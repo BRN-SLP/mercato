@@ -98,6 +98,11 @@ Thumbs.db
 
 # Turbo
 .turbo
+
+# Playwright
+playwright-report/
+test-results/
+
 # Lines to append to the project's .gitignore after scaffolding,
 # to keep internal planning documents OUT of the public git history.
 

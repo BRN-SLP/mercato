@@ -1,58 +1,67 @@
 # BeiBei
 
-Crowdsourced product price tracker on Celo
+**Crowdsourced product price tracker on Celo.** Scan a barcode, type the price you paid, drop an optional receipt photo — submission goes on-chain in one transaction. Other users in the same zone verify (✓ / ✗); three matching votes finalize the price and unlock micro-rewards in cUSD for the submitter and verifiers.
 
-A modern Celo blockchain application built with Next.js, TypeScript, and Turborepo.
+- 📷 **Scan** any UPC/EAN-13 barcode from the camera. Falls back to manual entry if the camera is blocked.
+- 🗳️ **Verify** nearby pending submissions with a single tap. Consensus is reached at three matching votes.
+- 💸 **Earn** 0.001 cUSD per accepted submission and 0.0002 cUSD per verification of an accepted submission. Claim accumulated rewards anytime.
+- 📈 **Read** the daily weighted median price for any item over the last 30 days, per zone.
 
-## Getting Started
+## Architecture
 
-1. Install dependencies:
-   ```bash
-   pnpm install
-   ```
+| Layer | Tech |
+|---|---|
+| Web app | Next.js 14 (App Router), TypeScript, TailwindCSS, Radix UI, [@composer-kit/ui](https://www.composerkit.xyz/) |
+| Web3 client | viem 2.x + wagmi 2.x + RainbowKit |
+| Smart contract | UUPS-upgradeable Solidity 0.8.28 on Celo, OpenZeppelin contracts-upgradeable 5.6 |
+| Barcode scanner | [@zxing/browser](https://github.com/zxing-js/browser) |
+| Receipt storage | Vercel Blob (photos), content-addressed by keccak256 |
+| Charts | recharts |
+| Monorepo | Turborepo |
 
-2. Start the development server:
-   ```bash
-   pnpm dev
-   ```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Submissions are identified by a monotonic `submissionId` from the contract. Locations are bucketed to a 2-decimal lat/lng grid (~1.1km) packed as `bytes6` so a zone is small and indexable. Barcodes are stored as `bytes12` (EAN-13/UPC check digit dropped to fit).
 
 ## Project Structure
 
-This is a monorepo managed by Turborepo with the following structure:
+```
+apps/web         Next.js application (landing, scan, item feed, rewards)
+apps/contracts   Hardhat smart contract development environment
+packages/sdk     @beibei/sdk — public read helpers (npm)
+```
 
-- `apps/web` - Next.js application with embedded UI components and utilities
-- `apps/contracts` - Smart contract development environment
+## Quick start
 
-## Available Scripts
+```bash
+pnpm install
+pnpm dev                 # runs Next.js dev server on :3000
+```
 
-- `pnpm dev` - Start development servers
-- `pnpm build` - Build all packages and apps
-- `pnpm lint` - Lint all packages and apps
-- `pnpm type-check` - Run TypeScript type checking
+Copy `.env.example` to the appropriate `.env` files and fill in the values. The web app reads `apps/web/.env.local`; the contracts read `apps/contracts/.env`.
 
-### Smart Contract Scripts
+## Smart contract scripts
 
-- `pnpm contracts:compile` - Compile smart contracts
-- `pnpm contracts:test` - Run smart contract tests
-- `pnpm contracts:deploy` - Deploy contracts to local network
-- `pnpm contracts:deploy:celo-sepolia` - Deploy to Celo Sepolia Testnet
-- `pnpm contracts:deploy:celo` - Deploy to Celo Mainnet
+```bash
+pnpm contracts:compile             # compile Solidity
+pnpm contracts:test                # 17 Hardhat tests (submit / verify / consensus / claim / UUPS)
+pnpm contracts:deploy:celo-sepolia # deploy UUPS proxy to Celo Sepolia
+pnpm contracts:deploy:celo         # deploy UUPS proxy to Celo Mainnet
+pnpm contracts:seed:celo-sepolia   # transfer 50 cUSD reward pool into the proxy
+```
 
-## Tech Stack
+After deploy the script prints both proxy and implementation addresses. Verify the implementation on Celoscan:
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Smart Contracts**: Hardhat with Viem
-- **Monorepo**: Turborepo
-- **Package Manager**: PNPM
+```bash
+cd apps/contracts
+pnpm hardhat verify --network celo-sepolia <implementation-address>
+```
 
-## Learn More
+## Tests
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Celo Documentation](https://docs.celo.org/)
-- [Turborepo Documentation](https://turbo.build/repo/docs)
-- [shadcn/ui Documentation](https://ui.shadcn.com/)
+```bash
+pnpm contracts:test                # 17 Hardhat tests, includes UUPS upgrade rehearsal
+pnpm --filter web test:e2e         # Playwright smoke tests against dev server
+```
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
