@@ -1,0 +1,42 @@
+{
+  "name": "@beibei/sdk",
+  "version": "0.0.1-alpha.0",
+  "description": "Read crowdsourced product prices from the BeiBei on-chain oracle on Celo",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "viem": "^2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "viem": "^2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "celo",
+    "cusd",
+    "price-oracle",
+    "barcode",
+    "minipay",
+    "beibei"
+  ]
+}
