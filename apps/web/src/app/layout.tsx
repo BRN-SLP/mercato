@@ -4,6 +4,7 @@ import './globals.css';
 
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
+import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/toaster';
 import { WalletProvider } from "@/components/wallet-provider"
 
@@ -83,19 +84,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-sans">
         {/* Navbar is included on all pages */}
-        <div className="relative flex min-h-screen flex-col">
-          <WalletProvider>
-            <Navbar />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-            <Toaster />
-          </WalletProvider>
-        </div>
+        <ThemeProvider>
+          <div className="relative flex min-h-screen flex-col">
+            <WalletProvider>
+              <Navbar />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+              <Toaster />
+            </WalletProvider>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
