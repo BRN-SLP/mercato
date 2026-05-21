@@ -117,20 +117,24 @@ export function zoneKeyToCountry(zoneKey: Hex): string | undefined {
 }
 
 /**
- * Convert a price in major units (e.g. "1.23") to the uint64 cents
- * the contract expects. Throws on negative or non-numeric input.
+ * Convert a price in major units (e.g. "1.23") to integer cents.
+ * Throws on negative or non-numeric input.
  *
- * `BigInt(Math.round(value * 100))` is the obvious approach, but it
- * loses precision on inputs like "0.1" (floating-point rounding bites
- * around the 17th decimal). We parse the string manually instead so a
- * user typing "1234567.89" gets exactly 123456789n with no surprises.
+ * `Math.round(value * 100)` is the obvious approach, but it loses
+ * precision on inputs like "0.1" because floating-point rounding bites
+ * around the 17th decimal. We parse the string manually instead so a
+ * user typing "1234567.89" gets exactly 123456789 with no surprises.
+ *
+ * Returns `number` (not `bigint`): cents domain caps well below
+ * Number.MAX_SAFE_INTEGER — see `chain-boundary.ts` for the rationale.
+ * Convert with `priceCentsToChain(cents)` at the on-chain write site.
  */
-export function majorUnitsToCents(input: string | number): bigint {
+export function majorUnitsToCents(input: string | number): number {
   const str = String(input).trim();
   if (!/^\d+(\.\d+)?$/.test(str)) {
     throw new Error(`majorUnitsToCents: invalid number "${input}"`);
   }
   const [whole, frac = ""] = str.split(".");
   const cents = frac.padEnd(2, "0").slice(0, 2);
-  return BigInt(whole) * 100n + BigInt(cents);
+  return parseInt(whole, 10) * 100 + parseInt(cents, 10);
 }

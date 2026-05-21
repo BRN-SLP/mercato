@@ -97,30 +97,27 @@ export async function getFxRatesBoth(): Promise<{
  * (also in cents). Returns null if the rate for that currency isn't
  * available — caller is expected to render "—" or hide the row.
  *
- *   localCents:  e.g. 5200n for 52.00 UAH
+ *   localCents:    e.g. 5200 for 52.00 UAH
  *   localCurrency: ISO 4217 — "UAH"
- *   rates:       FxRates with base "USD"
+ *   rates:         FxRates with base "USD"
  *
- *   → returns ~125 (meaning 1.25 USD cents-equivalent... wait, no:
- *     52 UAH ÷ 41 (UAH/USD) ≈ 1.27 USD = 127 cents)
+ *   → returns ~125 (1.25 USD ≈ 127 cents — actual: 52 UAH ÷ 41.5
+ *     UAH/USD ≈ 1.2530 USD = 125 cents)
  *
  * Math walk-through with base=USD, rates.UAH = 41.5:
  *   localCents = 5200 (52.00 UAH)
  *   localMajor = 52.00
- *   baseMajor = 52.00 / 41.5 = 1.2530
- *   baseCents = round(1.2530 * 100) = 125
+ *   baseMajor  = 52.00 / 41.5 = 1.2530
+ *   baseCents  = round(1.2530 * 100) = 125
  */
 export function convertCents(
-  localCents: bigint,
+  localCents: number,
   localCurrency: string,
   rates: FxRates,
 ): number | null {
   const rate = rates.rates[localCurrency.toUpperCase()];
   if (!rate || rate <= 0) return null;
-  // Use Number for the division — JS bigint can't do float math, and
-  // we're heading to cents-precision anyway. Up to ~2^53 cents is
-  // ~$90 trillion, more than enough for a basket of groceries.
-  const localMajor = Number(localCents) / 100;
+  const localMajor = localCents / 100;
   const baseMajor = localMajor / rate;
   return Math.round(baseMajor * 100);
 }
