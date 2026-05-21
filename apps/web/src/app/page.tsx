@@ -116,58 +116,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS — 3-step rail */}
+      {/* HOW IT WORKS — 3-step rail.
+          No side-stripe borders on cards — the premium-web-design
+          absolute ban applies. Hover lift + subtle ring is enough to
+          signal interactivity. */}
       <section className="container mx-auto max-w-5xl px-4 py-20">
         <RevealOnScroll>
           <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
             How it works
           </p>
-          <h2 className="mb-12 text-3xl font-semibold tracking-tight md:text-4xl">
-            Three taps. One transaction.
+          <h2 className="mb-12 font-serif text-3xl font-semibold tracking-tight md:text-4xl">
+            Three picks. <span className="italic text-primary">One transaction.</span>
           </h2>
         </RevealOnScroll>
 
         <div className="grid gap-6 md:grid-cols-3">
           <RevealOnScroll>
-            <Card className="h-full border-l-4 border-l-primary/70 transition hover:-translate-y-0.5 hover:shadow-[0_0_30px_-12px_hsl(var(--primary)/0.55)]">
+            <Card className="h-full border-border/60 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md hover:shadow-primary/10">
               <CardHeader>
                 <Scan className="h-6 w-6 text-primary" />
                 <CardTitle className="mt-3 text-lg">
-                  01 · Scan + submit
+                  01 · Pick + submit
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">
-                Point your camera at any barcode, enter the price you paid,
-                attach an optional receipt photo. Submission goes on-chain
-                in one tx.
+                Choose a product from the basket, choose your country,
+                type the price you paid. Optional receipt photo. One
+                on-chain transaction — gas in cUSD if your wallet
+                supports it.
               </CardContent>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.08}>
-            <Card className="h-full border-l-4 border-l-primary/70 transition hover:-translate-y-0.5 hover:shadow-[0_0_30px_-12px_hsl(var(--primary)/0.55)]">
+            <Card className="h-full border-border/60 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md hover:shadow-primary/10">
               <CardHeader>
                 <ShieldCheck className="h-6 w-6 text-primary" />
-                <CardTitle className="mt-3 text-lg">02 · Verify nearby</CardTitle>
+                <CardTitle className="mt-3 text-lg">02 · Peers verify</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">
-                Tap ✓ or ✗ on pending submissions in your zone. Three
-                matching votes finalize the price and unlock rewards for
-                everyone involved.
+                Other contributors in the same country tap ✓ or ✗ on
+                pending submissions. Three matching positives finalize
+                the price and unlock rewards for everyone involved.
               </CardContent>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.16}>
-            <Card className="h-full border-l-4 border-l-primary/70 transition hover:-translate-y-0.5 hover:shadow-[0_0_30px_-12px_hsl(var(--primary)/0.55)]">
+            <Card className="h-full border-border/60 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md hover:shadow-primary/10">
               <CardHeader>
                 <BarChart3 className="h-6 w-6 text-primary" />
                 <CardTitle className="mt-3 text-lg">03 · Earn cUSD</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">
-                Earn cUSD micro-rewards for every accepted submission and
-                for every verification you cast on someone else&apos;s. Sweep
-                your balance to MiniPay or any Celo wallet.
+                Micro-rewards for accepted submissions and for every
+                verification you cast on someone else&apos;s. Sweep your
+                balance to MiniPay or any Celo wallet — anytime, in one
+                claim.
               </CardContent>
             </Card>
           </RevealOnScroll>
