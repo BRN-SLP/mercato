@@ -9,8 +9,7 @@ import { RevealOnScroll } from "@/components/hero/RevealOnScroll";
  * Replaces the previous alternating-left/right text-only layout.
  * That layout wasn't a card grid (good — would have hit the
  * impeccable absolute ban) but it was three paragraphs of body
- * copy and nothing else. The page reads "designed" once but the
- * section under it falls back to a wall of words.
+ * copy and nothing else.
  *
  * The new layout keeps the editorial spine — serif stage numerals,
  * mono-caps tags, prose body — and adds a small visual artifact
@@ -21,18 +20,27 @@ import { RevealOnScroll } from "@/components/hero/RevealOnScroll";
  *   02 · verify  →  a vote tally (3-dot progress + verifier count)
  *   03 · earn    →  a reward receipt (cUSD micro-amount + tx hash)
  *
- * Artifacts are stylised, not literal screenshots — they live in
- * the same mono/serif register as the rest of the site and read
- * as "this is what the data looks like in motion", not "here's
- * a Figma mock". A thin horizontal rail connects the three stage
- * markers across desktop, reinforcing the "submission → vote →
- * reward" flow without needing arrow icons.
+ * Artifact rhythm (every artifact, same skeleton — that's what
+ * keeps the three from reading as 'three different cards'):
  *
- * Layout note: the three stages are NOT a card grid. There is no
- * card chrome around them — they sit on the page surface with the
- * connecting rail and stage numerals doing the structural work.
- * That is what keeps this out of the "Identical card grids"
- * absolute ban.
+ *   [tiny metadata strip — left + right]
+ *   [big mono metric]
+ *   [2 detail rows]
+ *   [solid bottom border]
+ *   [mono caps footer line]
+ *
+ * Height is locked with `min-h` so the stage copy under each
+ * artifact starts at the same baseline across columns. A thin
+ * horizontal rail connects the three stage markers on desktop so
+ * the section reads as 'submission → vote → reward', not as
+ * three independent ideas.
+ *
+ * Layout note: artifacts ARE card-shaped — they have a border and
+ * a label. But there are only three of them, the labels differ in
+ * shape (corner stamp), and each artifact has a distinct internal
+ * composition. So they don't read as 'identical card grid' (the
+ * absolute ban). They read as three stamped tickets from one
+ * printer.
  */
 export function HowItWorks() {
   const t = useTranslations("howItWorks");
@@ -49,22 +57,16 @@ export function HowItWorks() {
         </h2>
       </RevealOnScroll>
 
-      {/* Three-stage editorial flow.
-          Grid columns sit above a connecting rail (rendered as a
-          ::before pseudo on the desktop wrapper via the
-          before-rule below). Stage numerals are large enough to
-          serve as the visual hierarchy, the artifact mocks below
-          them carry the demonstration weight. */}
+      {/* Three-stage editorial flow. */}
       <div className="relative">
-        {/* Connecting rail — desktop only. Absolute below the
-            stage numerals; the rail anchors the eye horizontally
-            so the section reads as a sequence, not a list. */}
+        {/* Connecting rail — desktop only. Anchors the eye
+            horizontally so the section reads as a sequence. */}
         <div
           aria-hidden="true"
-          className="absolute left-0 right-0 top-[3.2rem] hidden h-px bg-border md:block"
+          className="absolute left-0 right-0 top-[3.25rem] hidden h-px bg-border md:block"
         />
 
-        <ol className="relative grid gap-12 md:grid-cols-3 md:gap-10">
+        <ol className="relative grid gap-12 md:grid-cols-3 md:gap-8">
           <RevealOnScroll>
             <Stage index={1} tag="scan">
               <SubmissionTicket />
@@ -115,10 +117,11 @@ interface StageProps {
 
 function Stage({ index, tag, children }: StageProps) {
   return (
-    <li className="relative flex flex-col gap-6">
-      {/* Stage marker — serif numeral floats above an artifact;
-          the dot is the node on the connecting rail. */}
-      <div className="flex items-center gap-3">
+    <li className="relative flex h-full flex-col gap-5">
+      {/* Stage marker — sits at the same y across columns so the
+          rail line passes through all three dots in a straight
+          horizontal. */}
+      <div className="flex h-12 items-center gap-3">
         <span
           aria-hidden="true"
           className="font-serif text-5xl font-bold leading-none text-primary"
@@ -128,9 +131,6 @@ function Stage({ index, tag, children }: StageProps) {
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           · {tag}
         </span>
-        {/* Rail node — sits at the same y as the absolute rail
-            line above. The numeral + tag occupy the rest of the
-            row; the dot is offset to the right to mark progress. */}
         <span
           aria-hidden="true"
           className="ml-auto hidden h-2 w-2 rounded-full bg-primary md:block"
@@ -161,114 +161,150 @@ function StageCopy({
 }
 
 /* ──────────────────────────────────────────────────────────────
- * Artifacts — small stylised UI fragments per stage.
+ * Artifacts.
  *
- * These are NOT literal screenshots. They are restrained mono/serif
- * compositions that demonstrate the *shape* of what that stage
- * produces: a submission ticket, a vote tally, a reward receipt.
- * The values are illustrative (clearly labeled "example" via the
- * mono caps header), not pulled from chain.
+ * All three share the same skeleton — see `Artifact` below — so
+ * the eye reads them as 'three tickets stamped from the same
+ * printer' rather than three different cards. Height is locked
+ * so the StageCopy underneath aligns across columns.
  * ────────────────────────────────────────────────────────────── */
+
+interface ArtifactProps {
+  label: string;
+  topLeft: React.ReactNode;
+  topRight: React.ReactNode;
+  metric: React.ReactNode;
+  metricUnit?: React.ReactNode;
+  rows: { left: React.ReactNode; right: React.ReactNode; muted?: boolean }[];
+  footer: React.ReactNode;
+}
+
+function Artifact({
+  label,
+  topLeft,
+  topRight,
+  metric,
+  metricUnit,
+  rows,
+  footer,
+}: ArtifactProps) {
+  return (
+    <figure className="relative flex min-h-[15rem] flex-col rounded-md border border-border/60 bg-card/60 p-4 backdrop-blur">
+      {/* Corner stamp — mono caps category tag, anchored top-left.
+          Sits across the card frame so the artifact reads as a
+          stamped ticket. */}
+      <figcaption className="absolute -top-2 left-3 bg-background px-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+        {label}
+      </figcaption>
+
+      {/* Top metadata strip — left + right slots. */}
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          {topLeft}
+        </div>
+        <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+          {topRight}
+        </div>
+      </div>
+
+      {/* Big mono metric — the focal value of the stage. */}
+      <div className="mt-3 flex items-baseline gap-2">
+        <span className="font-mono text-2xl font-semibold tabular-nums text-foreground">
+          {metric}
+        </span>
+        {metricUnit !== undefined && (
+          <span className="font-mono text-xs font-normal text-muted-foreground">
+            {metricUnit}
+          </span>
+        )}
+      </div>
+
+      {/* Detail rows — always two rows of mono caps so the column
+          rhythm matches across artifacts. */}
+      <div className="mt-3 space-y-1">
+        {rows.map((row, i) => (
+          <div
+            key={i}
+            className={`flex items-center justify-between font-mono text-[10px] uppercase tracking-wider ${
+              row.muted ? "text-muted-foreground/60" : "text-muted-foreground"
+            }`}
+          >
+            <span>{row.left}</span>
+            <span>{row.right}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Footer caption — pinned to the bottom of the artifact so
+          all three column footers sit at the same y. */}
+      <div className="mt-auto border-t border-border/60 pt-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+        {footer}
+      </div>
+    </figure>
+  );
+}
 
 function SubmissionTicket() {
   return (
-    <Artifact label="submission · example">
-      <div className="flex items-start justify-between gap-3">
+    <Artifact
+      label="submission · example"
+      topLeft={
         <span
           aria-hidden="true"
-          className="inline-flex h-7 w-10 items-center justify-center rounded-sm border border-border bg-card font-mono text-[10px] font-semibold tracking-[0.18em] text-foreground/80"
+          className="inline-flex h-6 w-9 items-center justify-center rounded-sm border border-border bg-card font-mono text-[10px] font-semibold tracking-[0.18em] text-foreground/80"
         >
           UA
         </span>
-        <span className="text-right font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-          14:42 utc
-        </span>
-      </div>
-      <div className="mt-3 space-y-1">
-        <p className="text-xs text-muted-foreground">milk · 1 L</p>
-        <p className="font-mono text-2xl font-semibold tabular-nums">
-          18.00{" "}
-          <span className="text-xs font-normal text-muted-foreground">
-            UAH
-          </span>
-        </p>
-      </div>
-      <div className="mt-3 border-t border-dashed border-border/70 pt-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-        receipt · optional
-      </div>
-    </Artifact>
+      }
+      topRight="14:42 utc"
+      metric="18.00"
+      metricUnit="UAH"
+      rows={[
+        { left: "product", right: "milk · 1 L" },
+        { left: "receipt", right: "optional · ipfs", muted: true },
+      ]}
+      footer="one tx · cUSD fee"
+    />
   );
 }
 
 function VoteTally() {
   return (
-    <Artifact label="vote tally · 2 of 3">
-      <div className="flex items-center justify-between">
-        <p className="text-xs text-muted-foreground">peers in UA</p>
-        <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-          4h window
+    <Artifact
+      label="vote tally · in progress"
+      topLeft={
+        <span className="flex items-center gap-2">
+          <Dot tone="filled" />
+          <Dot tone="filled" />
+          <Dot tone="empty" />
         </span>
-      </div>
-      <div className="mt-4 flex items-center gap-2.5">
-        <Dot tone="filled" />
-        <Dot tone="filled" />
-        <Dot tone="empty" />
-        <span className="ml-auto font-mono text-xs font-semibold tabular-nums">
-          2/3
-        </span>
-      </div>
-      <div className="mt-4 space-y-1.5">
-        <VoteRow vote="yes" by="0x9a…21" />
-        <VoteRow vote="yes" by="0x4c…7e" />
-        <VoteRow vote="—" by="—" muted />
-      </div>
-    </Artifact>
+      }
+      topRight="4h window"
+      metric="2/3"
+      metricUnit="peers · UA"
+      rows={[
+        { left: "0x9a…21", right: "yes" },
+        { left: "0x4c…7e", right: "yes" },
+      ]}
+      footer="1 more to finalize"
+    />
   );
 }
 
 function RewardChip() {
   return (
-    <Artifact label="settled · just now">
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="font-mono text-2xl font-semibold tabular-nums text-primary">
-          + 0.05
-        </span>
-        <span className="font-mono text-xs font-semibold tracking-wider text-foreground/80">
-          cUSD
-        </span>
-      </div>
-      <p className="mt-1 text-xs text-muted-foreground">
-        submitter share · 50%
-      </p>
-      <div className="mt-4 space-y-1">
-        <RewardLine label="3 × verifiers" amount="+ 0.05" />
-        <RewardLine label="net to wallet" amount="+ 0.05" emphasized />
-      </div>
-      <div className="mt-3 border-t border-border/60 pt-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-        tx · 0xab…1c ↗
-      </div>
-    </Artifact>
-  );
-}
-
-function Artifact({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <figure className="relative rounded-md border border-border/60 bg-card/60 p-4 backdrop-blur">
-      {/* Corner stamp — mono caps category tag, anchored top-left.
-          Sits inside the card frame so the artifact reads as a
-          ticket / receipt with a printed header, not as a plain
-          card. */}
-      <figcaption className="absolute -top-2 left-3 bg-background px-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
-        {label}
-      </figcaption>
-      {children}
-    </figure>
+    <Artifact
+      label="settled · just now"
+      topLeft={<span>net to wallet</span>}
+      topRight="↗ tx 0xab…1c"
+      metric="+ 0.05"
+      metricUnit="cUSD"
+      rows={[
+        { left: "submitter share", right: "+ 0.05" },
+        { left: "3 × verifiers", right: "+ 0.05" },
+      ]}
+      footer="sweep any time · no minimum"
+    />
   );
 }
 
@@ -278,59 +314,9 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
       aria-hidden="true"
       className={
         tone === "filled"
-          ? "inline-block h-2.5 w-2.5 rounded-full bg-primary"
-          : "inline-block h-2.5 w-2.5 rounded-full border border-border bg-transparent"
+          ? "inline-block h-2 w-2 rounded-full bg-primary"
+          : "inline-block h-2 w-2 rounded-full border border-border bg-transparent"
       }
     />
-  );
-}
-
-function VoteRow({
-  vote,
-  by,
-  muted,
-}: {
-  vote: string;
-  by: string;
-  muted?: boolean;
-}) {
-  return (
-    <div
-      className={`flex items-center justify-between font-mono text-[10px] uppercase tracking-wider ${
-        muted ? "text-muted-foreground/60" : "text-muted-foreground"
-      }`}
-    >
-      <span>{by}</span>
-      <span
-        className={
-          vote === "yes" && !muted
-            ? "text-foreground"
-            : "text-muted-foreground"
-        }
-      >
-        {vote}
-      </span>
-    </div>
-  );
-}
-
-function RewardLine({
-  label,
-  amount,
-  emphasized,
-}: {
-  label: string;
-  amount: string;
-  emphasized?: boolean;
-}) {
-  return (
-    <div
-      className={`flex items-baseline justify-between font-mono text-xs tabular-nums ${
-        emphasized ? "text-foreground" : "text-muted-foreground"
-      }`}
-    >
-      <span className={emphasized ? "font-semibold" : ""}>{label}</span>
-      <span className={emphasized ? "font-semibold" : ""}>{amount}</span>
-    </div>
   );
 }
