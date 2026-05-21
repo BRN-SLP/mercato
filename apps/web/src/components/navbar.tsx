@@ -49,11 +49,8 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-80">
-              <div className="mb-8 flex items-center gap-3 text-primary">
-                <MercatoLogo variant="icon" className="h-8 w-8" />
-                <span className="font-serif text-xl font-semibold italic">
-                  Mercato
-                </span>
+              <div className="mb-8 flex items-center text-primary">
+                <MercatoLogo className="h-7" />
               </div>
               <nav className="flex flex-col gap-4">
                 {navLinks.map((link) => (
@@ -78,16 +75,14 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
 
-          {/* Logo — basket icon + serif italic wordmark. */}
+          {/* Logo — geometric wordmark + sun-over-horizon glyph,
+              single combined mark. */}
           <Link
             href="/"
-            className="flex items-center gap-2 text-primary transition-opacity hover:opacity-80"
+            className="flex items-center text-primary transition-opacity hover:opacity-80"
             aria-label={t("logoAria")}
           >
-            <MercatoLogo variant="icon" className="h-9 w-9 sm:h-10 sm:w-10" />
-            <span className="hidden font-serif text-xl font-semibold italic sm:inline-block">
-              Mercato
-            </span>
+            <MercatoLogo className="h-7 sm:h-8" />
           </Link>
         </div>
 
