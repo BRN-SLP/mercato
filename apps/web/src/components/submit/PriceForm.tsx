@@ -88,7 +88,7 @@ export function PriceForm({ onCancel }: PriceFormProps) {
     submit.state.kind === "awaiting_signature" ||
     submit.state.kind === "confirming";
 
-  const ready = totalCents > 0n && !busy;
+  const ready = totalCents > 0 && !busy;
 
   async function handleFile(file: File | null): Promise<void> {
     setError(null);
@@ -313,13 +313,13 @@ export function PriceForm({ onCancel }: PriceFormProps) {
   );
 }
 
-function computeTotalCents(whole: string, cents: string): bigint {
+function computeTotalCents(whole: string, cents: string): number {
   try {
     const wholePart = whole || "0";
     const fracPart = (cents || "0").padEnd(2, "0").slice(0, 2);
     return majorUnitsToCents(`${wholePart}.${fracPart}`);
   } catch {
-    return 0n;
+    return 0;
   }
 }
 

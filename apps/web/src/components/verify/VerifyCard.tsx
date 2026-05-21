@@ -46,13 +46,13 @@ export function VerifyCard({ submission }: VerifyCardProps) {
     <Card>
       <CardHeader className="pb-2">
         <CardTitle className="text-base">
-          Submission #{submission.submissionId.toString()}
+          Submission #{submission.submissionId}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3 text-sm">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <span className="text-2xl font-semibold tracking-tight">
-            {(Number(submission.priceCents) / 100).toFixed(2)}
+            {(submission.priceCents / 100).toFixed(2)}
           </span>
           {zone && (
             <span className="text-xs text-muted-foreground">
@@ -63,13 +63,13 @@ export function VerifyCard({ submission }: VerifyCardProps) {
             votes {submission.acceptVotes}-{submission.rejectVotes} of 3
           </span>
         </div>
-        <div className="flex gap-2" role="group" aria-label={`Verify submission #${submission.submissionId.toString()}`}>
+        <div className="flex gap-2" role="group" aria-label={`Verify submission #${submission.submissionId}`}>
           <Button
             size="sm"
             variant="outline"
             onClick={() => handle(true)}
             disabled={busy}
-            aria-label={`Accept submission #${submission.submissionId.toString()}`}
+            aria-label={`Accept submission #${submission.submissionId}`}
             aria-busy={pending === "accept" || undefined}
             className="flex-1"
           >
@@ -91,7 +91,7 @@ export function VerifyCard({ submission }: VerifyCardProps) {
             variant="outline"
             onClick={() => handle(false)}
             disabled={busy}
-            aria-label={`Reject submission #${submission.submissionId.toString()}`}
+            aria-label={`Reject submission #${submission.submissionId}`}
             aria-busy={pending === "reject" || undefined}
             className="flex-1"
           >

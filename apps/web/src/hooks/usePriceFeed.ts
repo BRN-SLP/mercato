@@ -4,16 +4,26 @@ import { useEffect, useMemo, useState } from "react";
 import { usePublicClient, useWatchContractEvent } from "wagmi";
 import type { Hex, Log } from "viem";
 
+import {
+  priceCentsFromChain,
+  submissionIdFromChain,
+  timestampFromChain,
+} from "@/lib/chain-boundary";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 
+/**
+ * Submission record as stored in app state. All cent-domain and
+ * counter-domain fields use `number`; see `chain-boundary.ts` for
+ * the rationale.
+ */
 export interface SubmissionRecord {
-  submissionId: bigint;
+  submissionId: number;
   barcode: Hex;
   zoneKey: Hex;
   submitter: `0x${string}`;
-  priceCents: bigint;
+  priceCents: number;
   receiptHash: Hex;
-  timestamp: bigint;
+  timestamp: number;
   finalized: boolean;
   accepted: boolean;
   acceptVotes: number;
@@ -164,7 +174,7 @@ export function usePriceFeed(
   });
 
   const sorted = useMemo(
-    () => [...records.values()].sort((a, b) => Number(b.timestamp - a.timestamp)),
+    () => [...records.values()].sort((a, b) => b.timestamp - a.timestamp),
     [records],
   );
 
@@ -200,14 +210,15 @@ type FinalizedLog = Log & {
 
 function recordFromSubmitted(log: PriceSubmittedLog): SubmissionRecord | null {
   if (log.args?.submissionId === undefined) return null;
+  // Chain boundary: convert all bigint fields to app-model number.
   return {
-    submissionId: log.args.submissionId,
+    submissionId: submissionIdFromChain(log.args.submissionId),
     barcode: log.args.barcode as Hex,
     zoneKey: log.args.zoneKey as Hex,
     submitter: log.args.submitter as `0x${string}`,
-    priceCents: log.args.priceCents ?? 0n,
+    priceCents: priceCentsFromChain(log.args.priceCents),
     receiptHash: log.args.receiptHash as Hex,
-    timestamp: log.args.timestamp ?? 0n,
+    timestamp: timestampFromChain(log.args.timestamp),
     finalized: false,
     accepted: false,
     acceptVotes: 0,
@@ -222,7 +233,7 @@ function applyVerified(
 ): void {
   const id = log.args?.submissionId;
   if (id === undefined) return;
-  const rec = map.get(id.toString());
+  const rec = map.get(submissionIdFromChain(id).toString());
   if (!rec) return;
   rec.totalVotes += 1;
   if (log.args?.isValid) rec.acceptVotes += 1;
@@ -235,7 +246,7 @@ function applyFinalized(
 ): void {
   const id = log.args?.submissionId;
   if (id === undefined) return;
-  const rec = map.get(id.toString());
+  const rec = map.get(submissionIdFromChain(id).toString());
   if (!rec) return;
   rec.finalized = true;
   rec.accepted = Boolean(log.args?.accepted);

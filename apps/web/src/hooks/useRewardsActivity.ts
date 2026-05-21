@@ -4,12 +4,19 @@ import { useEffect, useState } from "react";
 import { useAccount, useChainId, usePublicClient } from "wagmi";
 import type { Log } from "viem";
 
+import { blockNumberFromChain } from "@/lib/chain-boundary";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 
+/**
+ * Per-user activity summary. Note that reward amounts stay `bigint`
+ * (10^17 wei = 0.1 CELO exceeds Number.MAX_SAFE_INTEGER's safe range
+ * for wei-precision math); block numbers use `number` per the
+ * convention in `chain-boundary.ts`.
+ */
 export interface RewardsActivity {
   submissionCount: number;
   verificationCount: number;
-  claims: Array<{ amount: bigint; blockNumber: bigint }>;
+  claims: Array<{ amount: bigint; blockNumber: number }>;
   totalClaimed: bigint;
 }
 
@@ -93,8 +100,10 @@ export function useRewardsActivity() {
 
         const claims = (claimedLogs as ClaimedLog[])
           .map((l) => ({
+            // amount stays bigint — wei amount, exceeds Number safety.
             amount: l.args?.amount ?? 0n,
-            blockNumber: l.blockNumber ?? 0n,
+            // blockNumber → number via chain-boundary.
+            blockNumber: blockNumberFromChain(l.blockNumber ?? undefined),
           }))
           .filter((c) => c.amount > 0n);
 

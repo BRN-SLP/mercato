@@ -88,3 +88,11 @@ export function rewardWeiFromChain(w: bigint | undefined): bigint {
 export function priceCentsToChain(cents: number): bigint {
   return BigInt(Math.round(cents));
 }
+
+/**
+ * Convert app-model submission id (number) back to bigint for an
+ * on-chain call (verify flow, etc.). Mirror of submissionIdFromChain.
+ */
+export function submissionIdToChain(id: number): bigint {
+  return BigInt(id);
+}

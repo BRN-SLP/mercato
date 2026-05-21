@@ -20,11 +20,11 @@ const PRODUCT_BY_BARCODE: ReadonlyMap<string, Product> = new Map(
 );
 
 interface FeedRow {
-  submissionId: bigint;
+  submissionId: number;
   barcode: `0x${string}`;
   product: Product;
   country: NonNullable<ReturnType<typeof getCountryByCode>>;
-  priceCents: bigint;
+  priceCents: number;
   finalized: boolean;
   accepted: boolean;
   totalVotes: number;
@@ -112,7 +112,7 @@ export function RecentSubmissions() {
 }
 
 function FeedItem({ row }: { row: FeedRow }) {
-  const major = (Number(row.priceCents) / 100).toLocaleString(undefined, {
+  const major = (row.priceCents / 100).toLocaleString(undefined, {
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   });

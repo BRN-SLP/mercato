@@ -10,6 +10,7 @@ import {
 import { celo } from "wagmi/chains";
 import type { Hex } from "viem";
 
+import { submissionIdToChain } from "@/lib/chain-boundary";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 import { CUSD_MAINNET_ADDRESS } from "@/lib/minipay";
 
@@ -17,7 +18,7 @@ type VerifyState =
   | { kind: "idle" }
   | { kind: "submitting" }
   | { kind: "confirming"; txHash: Hex }
-  | { kind: "success"; submissionId: bigint }
+  | { kind: "success"; submissionId: number }
   | { kind: "error"; message: string };
 
 export function useVerify() {
@@ -27,7 +28,7 @@ export function useVerify() {
   const [state, setState] = useState<VerifyState>({ kind: "idle" });
 
   const verify = useCallback(
-    async (submissionId: bigint, isValid: boolean) => {
+    async (submissionId: number, isValid: boolean) => {
       if (!publicClient) {
         setState({ kind: "error", message: "no public client" });
         return;
@@ -43,7 +44,7 @@ export function useVerify() {
         return;
       }
       const verdict = isValid ? "Accept" : "Reject";
-      const toastId = toast.loading(`${verdict}ing #${submissionId.toString()}…`);
+      const toastId = toast.loading(`${verdict}ing #${submissionId}…`);
       try {
         setState({ kind: "submitting" });
         // Fee abstraction — pay gas in cUSD on Celo mainnet so the
@@ -57,7 +58,8 @@ export function useVerify() {
           address: oracleAddress,
           abi: priceOracleAbi,
           functionName: "verify",
-          args: [submissionId, isValid],
+          // Chain boundary: number → bigint for the on-chain call.
+          args: [submissionIdToChain(submissionId), isValid],
           ...extraTxParams,
         });
         setState({ kind: "confirming", txHash: tx });
@@ -65,7 +67,7 @@ export function useVerify() {
         setState({ kind: "success", submissionId });
         toast.success(`Vote recorded`, {
           id: toastId,
-          description: `${verdict.toLowerCase()}ed #${submissionId.toString()}`,
+          description: `${verdict.toLowerCase()}ed #${submissionId}`,
         });
       } catch (err: unknown) {
         const message =

@@ -11,6 +11,10 @@ import {
 import { celo } from "wagmi/chains";
 import type { Hex } from "viem";
 
+import {
+  priceCentsToChain,
+  submissionIdFromChain,
+} from "@/lib/chain-boundary";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 import { CUSD_MAINNET_ADDRESS } from "@/lib/minipay";
 
@@ -19,13 +23,13 @@ type SubmitState =
   | { kind: "uploading" }
   | { kind: "awaiting_signature" }
   | { kind: "confirming"; txHash: Hex }
-  | { kind: "success"; submissionId: bigint }
+  | { kind: "success"; submissionId: number }
   | { kind: "error"; message: string };
 
 interface SubmitArgs {
   barcode: Hex;
   zoneKey: Hex;
-  priceCents: bigint;
+  priceCents: number;
   receiptHash: Hex;
 }
 
@@ -76,7 +80,8 @@ export function useSubmitPrice() {
           address: oracleAddress,
           abi: priceOracleAbi,
           functionName: "submitPrice",
-          args: [barcode, zoneKey, priceCents, receiptHash],
+          // Chain boundary: number → bigint for the on-chain call.
+          args: [barcode, zoneKey, priceCentsToChain(priceCents), receiptHash],
           ...extraTxParams,
         });
         setState({ kind: "confirming", txHash: tx });
@@ -86,13 +91,13 @@ export function useSubmitPrice() {
 
         // Decode submissionId from the PriceSubmitted event for nicer UX.
         const submissionId =
-          extractSubmissionId(receipt.logs, oracleAddress) ?? -1n;
+          extractSubmissionId(receipt.logs, oracleAddress) ?? -1;
         setState({ kind: "success", submissionId });
         toast.success("Submission live", {
           id: toastId,
           description:
-            submissionId >= 0n
-              ? `id #${submissionId.toString()} — awaiting 3 verifications`
+            submissionId >= 0
+              ? `id #${submissionId} — awaiting 3 verifications`
               : "Awaiting 3 verifications",
         });
       } catch (err: unknown) {
@@ -121,13 +126,13 @@ interface LogLike {
 function extractSubmissionId(
   logs: readonly LogLike[],
   oracleAddress: `0x${string}`,
-): bigint | undefined {
+): number | undefined {
   for (const log of logs) {
     if (log.address.toLowerCase() !== oracleAddress.toLowerCase()) continue;
     // topic0 = event signature hash of PriceSubmitted; topic1 = submissionId.
     if (log.topics.length >= 2) {
       try {
-        return BigInt(log.topics[1] as string);
+        return submissionIdFromChain(BigInt(log.topics[1] as string));
       } catch {
         continue;
       }
