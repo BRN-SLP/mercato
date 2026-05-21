@@ -1,7 +1,7 @@
 {
   "name": "hardhat",
   "version": "1.0.0",
-  "description": "Smart contracts for BeiBei",
+  "description": "Smart contracts for Mercato",
   "main": "index.js",
   "scripts": {
     "build": "hardhat compile",
@@ -13,6 +13,8 @@
     "deploy:celo": "hardhat run scripts/deploy.ts --network celo",
     "seed:celo-sepolia": "hardhat run scripts/seed-rewards.ts --network celo-sepolia",
     "seed:celo": "hardhat run scripts/seed-rewards.ts --network celo",
+    "seed-mercato:celo-sepolia": "hardhat run scripts/seed-mercato.ts --network celo-sepolia",
+    "seed-mercato:celo": "hardhat run scripts/seed-mercato.ts --network celo",
     "verify": "hardhat verify",
     "clean": "hardhat clean",
     "typechain": "hardhat typechain"
