@@ -18,7 +18,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { RecentSubmissions } from "@/components/feed/RecentSubmissions";
-import { ZoneCoverage } from "@/components/landing/ZoneCoverage";
 import { UserBalance } from "@/components/user-balance";
 
 export default function Home() {
@@ -195,10 +194,7 @@ export default function Home() {
             </div>
           </RevealOnScroll>
           <RevealOnScroll delay={0.08}>
-            <div className="grid gap-5 lg:grid-cols-[1.1fr_1fr]">
-              <RecentSubmissions />
-              <ZoneCoverage />
-            </div>
+            <RecentSubmissions />
           </RevealOnScroll>
         </div>
       </section>
