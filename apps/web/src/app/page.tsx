@@ -17,6 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { CountryBasketPreview } from "@/components/landing/CountryBasketPreview";
 import { RecentSubmissions } from "@/components/feed/RecentSubmissions";
 import { UserBalance } from "@/components/user-balance";
 
@@ -177,6 +178,11 @@ export default function Home() {
           </RevealOnScroll>
         </div>
       </section>
+
+      {/* COUNTRY BASKET PREVIEW — top countries by coverage.
+          Server component, pulls cached on-chain snapshot. Falls
+          back to a "be the first" empty state at zero submissions. */}
+      <CountryBasketPreview />
 
       {/* RECENT SUBMISSIONS — live feed */}
       <section className="border-t bg-secondary/40">
