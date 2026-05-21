@@ -231,7 +231,7 @@ export function PriceForm({ onCancel }: PriceFormProps) {
             <optgroup key={group.region} label={group.label}>
               {group.countries.map((c) => (
                 <option key={c.code} value={c.code}>
-                  {c.flag} {c.name} — {c.currency}
+                  {c.code} · {c.name} · {c.currency}
                 </option>
               ))}
             </optgroup>
