@@ -55,15 +55,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mercato' }],
   icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/logo-192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/logo-512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-      { url: '/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
-    ],
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' }],
   },
   manifest: '/site.webmanifest',
   openGraph: {
@@ -99,8 +92,8 @@ export const metadata: Metadata = {
  */
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#e7e5dd' },
-    { media: '(prefers-color-scheme: dark)', color: '#0d2419' },
+    { media: '(prefers-color-scheme: light)', color: '#eee5dd' },
+    { media: '(prefers-color-scheme: dark)', color: '#0c3c2f' },
   ],
   colorScheme: 'light dark',
 };
