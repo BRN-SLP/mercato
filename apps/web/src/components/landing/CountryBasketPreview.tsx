@@ -111,7 +111,6 @@ interface CoverageRowProps {
  * 0.2-wide bar would have no room for inline text.
  */
 function CoverageRow({ basket, denominator }: CoverageRowProps) {
-  const pct = Math.round((basket.coverage / denominator) * 100);
   const widthPct = Math.max(2, (basket.coverage / denominator) * 100);
   const totalMajor = formatMajor(basket.totalLocalCents);
 
@@ -119,44 +118,40 @@ function CoverageRow({ basket, denominator }: CoverageRowProps) {
     <li className="group">
       <Link
         href={`/basket?country=${basket.country.code}`}
-        className="grid items-center gap-x-6 gap-y-3 px-2 py-5 transition hover:bg-primary/[0.03] focus-visible:bg-primary/[0.06] focus-visible:outline-none md:grid-cols-[10rem_1fr_auto] md:py-6"
+        className="grid items-center gap-x-6 gap-y-1 px-2 py-5 transition hover:bg-primary/[0.04] focus-visible:bg-primary/[0.06] focus-visible:outline-none md:grid-cols-[auto_1fr_auto] md:py-6"
         aria-label={`${basket.country.name}: ${basket.coverage} of ${denominator} products priced`}
       >
-        {/* Country */}
-        <div className="flex items-baseline gap-3">
-          <span className="text-2xl leading-none" aria-hidden="true">
-            {basket.country.flag}
-          </span>
-          <div className="min-w-0">
-            <p className="font-serif text-lg font-semibold leading-tight">
-              {basket.country.name}
-            </p>
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              {basket.country.code} · {basket.country.currency}
-            </p>
-          </div>
-        </div>
-
-        {/* Bar */}
-        <div
-          className="relative h-7 overflow-hidden rounded-sm bg-muted/60"
+        {/* Country code badge — replaces emoji flag with a mono caps
+            pill in the editorial register. Apple-Pay style. */}
+        <span
           aria-hidden="true"
+          className="inline-flex h-9 w-12 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-xs font-semibold tracking-[0.18em] text-foreground/80 group-hover:border-primary/50 group-hover:text-primary"
         >
-          <div
-            className="absolute inset-y-0 left-0 bg-primary/80 transition-[width] duration-700 ease-out group-hover:bg-primary"
-            style={{ width: `${widthPct}%` }}
-          />
-          <div className="relative flex h-full items-center justify-between px-3 font-mono text-[11px] uppercase tracking-wider mix-blend-multiply dark:mix-blend-screen">
-            <span className="font-semibold text-primary-foreground/90 dark:text-primary-foreground">
+          {basket.country.code}
+        </span>
+
+        {/* Country meta + coverage progress underline */}
+        <div className="min-w-0">
+          <p className="font-serif text-lg font-semibold leading-tight">
+            {basket.country.name}
+          </p>
+          <div className="mt-2 flex items-center gap-3">
+            <span
+              aria-hidden="true"
+              className="relative h-px flex-1 bg-border/50"
+            >
+              <span
+                className="absolute inset-y-0 left-0 -top-px h-[3px] bg-primary/70 transition-[width] duration-700 ease-out group-hover:bg-primary"
+                style={{ width: `${widthPct}%` }}
+              />
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground tabular-nums">
               {basket.coverage}/{denominator}
             </span>
-            <span className="text-muted-foreground">
-              {pct}%
-            </span>
           </div>
         </div>
 
-        {/* Median basket */}
+        {/* Median basket sum */}
         <div className="font-mono text-right tabular-nums">
           <p className="text-base font-semibold tracking-tight">
             {totalMajor}{" "}
