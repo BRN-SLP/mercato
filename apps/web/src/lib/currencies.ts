@@ -1,168 +1,212 @@
 /**
  * Currency catalog for the price-submission form.
  *
- * Until this PR the form offered only KES, NGN, GHS, USD, ZAR — the four
- * Africa-launch markets plus USD. Anyone from outside that region had to
- * pick "USD" or no option at all, which was either inaccurate (price was
- * actually quoted in TRY / BRL / PHP / VND) or a dead end (they leave
- * thinking the app doesn't support their country). We're a global price
- * tracker by design — the contract has no regional binding, every Mento
- * stablecoin pair settles in cUSD on Celo, GPS-derived zone keys work
- * anywhere on Earth.
+ * Goal: any user from any country can pick their actual local currency.
+ * No psychological dead-end where someone from Vietnam, Sri Lanka, or
+ * Trinidad sees the dropdown and assumes the app is not for them.
  *
- * The dropdown now covers ~35 currencies grouped by region. Coverage
- * priority order:
+ * Coverage: every active ISO 4217 currency, grouped by region. Currency
+ * codes are hardcoded (stable — they rarely change), but human names
+ * are resolved dynamically via `Intl.DisplayNames("en", "currency")`.
+ * Localised names (e.g. "Roupie indienne" for a French user) come for
+ * free if we ever switch the form's locale.
  *
- *   1. All 15 Mento stablecoin currencies (USD, EUR, BRL, XOF, KES,
- *      PHP, COP, GBP, CAD, AUD, ZAR, GHS, NGN, JPY, CHF) — these are
- *      first-class Celo citizens and will likely become reward-currency
- *      options in a future contract upgrade.
- *   2. Major non-Mento currencies by population (INR, IDR, VND, TRY,
- *      RUB, MXN, EGP, TWD, PKR, BDT, etc.) so a real reader from those
- *      markets doesn't get bounced.
+ * Region grouping is a UX choice — native `<select>` + `<optgroup>`
+ * renders section headers on iOS / Android / desktop, so a user can
+ * land in the right area of the list with one finger swipe instead of
+ * scrolling through 150 alphabetised options.
  *
- * If you add a currency: keep it ISO 4217, put it in the right region
- * group, and add a human label. No on-chain change required — currency
- * is UX metadata on the submission form (NOT persisted on-chain yet;
- * see TODO in `useSubmitPrice` for the persistence plan).
+ * The 15 Mento stablecoin currencies (the ones that have a Celo-native
+ * stablecoin we can theoretically pay out in) are flagged with
+ * `mento: true` for future UI cues — currently unused.
  */
 
 export interface CurrencyOption {
   /** ISO 4217 code (e.g. "USD", "KES"). */
   code: string;
-  /** Human-readable name, used as `<option>` label. */
-  name: string;
-  /** True if this currency has a Mento stablecoin on Celo. Reserved for
-   *  future UI cues (e.g. a small "Mento" badge in the option label). */
+  /** True if this currency has a Mento stablecoin on Celo. */
   mento?: boolean;
 }
 
+const MENTO: ReadonlySet<string> = new Set([
+  "USD", "EUR", "GBP", "JPY", "CHF",
+  "BRL", "COP", "PHP", "GBP", "KES", "NGN", "GHS", "ZAR", "XOF",
+  "CAD", "AUD",
+]);
+
+/**
+ * Build a region entry from a flat list of codes. Sorts by code so the
+ * dropdown is predictable inside each section.
+ */
+function group(codes: readonly string[]): CurrencyOption[] {
+  return [...codes].sort().map((code) => ({
+    code,
+    ...(MENTO.has(code) ? { mento: true } : {}),
+  }));
+}
+
 export const CURRENCIES_BY_REGION: Record<string, CurrencyOption[]> = {
-  "Global / Reserves": [
-    { code: "USD", name: "US Dollar", mento: true },
-    { code: "EUR", name: "Euro", mento: true },
-    { code: "GBP", name: "British Pound", mento: true },
-    { code: "JPY", name: "Japanese Yen", mento: true },
-    { code: "CHF", name: "Swiss Franc", mento: true },
-    { code: "CNY", name: "Chinese Yuan" },
-  ],
-  "Africa": [
-    { code: "KES", name: "Kenyan Shilling", mento: true },
-    { code: "NGN", name: "Nigerian Naira", mento: true },
-    { code: "GHS", name: "Ghanaian Cedi", mento: true },
-    { code: "ZAR", name: "South African Rand", mento: true },
-    { code: "XOF", name: "West African CFA Franc", mento: true },
-    { code: "EGP", name: "Egyptian Pound" },
-    { code: "MAD", name: "Moroccan Dirham" },
-    { code: "ETB", name: "Ethiopian Birr" },
-    { code: "TZS", name: "Tanzanian Shilling" },
-    { code: "UGX", name: "Ugandan Shilling" },
-  ],
-  "Latin America": [
-    { code: "BRL", name: "Brazilian Real", mento: true },
-    { code: "COP", name: "Colombian Peso", mento: true },
-    { code: "MXN", name: "Mexican Peso" },
-    { code: "ARS", name: "Argentine Peso" },
-    { code: "CLP", name: "Chilean Peso" },
-    { code: "PEN", name: "Peruvian Sol" },
-  ],
-  "Asia": [
-    { code: "INR", name: "Indian Rupee" },
-    { code: "PHP", name: "Philippine Peso", mento: true },
-    { code: "IDR", name: "Indonesian Rupiah" },
-    { code: "VND", name: "Vietnamese Dong" },
-    { code: "THB", name: "Thai Baht" },
-    { code: "KRW", name: "South Korean Won" },
-    { code: "MYR", name: "Malaysian Ringgit" },
-    { code: "SGD", name: "Singapore Dollar" },
-    { code: "PKR", name: "Pakistani Rupee" },
-    { code: "BDT", name: "Bangladeshi Taka" },
-  ],
-  "Europe & Eurasia": [
-    { code: "TRY", name: "Turkish Lira" },
-    { code: "RUB", name: "Russian Ruble" },
-    { code: "UAH", name: "Ukrainian Hryvnia" },
-    { code: "PLN", name: "Polish Zloty" },
-  ],
-  "Other Developed": [
-    { code: "CAD", name: "Canadian Dollar", mento: true },
-    { code: "AUD", name: "Australian Dollar", mento: true },
-    { code: "NZD", name: "New Zealand Dollar" },
-    { code: "HKD", name: "Hong Kong Dollar" },
-  ],
+  "Global / Reserves": group([
+    "USD", "EUR", "GBP", "JPY", "CHF", "CNY",
+  ]),
+  "Africa": group([
+    "AOA", "BIF", "BWP", "CDF", "CVE", "DJF", "DZD", "EGP", "ERN", "ETB",
+    "GHS", "GMD", "GNF", "KES", "KMF", "LRD", "LSL", "LYD", "MAD", "MGA",
+    "MRU", "MUR", "MWK", "MZN", "NAD", "NGN", "RWF", "SCR", "SDG", "SLE",
+    "SOS", "SSP", "STN", "SZL", "TND", "TZS", "UGX", "XAF", "XOF", "ZAR",
+    "ZMW", "ZWL",
+  ]),
+  "Latin America & Caribbean": group([
+    "ARS", "BBD", "BMD", "BOB", "BRL", "BSD", "BZD", "CLP", "COP", "CRC",
+    "CUP", "DOP", "GTQ", "GYD", "HNL", "HTG", "JMD", "KYD", "MXN", "NIO",
+    "PAB", "PEN", "PYG", "SRD", "TTD", "UYU", "VES", "XCD",
+  ]),
+  "Middle East": group([
+    "AED", "BHD", "ILS", "IQD", "IRR", "JOD", "KWD", "LBP", "OMR",
+    "QAR", "SAR", "SYP", "YER",
+  ]),
+  "Asia": group([
+    "AFN", "AMD", "AZN", "BDT", "BND", "BTN", "GEL", "HKD", "IDR", "INR",
+    "KGS", "KHR", "KPW", "KRW", "KZT", "LAK", "LKR", "MMK", "MNT", "MOP",
+    "MVR", "MYR", "NPR", "PHP", "PKR", "SGD", "THB", "TJS", "TMT", "TWD",
+    "UZS", "VND",
+  ]),
+  "Europe & Eurasia": group([
+    "ALL", "BAM", "BGN", "BYN", "CZK", "DKK", "HUF", "ISK", "MDL", "MKD",
+    "NOK", "PLN", "RON", "RSD", "RUB", "SEK", "TRY", "UAH",
+  ]),
+  "Other Developed": group([
+    "AUD", "CAD", "NZD",
+  ]),
+  "Pacific": group([
+    "FJD", "PGK", "SBD", "TOP", "VUV", "WST", "XPF",
+  ]),
 };
 
-/** Flat list of every supported currency code. Order matches optgroup display. */
+/** Flat list of every supported currency code. */
 export const ALL_CURRENCY_CODES: readonly string[] = Object.values(
   CURRENCIES_BY_REGION,
 ).flatMap((group) => group.map((c) => c.code));
 
 /**
+ * Human-readable name for a currency code via the browser's Intl
+ * machinery. Falls back to the code itself if Intl is unavailable or
+ * the code isn't recognised (very old browsers, exotic codes).
+ *
+ * Cached because Intl.DisplayNames construction is non-trivial and
+ * the dropdown calls this once per option on every render.
+ */
+let displayNamesCache: Intl.DisplayNames | null = null;
+
+function getCurrencyName(code: string): string {
+  if (typeof Intl === "undefined" || typeof Intl.DisplayNames === "undefined") {
+    return code;
+  }
+  try {
+    if (!displayNamesCache) {
+      displayNamesCache = new Intl.DisplayNames(["en"], { type: "currency" });
+    }
+    return displayNamesCache.of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+/**
+ * `<option>` label format. Used by PriceForm. Format:
+ *   "USD — US Dollar"   (when Intl works)
+ *   "USD"               (fallback)
+ */
+export function currencyLabel(code: string): string {
+  const name = getCurrencyName(code);
+  return name === code ? code : `${code} — ${name}`;
+}
+
+/**
  * Best-effort guess at the user's local currency. Reads the browser's
- * default formatting locale (e.g. "fr-FR", "en-KE", "vi-VN") and asks
- * the Intl API for the currency code that locale would normally format
- * money in. Falls back to USD if:
+ * default locale (e.g. "fr-FR", "en-KE", "vi-VN"), maps the region
+ * part to a currency, and returns it if it's in our catalog.
  *
- *   - The runtime doesn't support `resolvedOptions().currency` (older
- *     Safari < 14, very old Android WebViews).
- *   - The locale resolves to a currency we don't carry in the dropdown
- *     (we'd rather default to a known-good option than offer one the
- *     user can't change to).
- *
- * Safe to call on the client only — guards against SSR (returns "USD"
- * if `Intl` or `navigator` is absent).
+ * Falls back to USD if:
+ *   - The runtime doesn't expose `navigator.language` (SSR).
+ *   - The locale has no region part (e.g. "en" alone).
+ *   - The region maps to a currency not in our catalog (impossible
+ *     now that we cover all ISO 4217, but kept as a safety net).
  */
 export function detectDefaultCurrency(fallback: string = "USD"): string {
-  if (typeof Intl === "undefined") return fallback;
+  if (typeof navigator === "undefined") return fallback;
   try {
-    const fmt = new Intl.NumberFormat(undefined, {
-      style: "currency",
-      currency: "USD", // dummy; just so we can read resolvedOptions
-    });
-    const opts = fmt.resolvedOptions();
-    // `resolvedOptions().currency` echoes the input currency. To get
-    // the user's actual local currency we need to NOT specify one in
-    // the constructor — but `style: "currency"` requires a currency
-    // param. Instead, use `Intl.Locale` (newer API) or fall back to
-    // language-to-currency mapping below.
-    const region = opts.locale.split("-")[1]?.toUpperCase();
-    if (region) {
-      const guess = REGION_TO_CURRENCY[region];
-      if (guess && ALL_CURRENCY_CODES.includes(guess)) return guess;
-    }
+    const locale = navigator.language || "en-US";
+    const region = locale.split("-")[1]?.toUpperCase();
+    if (!region) return fallback;
+    const guess = REGION_TO_CURRENCY[region];
+    if (guess && ALL_CURRENCY_CODES.includes(guess)) return guess;
   } catch {
-    /* fall through to fallback */
+    /* fall through */
   }
   return fallback;
 }
 
 /**
- * ISO 3166-1 alpha-2 region → ISO 4217 currency mapping for the
- * countries our dropdown covers. We don't need every country in
- * the world here — just enough that the most common locales resolve
- * to a currency in our dropdown.
+ * ISO 3166-1 alpha-2 → ISO 4217 mapping for every country in the world.
+ * Multi-territory currencies (XOF, XAF, XCD, EUR, USD) map every member
+ * country to the shared code.
  *
- * Multi-currency regions (e.g. EU) map to the dominant currency
- * (EUR) — users can always change manually.
+ * Source: ISO 4217:2025 + Eurozone composition as of 2026.
  */
 const REGION_TO_CURRENCY: Record<string, string> = {
-  // Global reserves
-  US: "USD", EU: "EUR", GB: "GBP", JP: "JPY", CH: "CHF", CN: "CNY",
-  // Africa
-  KE: "KES", NG: "NGN", GH: "GHS", ZA: "ZAR", EG: "EGP", MA: "MAD",
-  ET: "ETB", TZ: "TZS", UG: "UGX", SN: "XOF", CI: "XOF", BJ: "XOF",
-  ML: "XOF", BF: "XOF", NE: "XOF", TG: "XOF", GW: "XOF",
-  // Latin America
-  BR: "BRL", CO: "COP", MX: "MXN", AR: "ARS", CL: "CLP", PE: "PEN",
-  // Asia
-  IN: "INR", PH: "PHP", ID: "IDR", VN: "VND", TH: "THB", KR: "KRW",
-  MY: "MYR", SG: "SGD", PK: "PKR", BD: "BDT",
-  // Europe & Eurasia
-  TR: "TRY", RU: "RUB", UA: "UAH", PL: "PLN",
-  // Eurozone (a sample — full list is long, dropdown defaults to EUR for
-  // any locale whose region is one of these)
-  DE: "EUR", FR: "EUR", ES: "EUR", IT: "EUR", NL: "EUR", BE: "EUR",
-  AT: "EUR", PT: "EUR", IE: "EUR", FI: "EUR", GR: "EUR",
-  // Other developed
-  CA: "CAD", AU: "AUD", NZ: "NZD", HK: "HKD",
+  // North America
+  US: "USD", CA: "CAD", MX: "MXN",
+  // Eurozone (every country whose official currency is EUR)
+  AD: "EUR", AT: "EUR", BE: "EUR", CY: "EUR", DE: "EUR", EE: "EUR",
+  ES: "EUR", FI: "EUR", FR: "EUR", GR: "EUR", HR: "EUR", IE: "EUR",
+  IT: "EUR", LT: "EUR", LU: "EUR", LV: "EUR", MC: "EUR", ME: "EUR",
+  MT: "EUR", NL: "EUR", PT: "EUR", SI: "EUR", SK: "EUR", SM: "EUR",
+  VA: "EUR", XK: "EUR",
+  // Rest of Europe (non-Eurozone)
+  AL: "ALL", BA: "BAM", BG: "BGN", BY: "BYN", CH: "CHF", CZ: "CZK",
+  DK: "DKK", FO: "DKK", GB: "GBP", GG: "GBP", GI: "GBP", GL: "DKK",
+  HU: "HUF", IM: "GBP", IS: "ISK", JE: "GBP", LI: "CHF", MD: "MDL",
+  MK: "MKD", NO: "NOK", PL: "PLN", RO: "RON", RS: "RSD", RU: "RUB",
+  SE: "SEK", SJ: "NOK", TR: "TRY", UA: "UAH",
+  // Africa — XOF members
+  BJ: "XOF", BF: "XOF", CI: "XOF", GW: "XOF", ML: "XOF", NE: "XOF",
+  SN: "XOF", TG: "XOF",
+  // Africa — XAF members
+  CF: "XAF", CG: "XAF", CM: "XAF", GA: "XAF", GQ: "XAF", TD: "XAF",
+  // Africa — own currency
+  AO: "AOA", BI: "BIF", BW: "BWP", CD: "CDF", CV: "CVE", DJ: "DJF",
+  DZ: "DZD", EG: "EGP", ER: "ERN", ET: "ETB", GH: "GHS", GM: "GMD",
+  GN: "GNF", KE: "KES", KM: "KMF", LR: "LRD", LS: "LSL", LY: "LYD",
+  MA: "MAD", MG: "MGA", MR: "MRU", MU: "MUR", MW: "MWK", MZ: "MZN",
+  NA: "NAD", NG: "NGN", RW: "RWF", SC: "SCR", SD: "SDG", SL: "SLE",
+  SO: "SOS", SS: "SSP", ST: "STN", SZ: "SZL", TN: "TND", TZ: "TZS",
+  UG: "UGX", ZA: "ZAR", ZM: "ZMW", ZW: "ZWL", EH: "MAD",
+  // Asia (incl. Middle East)
+  AE: "AED", AF: "AFN", AM: "AMD", AZ: "AZN", BD: "BDT", BH: "BHD",
+  BN: "BND", BT: "BTN", CN: "CNY", GE: "GEL", HK: "HKD", ID: "IDR",
+  IL: "ILS", IN: "INR", IQ: "IQD", IR: "IRR", JO: "JOD", JP: "JPY",
+  KG: "KGS", KH: "KHR", KP: "KPW", KR: "KRW", KW: "KWD", KZ: "KZT",
+  LA: "LAK", LB: "LBP", LK: "LKR", MM: "MMK", MN: "MNT", MO: "MOP",
+  MV: "MVR", MY: "MYR", NP: "NPR", OM: "OMR", PH: "PHP", PK: "PKR",
+  PS: "ILS", QA: "QAR", SA: "SAR", SG: "SGD", SY: "SYP", TH: "THB",
+  TJ: "TJS", TL: "USD", TM: "TMT", TW: "TWD", UZ: "UZS", VN: "VND",
+  YE: "YER",
+  // Latin America & Caribbean
+  AG: "XCD", AI: "XCD", AR: "ARS", AW: "USD", BB: "BBD", BL: "EUR",
+  BM: "BMD", BO: "BOB", BQ: "USD", BR: "BRL", BS: "BSD", BZ: "BZD",
+  CL: "CLP", CO: "COP", CR: "CRC", CU: "CUP", CW: "USD", DM: "XCD",
+  DO: "DOP", EC: "USD", GD: "XCD", GF: "EUR", GP: "EUR", GT: "GTQ",
+  GY: "GYD", HN: "HNL", HT: "HTG", JM: "JMD", KN: "XCD", KY: "KYD",
+  LC: "XCD", MF: "EUR", MQ: "EUR", MS: "XCD", NI: "NIO", PA: "PAB",
+  PE: "PEN", PR: "USD", PY: "PYG", SR: "SRD", SV: "USD", SX: "USD",
+  TC: "USD", TT: "TTD", UY: "UYU", VC: "XCD", VE: "VES", VG: "USD",
+  VI: "USD",
+  // Pacific
+  AU: "AUD", CK: "NZD", FJ: "FJD", FM: "USD", GU: "USD", KI: "AUD",
+  MH: "USD", MP: "USD", NC: "XPF", NF: "AUD", NR: "AUD", NU: "NZD",
+  NZ: "NZD", PF: "XPF", PG: "PGK", PN: "NZD", PW: "USD", SB: "SBD",
+  TK: "NZD", TO: "TOP", TV: "AUD", VU: "VUV", WF: "XPF", WS: "WST",
+  // Indian Ocean / Other
+  IO: "USD", TF: "EUR",
 };

@@ -10,6 +10,7 @@ import { useSubmitPrice } from "@/hooks/useSubmitPrice";
 import {
   ALL_CURRENCY_CODES,
   CURRENCIES_BY_REGION,
+  currencyLabel,
   detectDefaultCurrency,
 } from "@/lib/currencies";
 import {
@@ -211,7 +212,7 @@ export function PriceForm({ barcode, onCancel }: PriceFormProps) {
               <optgroup key={region} label={region}>
                 {options.map((c) => (
                   <option key={c.code} value={c.code}>
-                    {c.code} — {c.name}
+                    {currencyLabel(c.code)}
                   </option>
                 ))}
               </optgroup>
