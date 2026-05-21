@@ -12,23 +12,11 @@ import { UserBalance } from "@/components/user-balance";
 export default function Home() {
   return (
     <main className="flex-1">
-      {/* HERO — split dashboard layout */}
-      <section className="relative overflow-hidden border-b">
-        {/* Subtle grid backdrop */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
-          }}
-        />
-        {/* Cyan glow */}
-        <div
-          aria-hidden="true"
-          className="absolute -top-32 right-[-10%] -z-10 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl"
-        />
+      {/* HERO — split dashboard layout.
+          MINIMAL §UX — "Zero decorative elements": grid backdrop +
+          blob glow removed. The page now relies entirely on
+          typography + content rhythm for hierarchy. */}
+      <section className="relative border-b">
 
         <div className="container mx-auto grid max-w-6xl gap-12 px-4 py-16 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:py-20">
           {/* Left — copy + live stats */}
@@ -61,11 +49,7 @@ export default function Home() {
             <HeroStats />
 
             <div className="flex flex-col items-start gap-3 sm:flex-row">
-              <Button
-                asChild
-                size="lg"
-                className="shadow-[0_0_24px_-4px_hsl(var(--primary)/0.35)]"
-              >
+              <Button asChild size="lg">
                 <Link href="/scan">
                   <Camera className="mr-2 h-4 w-4" />
                   Add a price
@@ -83,17 +67,12 @@ export default function Home() {
           </div>
 
           {/* Right — Live country ranking.
-              Replaced the static brand basket SVG with a real data
-              widget: cheapest → most expensive countries for a
-              comparable 3-product core basket (bread + milk +
-              transit), with a USD/EUR toggle. The brand signal is
-              already carried by the navbar logo + favicon + OG, so
-              hero-right is freed up for the actual product. */}
+              Real-data widget: cheapest → most expensive countries
+              for a comparable 3-product core basket, with USD/EUR
+              toggle. Decorative blur-glow removed per MINIMAL —
+              the widget's own visible structure carries enough
+              presence; we don't need ambient atmosphere underneath. */}
           <div className="relative">
-            <div
-              aria-hidden="true"
-              className="absolute -inset-4 -z-10 rounded-2xl bg-primary/10 blur-3xl"
-            />
             <HeroLiveRankingServer />
           </div>
         </div>

@@ -60,7 +60,7 @@ export function ConnectButton() {
                     onClick={openConnectModal}
                     whileHover={{ y: -1 }}
                     whileTap={{ scale: 0.97 }}
-                    className="group inline-flex items-center gap-2 rounded-sm border border-primary/40 bg-primary/5 px-3.5 py-1.5 font-mono text-xs uppercase tracking-[0.18em] text-primary shadow-[0_0_18px_-6px_hsl(var(--primary)/0.5)] transition hover:bg-primary/10 hover:shadow-[0_0_24px_-6px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    className="group inline-flex items-center gap-2 rounded-sm border border-primary/40 bg-primary/5 px-3.5 py-1.5 font-mono text-xs uppercase tracking-[0.18em] text-primary transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     <Plug
                       aria-hidden="true"
@@ -92,7 +92,7 @@ export function ConnectButton() {
                     type="button"
                     onClick={openChainModal}
                     whileTap={{ scale: 0.97 }}
-                    className="inline-flex items-center gap-2 border-r border-primary/20 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/80 transition hover:bg-primary/10 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="inline-flex items-center gap-2 border-r border-primary/20 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/80 transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     aria-label={`Switch network (current: ${chain.name})`}
                   >
                     <span aria-hidden="true" className="relative inline-flex">
@@ -106,7 +106,7 @@ export function ConnectButton() {
                     type="button"
                     onClick={openAccountModal}
                     whileTap={{ scale: 0.97 }}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 font-mono text-[11px] text-foreground transition hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 font-mono text-[11px] text-foreground transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     aria-label="Account details"
                   >
                     <span className="font-numeric tracking-tight">
