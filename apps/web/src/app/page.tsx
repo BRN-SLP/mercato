@@ -142,8 +142,8 @@ export default function Home() {
               <CardContent className="text-sm text-muted-foreground">
                 Choose a product from the basket, choose your country,
                 type the price you paid. Optional receipt photo. One
-                on-chain transaction — gas in cUSD if your wallet
-                supports it.
+                on-chain transaction, with the network fee paid in cUSD
+                if your wallet supports it.
               </CardContent>
             </Card>
           </RevealOnScroll>

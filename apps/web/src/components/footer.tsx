@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Github } from "lucide-react";
+import { Github, LifeBuoy } from "lucide-react";
 import { useChainId } from "wagmi";
 import { celo, celoSepolia } from "wagmi/chains";
 
 const VERSION = "0.2.0-alpha";
 const REPO_URL = "https://github.com/BRN-SLP/mercato";
+const SUPPORT_URL = "https://github.com/BRN-SLP/mercato/issues";
 
 export function Footer() {
   const chainId = useChainId();
@@ -19,7 +20,8 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-background/60 backdrop-blur">
-      <div className="container mx-auto flex max-w-screen-2xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="container mx-auto flex max-w-screen-2xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+        {/* Brand + version */}
         <div className="flex flex-col gap-1 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
           <span className="font-semibold text-foreground">Mercato</span>
           <span>
@@ -27,6 +29,31 @@ export function Footer() {
           </span>
         </div>
 
+        {/* Trust links — Terms, Privacy, Support. Required for MiniPay
+            listing (legal accessibility + dedicated support channel)
+            and a baseline premium-web-design footer convention. */}
+        <nav
+          aria-label="Legal and support"
+          className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground"
+        >
+          <Link href="/legal/terms" className="hover:text-foreground">
+            Terms
+          </Link>
+          <Link href="/legal/privacy" className="hover:text-foreground">
+            Privacy
+          </Link>
+          <Link
+            href={SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 hover:text-foreground"
+          >
+            <LifeBuoy className="h-3.5 w-3.5" aria-hidden="true" />
+            <span>Support</span>
+          </Link>
+        </nav>
+
+        {/* Network + repo */}
         <div className="flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.16em]">
           <span className="inline-flex items-center gap-2">
             <span
