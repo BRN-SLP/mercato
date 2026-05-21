@@ -2,10 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useChainId } from "wagmi";
-
-import { usePriceFeed } from "@/hooks/usePriceFeed";
-import { zoneKeyToCountry } from "@/lib/encode";
 
 /**
  * Live stats for the hero — one editorial sentence, three numbers.
@@ -16,29 +12,19 @@ import { zoneKeyToCountry } from "@/lib/encode";
  *
  * The replacement reads like a newspaper byline: tabular numerals
  * carry the data weight, mono-uppercase labels space them, the whole
- * line sits inline with the rest of the hero copy. Same three
- * numbers, none of the "metric grid" baggage.
+ * line sits inline with the rest of the hero copy.
  *
- * Three numbers chosen:
- *   - finalized = prices the consensus engine has fully accepted
- *   - countries = distinct countries with ≥ 1 finalized price
- *   - pending   = submissions still waiting on a vote (so the
- *                 visitor sees there's live work to do, which is
- *                 the conversion driver to /scan)
+ * Counts are pre-computed on the server (see `HeroStatsServer`) and
+ * passed in as plain props so the hero ships pre-filled — no
+ * mount-time RPC, no layout shift.
  */
-export function HeroStats() {
-  const chainId = useChainId();
-  const { records } = usePriceFeed(chainId);
+interface HeroStatsProps {
+  finalized: number;
+  countries: number;
+  pending: number;
+}
 
-  const finalized = records.filter((r) => r.finalized && r.accepted).length;
-  const countries = new Set(
-    records
-      .filter((r) => r.finalized && r.accepted)
-      .map((r) => zoneKeyToCountry(r.zoneKey))
-      .filter(Boolean),
-  ).size;
-  const pending = records.filter((r) => !r.finalized).length;
-
+export function HeroStats({ finalized, countries, pending }: HeroStatsProps) {
   return (
     <motion.p
       initial={{ opacity: 0, y: 8 }}
@@ -86,16 +72,24 @@ function Bullet() {
  * Count-up number animation respecting prefers-reduced-motion. Same
  * easeOutCubic curve the page already uses elsewhere so the hero
  * has one motion vocabulary.
+ *
+ * SSR-safe: initial display matches the server-rendered HTML
+ * (`value`), then on first client paint we either keep it (reduced
+ * motion) or kick the count-up from 0. The first frame still reads
+ * the final number, but the animation effect takes over before the
+ * browser paints — so no visual flash even though the HTML and
+ * client render briefly disagree.
  */
 function CountUp({ value, subdued }: { value: number; subdued: boolean }) {
   const prefersReduced = useReducedMotion();
-  const [display, setDisplay] = useState(prefersReduced ? value : 0);
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     if (prefersReduced) {
       setDisplay(value);
       return;
     }
+    setDisplay(0);
     let raf: number;
     const start = performance.now();
     const duration = 1400;
