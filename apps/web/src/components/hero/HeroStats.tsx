@@ -1,8 +1,3 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
-
 /**
  * Live stats for the hero — one editorial sentence, three numbers.
  *
@@ -17,6 +12,12 @@ import { useEffect, useState } from "react";
  * Counts are pre-computed on the server (see `HeroStatsServer`) and
  * passed in as plain props so the hero ships pre-filled — no
  * mount-time RPC, no layout shift.
+ *
+ * The entrance fade-from-below was removed: SSR already shows the
+ * final numbers, so animating from `y: 8` to `y: 0` on hydration
+ * just makes the hero feel like it's bouncing into place. The
+ * count-up animation inside `CountUp` is still optional — kicks in
+ * once on mount, respects prefers-reduced-motion.
  */
 interface HeroStatsProps {
   finalized: number;
@@ -26,18 +27,13 @@ interface HeroStatsProps {
 
 export function HeroStats({ finalized, countries, pending }: HeroStatsProps) {
   return (
-    <motion.p
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="flex flex-wrap items-baseline gap-x-5 gap-y-2 border-y border-primary/15 py-4"
-    >
+    <p className="flex flex-wrap items-baseline gap-x-5 gap-y-2 border-y border-primary/15 py-4">
       <Stat n={finalized} label="prices verified" />
       <Bullet />
       <Stat n={countries} label="countries live" />
       <Bullet />
       <Stat n={pending} label="awaiting peer vote" subdued={pending === 0} />
-    </motion.p>
+    </p>
   );
 }
 
@@ -52,7 +48,13 @@ function Stat({
 }) {
   return (
     <span className="inline-flex items-baseline gap-2">
-      <CountUp value={n} subdued={subdued} />
+      <span
+        className={`font-serif text-3xl font-semibold tabular-nums tracking-tight ${
+          subdued ? "text-muted-foreground/70" : "text-foreground"
+        }`}
+      >
+        {n.toLocaleString()}
+      </span>
       <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
         {label}
       </span>
@@ -68,48 +70,7 @@ function Bullet() {
   );
 }
 
-/**
- * Count-up number animation respecting prefers-reduced-motion. Same
- * easeOutCubic curve the page already uses elsewhere so the hero
- * has one motion vocabulary.
- *
- * SSR-safe: initial display matches the server-rendered HTML
- * (`value`), then on first client paint we either keep it (reduced
- * motion) or kick the count-up from 0. The first frame still reads
- * the final number, but the animation effect takes over before the
- * browser paints — so no visual flash even though the HTML and
- * client render briefly disagree.
- */
-function CountUp({ value, subdued }: { value: number; subdued: boolean }) {
-  const prefersReduced = useReducedMotion();
-  const [display, setDisplay] = useState(value);
-
-  useEffect(() => {
-    if (prefersReduced) {
-      setDisplay(value);
-      return;
-    }
-    setDisplay(0);
-    let raf: number;
-    const start = performance.now();
-    const duration = 1400;
-    const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      setDisplay(Math.round(eased * value));
-      if (t < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [value, prefersReduced]);
-
-  return (
-    <span
-      className={`font-serif text-3xl font-semibold tabular-nums tracking-tight ${
-        subdued ? "text-muted-foreground/70" : "text-foreground"
-      }`}
-    >
-      {display.toLocaleString()}
-    </span>
-  );
-}
+/* CountUp was removed: the animation re-kicked the digits back to 0
+ * on hydration and counted up to the SSR value, which read as the
+ * hero "jumping" into place every page load. SSR already paints the
+ * final numbers — that's enough. */
