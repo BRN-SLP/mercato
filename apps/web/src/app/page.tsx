@@ -46,22 +46,27 @@ export default function Home() {
           {/* Left — copy + live stats */}
           <div className="space-y-7">
             <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              <span>live · celo sepolia</span>
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+              <span>live · celo mainnet</span>
             </div>
 
-            <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-              The on-chain
+            {/* The hero answers Pillar 1 of the premium-web-design
+                checklist above the fold: WHAT (cost-of-living index),
+                FOR WHOM (anyone, anywhere), WHY TRUST (on-chain,
+                peer-verified, open data). Each phrase pulls one of the
+                three. */}
+            <h1 className="font-serif text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+              The price of
               <br />
-              <span className="text-primary">price index</span>
+              <span className="italic text-primary">everyday life,</span>
               <br />
-              for everyday goods.
+              measured by everyone.
             </h1>
 
             <p className="max-w-md text-sm text-muted-foreground md:text-base">
-              Scan a barcode. Type the price you paid. Other shoppers in your
-              zone verify. Three matching votes finalize the median — and
-              everyone involved earns cUSD micro-rewards.
+              Mercato is a community-built cost-of-living index. Anyone, in any
+              country, submits a local price for bread, rent, transport,
+              utilities. Peers verify on-chain. Everyone involved earns cUSD.
             </p>
 
             {/* Stats */}
@@ -71,11 +76,11 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="shadow-[0_0_24px_-4px_hsl(var(--primary)/0.45)]"
+                className="shadow-[0_0_24px_-4px_hsl(var(--primary)/0.35)]"
               >
                 <Link href="/scan">
                   <Camera className="mr-2 h-4 w-4" />
-                  Scan a price
+                  Add a price
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
