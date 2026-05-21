@@ -86,71 +86,107 @@ function CountryIndex({ baskets }: { baskets: readonly CountryBasket[] }) {
         </p>
       </header>
 
-      <div className="overflow-hidden rounded-md border border-border/60">
-        <table className="w-full text-sm">
-          <thead className="bg-muted/40 text-left font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            <tr>
-              <th scope="col" className="px-4 py-3 font-normal">
-                Country
-              </th>
-              <th scope="col" className="px-4 py-3 text-right font-normal">
-                Coverage
-              </th>
-              <th scope="col" className="px-4 py-3 text-right font-normal">
-                Basket total
-              </th>
-              <th scope="col" className="px-4 py-3" aria-hidden="true" />
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-border/60">
-            {ranked.map((basket) => (
-              <CountryRow key={basket.country.code} basket={basket} />
-            ))}
-          </tbody>
-        </table>
+      {/* Column header strip — sits OUTSIDE the row container so the
+          row list reads as a divider-rhythm chart, not a primitive
+          table-in-a-box. */}
+      <div className="grid grid-cols-[3rem_1fr_8rem_auto] items-baseline gap-x-6 border-b border-border/60 px-3 pb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+        <span aria-hidden="true">№</span>
+        <span>Country</span>
+        <span className="text-right">Coverage</span>
+        <span className="text-right">Basket total</span>
       </div>
+
+      <ol className="divide-y divide-border/60 border-b border-border/60">
+        {ranked.map((basket, i) => (
+          <CountryRow
+            key={basket.country.code}
+            basket={basket}
+            rank={i + 1}
+          />
+        ))}
+      </ol>
     </main>
   );
 }
 
-function CountryRow({ basket }: { basket: CountryBasket }) {
+function CountryRow({
+  basket,
+  rank,
+}: {
+  basket: CountryBasket;
+  rank: number;
+}) {
   const hasData = basket.coverage > 0;
   const total = formatMajor(basket.totalLocalCents);
+  const coveragePct = Math.max(
+    hasData ? 4 : 0,
+    (basket.coverage / PRODUCTS.length) * 100,
+  );
+
   return (
-    <tr className={hasData ? "transition hover:bg-muted/30" : "opacity-60"}>
-      <td className="px-4 py-4">
-        <Link
-          href={`/basket?country=${basket.country.code}`}
-          className="inline-flex items-center gap-3 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-        >
-          <span className="text-2xl leading-none" aria-hidden="true">
-            {basket.country.flag}
-          </span>
-          <span className="font-medium">{basket.country.name}</span>
-          <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+    <li className={hasData ? "group" : "opacity-50"}>
+      <Link
+        href={`/basket?country=${basket.country.code}`}
+        className="grid grid-cols-[3rem_1fr_8rem_auto] items-center gap-x-6 px-3 py-4 transition hover:bg-primary/[0.04] focus-visible:bg-primary/[0.06] focus-visible:outline-none"
+        aria-label={`${basket.country.name}: ${basket.coverage} of ${PRODUCTS.length} products priced`}
+      >
+        {/* Rank */}
+        <span className="font-mono text-[11px] tabular-nums text-muted-foreground">
+          {String(rank).padStart(2, "0")}
+        </span>
+
+        {/* Code pill + country name */}
+        <span className="flex min-w-0 items-center gap-3">
+          <span
+            aria-hidden="true"
+            className="inline-flex h-7 w-10 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-[10px] font-semibold tracking-[0.18em] text-foreground/80 group-hover:border-primary/50 group-hover:text-primary"
+          >
             {basket.country.code}
           </span>
-        </Link>
-      </td>
-      <td className="px-4 py-4 text-right font-mono tabular-nums">
-        {basket.coverage}/{PRODUCTS.length}
-      </td>
-      <td className="px-4 py-4 text-right font-mono tabular-nums">
-        {hasData ? (
-          <>
-            {total}{" "}
-            <span className="text-xs text-muted-foreground">
-              {basket.country.currency}
-            </span>
-          </>
-        ) : (
-          <span className="text-muted-foreground">—</span>
-        )}
-      </td>
-      <td className="px-4 py-4 text-right text-xs text-muted-foreground">
-        {hasData ? "View →" : "Be first →"}
-      </td>
-    </tr>
+          <span className="truncate font-medium">{basket.country.name}</span>
+        </span>
+
+        {/* Coverage with thin progress underline */}
+        <span className="flex items-center justify-end gap-2 font-mono text-xs tabular-nums">
+          <span
+            aria-hidden="true"
+            className="relative h-px w-16 bg-border/50"
+          >
+            <span
+              className="absolute inset-y-0 left-0 -top-px h-[3px] bg-primary/70 group-hover:bg-primary"
+              style={{ width: `${coveragePct}%` }}
+            />
+          </span>
+          <span className="text-muted-foreground">
+            {basket.coverage}/{PRODUCTS.length}
+          </span>
+        </span>
+
+        {/* Basket total + affordance hint */}
+        <span className="flex flex-col items-end gap-0.5 text-right font-mono tabular-nums">
+          {hasData ? (
+            <>
+              <span className="text-sm font-semibold">
+                {total}{" "}
+                <span className="text-[10px] font-normal uppercase tracking-wider text-muted-foreground">
+                  {basket.country.currency}
+                </span>
+              </span>
+              <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                view →
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-sm text-muted-foreground">—</span>
+              <span className="text-[10px] uppercase tracking-wider text-primary/80">
+                be first →
+              </span>
+            </>
+          )}
+        </span>
+      </Link>
+    </li>
   );
 }
 
@@ -173,18 +209,24 @@ function CountryDetail({ basket }: { basket: CountryBasket }) {
         Back to index
       </Link>
 
-      <header className="mb-10 space-y-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
-          {basket.country.code} · {basket.country.currency}
-        </p>
-        <div className="flex items-baseline gap-3">
-          <span className="text-5xl leading-none" aria-hidden="true">
-            {basket.country.flag}
+      <header className="mb-10 space-y-4">
+        <div className="flex items-center gap-3">
+          {/* Country code as primary identifier — the mono caps pill
+              carries the brand register and replaces the previous
+              giant emoji flag. */}
+          <span
+            aria-hidden="true"
+            className="inline-flex h-12 w-16 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-base font-semibold tracking-[0.2em] text-foreground/80"
+          >
+            {basket.country.code}
           </span>
-          <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
-            {basket.country.nameLocal ?? basket.country.name}
-          </h1>
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
+            {basket.country.currency} · cost-of-living
+          </p>
         </div>
+        <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
+          {basket.country.nameLocal ?? basket.country.name}
+        </h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
           Median basket total of{" "}
           <strong>
