@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ShoppingBasket } from "lucide-react";
 
 import { getBasketSnapshot, type CountryBasket } from "@/lib/aggregate";
+import { formatMajor } from "@/lib/format-cents";
 import { PRODUCTS } from "@/lib/products";
 
 /**
@@ -204,20 +205,3 @@ function BasketEmptyState() {
   );
 }
 
-/**
- * Format a price-cents BigInt to a major-unit string with up to 2
- * decimal places, grouping thousands. Output examples:
- *   1_234_500n → "12 345"
- *   1_234_567n → "12 345.67"
- *   123n       → "1.23"
- * Uses thin-space grouping (U+202F) which renders cleanly in most
- * languages and matches the editorial-mono feel of the dashboard.
- */
-function formatMajor(cents: bigint): string {
-  if (cents === 0n) return "0";
-  const major = cents / 100n;
-  const remainder = cents % 100n;
-  const grouped = major.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  if (remainder === 0n) return grouped;
-  return `${grouped}.${remainder.toString().padStart(2, "0")}`;
-}

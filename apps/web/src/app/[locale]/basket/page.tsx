@@ -12,6 +12,7 @@ import {
   type CountryBasket,
   type ProductPriceSummary,
 } from "@/lib/aggregate";
+import { formatMajor } from "@/lib/format-cents";
 import { CATEGORY_LABELS, PRODUCTS, type ProductCategory } from "@/lib/products";
 
 /**
@@ -336,17 +337,3 @@ function EmptyState() {
   );
 }
 
-/**
- * Format a price-cents BigInt to a major-unit string with up to 2
- * decimal places, thin-space-grouped thousands. Mirrors the helper
- * in components/landing/CountryBasketPreview.tsx; kept duplicated
- * for now to keep the page self-contained.
- */
-function formatMajor(cents: bigint): string {
-  if (cents === 0n) return "0";
-  const major = cents / 100n;
-  const remainder = cents % 100n;
-  const grouped = major.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  if (remainder === 0n) return grouped;
-  return `${grouped}.${remainder.toString().padStart(2, "0")}`;
-}
