@@ -31,6 +31,10 @@ import { unstable_cache } from "next/cache";
 import { createPublicClient, http, type PublicClient } from "viem";
 import { celo, celoSepolia } from "viem/chains";
 
+import {
+  priceCentsFromChain,
+  timestampFromChain,
+} from "./chain-boundary";
 import { ADDRESSES, priceOracleAbi } from "./contracts";
 import {
   COUNTRIES,
@@ -40,11 +44,17 @@ import {
 import { productSlugToBarcode, zoneKeyToCountry } from "./encode";
 import { PRODUCTS, getProductBySlug, type Product } from "./products";
 
-/** Median price for a single product in a single country. */
+/**
+ * Median price for a single product in a single country.
+ *
+ * Note: cent values are `number`, not `bigint`. See `chain-boundary.ts`
+ * for the rationale — max realistic price ≈ 10^8 cents, well within
+ * `Number.MAX_SAFE_INTEGER` (~9 × 10^15).
+ */
 export interface ProductPriceSummary {
   product: Product;
   /** Median price in the country's local currency, expressed in cents. */
-  medianCents: bigint;
+  medianCents: number;
   /** Number of accepted submissions feeding this median. */
   sampleSize: number;
   /** Block timestamp (seconds) of the most recent contributing submission. */
@@ -55,7 +65,7 @@ export interface ProductPriceSummary {
 export interface CountryBasket {
   country: Country;
   /** Sum of medianCents across all products with at least one submission. */
-  totalLocalCents: bigint;
+  totalLocalCents: number;
   /** Number of products with >= 1 submission (max = PRODUCTS.length). */
   coverage: number;
   /** Most recent contributing submission's block timestamp. */
@@ -104,23 +114,25 @@ const BARCODE_TO_PRODUCT: ReadonlyMap<string, Product> = new Map(
 interface RawSubmission {
   product: Product;
   country: Country;
-  priceCents: bigint;
+  priceCents: number;
   blockTimestamp: number;
 }
 
-/** Median of an array of bigints. Modifies a copy, not the input. */
-function median(values: readonly bigint[]): bigint {
-  if (values.length === 0) return 0n;
-  const sorted = [...values].sort((a, b) =>
-    a < b ? -1 : a > b ? 1 : 0,
-  );
+/** Median of an array of numbers. Modifies a copy, not the input.
+ *  Result is rounded to an integer (we work in cents — sub-cent
+ *  precision is meaningless for a consumer-price index). */
+function median(values: readonly number[]): number {
+  if (values.length === 0) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
   const mid = Math.floor(sorted.length / 2);
   if (sorted.length % 2 === 0) {
-    return (sorted[mid - 1] + sorted[mid]) / 2n;
+    return Math.round((sorted[mid - 1] + sorted[mid]) / 2);
   }
   return sorted[mid];
 }
 
+/** Block-count lookback for event scanning. Stays `bigint` because
+ *  it's used directly with viem's `getBlockNumber()` / `fromBlock`. */
 const LOOKBACK_BLOCKS = 1_000_000n;
 
 /**
@@ -178,12 +190,13 @@ const fetchBasketSnapshot = unstable_cache(
         if (!countryCode) return [];
         const country = getCountryByCode(countryCode);
         if (!country) return [];
+        // Chain boundary: bigint → number for cents + timestamp.
         return [
           {
             product,
             country,
-            priceCents,
-            blockTimestamp: Number(timestamp ?? 0n),
+            priceCents: priceCentsFromChain(priceCents),
+            blockTimestamp: timestampFromChain(timestamp),
           } satisfies RawSubmission,
         ];
       });
@@ -199,7 +212,10 @@ const fetchBasketSnapshot = unstable_cache(
       chainId,
     };
   },
-  ["mercato-basket-snapshot-v1"],
+  // v1 → v2: snapshot shape switched cent fields from bigint to
+  // number. v1 cache entries from any prior deploy are stale and
+  // would deserialize as objects with string-coerced bigints.
+  ["mercato-basket-snapshot-v2"],
   { revalidate: 60, tags: ["basket"] },
 );
 
@@ -211,8 +227,8 @@ const fetchBasketSnapshot = unstable_cache(
 function aggregateByCountry(
   submissions: readonly RawSubmission[],
 ): CountryBasket[] {
-  // First bucket by countryCode → productSlug → bigint[]
-  const byCountry: Map<string, Map<string, bigint[]>> = new Map();
+  // First bucket by countryCode → productSlug → number[]
+  const byCountry: Map<string, Map<string, number[]>> = new Map();
   const lastSeen: Map<string, Map<string, number>> = new Map();
 
   for (const sub of submissions) {
@@ -245,8 +261,8 @@ function aggregateByCountry(
       };
     });
     const totalLocalCents = prices.reduce(
-      (acc, p) => acc + (p.sampleSize > 0 ? p.medianCents : 0n),
-      0n,
+      (acc, p) => acc + (p.sampleSize > 0 ? p.medianCents : 0),
+      0,
     );
     const coverage = prices.filter((p) => p.sampleSize > 0).length;
     const lastUpdated = prices.reduce(
