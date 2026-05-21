@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "basket": "Canasta",
+    "submit": "Aportar",
+    "rewards": "Recompensas",
+    "menu": "Menú",
+    "logoAria": "Mercato — inicio"
+  },
+  "hero": {
+    "liveBadge": "live · celo mainnet",
+    "title1": "El precio de",
+    "title2": "la vida cotidiana,",
+    "title3": "medido por todos.",
+    "subtitle": "Mercato es un índice de costo de vida construido por la comunidad. Cualquiera, en cualquier país, aporta un precio local de pan, alquiler, transporte, servicios. Los pares verifican on-chain. Todos los involucrados ganan cUSD.",
+    "cta_addPrice": "Aportar un precio",
+    "cta_myRewards": "Mis recompensas",
+    "stats": {
+      "verified": "precios verificados",
+      "countries": "países activos",
+      "pending": "esperando votación"
+    }
+  },
+  "howItWorks": {
+    "section": "Cómo funciona",
+    "title1": "Tres pasos.",
+    "title2": "Una transacción.",
+    "step1Title": "Elige el producto, escribe el precio.",
+    "step1Body": "Elige un producto de la canasta, selecciona tu país, escribe el precio que realmente pagaste. Foto del recibo es opcional. Una transacción on-chain; la comisión de red se paga en cUSD si tu billetera lo permite.",
+    "step2Title": "Tres pares dicen",
+    "step2TitleAccent": "sí.",
+    "step2Body": "Otros contribuyentes del mismo país votan ✓ o ✗ sobre las aportaciones pendientes. Tres síes coincidentes finalizan el precio y desbloquean recompensas para todos los involucrados.",
+    "step3Title": "Retira tus recompensas en cUSD.",
+    "step3Body": "Las micro-recompensas se acumulan por cada aportación aceptada y cada verificación que emitas sobre la de otra persona. Retira el saldo a MiniPay o cualquier billetera Celo en una sola operación — cuando quieras, sin mínimo."
+  },
+  "basketPreview": {
+    "section": "La canasta hasta ahora",
+    "title1": "Dónde el índice está",
+    "titleAccent": "ya vivo.",
+    "subtitle": "Cada barra mide cuánto de la canasta de {total} productos tiene al menos un precio verificado en ese país. Toca una fila para ver el desglose completo.",
+    "seeFull": "Ver índice completo",
+    "basketSum": "total canasta",
+    "empty": {
+      "section": "La canasta está vacía",
+      "title1": "Ningún país tiene precios",
+      "titleAccent": "todavía.",
+      "body": "Mercato arranca en cero. Sé el primero en aportar un precio en tu país — el resto de la canasta se construye sola.",
+      "cta": "Aportar un precio"
+    }
+  },
+  "feed": {
+    "section": "Actividad",
+    "title": "Aportaciones recientes",
+    "loading": "Cargando actividad…",
+    "emptyTitle": "Actividad en silencio",
+    "emptyBody": "Aún no hay aportaciones a Mercato.",
+    "emptyCta": "Aportar el primer precio →",
+    "accepted": "✓ aceptado",
+    "rejected": "✗ rechazado",
+    "pending": "pendiente · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Ranking en vivo de países",
+    "title": "Pan · leche · transporte",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Índice completo",
+    "buildingTitle": "Ranking en vivo",
+    "buildingBody": "Construyendo la canasta comparable. En cuanto un país tenga precios de pan, leche y transporte, aparecerá aquí.",
+    "baseToggleAria": "Moneda base"
+  },
+  "footer": {
+    "version": "v{version} · mit · índice de costo de vida · celo",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "support": "Soporte",
+    "github": "github",
+    "networkUnsupported": "Red no soportada",
+    "legalAria": "Legal y soporte",
+    "githubAria": "Ver código fuente en GitHub"
+  },
+  "balance": {
+    "title": "Tus saldos"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "english": "English",
+    "ukrainian": "Українська",
+    "spanish": "Español",
+    "portugueseBR": "Português (BR)",
+    "german": "Deutsch",
+    "french": "Français"
+  }
+}

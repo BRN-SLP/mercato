@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "basket": "Panier",
+    "submit": "Soumettre",
+    "rewards": "Récompenses",
+    "menu": "Menu",
+    "logoAria": "Mercato — accueil"
+  },
+  "hero": {
+    "liveBadge": "live · celo mainnet",
+    "title1": "Le prix de",
+    "title2": "la vie quotidienne,",
+    "title3": "mesuré par tous.",
+    "subtitle": "Mercato est un indice du coût de la vie construit par la communauté. N'importe qui, dans n'importe quel pays, soumet un prix local pour le pain, le loyer, les transports, les factures. Les pairs vérifient on-chain. Tout le monde impliqué gagne du cUSD.",
+    "cta_addPrice": "Ajouter un prix",
+    "cta_myRewards": "Mes récompenses",
+    "stats": {
+      "verified": "prix vérifiés",
+      "countries": "pays actifs",
+      "pending": "en attente de vote"
+    }
+  },
+  "howItWorks": {
+    "section": "Comment ça marche",
+    "title1": "Trois choix.",
+    "title2": "Une transaction.",
+    "step1Title": "Choisis le produit, saisis le prix.",
+    "step1Body": "Choisis un produit dans le panier, sélectionne ton pays, saisis le prix que tu as réellement payé. Photo du ticket est optionnelle. Une transaction on-chain ; les frais de réseau sont payés en cUSD si ton portefeuille le permet.",
+    "step2Title": "Trois pairs disent",
+    "step2TitleAccent": "oui.",
+    "step2Body": "D'autres contributeurs du même pays votent ✓ ou ✗ sur les soumissions en attente. Trois oui concordants finalisent le prix et débloquent les récompenses pour toutes les personnes impliquées.",
+    "step3Title": "Récupère tes récompenses en cUSD.",
+    "step3Body": "Les micro-récompenses s'accumulent pour chaque soumission acceptée et chaque vérification que tu fais sur celle d'une autre personne. Transfère le solde sur MiniPay ou n'importe quel portefeuille Celo en une seule opération — quand tu veux, sans minimum."
+  },
+  "basketPreview": {
+    "section": "Le panier à ce jour",
+    "title1": "Où l'indice est",
+    "titleAccent": "déjà vivant.",
+    "subtitle": "Chaque barre mesure quelle part du panier de {total} produits a au moins un prix vérifié dans ce pays. Touche une ligne pour le détail complet.",
+    "seeFull": "Voir l'indice complet",
+    "basketSum": "total panier",
+    "empty": {
+      "section": "Le panier est vide",
+      "title1": "Aucun pays n'a encore",
+      "titleAccent": "de prix.",
+      "body": "Mercato démarre à zéro. Sois le premier à ajouter un prix dans ton pays — le reste du panier se construit tout seul.",
+      "cta": "Ajouter un prix"
+    }
+  },
+  "feed": {
+    "section": "Activité",
+    "title": "Soumissions récentes",
+    "loading": "Chargement du flux…",
+    "emptyTitle": "Le flux est silencieux",
+    "emptyBody": "Aucune soumission Mercato pour le moment.",
+    "emptyCta": "Ajouter le premier prix →",
+    "accepted": "✓ accepté",
+    "rejected": "✗ rejeté",
+    "pending": "en attente · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Classement en direct des pays",
+    "title": "Pain · lait · transport",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Indice complet",
+    "buildingTitle": "Classement en direct",
+    "buildingBody": "Construction du panier comparable. Dès qu'un pays a des prix pour le pain, le lait et le transport, il apparaît ici.",
+    "baseToggleAria": "Devise de base"
+  },
+  "footer": {
+    "version": "v{version} · mit · indice du coût de la vie · celo",
+    "terms": "CGU",
+    "privacy": "Confidentialité",
+    "support": "Support",
+    "github": "github",
+    "networkUnsupported": "Réseau non pris en charge",
+    "legalAria": "Mentions légales et support",
+    "githubAria": "Voir le code source sur GitHub"
+  },
+  "balance": {
+    "title": "Vos soldes"
+  },
+  "languageSwitcher": {
+    "label": "Langue",
+    "english": "English",
+    "ukrainian": "Українська",
+    "spanish": "Español",
+    "portugueseBR": "Português (BR)",
+    "german": "Deutsch",
+    "french": "Français"
+  }
+}

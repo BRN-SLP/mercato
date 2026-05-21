@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Start",
+    "basket": "Warenkorb",
+    "submit": "Einreichen",
+    "rewards": "Belohnungen",
+    "menu": "Menü",
+    "logoAria": "Mercato — Start"
+  },
+  "hero": {
+    "liveBadge": "live · celo mainnet",
+    "title1": "Der Preis des",
+    "title2": "Alltags,",
+    "title3": "von allen gemessen.",
+    "subtitle": "Mercato ist ein von der Community gepflegter Lebenshaltungs-Index. Jeder, in jedem Land, reicht einen lokalen Preis für Brot, Miete, Verkehr, Nebenkosten ein. Andere bestätigen on-chain. Alle Beteiligten verdienen cUSD.",
+    "cta_addPrice": "Preis hinzufügen",
+    "cta_myRewards": "Meine Belohnungen",
+    "stats": {
+      "verified": "Preise verifiziert",
+      "countries": "Länder aktiv",
+      "pending": "warten auf Stimme"
+    }
+  },
+  "howItWorks": {
+    "section": "So funktioniert es",
+    "title1": "Drei Schritte.",
+    "title2": "Eine Transaktion.",
+    "step1Title": "Produkt wählen, Preis eingeben.",
+    "step1Body": "Wähle ein Produkt aus dem Warenkorb, wähle dein Land, gib den Preis ein, den du tatsächlich gezahlt hast. Beleg-Foto ist optional. Eine On-Chain-Transaktion; die Netzwerkgebühr wird in cUSD bezahlt, falls deine Wallet das unterstützt.",
+    "step2Title": "Drei Mitwirkende sagen",
+    "step2TitleAccent": "ja.",
+    "step2Body": "Andere Beitragende aus dem gleichen Land stimmen ✓ oder ✗ über offene Einreichungen ab. Drei übereinstimmende Ja-Stimmen finalisieren den Preis und schalten Belohnungen für alle Beteiligten frei.",
+    "step3Title": "Belohnungen in cUSD abholen.",
+    "step3Body": "Mikro-Belohnungen sammeln sich für jede angenommene Einreichung und jede Bestätigung, die du auf eine andere abgibst. Hole das Guthaben in einer Transaktion auf MiniPay oder eine beliebige Celo-Wallet — jederzeit, ohne Mindestbetrag."
+  },
+  "basketPreview": {
+    "section": "Der Warenkorb bislang",
+    "title1": "Wo der Index",
+    "titleAccent": "schon lebt.",
+    "subtitle": "Jeder Balken zeigt, wie viel des {total}-Produkte-Warenkorbs in diesem Land mindestens einen verifizierten Preis hat. Tippe eine Zeile für die vollständige Aufschlüsselung an.",
+    "seeFull": "Gesamten Index ansehen",
+    "basketSum": "Korbsumme",
+    "empty": {
+      "section": "Der Warenkorb ist leer",
+      "title1": "Noch kein Land",
+      "titleAccent": "erfasst.",
+      "body": "Mercato startet bei null. Sei der/die Erste, der einen Preis in deinem Land einträgt — der Rest des Warenkorbs füllt sich von selbst.",
+      "cta": "Preis hinzufügen"
+    }
+  },
+  "feed": {
+    "section": "Live-Feed",
+    "title": "Aktuelle Einreichungen",
+    "loading": "Feed wird geladen…",
+    "emptyTitle": "Der Feed ist still",
+    "emptyBody": "Noch keine Mercato-Einreichungen.",
+    "emptyCta": "Ersten Preis hinzufügen →",
+    "accepted": "✓ angenommen",
+    "rejected": "✗ abgelehnt",
+    "pending": "ausstehend · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Live-Länder-Ranking",
+    "title": "Brot · Milch · Verkehr",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Gesamter Index",
+    "buildingTitle": "Live-Ranking",
+    "buildingBody": "Baue den vergleichbaren Warenkorb. Sobald ein Land Preise für Brot, Milch und Verkehr hat, erscheint es hier.",
+    "baseToggleAria": "Basiswährung"
+  },
+  "footer": {
+    "version": "v{version} · mit · Lebenshaltungs-Index · celo",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "support": "Support",
+    "github": "github",
+    "networkUnsupported": "Nicht unterstütztes Netzwerk",
+    "legalAria": "Rechtliches und Support",
+    "githubAria": "Quellcode auf GitHub ansehen"
+  },
+  "balance": {
+    "title": "Deine Guthaben"
+  },
+  "languageSwitcher": {
+    "label": "Sprache",
+    "english": "English",
+    "ukrainian": "Українська",
+    "spanish": "Español",
+    "portugueseBR": "Português (BR)",
+    "german": "Deutsch",
+    "french": "Français"
+  }
+}

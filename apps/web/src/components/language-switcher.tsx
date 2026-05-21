@@ -1,0 +1,63 @@
+"use client";
+
+import { useLocale, useTranslations } from "next-intl";
+import { useTransition } from "react";
+import { Globe } from "lucide-react";
+
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
+
+/**
+ * Footer language switcher.
+ *
+ * Compact native `<select>` so it works on every device (iOS picker,
+ * Android wheel, desktop dropdown) without bringing in a heavy combobox.
+ * On change we router.replace the same pathname with the new locale —
+ * keeps the user on the page they're reading, just in a new language.
+ *
+ * The label list intentionally shows each language in its OWN script
+ * (Українська, Español, ...) — never translate language names; users
+ * recognize their own language faster than a localized name.
+ */
+const LABEL_KEY: Record<Locale, string> = {
+  en: "english",
+  uk: "ukrainian",
+  es: "spanish",
+  "pt-BR": "portugueseBR",
+  de: "german",
+  fr: "french",
+};
+
+export function LanguageSwitcher() {
+  const t = useTranslations("languageSwitcher");
+  const locale = useLocale() as Locale;
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+
+  const handleChange = (nextLocale: Locale) => {
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale });
+    });
+  };
+
+  return (
+    <label className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em]">
+      <Globe className="h-3.5 w-3.5" aria-hidden="true" />
+      <span className="sr-only">{t("label")}</span>
+      <select
+        value={locale}
+        disabled={isPending}
+        onChange={(e) => handleChange(e.target.value as Locale)}
+        className="cursor-pointer bg-transparent text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
+        aria-label={t("label")}
+      >
+        {routing.locales.map((code) => (
+          <option key={code} value={code}>
+            {t(LABEL_KEY[code])}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}

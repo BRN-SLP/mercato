@@ -1,39 +1,40 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu, ExternalLink } from "lucide-react"
+import { useTranslations } from "next-intl";
+import { Menu, ExternalLink } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
-} from "@/components/ui/sheet"
-import { ConnectButton } from "@/components/connect-button"
-import { MercatoLogo } from "@/components/brand/MercatoLogo"
-import { ThemeToggle } from "@/components/theme-toggle"
+} from "@/components/ui/sheet";
+import { ConnectButton } from "@/components/connect-button";
+import { MercatoLogo } from "@/components/brand/MercatoLogo";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Link, usePathname } from "@/i18n/navigation";
 
 interface NavLink {
-  name: string
-  href: string
-  external?: boolean
+  /** Translation key under nav.* */
+  key: "home" | "basket" | "submit" | "rewards";
+  href: string;
+  external?: boolean;
 }
 
 // Routes — `/scan` is the legacy submit-a-price URL kept stable so
-// existing deep links continue to resolve; the label is "Submit"
-// since the foundation PR. `/basket` is the new cost-of-living index
-// dashboard. Order: Home, Basket (read), Submit (write), Rewards
-// (claim) — follows the user journey arc.
+// existing deep links continue to resolve; the label maps via i18n.
+// Order: Home → Basket (read) → Submit (write) → Rewards (claim) —
+// follows the user journey arc.
 const navLinks: NavLink[] = [
-  { name: "Home", href: "/" },
-  { name: "Basket", href: "/basket" },
-  { name: "Submit", href: "/scan" },
-  { name: "Rewards", href: "/rewards" },
-]
+  { key: "home", href: "/" },
+  { key: "basket", href: "/basket" },
+  { key: "submit", href: "/scan" },
+  { key: "rewards", href: "/rewards" },
+];
 
 export function Navbar() {
-  const pathname = usePathname()
+  const t = useTranslations("nav");
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
@@ -44,7 +45,7 @@ export function Navbar() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="h-11 w-11 md:hidden">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
+                <span className="sr-only">{t("menu")}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-80">
@@ -65,7 +66,7 @@ export function Navbar() {
                       pathname === link.href ? "text-foreground" : "text-foreground/70"
                     }`}
                   >
-                    {link.name}
+                    {t(link.key)}
                     {link.external && <ExternalLink className="h-4 w-4" />}
                   </Link>
                 ))}
@@ -77,16 +78,11 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
 
-          {/* Logo — basket icon + serif italic wordmark.
-              The Link owns the accessible name via aria-label; the
-              SVG itself is aria-hidden to avoid duplicate SR
-              announcement. `text-primary` paints the basket in the
-              brand deep-green; the wordmark inherits the same color
-              via Tailwind. */}
+          {/* Logo — basket icon + serif italic wordmark. */}
           <Link
             href="/"
             className="flex items-center gap-2 text-primary transition-opacity hover:opacity-80"
-            aria-label="Mercato — home"
+            aria-label={t("logoAria")}
           >
             <MercatoLogo variant="icon" className="h-9 w-9 sm:h-10 sm:w-10" />
             <span className="hidden font-serif text-xl font-semibold italic sm:inline-block">
@@ -109,7 +105,7 @@ export function Navbar() {
                   : "text-foreground/70"
               }`}
             >
-              {link.name}
+              {t(link.key)}
               {link.external && <ExternalLink className="h-4 w-4" />}
             </Link>
           ))}
@@ -121,5 +117,5 @@ export function Navbar() {
         </nav>
       </div>
     </header>
-  )
+  );
 }

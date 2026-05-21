@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Início",
+    "basket": "Cesta",
+    "submit": "Enviar",
+    "rewards": "Recompensas",
+    "menu": "Menu",
+    "logoAria": "Mercato — início"
+  },
+  "hero": {
+    "liveBadge": "live · celo mainnet",
+    "title1": "O preço da",
+    "title2": "vida cotidiana,",
+    "title3": "medido por todos.",
+    "subtitle": "O Mercato é um índice de custo de vida construído pela comunidade. Qualquer pessoa, em qualquer país, envia um preço local de pão, aluguel, transporte, contas. A comunidade verifica on-chain. Todo mundo envolvido ganha cUSD.",
+    "cta_addPrice": "Enviar um preço",
+    "cta_myRewards": "Minhas recompensas",
+    "stats": {
+      "verified": "preços verificados",
+      "countries": "países ativos",
+      "pending": "aguardando voto"
+    }
+  },
+  "howItWorks": {
+    "section": "Como funciona",
+    "title1": "Três passos.",
+    "title2": "Uma transação.",
+    "step1Title": "Escolha o produto, digite o preço.",
+    "step1Body": "Escolha um produto na cesta, selecione seu país, digite o preço que você realmente pagou. Foto do recibo é opcional. Uma transação on-chain; a taxa de rede é paga em cUSD se sua carteira suportar.",
+    "step2Title": "Três pares dizem",
+    "step2TitleAccent": "sim.",
+    "step2Body": "Outros contribuidores do mesmo país votam ✓ ou ✗ nos envios pendentes. Três sins coincidentes finalizam o preço e desbloqueiam recompensas para todos no round.",
+    "step3Title": "Retire suas recompensas em cUSD.",
+    "step3Body": "Micro-recompensas se acumulam para cada envio aceito e cada verificação que você fizer no de outra pessoa. Transfira o saldo para o MiniPay ou qualquer carteira Celo em uma única operação — quando quiser, sem mínimo."
+  },
+  "basketPreview": {
+    "section": "A cesta até agora",
+    "title1": "Onde o índice já está",
+    "titleAccent": "vivo.",
+    "subtitle": "Cada barra mostra o quanto da cesta de {total} produtos tem pelo menos um preço verificado naquele país. Toque numa linha para ver o detalhamento completo.",
+    "seeFull": "Ver índice completo",
+    "basketSum": "soma da cesta",
+    "empty": {
+      "section": "A cesta está vazia",
+      "title1": "Nenhum país foi precificado",
+      "titleAccent": "ainda.",
+      "body": "O Mercato começa do zero. Seja o primeiro a enviar um preço no seu país — o resto da cesta se monta sozinho.",
+      "cta": "Enviar um preço"
+    }
+  },
+  "feed": {
+    "section": "Atividade",
+    "title": "Envios recentes",
+    "loading": "Carregando atividade…",
+    "emptyTitle": "Atividade em silêncio",
+    "emptyBody": "Ainda não há envios ao Mercato.",
+    "emptyCta": "Enviar o primeiro preço →",
+    "accepted": "✓ aceito",
+    "rejected": "✗ rejeitado",
+    "pending": "pendente · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Ranking ao vivo de países",
+    "title": "Pão · leite · transporte",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Índice completo",
+    "buildingTitle": "Ranking ao vivo",
+    "buildingBody": "Montando a cesta comparável. Assim que um país tiver preços de pão, leite e transporte, ele aparece aqui.",
+    "baseToggleAria": "Moeda base"
+  },
+  "footer": {
+    "version": "v{version} · mit · índice de custo de vida · celo",
+    "terms": "Termos",
+    "privacy": "Privacidade",
+    "support": "Suporte",
+    "github": "github",
+    "networkUnsupported": "Rede não suportada",
+    "legalAria": "Legal e suporte",
+    "githubAria": "Ver código-fonte no GitHub"
+  },
+  "balance": {
+    "title": "Seus saldos"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "english": "English",
+    "ukrainian": "Українська",
+    "spanish": "Español",
+    "portugueseBR": "Português (BR)",
+    "german": "Deutsch",
+    "french": "Français"
+  }
+}

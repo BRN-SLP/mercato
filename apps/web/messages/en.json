@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Home",
+    "basket": "Basket",
+    "submit": "Submit",
+    "rewards": "Rewards",
+    "menu": "Toggle menu",
+    "logoAria": "Mercato — home"
+  },
+  "hero": {
+    "liveBadge": "live · celo mainnet",
+    "title1": "The price of",
+    "title2": "everyday life,",
+    "title3": "measured by everyone.",
+    "subtitle": "Mercato is a community-built cost-of-living index. Anyone, in any country, submits a local price for bread, rent, transport, utilities. Peers verify on-chain. Everyone involved earns cUSD.",
+    "cta_addPrice": "Add a price",
+    "cta_myRewards": "My rewards",
+    "stats": {
+      "verified": "prices verified",
+      "countries": "countries live",
+      "pending": "awaiting peer vote"
+    }
+  },
+  "howItWorks": {
+    "section": "How it works",
+    "title1": "Three picks.",
+    "title2": "One transaction.",
+    "step1Title": "Pick the product, type the price.",
+    "step1Body": "Choose a product from the basket, pick your country, type the price you actually paid. Receipt photo is optional. One on-chain transaction, with the network fee paid in cUSD if your wallet supports it.",
+    "step2Title": "Three peers tap",
+    "step2TitleAccent": "yes.",
+    "step2Body": "Other contributors in the same country vote ✓ or ✗ on pending submissions. Three matching positives finalize the price and unlock rewards for everyone involved in the round.",
+    "step3Title": "Sweep your rewards in cUSD.",
+    "step3Body": "Micro-rewards accumulate for every accepted submission and every verification you cast on someone else's. Sweep the balance to MiniPay or any Celo wallet in one claim — any time, no minimum."
+  },
+  "basketPreview": {
+    "section": "The basket so far",
+    "title1": "Where the index is",
+    "titleAccent": "already alive.",
+    "subtitle": "Each bar measures how much of the {total}-product basket has at least one verified price in that country. Tap a row for the full country breakdown.",
+    "seeFull": "See full index",
+    "basketSum": "basket sum",
+    "empty": {
+      "section": "The basket is empty",
+      "title1": "No country has been priced",
+      "titleAccent": "yet.",
+      "body": "Mercato launches at zero submissions. Be the first to add a price in your country — the rest of the basket builds itself.",
+      "cta": "Add a price"
+    }
+  },
+  "feed": {
+    "section": "Live feed",
+    "title": "Recent submissions",
+    "loading": "Loading the feed…",
+    "emptyTitle": "The feed is quiet",
+    "emptyBody": "No Mercato submissions yet.",
+    "emptyCta": "Add the first price →",
+    "accepted": "✓ accepted",
+    "rejected": "✗ rejected",
+    "pending": "pending · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Live country ranking",
+    "title": "Bread · milk · transit",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Full index",
+    "buildingTitle": "Live ranking",
+    "buildingBody": "Building the comparable basket. As soon as one country has bread, milk, and transit priced, it shows up here.",
+    "baseToggleAria": "Base currency"
+  },
+  "footer": {
+    "version": "v{version} · mit · cost-of-living index · celo",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "support": "Support",
+    "github": "github",
+    "networkUnsupported": "Unsupported chain",
+    "legalAria": "Legal and support",
+    "githubAria": "View source on GitHub"
+  },
+  "balance": {
+    "title": "Your balances"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "english": "English",
+    "ukrainian": "Українська",
+    "spanish": "Español",
+    "portugueseBR": "Português (BR)",
+    "german": "Deutsch",
+    "french": "Français"
+  }
+}

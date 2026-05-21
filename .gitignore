@@ -111,3 +111,5 @@ PLAN.md
 INTERNAL.md
 .internal-notes/
 .private/
+.vercel
+.env*.local
