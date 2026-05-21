@@ -122,15 +122,18 @@ export function HeroLiveRanking({
                 aria-label={`${entry.countryName}: ${symbol}${major} ${base} core basket`}
               >
                 <div className="flex items-center justify-between gap-3 text-xs">
-                  <span className="flex items-baseline gap-2 truncate">
+                  <span className="flex items-center gap-2.5 truncate">
                     <span
                       aria-hidden="true"
-                      className="font-mono text-[10px] text-muted-foreground"
+                      className="font-mono text-[10px] text-muted-foreground tabular-nums"
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-base leading-none" aria-hidden="true">
-                      {entry.flag}
+                    <span
+                      aria-hidden="true"
+                      className="inline-flex h-5 min-w-[2rem] items-center justify-center rounded-sm border border-border/60 bg-card/40 px-1 font-mono text-[9px] font-semibold tracking-[0.16em] text-foreground/80 group-hover:border-primary/50 group-hover:text-primary"
+                    >
+                      {entry.countryCode}
                     </span>
                     <span className="truncate font-medium">
                       {entry.countryName}
