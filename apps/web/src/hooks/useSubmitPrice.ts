@@ -8,9 +8,11 @@ import {
   usePublicClient,
   useWriteContract,
 } from "wagmi";
+import { celo } from "wagmi/chains";
 import type { Hex } from "viem";
 
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
+import { CUSD_MAINNET_ADDRESS } from "@/lib/minipay";
 
 type SubmitState =
   | { kind: "idle" }
@@ -57,12 +59,25 @@ export function useSubmitPrice() {
       const toastId = toast.loading("Submitting price…");
       try {
         setState({ kind: "awaiting_signature" });
+        // Fee abstraction: on Celo mainnet (where the cUSD stablecoin
+        // is canonical), pass `feeCurrency` so the user pays gas in
+        // cUSD rather than CELO. MiniPay handles this natively; for
+        // any other Celo-compatible wallet that doesn't recognise the
+        // field, the tx still goes through with CELO gas — viem just
+        // omits the field at serialisation. Skipping on Sepolia
+        // because the cUSD address differs there and the testnet RPC
+        // is more permissive with raw CELO gas anyway.
+        const extraTxParams =
+          chainId === celo.id
+            ? ({ feeCurrency: CUSD_MAINNET_ADDRESS } as const)
+            : ({} as const);
         const tx = await writeContractAsync({
           chainId,
           address: oracleAddress,
           abi: priceOracleAbi,
           functionName: "submitPrice",
           args: [barcode, zoneKey, priceCents, receiptHash],
+          ...extraTxParams,
         });
         setState({ kind: "confirming", txHash: tx });
         const receipt = await publicClient.waitForTransactionReceipt({

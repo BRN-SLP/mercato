@@ -9,6 +9,7 @@ import {
   usePublicClient,
   useWriteContract,
 } from "wagmi";
+import { celo } from "wagmi/chains";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +19,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
+import { CUSD_MAINNET_ADDRESS } from "@/lib/minipay";
 
 interface ClaimCardProps {
   pending: bigint;
@@ -46,11 +48,20 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
     try {
       const oracleAddress = getPriceOracleAddress(chainId);
       setState({ kind: "submitting" });
+      // Fee abstraction — claim gas in cUSD on Celo mainnet. The
+      // claim transfers cUSD into the user's wallet, so paying the
+      // gas in the same currency rounds out a "no CELO ever needed"
+      // user flow. Same pattern as useSubmitPrice + useVerify.
+      const extraTxParams =
+        chainId === celo.id
+          ? ({ feeCurrency: CUSD_MAINNET_ADDRESS } as const)
+          : ({} as const);
       const tx = await writeContractAsync({
         chainId,
         address: oracleAddress,
         abi: priceOracleAbi,
         functionName: "claimRewards",
+        ...extraTxParams,
       });
       setState({ kind: "confirming", txHash: tx });
       const toastId = toast.loading("Claiming rewards…", {
@@ -83,7 +94,7 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
           </div>
           {!hasFunds && (
             <p className="mt-1 text-xs text-muted-foreground">
-              Nothing to claim yet — scan a price or verify others&apos;
+              Nothing to claim yet — submit a price or verify others&apos;
               submissions to earn.
             </p>
           )}

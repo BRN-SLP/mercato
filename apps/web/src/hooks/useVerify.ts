@@ -7,9 +7,11 @@ import {
   usePublicClient,
   useWriteContract,
 } from "wagmi";
+import { celo } from "wagmi/chains";
 import type { Hex } from "viem";
 
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
+import { CUSD_MAINNET_ADDRESS } from "@/lib/minipay";
 
 type VerifyState =
   | { kind: "idle" }
@@ -44,12 +46,19 @@ export function useVerify() {
       const toastId = toast.loading(`${verdict}ing #${submissionId.toString()}…`);
       try {
         setState({ kind: "submitting" });
+        // Fee abstraction — pay gas in cUSD on Celo mainnet so the
+        // user never needs CELO. Same pattern as useSubmitPrice.
+        const extraTxParams =
+          chainId === celo.id
+            ? ({ feeCurrency: CUSD_MAINNET_ADDRESS } as const)
+            : ({} as const);
         const tx = await writeContractAsync({
           chainId,
           address: oracleAddress,
           abi: priceOracleAbi,
           functionName: "verify",
           args: [submissionId, isValid],
+          ...extraTxParams,
         });
         setState({ kind: "confirming", txHash: tx });
         await publicClient.waitForTransactionReceipt({ hash: tx });

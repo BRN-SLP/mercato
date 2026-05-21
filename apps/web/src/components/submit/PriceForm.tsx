@@ -1,85 +1,104 @@
 "use client";
 
-import { Camera, MapPin, Upload, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Camera, Upload, X } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import type { Hex } from "viem";
 
 import { Button } from "@/components/ui/button";
-import { useGeolocation } from "@/hooks/useGeolocation";
 import { useSubmitPrice } from "@/hooks/useSubmitPrice";
 import {
-  ALL_CURRENCY_CODES,
-  CURRENCIES_BY_REGION,
-  currencyLabel,
-  detectDefaultCurrency,
-} from "@/lib/currencies";
+  COUNTRIES,
+  detectCountryFromLocale,
+  getCountriesByRegion,
+  getCountryByCode,
+  type Country,
+} from "@/lib/countries";
+import {
+  ZERO_RECEIPT_HASH,
+  countryToZoneKey,
+  majorUnitsToCents,
+  productSlugToBarcode,
+} from "@/lib/encode";
+import {
+  PRODUCTS,
+  getProductsByCategory,
+  getProductBySlug,
+} from "@/lib/products";
 import {
   MAX_RECEIPT_BYTES,
   SUPPORTED_RECEIPT_TYPES,
-  barcodeStringToHex,
   type SubmitReceiptResponse,
 } from "@/lib/submissions";
-import { gpsToZoneKey } from "@/lib/zone";
 
 interface PriceFormProps {
-  barcode: string;
+  /** Optional callback when the user clicks the X / "Cancel" button. */
   onCancel: () => void;
 }
 
-const ZERO_RECEIPT_HASH =
-  "0x0000000000000000000000000000000000000000000000000000000000000000" as Hex;
+const DEFAULT_PRODUCT_SLUG = PRODUCTS[0].slug;
+/**
+ * Server-safe initial country. The actual default is detected from
+ * the browser locale in a client-only effect (see useEffect below)
+ * so the component renders deterministically on the server before
+ * hydration. US is the safest fallback when no locale region matches
+ * our launch country list.
+ */
+const INITIAL_COUNTRY: Country = getCountryByCode("US") ?? COUNTRIES[0];
 
 /**
- * Server-safe initial currency. The actual default is detected from the
- * browser locale in a client-only effect (see useEffect below) — but
- * since this component renders on the server first (Next.js App Router),
- * we need a deterministic placeholder that won't cause hydration mismatch.
- * USD is universally recognised and a safe fallback.
+ * Submit form for Mercato's canonical basket.
+ *
+ * Replaces the legacy BeiBei flow (camera barcode scan + GPS zone) with
+ * an explicit two-dropdown pick: which product, which country. The
+ * underlying contract call is unchanged — see lib/encode.ts for how the
+ * product slug is hashed to bytes12 and the country code is packed to
+ * bytes6 before going on-chain.
  */
-const INITIAL_CURRENCY = "USD";
-
-export function PriceForm({ barcode, onCancel }: PriceFormProps) {
-  const geo = useGeolocation();
+export function PriceForm({ onCancel }: PriceFormProps) {
   const submit = useSubmitPrice();
 
+  const [productSlug, setProductSlug] = useState<string>(DEFAULT_PRODUCT_SLUG);
+  const [country, setCountry] = useState<Country>(INITIAL_COUNTRY);
   const [priceWhole, setPriceWhole] = useState("");
   const [priceCents, setPriceCents] = useState("");
-  const [currency, setCurrency] = useState<string>(INITIAL_CURRENCY);
   const [receiptFile, setReceiptFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Detect the user's local currency from the browser locale and use
-  // it as the default. Client-only — running on the server would
+  // Detect user's country from browser locale, post-hydration. Falls
+  // back to INITIAL_COUNTRY silently if locale has no region or the
+  // region isn't in our launch list. Running this on the server would
   // produce a different value than the first client render and trip
-  // React's hydration check.
+  // React's hydration check, hence the useEffect gate.
   useEffect(() => {
-    const detected = detectDefaultCurrency(INITIAL_CURRENCY);
-    if (detected !== INITIAL_CURRENCY) setCurrency(detected);
+    const detected = detectCountryFromLocale();
+    if (detected && detected.code !== INITIAL_COUNTRY.code) {
+      setCountry(detected);
+    }
   }, []);
+
+  const product = useMemo(
+    () => getProductBySlug(productSlug) ?? PRODUCTS[0],
+    [productSlug],
+  );
+
+  const totalCents = computeTotalCents(priceWhole, priceCents);
 
   const busy =
     uploading ||
     submit.state.kind === "awaiting_signature" ||
     submit.state.kind === "confirming";
 
-  const totalCents = computeTotalCents(priceWhole, priceCents);
-  const ready =
-    totalCents > 0 &&
-    barcode.length >= 8 &&
-    (geo.status === "ok" || geo.status === "error") && // allow without GPS too
-    !busy;
+  const ready = totalCents > 0n && !busy;
 
-  async function handleFile(file: File | null) {
+  async function handleFile(file: File | null): Promise<void> {
     setError(null);
     if (!file) {
       setReceiptFile(null);
       return;
     }
     if (!SUPPORTED_RECEIPT_TYPES.includes(file.type as never)) {
-      setError(
-        `Unsupported file type ${file.type}. Use JPEG / PNG / WebP.`,
-      );
+      setError(`Unsupported file type ${file.type}. Use JPEG / PNG / WebP.`);
       return;
     }
     if (file.size > MAX_RECEIPT_BYTES) {
@@ -114,19 +133,16 @@ export function PriceForm({ barcode, onCancel }: PriceFormProps) {
     }
   }
 
-  async function handleSubmit() {
+  async function handleSubmit(): Promise<void> {
     setError(null);
     try {
-      const barcodeHex = barcodeStringToHex(barcode);
-      const zoneKey: Hex =
-        geo.status === "ok" && geo.lat !== undefined && geo.lng !== undefined
-          ? gpsToZoneKey(geo.lat, geo.lng)
-          : ("0x000000000000" as Hex);
+      const barcode = productSlugToBarcode(productSlug);
+      const zoneKey = countryToZoneKey(country.code);
       const receiptHash = await uploadReceipt();
       await submit.submit({
-        barcode: barcodeHex,
+        barcode,
         zoneKey,
-        priceCents: BigInt(totalCents),
+        priceCents: totalCents,
         receiptHash,
       });
     } catch (err: unknown) {
@@ -136,48 +152,111 @@ export function PriceForm({ barcode, onCancel }: PriceFormProps) {
 
   if (submit.state.kind === "success") {
     return (
-      <div className="rounded-md border border-emerald-500/30 bg-emerald-50 p-4 text-sm dark:bg-emerald-950/40">
-        <p className="font-medium text-emerald-700 dark:text-emerald-300">
+      <div className="rounded-md border border-primary/30 bg-primary/5 p-4 text-sm">
+        <p className="font-semibold text-primary">
           Submission #{submit.state.submissionId.toString()} accepted on-chain.
         </p>
-        <p className="mt-1 text-xs text-emerald-700/70 dark:text-emerald-300/70">
+        <p className="mt-1 text-xs text-muted-foreground">
           Waiting for community verification (3 votes needed). Reward will
           appear on your /rewards page once finalized.
         </p>
         <div className="mt-3 flex gap-2">
           <Button onClick={onCancel} size="sm">
-            Scan another
+            Submit another
           </Button>
         </div>
       </div>
     );
   }
 
+  const productGroups = getProductsByCategory();
+  const countryGroups = getCountriesByRegion();
+
   return (
-    <div className="space-y-4 rounded-md border border-input bg-background p-4">
+    <div className="space-y-5 rounded-md border border-input bg-card p-5">
       <div className="flex items-start justify-between">
         <div>
-          <h2 className="text-base font-semibold">New price submission</h2>
-          <p className="font-mono text-xs text-muted-foreground">{barcode}</p>
+          <h2 className="font-serif text-xl font-semibold">
+            Add a price to the basket
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            Pick a product, your country, the price you paid.
+          </p>
         </div>
-        <Button variant="ghost" size="sm" onClick={onCancel}>
+        <Button variant="ghost" size="sm" onClick={onCancel} aria-label="Cancel">
           <X className="h-4 w-4" />
         </Button>
       </div>
 
-      <div className="space-y-2">
-        <label htmlFor="price-whole" className="text-sm font-medium">
-          Price
+      {/* Product */}
+      <div className="space-y-1.5">
+        <label htmlFor="mercato-product" className="text-sm font-medium">
+          Product
+        </label>
+        <select
+          id="mercato-product"
+          value={productSlug}
+          onChange={(e) => setProductSlug(e.target.value)}
+          aria-label="Choose a product"
+          className="block w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          {productGroups.map((group) => (
+            <optgroup key={group.category} label={group.label}>
+              {group.products.map((p) => (
+                <option key={p.slug} value={p.slug}>
+                  {p.label}
+                  {p.hint ? ` — ${p.hint}` : ""}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </div>
+
+      {/* Country */}
+      <div className="space-y-1.5">
+        <label htmlFor="mercato-country" className="text-sm font-medium">
+          Country
+        </label>
+        <select
+          id="mercato-country"
+          value={country.code}
+          onChange={(e) => {
+            const next = getCountryByCode(e.target.value);
+            if (next) setCountry(next);
+          }}
+          aria-label="Choose your country"
+          className="block w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          {countryGroups.map((group) => (
+            <optgroup key={group.region} label={group.label}>
+              {group.countries.map((c) => (
+                <option key={c.code} value={c.code}>
+                  {c.flag} {c.name} — {c.currency}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+        <p className="text-xs text-muted-foreground">
+          Currency follows your country: prices in <strong>{country.currency}</strong>.
+        </p>
+      </div>
+
+      {/* Price */}
+      <div className="space-y-1.5">
+        <label htmlFor="mercato-price-whole" className="text-sm font-medium">
+          Price you paid
         </label>
         <div className="flex items-center gap-2">
           <input
-            id="price-whole"
+            id="mercato-price-whole"
             value={priceWhole}
             onChange={(e) => setPriceWhole(e.target.value.replace(/\D/g, ""))}
             placeholder="0"
             inputMode="numeric"
             aria-label="Whole units"
-            className="min-w-0 flex-1 rounded-md border border-input bg-background px-3 py-2 text-right font-mono text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="min-w-0 flex-1 rounded-md border border-input bg-background px-3 py-2.5 text-right font-mono text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           />
           <span aria-hidden="true" className="text-muted-foreground">
             .
@@ -189,62 +268,17 @@ export function PriceForm({ barcode, onCancel }: PriceFormProps) {
             }
             placeholder="00"
             inputMode="numeric"
-            aria-label="Cents"
-            className="w-14 shrink-0 rounded-md border border-input bg-background px-3 py-2 font-mono text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            aria-label="Cents or fractional units"
+            className="w-14 shrink-0 rounded-md border border-input bg-background px-3 py-2.5 font-mono text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           />
-          <select
-            value={currency}
-            onChange={(e) => {
-              const next = e.target.value;
-              // Guard against the user somehow selecting a code that's
-              // no longer in our catalog (browser-restored stale state
-              // after we trim the list, for example).
-              if (ALL_CURRENCY_CODES.includes(next)) setCurrency(next);
-            }}
-            aria-label="Currency"
-            className="w-24 shrink-0 rounded-md border border-input bg-background px-2 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            {/* Grouped by region so the dropdown is navigable on
-                desktop (where `<optgroup>` renders bold separators)
-                and on mobile (where iOS / Android system pickers also
-                show optgroup labels as section headers). */}
-            {Object.entries(CURRENCIES_BY_REGION).map(([region, options]) => (
-              <optgroup key={region} label={region}>
-                {options.map((c) => (
-                  <option key={c.code} value={c.code}>
-                    {currencyLabel(c.code)}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
+          <span className="w-12 shrink-0 text-right font-mono text-sm text-muted-foreground">
+            {country.currency}
+          </span>
         </div>
       </div>
 
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Location</label>
-        {geo.status === "ok" ? (
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <MapPin className="h-4 w-4" />
-            {geo.lat?.toFixed(2)}, {geo.lng?.toFixed(2)}
-          </div>
-        ) : geo.status === "error" ? (
-          <div className="flex items-center justify-between rounded-md bg-amber-50 px-3 py-2 text-xs dark:bg-amber-950/40">
-            <span className="text-amber-700 dark:text-amber-300">
-              {geo.error}. Submission will skip zone tagging.
-            </span>
-            <Button variant="ghost" size="sm" onClick={geo.refresh}>
-              Retry
-            </Button>
-          </div>
-        ) : (
-          <p className="text-xs text-muted-foreground">
-            Requesting location…
-          </p>
-        )}
-      </div>
-
-      <div className="space-y-2">
+      {/* Receipt (optional) */}
+      <div className="space-y-1.5">
         <label className="text-sm font-medium">Receipt photo (optional)</label>
         <input
           type="file"
@@ -260,7 +294,7 @@ export function PriceForm({ barcode, onCancel }: PriceFormProps) {
         )}
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 border-t border-border/60 pt-4 sm:flex-row sm:items-center sm:justify-between">
         <SubmitStatus
           uploading={uploading}
           submitState={submit.state}
@@ -273,18 +307,21 @@ export function PriceForm({ barcode, onCancel }: PriceFormProps) {
           className="w-full sm:w-auto"
         >
           <Camera className="mr-2 h-4 w-4" aria-hidden="true" />
-          {busy ? "Submitting…" : "Submit"}
+          {busy ? "Submitting…" : `Submit ${product.label.toLowerCase()}`}
         </Button>
       </div>
     </div>
   );
 }
 
-function computeTotalCents(whole: string, cents: string): number {
-  const w = Number.parseInt(whole || "0", 10);
-  const c = Number.parseInt((cents || "0").padEnd(2, "0").slice(0, 2), 10);
-  if (!Number.isFinite(w) || !Number.isFinite(c)) return 0;
-  return w * 100 + c;
+function computeTotalCents(whole: string, cents: string): bigint {
+  try {
+    const wholePart = whole || "0";
+    const fracPart = (cents || "0").padEnd(2, "0").slice(0, 2);
+    return majorUnitsToCents(`${wholePart}.${fracPart}`);
+  } catch {
+    return 0n;
+  }
 }
 
 async function fileToBase64(file: File): Promise<string> {
