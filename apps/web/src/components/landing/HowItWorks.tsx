@@ -118,7 +118,7 @@ export function HowItWorks() {
               aria-controls={`stage-panel-${s.tag}`}
               id={`stage-tab-${s.tag}`}
               onClick={() => selectStage(i)}
-              className={`relative flex flex-1 items-baseline gap-2 rounded-t-md border border-b-0 px-4 py-3 text-left transition-colors sm:flex-initial sm:px-6 sm:py-4 ${
+              className={`relative flex flex-1 flex-col items-start gap-1 rounded-t-md border border-b-0 px-3 py-3 text-left transition-colors sm:flex-row sm:flex-initial sm:items-baseline sm:gap-2 sm:px-6 sm:py-4 ${
                 isActive
                   ? "border-border bg-card/60 text-foreground"
                   : "border-transparent bg-transparent text-muted-foreground hover:bg-card/30"
@@ -131,8 +131,9 @@ export function HowItWorks() {
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em]">
-                · {s.tag}
+              <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.18em]">
+                <span aria-hidden="true" className="hidden sm:inline">· </span>
+                {s.tag}
               </span>
               {/* Bottom-edge masking strip — extends 1px below the
                   tab to cover the panel's top border under the
@@ -204,10 +205,11 @@ export function HowItWorks() {
  * ────────────────────────────────────────────────────────────── */
 
 function SubmissionArtifact() {
+  const t = useTranslations("howItWorks.artifacts");
   return (
     <div className="font-mono">
       <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-        submission · example
+        {t("submissionStamp")}
       </p>
       <div className="flex items-center justify-between border-b border-border/60 pb-3">
         <span className="inline-flex h-8 w-12 items-center justify-center rounded-sm border border-border bg-card font-mono text-xs font-semibold tracking-[0.2em] text-foreground/80">
@@ -227,17 +229,18 @@ function SubmissionArtifact() {
         </p>
       </div>
       <div className="border-t border-border/60 pt-3 text-[10px] uppercase tracking-wider text-muted-foreground">
-        one tx · cUSD fee · receipt optional
+        {t("submissionFooter")}
       </div>
     </div>
   );
 }
 
 function VoteArtifact() {
+  const t = useTranslations("howItWorks.artifacts");
   return (
     <div className="font-mono">
       <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-        vote tally · in progress
+        {t("voteStamp")}
       </p>
       <div className="flex items-center justify-between border-b border-border/60 pb-3">
         <span className="flex items-center gap-2.5">
@@ -246,11 +249,13 @@ function VoteArtifact() {
           <Dot tone="empty" />
         </span>
         <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-          4h window
+          {t("voteWindow")}
         </span>
       </div>
       <div className="py-5">
-        <p className="text-xs text-muted-foreground">peers in UA</p>
+        <p className="text-xs text-muted-foreground">
+          {t("votePeersIn", { country: "UA" })}
+        </p>
         <p className="mt-1 text-4xl font-semibold tabular-nums text-foreground md:text-5xl">
           2/3
         </p>
@@ -270,19 +275,24 @@ function VoteArtifact() {
 }
 
 function RewardArtifact() {
+  const t = useTranslations("howItWorks.artifacts");
   return (
     <div className="font-mono">
       <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-        settled · just now
+        {t("rewardStamp")}
       </p>
       <div className="flex items-center justify-between border-b border-border/60 pb-3">
-        <span className="text-xs text-muted-foreground">net to wallet</span>
+        <span className="text-xs text-muted-foreground">
+          {t("rewardNetToWallet")}
+        </span>
         <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
           ↗ tx 0xab…1c
         </span>
       </div>
       <div className="py-5">
-        <p className="text-xs text-muted-foreground">submitter share · 50%</p>
+        <p className="text-xs text-muted-foreground">
+          {t("rewardSubmitterShare")}
+        </p>
         <p className="mt-1 text-4xl font-semibold tabular-nums text-primary md:text-5xl">
           + 0.05{" "}
           <span className="text-base font-normal text-muted-foreground">
@@ -292,12 +302,12 @@ function RewardArtifact() {
       </div>
       <div className="space-y-1.5 border-t border-border/60 pt-3 text-[10px] uppercase tracking-wider text-muted-foreground">
         <div className="flex justify-between">
-          <span>3 × verifiers</span>
+          <span>{t("rewardVerifiersRow")}</span>
           <span className="text-foreground/80">+ 0.05 each</span>
         </div>
         <div className="flex justify-between">
-          <span>sweep</span>
-          <span className="text-foreground/80">any time · no min</span>
+          <span>{t("rewardSweepRow")}</span>
+          <span className="text-foreground/80">{t("rewardSweepValue")}</span>
         </div>
       </div>
     </div>
