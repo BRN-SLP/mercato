@@ -9,7 +9,6 @@ import { CountryBasketPreview } from "@/components/landing/CountryBasketPreview"
 import { HeroLiveRankingServer } from "@/components/landing/HeroLiveRankingServer";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { RecentSubmissions } from "@/components/feed/RecentSubmissions";
-import { UserBalance } from "@/components/user-balance";
 import { Link } from "@/i18n/navigation";
 
 interface HomeProps {
@@ -37,8 +36,12 @@ function HomeContent() {
           composition now flows one section into the next without
           hard rules. */}
       <section className="relative">
-        <div className="container mx-auto grid max-w-6xl gap-12 px-4 pt-16 pb-10 lg:grid-cols-[3fr_2fr] lg:items-start lg:gap-16 lg:pt-20 lg:pb-14">
-          {/* Left — copy + live stats */}
+        <div className="container mx-auto grid max-w-6xl gap-12 px-4 pt-16 pb-10 lg:grid-cols-[3fr_2fr] lg:items-start lg:gap-16 lg:pt-20 lg:pb-12">
+          {/* Left — copy + CTAs. Stats moved out into their own
+              full-width strip below so growing numbers don't reflow
+              the hero, and UserBalance was removed entirely — it's a
+              logged-in widget that belongs on /rewards, not as an
+              alien card in the marketing hero. */}
           <div className="space-y-7">
             <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
@@ -57,8 +60,6 @@ function HomeContent() {
               {t("subtitle")}
             </p>
 
-            <HeroStatsServer />
-
             <div className="flex flex-col items-start gap-3 sm:flex-row">
               <Button asChild size="lg">
                 <Link href="/scan">
@@ -73,18 +74,20 @@ function HomeContent() {
                 </Link>
               </Button>
             </div>
-
-            <UserBalance />
           </div>
 
-          {/* Right — Live country ranking.
-              No border-l divider — with items-start the right column
-              ends where its content ends and a half-height vertical
-              line just reads as an artefact. The gap-16 between
-              columns + the column proportions carry the separation. */}
+          {/* Right — Live country ranking. */}
           <div className="relative">
             <HeroLiveRankingServer />
           </div>
+        </div>
+
+        {/* Stats strip — full-width band immediately under the hero
+            two-column composition. Three fixed-slot cells; values
+            can grow without disturbing neighboring cells or the
+            page geometry above. */}
+        <div className="container mx-auto max-w-6xl px-4 pb-10 lg:pb-14">
+          <HeroStatsServer />
         </div>
       </section>
 
