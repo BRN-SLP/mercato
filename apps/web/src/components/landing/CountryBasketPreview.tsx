@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ShoppingBasket } from "lucide-react";
 
+import { CountryMark } from "@/components/brand/CountryMark";
 import { getBasketSnapshot, type CountryBasket } from "@/lib/aggregate";
 import { formatMajor } from "@/lib/format-cents";
 import { PRODUCTS } from "@/lib/products";
@@ -121,14 +122,9 @@ function CoverageRow({ basket, denominator }: CoverageRowProps) {
         className="grid items-center gap-x-6 gap-y-1 px-2 py-5 transition hover:bg-primary/[0.04] focus-visible:bg-primary/[0.06] focus-visible:outline-none md:grid-cols-[auto_1fr_auto] md:py-6"
         aria-label={`${basket.country.name}: ${basket.coverage} of ${denominator} products priced`}
       >
-        {/* Country code badge — replaces emoji flag with a mono caps
-            pill in the editorial register. Apple-Pay style. */}
-        <span
-          aria-hidden="true"
-          className="inline-flex h-9 w-12 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-xs font-semibold tracking-[0.18em] text-foreground/80 group-hover:border-primary/50 group-hover:text-primary"
-        >
-          {basket.country.code}
-        </span>
+        {/* Country mark — desaturated SVG flag + mono caps ISO code.
+            Production canonical; see components/brand/CountryMark. */}
+        <CountryMark code={basket.country.code} size="md" />
 
         {/* Country meta + coverage progress underline */}
         <div className="min-w-0">

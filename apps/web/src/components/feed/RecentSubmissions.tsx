@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { CountryMark } from "@/components/brand/CountryMark";
 import { Card, CardContent } from "@/components/ui/card";
 import { getRecentFeed, type FeedRow } from "@/lib/recent-feed";
 
@@ -72,13 +73,15 @@ function FeedItem({ row }: { row: FeedRow }) {
     <li
       className={`grid grid-cols-[auto_1fr_auto] items-center gap-x-4 px-5 py-4 ${ROW_HEIGHT_CLASS}`}
     >
-      {/* Country code pill — replaces emoji flag */}
+      {/* Country mark — desaturated SVG flag + ISO pill.
+          The whole element wraps in a Link so the row deep-links
+          into the item page. */}
       <Link
         href={`/item/${row.barcode}`}
-        className="inline-flex h-8 w-11 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-[11px] font-semibold tracking-[0.18em] text-foreground/80 transition-colors hover:border-primary/50 hover:text-primary"
+        className="inline-flex items-center transition-opacity hover:opacity-80"
         aria-label={row.country.name}
       >
-        {row.country.code}
+        <CountryMark code={row.country.code} size="md" />
       </Link>
 
       {/* Product + country meta */}

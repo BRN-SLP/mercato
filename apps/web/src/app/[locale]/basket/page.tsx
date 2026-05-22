@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, ShoppingBasket } from "lucide-react";
 
+import { CountryMark } from "@/components/brand/CountryMark";
 import {
   Card,
   CardContent,
@@ -135,14 +136,9 @@ function CountryRow({
           {String(rank).padStart(2, "0")}
         </span>
 
-        {/* Code pill + country name */}
+        {/* Country mark + name */}
         <span className="flex min-w-0 items-center gap-3">
-          <span
-            aria-hidden="true"
-            className="inline-flex h-7 w-10 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-[10px] font-semibold tracking-[0.18em] text-foreground/80 group-hover:border-primary/50 group-hover:text-primary"
-          >
-            {basket.country.code}
-          </span>
+          <CountryMark code={basket.country.code} size="md" />
           <span className="truncate font-medium">{basket.country.name}</span>
         </span>
 
@@ -211,15 +207,9 @@ function CountryDetail({ basket }: { basket: CountryBasket }) {
 
       <header className="mb-10 space-y-4">
         <div className="flex items-center gap-3">
-          {/* Country code as primary identifier — the mono caps pill
-              carries the brand register and replaces the previous
-              giant emoji flag. */}
-          <span
-            aria-hidden="true"
-            className="inline-flex h-12 w-16 items-center justify-center rounded-sm border border-border/60 bg-card/40 font-mono text-base font-semibold tracking-[0.2em] text-foreground/80"
-          >
-            {basket.country.code}
-          </span>
+          {/* Country mark — desaturated flag + ISO pill, large size
+              so the country reads as the page identity. */}
+          <CountryMark code={basket.country.code} size="lg" />
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
             {basket.country.currency} · cost-of-living
           </p>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
+import { CountryMark } from "@/components/brand/CountryMark";
 import type { CoreBasketEntry } from "@/lib/core-basket";
 
 interface HeroLiveRankingProps {
@@ -123,12 +124,7 @@ export function HeroLiveRanking({
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span
-                      aria-hidden="true"
-                      className="inline-flex h-5 min-w-[2rem] items-center justify-center rounded-sm border border-border/60 bg-card/40 px-1 font-mono text-[9px] font-semibold tracking-[0.16em] text-foreground/80 group-hover:border-primary/50 group-hover:text-primary"
-                    >
-                      {entry.countryCode}
-                    </span>
+                    <CountryMark code={entry.countryCode} size="sm" />
                     <span className="truncate font-medium">
                       {entry.countryName}
                     </span>
