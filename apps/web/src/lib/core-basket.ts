@@ -59,10 +59,10 @@ export interface CoreBasketEntry {
  * Project the on-chain country baskets onto the core-basket subset
  * and convert into the given base currency.
  *
- * Returns only countries with complete data (all 3 core products
- * priced), sorted ascending by base-currency cost (cheapest first —
- * the user's first instinct on a cost-of-living index is to find
- * where life is most affordable).
+ * Returns countries with complete core data (all 3 core products
+ * priced) sorted ascending by base-currency cost. The user's first
+ * instinct on a cost-of-living index is to find where life is most
+ * affordable.
  */
 export function rankCoreBasket(
   countries: readonly CountryBasket[],
@@ -89,9 +89,9 @@ export function rankCoreBasket(
       filled++;
     }
 
-    // For now we only rank countries with the COMPLETE core. Partial
-    // rows clutter the comparison and are exactly what the strict-core
-    // choice was supposed to filter out.
+    // Only the COMPLETE core enters the ranking; partial rows go to
+    // `rankCoreBasketPartial` so the empty state can surface
+    // 'almost there' countries instead of a generic placeholder.
     if (!ok || filled !== CORE_BASKET_SLUGS.length) continue;
 
     entries.push({
@@ -104,4 +104,52 @@ export function rankCoreBasket(
   }
 
   return entries.sort((a, b) => a.baseCents - b.baseCents);
+}
+
+/**
+ * Partial-fill ranking used by the hero empty state to show which
+ * countries are closest to having all three core products priced.
+ *
+ * Returns countries with `filled > 0 && filled < CORE_BASKET_SLUGS.length`,
+ * sorted by filled count descending (closest to complete first), then
+ * by country name for stable display order. Used by `HeroLiveRanking`
+ * when `rankCoreBasket` is empty, turning the placeholder into a
+ * useful 'next milestone' surface.
+ */
+export interface CorePartialEntry {
+  countryCode: string;
+  countryName: string;
+  filled: number;
+  total: number;
+}
+
+export function rankCoreBasketPartial(
+  countries: readonly CountryBasket[],
+): CorePartialEntry[] {
+  const entries: CorePartialEntry[] = [];
+
+  for (const basket of countries) {
+    const country = getCountryByCode(basket.country.code);
+    if (!country) continue;
+
+    let filled = 0;
+    for (const slug of CORE_BASKET_SLUGS) {
+      const entry = basket.prices.find((p) => p.product.slug === slug);
+      if (entry && entry.sampleSize > 0) filled++;
+    }
+
+    if (filled === 0 || filled === CORE_BASKET_SLUGS.length) continue;
+
+    entries.push({
+      countryCode: country.code,
+      countryName: country.name,
+      filled,
+      total: CORE_BASKET_SLUGS.length,
+    });
+  }
+
+  return entries.sort((a, b) => {
+    if (b.filled !== a.filled) return b.filled - a.filled;
+    return a.countryName.localeCompare(b.countryName);
+  });
 }

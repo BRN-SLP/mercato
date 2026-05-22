@@ -5,7 +5,10 @@ import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 import { CountryMark } from "@/components/brand/CountryMark";
-import type { CoreBasketEntry } from "@/lib/core-basket";
+import type {
+  CoreBasketEntry,
+  CorePartialEntry,
+} from "@/lib/core-basket";
 
 interface HeroLiveRankingProps {
   /** Pre-computed rankings in both base currencies. Server fetched
@@ -17,6 +20,9 @@ interface HeroLiveRankingProps {
    *  "as of" line so the visitor knows what 'live' means. */
   asOfUsd: string | null;
   asOfEur: string | null;
+  /** Countries with 1-2 of the 3 core products priced. Surfaced in
+   *  the empty state when zero countries qualify for the ranking. */
+  partial?: CorePartialEntry[];
 }
 
 /**
@@ -41,6 +47,7 @@ export function HeroLiveRanking({
   eur,
   asOfUsd,
   asOfEur,
+  partial,
 }: HeroLiveRankingProps) {
   const [base, setBase] = useState<"USD" | "EUR">("USD");
   const data = base === "USD" ? usd : eur;
@@ -48,19 +55,7 @@ export function HeroLiveRanking({
   const symbol = base === "USD" ? "$" : "€";
 
   if (!data || data.length === 0) {
-    // No core-basket-complete country yet — preserve the column space
-    // with a quiet placeholder so the hero layout doesn't collapse.
-    return (
-      <div className="flex h-full flex-col justify-center rounded-md border border-border/60 bg-card/40 px-5 py-8 text-center">
-        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-          Live ranking
-        </p>
-        <p className="mt-3 text-sm text-muted-foreground">
-          Building the comparable basket. As soon as one country has
-          bread, milk, and transit priced, it shows up here.
-        </p>
-      </div>
-    );
+    return <EmptyState partial={partial ?? []} />;
   }
 
   const maxCents = Math.max(...data.map((e) => e.baseCents));
@@ -162,6 +157,87 @@ export function HeroLiveRanking({
           <ArrowRight className="h-3 w-3" aria-hidden="true" />
         </Link>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Empty state — shown when no country has all three core products
+ * priced yet. Instead of a generic placeholder, surfaces the top
+ * countries by partial fill so visitors see what's *almost* there
+ * and which slot is missing.
+ */
+function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
+  const hasPartial = partial.length > 0;
+  return (
+    <div className="flex h-full flex-col rounded-md border border-border/60 bg-card/40 px-5 py-6">
+      <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+        Closest to ranking
+      </p>
+      <h3 className="mt-1 font-serif text-lg font-semibold tracking-tight">
+        Bread · milk · transit
+      </h3>
+      {hasPartial ? (
+        <>
+          <p className="mt-2 text-xs text-muted-foreground">
+            One more product, one more country into the ranking.
+          </p>
+          <ol className="mt-4 space-y-2.5">
+            {partial.slice(0, 5).map((entry) => {
+              const widthPct = (entry.filled / entry.total) * 100;
+              return (
+                <li key={entry.countryCode}>
+                  <Link
+                    href={`/basket?country=${entry.countryCode}`}
+                    className="group block focus-visible:outline-none"
+                    aria-label={`${entry.countryName}: ${entry.filled} of ${entry.total} core products priced`}
+                  >
+                    <div className="flex items-center justify-between gap-3 text-xs">
+                      <span className="flex items-center gap-2.5 truncate">
+                        <CountryMark code={entry.countryCode} size="sm" />
+                        <span className="truncate font-medium">
+                          {entry.countryName}
+                        </span>
+                      </span>
+                      <span className="font-mono tabular-nums text-muted-foreground">
+                        {entry.filled}/{entry.total}
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      className="mt-1 h-1.5 overflow-hidden rounded-full bg-muted/40"
+                    >
+                      <div
+                        className="h-full bg-primary/50 transition-[width] duration-700 ease-out group-hover:bg-primary/80"
+                        style={{ width: `${widthPct}%` }}
+                      />
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+          <div className="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+            ranking unlocks at 3/3
+          </div>
+        </>
+      ) : (
+        <>
+          <p className="mt-3 max-w-xs text-sm text-muted-foreground">
+            Add the first price for bread, milk, or transit. The ranking
+            seeds itself from there.
+          </p>
+          <div className="mt-auto pt-4">
+            <Link
+              href="/scan"
+              className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-primary hover:underline"
+            >
+              Add a price
+              <ArrowRight className="h-3 w-3" aria-hidden="true" />
+            </Link>
+          </div>
+        </>
+      )}
     </div>
   );
 }
