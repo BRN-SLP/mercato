@@ -33,7 +33,7 @@ const SITE_URL =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Mercato — crowdsourced consumer price basket on Celo',
+    default: 'Mercato · crowdsourced consumer price basket on Celo',
     template: '%s · Mercato',
   },
   description:
@@ -134,7 +134,12 @@ export default async function LocaleLayout({
             <div className="relative flex min-h-screen flex-col">
               <WalletProvider>
                 <Navbar />
-                <main className="flex-1">{children}</main>
+                {/* No <main> here — each page provides its own so
+                    the document has exactly one main landmark.
+                    Layout-level <main> would duplicate the
+                    page-level <main> on /, /basket, /scan, /rewards
+                    and trip WCAG 2.4.1 + AXE rules. */}
+                <div className="flex-1">{children}</div>
                 <Footer />
                 <Toaster />
               </WalletProvider>
