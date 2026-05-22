@@ -5,7 +5,7 @@
     "submit": "Soumettre",
     "rewards": "Récompenses",
     "menu": "Menu",
-    "logoAria": "Mercato — accueil"
+    "logoAria": "Mercato, accueil"
   },
   "hero": {
     "liveBadge": "live · celo mainnet",
@@ -31,7 +31,7 @@
     "step2TitleAccent": "oui.",
     "step2Body": "D'autres contributeurs du même pays votent ✓ ou ✗ sur les soumissions en attente. Trois oui concordants finalisent le prix et débloquent les récompenses pour toutes les personnes impliquées.",
     "step3Title": "Récupère tes récompenses en cUSD.",
-    "step3Body": "Les micro-récompenses s'accumulent pour chaque soumission acceptée et chaque vérification que tu fais sur celle d'une autre personne. Transfère le solde sur MiniPay ou n'importe quel portefeuille Celo en une seule opération — quand tu veux, sans minimum."
+    "step3Body": "Les micro-récompenses s'accumulent pour chaque soumission acceptée et chaque vérification que tu fais sur celle d'une autre personne. Transfère le solde sur MiniPay ou n'importe quel portefeuille Celo en une seule opération. Quand tu veux, sans minimum."
   },
   "basketPreview": {
     "section": "Le panier à ce jour",
@@ -44,7 +44,7 @@
       "section": "Le panier est vide",
       "title1": "Aucun pays n'a encore",
       "titleAccent": "de prix.",
-      "body": "Mercato démarre à zéro. Sois le premier à ajouter un prix dans ton pays — le reste du panier se construit tout seul.",
+      "body": "Mercato démarre à zéro. Sois le premier à ajouter un prix dans ton pays, le reste du panier se construit tout seul.",
       "cta": "Ajouter un prix"
     }
   },

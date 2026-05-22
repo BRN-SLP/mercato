@@ -5,7 +5,7 @@
     "submit": "Enviar",
     "rewards": "Recompensas",
     "menu": "Menu",
-    "logoAria": "Mercato — início"
+    "logoAria": "Mercato, início"
   },
   "hero": {
     "liveBadge": "live · celo mainnet",
@@ -31,7 +31,7 @@
     "step2TitleAccent": "sim.",
     "step2Body": "Outros contribuidores do mesmo país votam ✓ ou ✗ nos envios pendentes. Três sins coincidentes finalizam o preço e desbloqueiam recompensas para todos no round.",
     "step3Title": "Retire suas recompensas em cUSD.",
-    "step3Body": "Micro-recompensas se acumulam para cada envio aceito e cada verificação que você fizer no de outra pessoa. Transfira o saldo para o MiniPay ou qualquer carteira Celo em uma única operação — quando quiser, sem mínimo."
+    "step3Body": "Micro-recompensas se acumulam para cada envio aceito e cada verificação que você fizer no de outra pessoa. Transfira o saldo para o MiniPay ou qualquer carteira Celo em uma única operação. Quando quiser, sem mínimo."
   },
   "basketPreview": {
     "section": "A cesta até agora",
@@ -44,7 +44,7 @@
       "section": "A cesta está vazia",
       "title1": "Nenhum país foi precificado",
       "titleAccent": "ainda.",
-      "body": "O Mercato começa do zero. Seja o primeiro a enviar um preço no seu país — o resto da cesta se monta sozinho.",
+      "body": "O Mercato começa do zero. Seja o primeiro a enviar um preço no seu país, o resto da cesta se monta sozinho.",
       "cta": "Enviar um preço"
     }
   },

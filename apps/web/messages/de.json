@@ -5,7 +5,7 @@
     "submit": "Einreichen",
     "rewards": "Belohnungen",
     "menu": "Menü",
-    "logoAria": "Mercato — Start"
+    "logoAria": "Mercato, Start"
   },
   "hero": {
     "liveBadge": "live · celo mainnet",
@@ -31,7 +31,7 @@
     "step2TitleAccent": "ja.",
     "step2Body": "Andere Beitragende aus dem gleichen Land stimmen ✓ oder ✗ über offene Einreichungen ab. Drei übereinstimmende Ja-Stimmen finalisieren den Preis und schalten Belohnungen für alle Beteiligten frei.",
     "step3Title": "Belohnungen in cUSD abholen.",
-    "step3Body": "Mikro-Belohnungen sammeln sich für jede angenommene Einreichung und jede Bestätigung, die du auf eine andere abgibst. Hole das Guthaben in einer Transaktion auf MiniPay oder eine beliebige Celo-Wallet — jederzeit, ohne Mindestbetrag."
+    "step3Body": "Mikro-Belohnungen sammeln sich für jede angenommene Einreichung und jede Bestätigung, die du auf eine andere abgibst. Hole das Guthaben in einer Transaktion auf MiniPay oder eine beliebige Celo-Wallet. Jederzeit, ohne Mindestbetrag."
   },
   "basketPreview": {
     "section": "Der Warenkorb bislang",
@@ -44,7 +44,7 @@
       "section": "Der Warenkorb ist leer",
       "title1": "Noch kein Land",
       "titleAccent": "erfasst.",
-      "body": "Mercato startet bei null. Sei der/die Erste, der einen Preis in deinem Land einträgt — der Rest des Warenkorbs füllt sich von selbst.",
+      "body": "Mercato startet bei null. Sei der/die Erste, der einen Preis in deinem Land einträgt, der Rest des Warenkorbs füllt sich von selbst.",
       "cta": "Preis hinzufügen"
     }
   },

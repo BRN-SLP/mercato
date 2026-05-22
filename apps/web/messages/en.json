@@ -5,7 +5,7 @@
     "submit": "Submit",
     "rewards": "Rewards",
     "menu": "Toggle menu",
-    "logoAria": "Mercato — home"
+    "logoAria": "Mercato, home"
   },
   "hero": {
     "liveBadge": "live · celo mainnet",
@@ -31,7 +31,7 @@
     "step2TitleAccent": "yes.",
     "step2Body": "Other contributors in the same country vote ✓ or ✗ on pending submissions. Three matching positives finalize the price and unlock rewards for everyone involved in the round.",
     "step3Title": "Sweep your rewards in cUSD.",
-    "step3Body": "Micro-rewards accumulate for every accepted submission and every verification you cast on someone else's. Sweep the balance to MiniPay or any Celo wallet in one claim — any time, no minimum."
+    "step3Body": "Micro-rewards accumulate for every accepted submission and every verification you cast on someone else's. Sweep the balance to MiniPay or any Celo wallet in one claim. Any time, no minimum."
   },
   "basketPreview": {
     "section": "The basket so far",
@@ -44,7 +44,7 @@
       "section": "The basket is empty",
       "title1": "No country has been priced",
       "titleAccent": "yet.",
-      "body": "Mercato launches at zero submissions. Be the first to add a price in your country — the rest of the basket builds itself.",
+      "body": "Mercato launches at zero submissions. Be the first to add a price in your country, and the rest of the basket builds itself.",
       "cta": "Add a price"
     }
   },

@@ -5,7 +5,7 @@
     "submit": "Aportar",
     "rewards": "Recompensas",
     "menu": "Menú",
-    "logoAria": "Mercato — inicio"
+    "logoAria": "Mercato, inicio"
   },
   "hero": {
     "liveBadge": "live · celo mainnet",
@@ -31,7 +31,7 @@
     "step2TitleAccent": "sí.",
     "step2Body": "Otros contribuyentes del mismo país votan ✓ o ✗ sobre las aportaciones pendientes. Tres síes coincidentes finalizan el precio y desbloquean recompensas para todos los involucrados.",
     "step3Title": "Retira tus recompensas en cUSD.",
-    "step3Body": "Las micro-recompensas se acumulan por cada aportación aceptada y cada verificación que emitas sobre la de otra persona. Retira el saldo a MiniPay o cualquier billetera Celo en una sola operación — cuando quieras, sin mínimo."
+    "step3Body": "Las micro-recompensas se acumulan por cada aportación aceptada y cada verificación que emitas sobre la de otra persona. Retira el saldo a MiniPay o cualquier billetera Celo en una sola operación. Cuando quieras, sin mínimo."
   },
   "basketPreview": {
     "section": "La canasta hasta ahora",
@@ -44,7 +44,7 @@
       "section": "La canasta está vacía",
       "title1": "Ningún país tiene precios",
       "titleAccent": "todavía.",
-      "body": "Mercato arranca en cero. Sé el primero en aportar un precio en tu país — el resto de la canasta se construye sola.",
+      "body": "Mercato arranca en cero. Sé el primero en aportar un precio en tu país, el resto de la canasta se construye sola.",
       "cta": "Aportar un precio"
     }
   },
