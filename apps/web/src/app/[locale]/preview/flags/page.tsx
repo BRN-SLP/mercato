@@ -20,7 +20,9 @@ import { COUNTRIES } from "@/lib/countries";
  * metadata below.
  */
 export const metadata: Metadata = {
-  title: "Flag style preview · Mercato",
+  // Title only — the `· Mercato` suffix is added by the layout
+  // template, so writing it here too renders as `· Mercato · Mercato`.
+  title: "Flag style preview",
   robots: { index: false, follow: false },
 };
 
