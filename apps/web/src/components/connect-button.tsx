@@ -4,6 +4,7 @@ import { ConnectButton as RainbowKitConnectButton } from "@rainbow-me/rainbowkit
 import { motion } from "framer-motion";
 import { AlertTriangle, Plug } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 /**
  * Mercato-branded connect button.
@@ -25,6 +26,7 @@ import { useEffect, useState } from "react";
  * Inside MiniPay's injected Opera wallet the entire control hides.
  */
 export function ConnectButton() {
+  const t = useTranslations("connectButton");
   const [isMinipay, setIsMinipay] = useState(false);
 
   useEffect(() => {
@@ -66,7 +68,7 @@ export function ConnectButton() {
                       aria-hidden="true"
                       className="h-3.5 w-3.5 transition-transform group-hover:rotate-12"
                     />
-                    <span>[ connect ]</span>
+                    <span>{t("connect")}</span>
                   </motion.button>
                 );
               }
@@ -81,7 +83,7 @@ export function ConnectButton() {
                     className="inline-flex items-center gap-2 rounded-sm border border-destructive/50 bg-destructive/10 px-3 py-1.5 font-mono text-xs uppercase tracking-[0.18em] text-destructive"
                   >
                     <AlertTriangle aria-hidden="true" className="h-3.5 w-3.5" />
-                    <span>wrong net</span>
+                    <span>{t("wrongNet")}</span>
                   </motion.button>
                 );
               }
@@ -93,7 +95,7 @@ export function ConnectButton() {
                     onClick={openChainModal}
                     whileTap={{ scale: 0.97 }}
                     className="inline-flex items-center gap-2 border-r border-primary/20 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/80 transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    aria-label={`Switch network (current: ${chain.name})`}
+                    aria-label={t("switchAria", { network: chain.name })}
                   >
                     <span aria-hidden="true" className="relative inline-flex">
                       <span className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -107,7 +109,7 @@ export function ConnectButton() {
                     onClick={openAccountModal}
                     whileTap={{ scale: 0.97 }}
                     className="inline-flex items-center gap-2 px-3 py-1.5 font-mono text-[11px] text-foreground transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    aria-label="Account details"
+                    aria-label={t("accountAria")}
                   >
                     <span className="font-numeric tracking-tight">
                       {account.displayName}
