@@ -284,6 +284,37 @@
         "h2": "Contact",
         "body": "For privacy questions, security disclosures, or removal requests for off-chain content (the receipt photos mentioned above), open an issue on the <link>project repository</link>."
       }
+    },
+    "terms": {
+      "metaTitle": "Terms of Service",
+      "metaDescription": "Mercato terms of service: open-source community price index on Celo.",
+      "h1": "Terms of Service",
+      "what": {
+        "h2": "What Mercato is",
+        "body": "Mercato is a community-built consumer-price index on the Celo blockchain. Anyone can submit a local price for an everyday product. Other contributors vote ✓ or ✗ on submissions. After three matching positive votes the submission is finalized and stored on-chain as a price observation. The full source code is MIT-licensed and lives at <link>github.com/BRN-SLP/mercato</link>."
+      },
+      "warranties": {
+        "h2": "No warranties",
+        "body": "Mercato is provided as-is, with no warranties of any kind. The smart contract is immutable in its current logic: its source is verified on <link>Celoscan</link> so you can inspect it before interacting. You are responsible for any transaction you submit. We make no claim that any submitted price is accurate; consensus only proves that three peers agreed, not that the price reflects reality."
+      },
+      "rewards": {
+        "h2": "Rewards",
+        "body": "The contract pays small cUSD rewards to submitters and verifiers from a fixed seed pool funded by the project. The pool is finite. When it is depleted, the reward-distribution path inside the contract will revert with <code>InsufficientPoolBalance</code>; submissions and verifications still work but no payouts occur. There is no guarantee of any specific reward amount or payout schedule."
+      },
+      "use": {
+        "h2": "Acceptable use",
+        "honest": "Submit prices you have actually observed. Spam, fraudulent or coordinated submissions are not welcome and will be voted down by the community.",
+        "noattack": "Do not attempt to attack, overload, or game the contract or this site. Security disclosures: open an issue on the GitHub repo above.",
+        "permanent": "All submitted price observations become public on-chain data the moment they are mined. Treat anything you publish as permanent and public."
+      },
+      "opendata": {
+        "h2": "Open data",
+        "body": "All price observations submitted via Mercato are released into the public domain (CC0). Anyone can read, copy, fork, or build on the data: that is the entire point of the project."
+      },
+      "changes": {
+        "h2": "Changes",
+        "body": "These terms may change as the project evolves. The current version is always the one served at this URL."
+      }
     }
   },
   "languageSwitcher": {

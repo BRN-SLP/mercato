@@ -284,6 +284,37 @@
         "h2": "Contato",
         "body": "Para dúvidas de privacidade, security disclosures ou pedidos de remoção de conteúdo off-chain (fotos de recibo), abra uma issue no <link>repositório do projeto</link>."
       }
+    },
+    "terms": {
+      "metaTitle": "Termos de Serviço",
+      "metaDescription": "Termos de serviço do Mercato: índice de preços ao consumidor open-source na Celo.",
+      "h1": "Termos de Serviço",
+      "what": {
+        "h2": "O que é o Mercato",
+        "body": "O Mercato é um índice de preços ao consumidor construído pela comunidade na blockchain Celo. Qualquer pessoa pode enviar um preço local de um produto cotidiano. Outros contribuidores votam ✓ ou ✗ nos envios. Após três votos positivos coincidentes, o envio é finalizado e gravado on-chain como observação de preço. O código fonte completo está sob licença MIT em <link>github.com/BRN-SLP/mercato</link>."
+      },
+      "warranties": {
+        "h2": "Sem garantias",
+        "body": "O Mercato é fornecido no estado em que se encontra, sem garantias de qualquer tipo. A lógica do smart contract é imutável: seu código fonte está verificado no <link>Celoscan</link>, então você pode inspecioná-lo antes de interagir. Você é responsável por qualquer transação que assinar. Não afirmamos que algum preço enviado seja exato; o consenso só prova que três pares concordaram, não que o preço corresponde à realidade."
+      },
+      "rewards": {
+        "h2": "Recompensas",
+        "body": "O contrato paga pequenas recompensas em cUSD para enviadores e verificadores a partir de um seed pool fixo financiado pelo projeto. O pool é finito. Quando esgotar, o caminho de distribuição de recompensas dentro do contrato reverterá com <code>InsufficientPoolBalance</code>; envios e verificações continuam funcionando mas não há pagamentos. Não há garantia de valor específico nem de calendário de pagamento."
+      },
+      "use": {
+        "h2": "Uso aceitável",
+        "honest": "Envie preços que você realmente observou. Spam, envios fraudulentos ou coordenados não são bem-vindos e serão votados negativamente pela comunidade.",
+        "noattack": "Não tente atacar, sobrecarregar nem manipular o contrato ou este site. Security disclosures: abra uma issue no repositório do GitHub mencionado acima.",
+        "permanent": "Toda observação de preço enviada vira dado público on-chain no instante em que é minerada. Trate o que publica como permanente e público."
+      },
+      "opendata": {
+        "h2": "Dados abertos",
+        "body": "Todas as observações de preço enviadas via Mercato são liberadas em domínio público (CC0). Qualquer pessoa pode ler, copiar, forkar ou construir sobre os dados: esse é o ponto inteiro do projeto."
+      },
+      "changes": {
+        "h2": "Mudanças",
+        "body": "Estes termos podem mudar à medida que o projeto evolui. A versão vigente é sempre a servida nesta URL."
+      }
     }
   },
   "languageSwitcher": {

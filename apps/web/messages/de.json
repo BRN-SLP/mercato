@@ -284,6 +284,37 @@
         "h2": "Kontakt",
         "body": "Für Datenschutzanfragen, Security Disclosures oder Anträge auf Entfernung von Off-Chain-Inhalten (siehe Belegfotos oben) öffne ein Issue im <link>Projekt-Repository</link>."
       }
+    },
+    "terms": {
+      "metaTitle": "Nutzungsbedingungen",
+      "metaDescription": "Nutzungsbedingungen von Mercato: Open-Source-Verbraucherpreisindex der Community auf Celo.",
+      "h1": "Nutzungsbedingungen",
+      "what": {
+        "h2": "Was Mercato ist",
+        "body": "Mercato ist ein von der Community auf der Celo-Blockchain aufgebauter Verbraucherpreisindex. Jede und jeder kann einen lokalen Preis für ein Alltagsprodukt einreichen. Andere Beitragende stimmen mit ✓ oder ✗ über Einreichungen ab. Nach drei übereinstimmenden positiven Stimmen wird die Einreichung finalisiert und on-chain als Preisbeobachtung abgelegt. Der vollständige Quellcode steht unter MIT-Lizenz auf <link>github.com/BRN-SLP/mercato</link>."
+      },
+      "warranties": {
+        "h2": "Keine Gewährleistung",
+        "body": "Mercato wird wie besehen bereitgestellt, ohne jegliche Gewährleistung. Die Logik des Smart Contracts ist unveränderlich: Sein Quellcode ist auf <link>Celoscan</link> verifiziert, sodass du ihn vor der Interaktion prüfen kannst. Du bist für jede Transaktion, die du signierst, selbst verantwortlich. Wir behaupten nicht, dass ein eingereichter Preis korrekt ist; der Konsens beweist nur, dass drei Peers übereinstimmten, nicht dass der Preis die Realität widerspiegelt."
+      },
+      "rewards": {
+        "h2": "Belohnungen",
+        "body": "Der Vertrag zahlt kleine cUSD-Belohnungen an Einreichende und Verifizierende aus einem festen Seed-Pool, den das Projekt finanziert. Der Pool ist endlich. Wenn er erschöpft ist, wird der Belohnungs-Verteilungspfad im Vertrag mit <code>InsufficientPoolBalance</code> zurückgesetzt; Einreichungen und Verifizierungen funktionieren weiter, aber es erfolgen keine Auszahlungen. Es gibt keine Garantie für eine bestimmte Belohnungshöhe oder einen Auszahlungsplan."
+      },
+      "use": {
+        "h2": "Zulässige Nutzung",
+        "honest": "Reiche nur Preise ein, die du tatsächlich beobachtet hast. Spam, betrügerische oder koordinierte Einreichungen sind nicht willkommen und werden von der Community herunter gestimmt.",
+        "noattack": "Versuche nicht, den Vertrag oder diese Seite anzugreifen, zu überlasten oder zu manipulieren. Security Disclosures: öffne ein Issue im oben verlinkten GitHub-Repo.",
+        "permanent": "Jede eingereichte Preisbeobachtung wird in dem Moment, in dem sie geminted wird, zu öffentlichen On-Chain-Daten. Behandle alles, was du veröffentlichst, als dauerhaft und öffentlich."
+      },
+      "opendata": {
+        "h2": "Offene Daten",
+        "body": "Alle über Mercato eingereichten Preisbeobachtungen werden in die Public Domain (CC0) entlassen. Jeder darf die Daten lesen, kopieren, forken oder darauf aufbauen: genau das ist der Sinn des Projekts."
+      },
+      "changes": {
+        "h2": "Änderungen",
+        "body": "Diese Bedingungen können sich mit der Weiterentwicklung des Projekts ändern. Die aktuelle Version ist immer die, die unter dieser URL ausgeliefert wird."
+      }
     }
   },
   "languageSwitcher": {
