@@ -2,6 +2,7 @@
 
 import { Check, Loader2, X } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,6 +20,7 @@ interface VerifyCardProps {
 }
 
 export function VerifyCard({ submission }: VerifyCardProps) {
+  const t = useTranslations("verifyCard");
   const verify = useVerify();
   const [pending, setPending] = useState<"accept" | "reject" | null>(null);
 
@@ -42,12 +44,12 @@ export function VerifyCard({ submission }: VerifyCardProps) {
   const busy =
     verify.state.kind === "submitting" || verify.state.kind === "confirming";
 
+  const id = submission.submissionId.toString();
+
   return (
     <Card>
       <CardHeader className="pb-2">
-        <CardTitle className="text-base">
-          Submission #{submission.submissionId}
-        </CardTitle>
+        <CardTitle className="text-base">{t("title", { id })}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-3 text-sm">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -56,20 +58,26 @@ export function VerifyCard({ submission }: VerifyCardProps) {
           </span>
           {zone && (
             <span className="text-xs text-muted-foreground">
-              zone {zone.lat.toFixed(2)}, {zone.lng.toFixed(2)}
+              {t("zoneLabel", {
+                lat: zone.lat.toFixed(2),
+                lng: zone.lng.toFixed(2),
+              })}
             </span>
           )}
           <span className="text-xs text-muted-foreground">
-            votes {submission.acceptVotes}-{submission.rejectVotes} of 3
+            {t("votesLabel", {
+              accept: submission.acceptVotes,
+              reject: submission.rejectVotes,
+            })}
           </span>
         </div>
-        <div className="flex gap-2" role="group" aria-label={`Verify submission #${submission.submissionId}`}>
+        <div className="flex gap-2" role="group" aria-label={t("groupAria", { id })}>
           <Button
             size="sm"
             variant="outline"
             onClick={() => handle(true)}
             disabled={busy}
-            aria-label={`Accept submission #${submission.submissionId}`}
+            aria-label={t("acceptAria", { id })}
             aria-busy={pending === "accept" || undefined}
             className="flex-1"
           >
@@ -84,14 +92,14 @@ export function VerifyCard({ submission }: VerifyCardProps) {
                 className="mr-2 h-4 w-4 text-emerald-600"
               />
             )}
-            Looks right
+            {t("accept")}
           </Button>
           <Button
             size="sm"
             variant="outline"
             onClick={() => handle(false)}
             disabled={busy}
-            aria-label={`Reject submission #${submission.submissionId}`}
+            aria-label={t("rejectAria", { id })}
             aria-busy={pending === "reject" || undefined}
             className="flex-1"
           >
@@ -106,7 +114,7 @@ export function VerifyCard({ submission }: VerifyCardProps) {
                 className="mr-2 h-4 w-4 text-rose-600"
               />
             )}
-            Off
+            {t("reject")}
           </Button>
         </div>
         {verify.state.kind === "error" && (
