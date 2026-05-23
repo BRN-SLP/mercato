@@ -94,6 +94,38 @@
   "balance": {
     "title": "Your balances"
   },
+  "basket": {
+    "index": {
+      "kicker": "Cost-of-living index",
+      "title1": "The Mercato basket,",
+      "titleAccent": "country by country.",
+      "body": "Daily median prices submitted and verified by the community. Each basket sums the median price for {count} canonical goods in local currency: bread, rent, transport, utilities. Click a row for the per-product breakdown.",
+      "columns": {
+        "country": "Country",
+        "coverage": "Coverage",
+        "basketTotal": "Basket total"
+      },
+      "rowAria": "{country}: {coverage} of {total} products priced",
+      "viewAfford": "view →",
+      "beFirstAfford": "be first →"
+    },
+    "detail": {
+      "back": "Back to index",
+      "kicker": "{currency} · cost-of-living",
+      "summary": "Median basket total of <strong>{value} {currency}</strong> across {filled} of {total} canonical products.",
+      "subsCount": "{count, plural, one {# sub} other {# subs}}",
+      "emptyTitle": "No prices in <accent>{country}</accent> yet",
+      "emptyBody": "The basket here is empty. Be the first to add a price.",
+      "emptyCta": "Add a price →"
+    },
+    "empty": {
+      "kicker": "The basket is empty",
+      "title1": "No prices have been submitted",
+      "titleAccent": "yet.",
+      "body": "Mercato launches at zero submissions in every country. Pick a product, pick your country, type a price, the index starts building itself.",
+      "cta": "Add the first price →"
+    }
+  },
   "scan": {
     "connectPrompt": "Connect your wallet at the top right to submit. The form below works in preview mode without a wallet.",
     "form": {

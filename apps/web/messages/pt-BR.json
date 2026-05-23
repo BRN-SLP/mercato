@@ -94,6 +94,38 @@
   "balance": {
     "title": "Seus saldos"
   },
+  "basket": {
+    "index": {
+      "kicker": "Índice de custo de vida",
+      "title1": "A cesta do Mercato,",
+      "titleAccent": "país por país.",
+      "body": "Preços medianos diários enviados e verificados pela comunidade. Cada cesta soma o preço mediano de {count} produtos canônicos em moeda local: pão, aluguel, transporte, contas. Toque numa linha para o detalhamento por produto.",
+      "columns": {
+        "country": "País",
+        "coverage": "Cobertura",
+        "basketTotal": "Total da cesta"
+      },
+      "rowAria": "{country}: {coverage} de {total} produtos com preço",
+      "viewAfford": "ver →",
+      "beFirstAfford": "seja o primeiro →"
+    },
+    "detail": {
+      "back": "Voltar ao índice",
+      "kicker": "{currency} · custo de vida",
+      "summary": "Total mediano da cesta de <strong>{value} {currency}</strong> em {filled} de {total} produtos canônicos.",
+      "subsCount": "{count, plural, one {# envio} other {# envios}}",
+      "emptyTitle": "Ainda não há preços em <accent>{country}</accent>",
+      "emptyBody": "A cesta aqui está vazia. Seja o primeiro a enviar um preço.",
+      "emptyCta": "Enviar um preço →"
+    },
+    "empty": {
+      "kicker": "A cesta está vazia",
+      "title1": "Nenhum preço foi",
+      "titleAccent": "enviado ainda.",
+      "body": "O Mercato começa do zero em cada país. Escolha um produto, seu país, digite um preço, o índice começa a se montar sozinho.",
+      "cta": "Enviar o primeiro preço →"
+    }
+  },
   "scan": {
     "connectPrompt": "Conecte sua carteira no canto superior direito para enviar. O formulário funciona em modo de preview sem carteira.",
     "form": {

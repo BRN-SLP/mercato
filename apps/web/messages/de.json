@@ -94,6 +94,38 @@
   "balance": {
     "title": "Deine Guthaben"
   },
+  "basket": {
+    "index": {
+      "kicker": "Lebenshaltungs-Index",
+      "title1": "Der Mercato-Warenkorb,",
+      "titleAccent": "Land für Land.",
+      "body": "Tägliche Median-Preise, eingereicht und bestätigt von der Community. Jeder Warenkorb summiert den Median-Preis für {count} kanonische Güter in lokaler Währung: Brot, Miete, Verkehr, Nebenkosten. Tippe eine Zeile für die Aufschlüsselung pro Produkt.",
+      "columns": {
+        "country": "Land",
+        "coverage": "Abdeckung",
+        "basketTotal": "Korbsumme"
+      },
+      "rowAria": "{country}: {coverage} von {total} Produkten mit Preis",
+      "viewAfford": "öffnen →",
+      "beFirstAfford": "sei zuerst →"
+    },
+    "detail": {
+      "back": "Zurück zum Index",
+      "kicker": "{currency} · Lebenshaltung",
+      "summary": "Median-Korbsumme von <strong>{value} {currency}</strong> über {filled} von {total} kanonischen Produkten.",
+      "subsCount": "{count, plural, one {# Eintrag} other {# Einträge}}",
+      "emptyTitle": "Noch keine Preise in <accent>{country}</accent>",
+      "emptyBody": "Der Warenkorb hier ist leer. Sei der/die Erste, der einen Preis einträgt.",
+      "emptyCta": "Preis hinzufügen →"
+    },
+    "empty": {
+      "kicker": "Der Warenkorb ist leer",
+      "title1": "Es wurden noch keine",
+      "titleAccent": "Preise eingereicht.",
+      "body": "Mercato startet in jedem Land bei null. Wähle ein Produkt, dein Land, gib einen Preis ein, der Index baut sich von selbst auf.",
+      "cta": "Ersten Preis hinzufügen →"
+    }
+  },
   "scan": {
     "connectPrompt": "Verbinde dein Wallet oben rechts, um zu senden. Das Formular unten funktioniert im Vorschaumodus auch ohne Wallet.",
     "form": {

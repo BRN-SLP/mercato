@@ -94,6 +94,38 @@
   "balance": {
     "title": "Vos soldes"
   },
+  "basket": {
+    "index": {
+      "kicker": "Indice du coût de la vie",
+      "title1": "Le panier Mercato,",
+      "titleAccent": "pays par pays.",
+      "body": "Prix médians quotidiens soumis et vérifiés par la communauté. Chaque panier additionne le prix médian de {count} biens canoniques en devise locale : pain, loyer, transports, factures. Touche une ligne pour le détail par produit.",
+      "columns": {
+        "country": "Pays",
+        "coverage": "Couverture",
+        "basketTotal": "Total panier"
+      },
+      "rowAria": "{country} : {coverage} sur {total} produits avec un prix",
+      "viewAfford": "ouvrir →",
+      "beFirstAfford": "sois le premier →"
+    },
+    "detail": {
+      "back": "Retour à l'index",
+      "kicker": "{currency} · coût de la vie",
+      "summary": "Total médian du panier de <strong>{value} {currency}</strong> sur {filled} des {total} produits canoniques.",
+      "subsCount": "{count, plural, one {# soumission} other {# soumissions}}",
+      "emptyTitle": "Pas encore de prix en <accent>{country}</accent>",
+      "emptyBody": "Le panier est vide ici. Sois le premier à ajouter un prix.",
+      "emptyCta": "Ajouter un prix →"
+    },
+    "empty": {
+      "kicker": "Le panier est vide",
+      "title1": "Aucun prix n'a encore",
+      "titleAccent": "été soumis.",
+      "body": "Mercato démarre à zéro dans chaque pays. Choisis un produit, ton pays, saisis un prix, l'indice commence à se construire tout seul.",
+      "cta": "Ajouter le premier prix →"
+    }
+  },
   "scan": {
     "connectPrompt": "Connecte ton portefeuille en haut à droite pour soumettre. Le formulaire ci-dessous fonctionne en mode aperçu sans portefeuille.",
     "form": {

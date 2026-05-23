@@ -94,6 +94,38 @@
   "balance": {
     "title": "Tus saldos"
   },
+  "basket": {
+    "index": {
+      "kicker": "Índice de costo de vida",
+      "title1": "La canasta de Mercato,",
+      "titleAccent": "país por país.",
+      "body": "Precios medianos diarios aportados y verificados por la comunidad. Cada canasta suma el precio mediano de {count} productos canónicos en moneda local: pan, alquiler, transporte, servicios. Toca una fila para el desglose por producto.",
+      "columns": {
+        "country": "País",
+        "coverage": "Cobertura",
+        "basketTotal": "Total canasta"
+      },
+      "rowAria": "{country}: {coverage} de {total} productos con precio",
+      "viewAfford": "ver →",
+      "beFirstAfford": "sé el primero →"
+    },
+    "detail": {
+      "back": "Volver al índice",
+      "kicker": "{currency} · costo de vida",
+      "summary": "Total mediano de la canasta de <strong>{value} {currency}</strong> en {filled} de {total} productos canónicos.",
+      "subsCount": "{count, plural, one {# envío} other {# envíos}}",
+      "emptyTitle": "Aún no hay precios en <accent>{country}</accent>",
+      "emptyBody": "La canasta aquí está vacía. Sé el primero en aportar un precio.",
+      "emptyCta": "Aportar un precio →"
+    },
+    "empty": {
+      "kicker": "La canasta está vacía",
+      "title1": "Aún no se ha aportado",
+      "titleAccent": "ningún precio.",
+      "body": "Mercato arranca en cero en cada país. Elige un producto, tu país, escribe un precio, el índice empieza a construirse solo.",
+      "cta": "Aportar el primer precio →"
+    }
+  },
   "scan": {
     "connectPrompt": "Conecta tu billetera arriba a la derecha para enviar. El formulario funciona en modo previsualización sin billetera.",
     "form": {
