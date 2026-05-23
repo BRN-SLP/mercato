@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
+import { useSearchParams } from "next/navigation";
 import { Globe } from "lucide-react";
 
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -32,12 +33,21 @@ export function LanguageSwitcher() {
   const t = useTranslations("languageSwitcher");
   const locale = useLocale() as Locale;
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (nextLocale: Locale) => {
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      // Preserve query string when switching locale. usePathname()
+      // drops search params, so on routes like /basket?country=UA a
+      // naive router.replace(pathname, ...) would strip ?country=UA
+      // and bounce the user back to the index. Re-attach the search
+      // string so the user stays on the exact same view, just in a
+      // different language.
+      const search = searchParams.toString();
+      const target = search ? `${pathname}?${search}` : pathname;
+      router.replace(target, { locale: nextLocale });
     });
   };
 
