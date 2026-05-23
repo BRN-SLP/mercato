@@ -22,15 +22,15 @@ import { CATEGORY_LABELS, PRODUCTS, type ProductCategory } from "@/lib/products"
  *
  * Two modes, switched by the `?country=XX` query param:
  *
- *   - INDEX (no param) — table of every launch country sorted by
+ *   - INDEX (no param), table of every launch country sorted by
  *     coverage descending, each row linkable into that country's
  *     detailed breakdown.
- *   - DETAIL (?country=XX) — per-category product table for one
+ *   - DETAIL (?country=XX), per-category product table for one
  *     country showing the median price + sample size + how recent the
  *     last contributing submission is.
  *
  * Both modes server-render off the same cached snapshot
- * (`getBasketSnapshot`) — no client fetching, no skeletons, page
+ * (`getBasketSnapshot`), no client fetching, no skeletons, page
  * shows the freshest data Forno had within the last 60 seconds.
  */
 
@@ -64,7 +64,7 @@ export default async function BasketPage({ searchParams }: BasketPageProps) {
 
 async function CountryIndex({ baskets }: { baskets: readonly CountryBasket[] }) {
   const t = await getTranslations("basket.index");
-  // Show all countries — including zero-coverage ones at the bottom —
+  // Show all countries, including zero-coverage ones at the bottom,
   // so contributors see what's missing and can fill gaps.
   const ranked = [...baskets].sort((a, b) => {
     if (b.coverage !== a.coverage) return b.coverage - a.coverage;
@@ -86,7 +86,7 @@ async function CountryIndex({ baskets }: { baskets: readonly CountryBasket[] }) 
         </p>
       </header>
 
-      {/* Column header strip — sits OUTSIDE the row container so the
+      {/* Column header strip,sits OUTSIDE the row container so the
           row list reads as a divider-rhythm chart, not a primitive
           table-in-a-box. */}
       <div className="grid grid-cols-[3rem_1fr_8rem_auto] items-baseline gap-x-6 border-b border-border/60 px-3 pb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
@@ -178,7 +178,7 @@ async function CountryRow({
             </>
           ) : (
             <>
-              <span className="text-sm text-muted-foreground">—</span>
+              <span className="text-sm text-muted-foreground">·</span>
               <span className="text-[10px] uppercase tracking-wider text-primary/80">
                 {t("beFirstAfford")}
               </span>
@@ -212,7 +212,7 @@ async function CountryDetail({ basket }: { basket: CountryBasket }) {
 
       <header className="mb-10 space-y-4">
         <div className="flex items-center gap-3">
-          {/* Country mark — desaturated flag + ISO pill, large size
+          {/* Country mark,desaturated flag + ISO pill, large size
               so the country reads as the page identity. */}
           <CountryMark code={basket.country.code} size="lg" />
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
@@ -327,7 +327,7 @@ async function CategorySection({
                         </span>
                       </>
                     ) : (
-                      <span className="text-muted-foreground">—</span>
+                      <span className="text-muted-foreground">·</span>
                     )}
                   </td>
                   <td className="px-6 py-3 text-right font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
