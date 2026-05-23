@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { formatUnits } from "viem";
 import { useAccount } from "wagmi";
 
@@ -16,13 +17,14 @@ import { useRewardsActivity } from "@/hooks/useRewardsActivity";
 import { truncateAddress } from "@/lib/app-utils";
 
 function formatReward(wei: bigint | null): string {
-  if (wei === null) return "—";
+  if (wei === null) return "·";
   // Trim trailing zeros so 50000000000000000 → "0.05", not "0.050000000000000000".
   const s = formatUnits(wei, 18);
   return s.includes(".") ? s.replace(/0+$/, "").replace(/\.$/, "") : s;
 }
 
 export default function RewardsPage() {
+  const t = useTranslations("rewards");
   const { isConnected, address } = useAccount();
   const { pending, refetch, oracleAddress } = usePendingRewards();
   const { activity, loading } = useRewardsActivity();
@@ -31,9 +33,9 @@ export default function RewardsPage() {
   if (!isConnected || !address) {
     return (
       <main className="container mx-auto max-w-3xl px-4 py-10">
-        <h1 className="text-2xl font-semibold tracking-tight">Rewards</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{t("h1")}</h1>
         <p className="mt-3 text-sm text-muted-foreground">
-          Connect your wallet to see pending rewards and claim history.
+          {t("notConnected")}
         </p>
       </main>
     );
@@ -42,11 +44,8 @@ export default function RewardsPage() {
   if (!oracleAddress) {
     return (
       <main className="container mx-auto max-w-3xl px-4 py-10">
-        <h1 className="text-2xl font-semibold tracking-tight">Rewards</h1>
-        <p className="mt-3 text-sm text-destructive">
-          Mercato is not deployed on this network yet. Switch to a supported
-          chain.
-        </p>
+        <h1 className="text-2xl font-semibold tracking-tight">{t("h1")}</h1>
+        <p className="mt-3 text-sm text-destructive">{t("wrongNetwork")}</p>
       </main>
     );
   }
@@ -54,7 +53,7 @@ export default function RewardsPage() {
   return (
     <main className="container mx-auto max-w-3xl space-y-6 px-4 py-10">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Rewards</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{t("h1")}</h1>
         <p
           className="mt-1 font-mono text-xs text-muted-foreground"
           title={address}
@@ -72,7 +71,9 @@ export default function RewardsPage() {
         />
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Lifetime claimed</CardTitle>
+            <CardTitle className="text-lg">
+              {t("lifetimeClaimed.title")}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold tracking-tight">
@@ -80,8 +81,9 @@ export default function RewardsPage() {
               <span className="text-base">cUSD</span>
             </div>
             <p className="mt-1 text-xs text-muted-foreground">
-              {activity.claims.length} claim
-              {activity.claims.length === 1 ? "" : "s"} on record.
+              {t("lifetimeClaimed.claimsCount", {
+                count: activity.claims.length,
+              })}
             </p>
           </CardContent>
         </Card>
@@ -90,27 +92,29 @@ export default function RewardsPage() {
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Submissions</CardTitle>
+            <CardTitle className="text-lg">{t("submissions.title")}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold tracking-tight">
-              {loading ? "—" : activity.submissionCount}
+              {loading ? "·" : activity.submissionCount}
             </div>
             <p className="mt-1 text-xs text-muted-foreground">
-              Prices you submitted on-chain.
+              {t("submissions.body")}
             </p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Verifications</CardTitle>
+            <CardTitle className="text-lg">
+              {t("verifications.title")}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold tracking-tight">
-              {loading ? "—" : activity.verificationCount}
+              {loading ? "·" : activity.verificationCount}
             </div>
             <p className="mt-1 text-xs text-muted-foreground">
-              Votes you cast on other submissions.
+              {t("verifications.body")}
             </p>
           </CardContent>
         </Card>
@@ -118,28 +122,21 @@ export default function RewardsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">How rewards work</CardTitle>
+          <CardTitle className="text-lg">{t("howRewards.title")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-sm text-muted-foreground">
           <p>
-            Each accepted submission earns{" "}
-            <span className="font-medium text-foreground">
-              {formatReward(rewards.submitter)} cUSD
-            </span>{" "}
-            once it gathers three consistent verifications. Each verification
-            on an accepted submission earns{" "}
-            <span className="font-medium text-foreground">
-              {formatReward(rewards.verifier)} cUSD
-            </span>
-            .
+            {t.rich("howRewards.body", {
+              submitter: formatReward(rewards.submitter),
+              verifier: formatReward(rewards.verifier),
+              strong: (chunks) => (
+                <span className="font-medium text-foreground">{chunks}</span>
+              ),
+            })}
           </p>
-          <p>
-            Rewards accumulate inside the contract until you claim — one
-            transaction sweeps the full balance to your wallet.
-          </p>
+          <p>{t("howRewards.accumulate")}</p>
           <p className="text-[11px] text-muted-foreground/70">
-            Values are read directly from the deployed PriceOracle, so they
-            always match the active chain.
+            {t("howRewards.valuesNote")}
           </p>
         </CardContent>
       </Card>
