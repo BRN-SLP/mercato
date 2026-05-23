@@ -340,6 +340,12 @@
     "empty": "Ainda não há envios aceitos nos últimos 30 dias.",
     "sampleSize": "n = {count}"
   },
+  "connectButton": {
+    "connect": "[ conectar ]",
+    "wrongNet": "rede errada",
+    "switchAria": "Trocar rede (atual: {network})",
+    "accountAria": "Detalhes da conta"
+  },
   "languageSwitcher": {
     "label": "Idioma",
     "english": "English",

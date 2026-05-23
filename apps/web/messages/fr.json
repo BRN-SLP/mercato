@@ -340,6 +340,12 @@
     "empty": "Aucune soumission acceptée ces 30 derniers jours pour l'instant.",
     "sampleSize": "n = {count}"
   },
+  "connectButton": {
+    "connect": "[ connecter ]",
+    "wrongNet": "mauvais réseau",
+    "switchAria": "Changer de réseau (actuel : {network})",
+    "accountAria": "Détails du compte"
+  },
   "languageSwitcher": {
     "label": "Langue",
     "english": "English",

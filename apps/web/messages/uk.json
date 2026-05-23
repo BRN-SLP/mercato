@@ -340,6 +340,12 @@
     "empty": "Прийнятих заявок за останні 30 днів ще немає.",
     "sampleSize": "n = {count}"
   },
+  "connectButton": {
+    "connect": "[ підключити ]",
+    "wrongNet": "не та мережа",
+    "switchAria": "Змінити мережу (зараз: {network})",
+    "accountAria": "Деталі акаунту"
+  },
   "languageSwitcher": {
     "label": "Мова",
     "english": "English",

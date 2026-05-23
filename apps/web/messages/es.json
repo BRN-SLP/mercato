@@ -340,6 +340,12 @@
     "empty": "Aún no hay aportaciones aceptadas en los últimos 30 días.",
     "sampleSize": "n = {count}"
   },
+  "connectButton": {
+    "connect": "[ conectar ]",
+    "wrongNet": "red errónea",
+    "switchAria": "Cambiar red (actual: {network})",
+    "accountAria": "Detalles de la cuenta"
+  },
   "languageSwitcher": {
     "label": "Idioma",
     "english": "English",

@@ -340,6 +340,12 @@
     "empty": "In den letzten 30 Tagen noch keine angenommenen Einreichungen.",
     "sampleSize": "n = {count}"
   },
+  "connectButton": {
+    "connect": "[ verbinden ]",
+    "wrongNet": "falsches Netz",
+    "switchAria": "Netzwerk wechseln (aktuell: {network})",
+    "accountAria": "Konto-Details"
+  },
   "languageSwitcher": {
     "label": "Sprache",
     "english": "English",
