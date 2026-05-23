@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { Menu, ExternalLink } from "lucide-react";
 
@@ -69,7 +70,9 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="mt-6 flex flex-col gap-4 border-t pt-6">
-                  <LanguageSwitcher />
+                  <Suspense fallback={null}>
+                    <LanguageSwitcher />
+                  </Suspense>
                   <div className="flex items-center gap-2">
                     <ThemeToggle />
                     <ConnectButton />
@@ -110,7 +113,9 @@ export function Navbar() {
           ))}
 
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
+            <Suspense fallback={null}>
+              <LanguageSwitcher />
+            </Suspense>
             <ThemeToggle />
             <ConnectButton />
           </div>
