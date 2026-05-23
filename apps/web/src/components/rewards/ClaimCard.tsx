@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { formatUnits } from "viem";
 import {
@@ -34,6 +35,7 @@ type ClaimState =
   | { kind: "error"; message: string };
 
 export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
+  const t = useTranslations("rewards.claim");
   const chainId = useChainId();
   const { isConnected } = useAccount();
   const publicClient = usePublicClient({ chainId });
@@ -48,7 +50,7 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
     try {
       const oracleAddress = getPriceOracleAddress(chainId);
       setState({ kind: "submitting" });
-      // Fee abstraction — claim gas in cUSD on Celo mainnet. The
+      // Fee abstraction, claim gas in cUSD on Celo mainnet. The
       // claim transfers cUSD into the user's wallet, so paying the
       // gas in the same currency rounds out a "no CELO ever needed"
       // user flow. Same pattern as useSubmitPrice + useVerify.
@@ -64,28 +66,28 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
         ...extraTxParams,
       });
       setState({ kind: "confirming", txHash: tx });
-      const toastId = toast.loading("Claiming rewards…", {
-        description: `${formatUnits(pending, 18)} cUSD`,
+      const toastId = toast.loading(t("toastLoading"), {
+        description: t("toastLoadingDesc", { value: formatUnits(pending, 18) }),
       });
       await publicClient.waitForTransactionReceipt({ hash: tx });
       setState({ kind: "success" });
-      toast.success("Rewards claimed", {
+      toast.success(t("toastSuccessTitle"), {
         id: toastId,
-        description: "Funds are on their way to your wallet.",
+        description: t("toastSuccessDesc"),
       });
       await onClaimed();
     } catch (err: unknown) {
       const message =
-        err instanceof Error ? err.message.split("\n")[0] : "claim failed";
+        err instanceof Error ? err.message.split("\n")[0] : t("fallbackError");
       setState({ kind: "error", message });
-      toast.error("Claim failed", { description: message });
+      toast.error(t("toastErrorTitle"), { description: message });
     }
   }
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg">Pending rewards</CardTitle>
+        <CardTitle className="text-lg">{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
@@ -94,8 +96,7 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
           </div>
           {!hasFunds && (
             <p className="mt-1 text-xs text-muted-foreground">
-              Nothing to claim yet — submit a price or verify others&apos;
-              submissions to earn.
+              {t("emptyHint")}
             </p>
           )}
         </div>
@@ -107,15 +108,17 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
         >
           {busy
             ? state.kind === "submitting"
-              ? "Confirm in wallet…"
-              : "Waiting for confirmation…"
-            : "Claim cUSD"}
+              ? t("submitting")
+              : t("confirming")
+            : t("button")}
         </Button>
         {state.kind === "error" && (
-          <p className="text-xs text-destructive">Error: {state.message}</p>
+          <p className="text-xs text-destructive">
+            {t("error", { message: state.message })}
+          </p>
         )}
         {state.kind === "success" && (
-          <p className="text-xs text-emerald-600">Claimed.</p>
+          <p className="text-xs text-emerald-600">{t("success")}</p>
         )}
       </CardContent>
     </Card>
