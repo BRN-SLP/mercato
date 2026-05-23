@@ -27,7 +27,7 @@ export function HeroStats({ finalized, countries, pending }: HeroStatsProps) {
   return (
     <div
       role="list"
-      aria-label="Live network stats"
+      aria-label={t("ariaLabel")}
       className="grid grid-cols-1 divide-y divide-border/60 border-y border-border/60 sm:grid-cols-3 sm:divide-x sm:divide-y-0"
     >
       <Stat n={finalized} label={t("verified")} />
