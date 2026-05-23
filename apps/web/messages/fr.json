@@ -79,7 +79,14 @@
     "fullIndex": "Indice complet",
     "buildingTitle": "Classement en direct",
     "buildingBody": "Construction du panier comparable. Dès qu'un pays a des prix pour le pain, le lait et le transport, il apparaît ici.",
-    "baseToggleAria": "Devise de base"
+    "baseToggleAria": "Devise de base",
+    "partialTitle": "Tout près du classement",
+    "partialBody": "Un produit de plus, un pays de plus dans le classement.",
+    "partialFooter": "le classement s'ouvre à 3/3",
+    "emptyBody": "Ajoute le premier prix du pain, du lait ou des transports. Le classement se construit tout seul à partir de là.",
+    "emptyAddCta": "Ajouter un prix",
+    "itemAria": "{country} : {symbol}{amount} {base} panier de base",
+    "partialItemAria": "{country} : {filled} sur {total} produits de base avec prix"
   },
   "footer": {
     "version": "v{version} · mit · indice du coût de la vie · celo",

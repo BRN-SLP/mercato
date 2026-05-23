@@ -79,7 +79,14 @@
     "fullIndex": "Full index",
     "buildingTitle": "Live ranking",
     "buildingBody": "Building the comparable basket. As soon as one country has bread, milk, and transit priced, it shows up here.",
-    "baseToggleAria": "Base currency"
+    "baseToggleAria": "Base currency",
+    "partialTitle": "Closest to ranking",
+    "partialBody": "One more product, one more country into the ranking.",
+    "partialFooter": "ranking unlocks at 3/3",
+    "emptyBody": "Add the first price for bread, milk, or transit. The ranking seeds itself from there.",
+    "emptyAddCta": "Add a price",
+    "itemAria": "{country}: {symbol}{amount} {base} core basket",
+    "partialItemAria": "{country}: {filled} of {total} core products priced"
   },
   "footer": {
     "version": "v{version} · mit · cost-of-living index · celo",

@@ -79,7 +79,14 @@
     "fullIndex": "Índice completo",
     "buildingTitle": "Ranking en vivo",
     "buildingBody": "Construyendo la canasta comparable. En cuanto un país tenga precios de pan, leche y transporte, aparecerá aquí.",
-    "baseToggleAria": "Moneda base"
+    "baseToggleAria": "Moneda base",
+    "partialTitle": "Cerca del ranking",
+    "partialBody": "Un producto más, un país más en el ranking.",
+    "partialFooter": "el ranking se desbloquea con 3/3",
+    "emptyBody": "Aporta el primer precio de pan, leche o transporte. El ranking se siembra solo desde ahí.",
+    "emptyAddCta": "Aportar un precio",
+    "itemAria": "{country}: {symbol}{amount} {base} canasta básica",
+    "partialItemAria": "{country}: {filled} de {total} productos básicos con precio"
   },
   "footer": {
     "version": "v{version} · mit · índice de costo de vida · celo",

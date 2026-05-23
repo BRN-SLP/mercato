@@ -79,7 +79,14 @@
     "fullIndex": "Gesamter Index",
     "buildingTitle": "Live-Ranking",
     "buildingBody": "Baue den vergleichbaren Warenkorb. Sobald ein Land Preise für Brot, Milch und Verkehr hat, erscheint es hier.",
-    "baseToggleAria": "Basiswährung"
+    "baseToggleAria": "Basiswährung",
+    "partialTitle": "Knapp am Ranking",
+    "partialBody": "Ein Produkt mehr, ein Land mehr im Ranking.",
+    "partialFooter": "Ranking schaltet bei 3/3 frei",
+    "emptyBody": "Reiche den ersten Preis für Brot, Milch oder Transport ein. Das Ranking sät sich von dort aus selbst.",
+    "emptyAddCta": "Preis einreichen",
+    "itemAria": "{country}: {symbol}{amount} {base} Kernkorb",
+    "partialItemAria": "{country}: {filled} von {total} Kernprodukten mit Preis"
   },
   "footer": {
     "version": "v{version} · mit · Lebenshaltungs-Index · celo",

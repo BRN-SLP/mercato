@@ -79,7 +79,14 @@
     "fullIndex": "Повний індекс",
     "buildingTitle": "Жива таблиця",
     "buildingBody": "Будуємо порівнюваний кошик. Як тільки в країні з'являться ціни на хліб, молоко й транспорт, вона з'явиться тут.",
-    "baseToggleAria": "Базова валюта"
+    "baseToggleAria": "Базова валюта",
+    "partialTitle": "Близько до рейтингу",
+    "partialBody": "Ще один продукт, ще одна країна потрапить у рейтинг.",
+    "partialFooter": "рейтинг відкривається при 3/3",
+    "emptyBody": "Додай першу ціну на хліб, молоко або транспорт. Рейтинг засіється сам.",
+    "emptyAddCta": "Додати ціну",
+    "itemAria": "{country}: {symbol}{amount} {base} основний кошик",
+    "partialItemAria": "{country}: {filled} з {total} основних продуктів з ціною"
   },
   "footer": {
     "version": "v{version} · mit · індекс вартості життя · celo",

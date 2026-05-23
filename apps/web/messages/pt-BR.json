@@ -79,7 +79,14 @@
     "fullIndex": "Índice completo",
     "buildingTitle": "Ranking ao vivo",
     "buildingBody": "Montando a cesta comparável. Assim que um país tiver preços de pão, leite e transporte, ele aparece aqui.",
-    "baseToggleAria": "Moeda base"
+    "baseToggleAria": "Moeda base",
+    "partialTitle": "Perto do ranking",
+    "partialBody": "Mais um produto, mais um país entra no ranking.",
+    "partialFooter": "ranking abre em 3/3",
+    "emptyBody": "Envia o primeiro preço de pão, leite ou transporte. O ranking se planta sozinho a partir daí.",
+    "emptyAddCta": "Enviar um preço",
+    "itemAria": "{country}: {symbol}{amount} {base} cesta básica",
+    "partialItemAria": "{country}: {filled} de {total} produtos básicos com preço"
   },
   "footer": {
     "version": "v{version} · mit · índice de custo de vida · celo",
