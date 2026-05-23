@@ -64,7 +64,7 @@ export default function ItemPage({ params }: ItemPageProps) {
         </CardHeader>
         <CardContent>
           <div className="text-3xl font-semibold tracking-tight">
-            {median !== null ? (median / 100).toFixed(2) : "—"}
+            {median !== null ? (median / 100).toFixed(2) : "·"}
           </div>
           <p className="mt-1 text-xs text-muted-foreground">
             {t("median.subtitle", { count: accepted.length })}
