@@ -94,6 +94,44 @@
   "balance": {
     "title": "Seus saldos"
   },
+  "rewards": {
+    "h1": "Recompensas",
+    "notConnected": "Conecte sua carteira para ver as recompensas pendentes e o histórico de retiradas.",
+    "wrongNetwork": "O Mercato ainda não está implantado nesta rede. Troque para uma rede suportada.",
+    "lifetimeClaimed": {
+      "title": "Total resgatado",
+      "claimsCount": "{count, plural, one {# resgate} other {# resgates}} no histórico."
+    },
+    "submissions": {
+      "title": "Envios",
+      "body": "Preços que você enviou on-chain."
+    },
+    "verifications": {
+      "title": "Verificações",
+      "body": "Votos que você deu em envios de outras pessoas."
+    },
+    "howRewards": {
+      "title": "Como funcionam as recompensas",
+      "body": "Cada envio aceito rende <strong>{submitter} cUSD</strong> assim que reúne três verificações coincidentes. Cada verificação a um envio aceito rende <strong>{verifier} cUSD</strong>.",
+      "accumulate": "As recompensas se acumulam no contrato até você resgatar, uma única transação transfere todo o saldo para sua carteira.",
+      "valuesNote": "Os valores são lidos diretamente do contrato PriceOracle, então sempre batem com a rede ativa."
+    },
+    "claim": {
+      "title": "Recompensas pendentes",
+      "emptyHint": "Nada para resgatar ainda, envie um preço ou verifique envios de outras pessoas para ganhar.",
+      "submitting": "Confirme na carteira…",
+      "confirming": "Aguardando confirmação…",
+      "button": "Resgatar cUSD",
+      "error": "Erro: {message}",
+      "success": "Resgatado.",
+      "toastLoading": "Resgatando recompensas…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Recompensas resgatadas",
+      "toastSuccessDesc": "Os fundos estão a caminho da sua carteira.",
+      "toastErrorTitle": "Resgate falhou",
+      "fallbackError": "falha no resgate"
+    }
+  },
   "basket": {
     "index": {
       "kicker": "Índice de custo de vida",

@@ -94,6 +94,44 @@
   "balance": {
     "title": "Vos soldes"
   },
+  "rewards": {
+    "h1": "Récompenses",
+    "notConnected": "Connecte ton portefeuille pour voir les récompenses en attente et l'historique des retraits.",
+    "wrongNetwork": "Mercato n'est pas encore déployé sur ce réseau. Bascule vers un réseau pris en charge.",
+    "lifetimeClaimed": {
+      "title": "Total réclamé",
+      "claimsCount": "{count, plural, one {# retrait} other {# retraits}} dans l'historique."
+    },
+    "submissions": {
+      "title": "Soumissions",
+      "body": "Prix que tu as soumis on-chain."
+    },
+    "verifications": {
+      "title": "Vérifications",
+      "body": "Votes que tu as donnés sur les soumissions d'autres."
+    },
+    "howRewards": {
+      "title": "Comment fonctionnent les récompenses",
+      "body": "Chaque soumission acceptée rapporte <strong>{submitter} cUSD</strong> dès qu'elle obtient trois vérifications concordantes. Chaque vérification sur une soumission acceptée rapporte <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Les récompenses s'accumulent dans le contrat jusqu'au retrait, une seule transaction transfère tout le solde vers ton portefeuille.",
+      "valuesNote": "Les valeurs sont lues directement depuis le contrat PriceOracle, elles correspondent donc toujours au réseau actif."
+    },
+    "claim": {
+      "title": "Récompenses en attente",
+      "emptyHint": "Rien à réclamer pour l'instant, soumets un prix ou vérifie les soumissions d'autres pour gagner.",
+      "submitting": "Confirme dans le portefeuille…",
+      "confirming": "En attente de confirmation…",
+      "button": "Retirer en cUSD",
+      "error": "Erreur : {message}",
+      "success": "Retiré.",
+      "toastLoading": "Retrait en cours…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Récompenses retirées",
+      "toastSuccessDesc": "Les fonds sont en route vers ton portefeuille.",
+      "toastErrorTitle": "Retrait échoué",
+      "fallbackError": "retrait échoué"
+    }
+  },
   "basket": {
     "index": {
       "kicker": "Indice du coût de la vie",

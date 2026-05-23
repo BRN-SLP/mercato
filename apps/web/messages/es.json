@@ -94,6 +94,44 @@
   "balance": {
     "title": "Tus saldos"
   },
+  "rewards": {
+    "h1": "Recompensas",
+    "notConnected": "Conecta tu billetera para ver las recompensas pendientes y el historial de retiros.",
+    "wrongNetwork": "Mercato aún no está desplegado en esta red. Cambia a una cadena compatible.",
+    "lifetimeClaimed": {
+      "title": "Total reclamado",
+      "claimsCount": "{count, plural, one {# retiro} other {# retiros}} en el historial."
+    },
+    "submissions": {
+      "title": "Aportaciones",
+      "body": "Precios que enviaste on-chain."
+    },
+    "verifications": {
+      "title": "Verificaciones",
+      "body": "Votos que diste a aportaciones de otros."
+    },
+    "howRewards": {
+      "title": "Cómo funcionan las recompensas",
+      "body": "Cada aportación aceptada gana <strong>{submitter} cUSD</strong> una vez reúne tres verificaciones coincidentes. Cada verificación a una aportación aceptada gana <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Las recompensas se acumulan en el contrato hasta que reclames, una sola transacción transfiere todo el saldo a tu billetera.",
+      "valuesNote": "Los valores se leen directamente del contrato PriceOracle, así siempre coinciden con la cadena activa."
+    },
+    "claim": {
+      "title": "Recompensas pendientes",
+      "emptyHint": "Nada que reclamar aún, aporta un precio o verifica las aportaciones de otros para ganar.",
+      "submitting": "Confirma en la billetera…",
+      "confirming": "Esperando confirmación…",
+      "button": "Reclamar cUSD",
+      "error": "Error: {message}",
+      "success": "Reclamado.",
+      "toastLoading": "Reclamando recompensas…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Recompensas reclamadas",
+      "toastSuccessDesc": "Los fondos van camino a tu billetera.",
+      "toastErrorTitle": "Reclamo fallido",
+      "fallbackError": "reclamo fallido"
+    }
+  },
   "basket": {
     "index": {
       "kicker": "Índice de costo de vida",

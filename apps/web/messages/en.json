@@ -94,6 +94,44 @@
   "balance": {
     "title": "Your balances"
   },
+  "rewards": {
+    "h1": "Rewards",
+    "notConnected": "Connect your wallet to see pending rewards and claim history.",
+    "wrongNetwork": "Mercato is not deployed on this network yet. Switch to a supported chain.",
+    "lifetimeClaimed": {
+      "title": "Lifetime claimed",
+      "claimsCount": "{count, plural, one {# claim} other {# claims}} on record."
+    },
+    "submissions": {
+      "title": "Submissions",
+      "body": "Prices you submitted on-chain."
+    },
+    "verifications": {
+      "title": "Verifications",
+      "body": "Votes you cast on other submissions."
+    },
+    "howRewards": {
+      "title": "How rewards work",
+      "body": "Each accepted submission earns <strong>{submitter} cUSD</strong> once it gathers three consistent verifications. Each verification on an accepted submission earns <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Rewards accumulate inside the contract until you claim, one transaction sweeps the full balance to your wallet.",
+      "valuesNote": "Values are read directly from the deployed PriceOracle, so they always match the active chain."
+    },
+    "claim": {
+      "title": "Pending rewards",
+      "emptyHint": "Nothing to claim yet, submit a price or verify others' submissions to earn.",
+      "submitting": "Confirm in wallet…",
+      "confirming": "Waiting for confirmation…",
+      "button": "Claim cUSD",
+      "error": "Error: {message}",
+      "success": "Claimed.",
+      "toastLoading": "Claiming rewards…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Rewards claimed",
+      "toastSuccessDesc": "Funds are on their way to your wallet.",
+      "toastErrorTitle": "Claim failed",
+      "fallbackError": "claim failed"
+    }
+  },
   "basket": {
     "index": {
       "kicker": "Cost-of-living index",

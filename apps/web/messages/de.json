@@ -94,6 +94,44 @@
   "balance": {
     "title": "Deine Guthaben"
   },
+  "rewards": {
+    "h1": "Belohnungen",
+    "notConnected": "Verbinde dein Wallet, um ausstehende Belohnungen und den Auszahlungsverlauf zu sehen.",
+    "wrongNetwork": "Mercato ist auf diesem Netzwerk noch nicht deployt. Wechsle zu einem unterstützten Netz.",
+    "lifetimeClaimed": {
+      "title": "Insgesamt abgehoben",
+      "claimsCount": "{count, plural, one {# Auszahlung} other {# Auszahlungen}} im Verlauf."
+    },
+    "submissions": {
+      "title": "Einreichungen",
+      "body": "Preise, die du on-chain eingereicht hast."
+    },
+    "verifications": {
+      "title": "Bestätigungen",
+      "body": "Stimmen, die du auf andere Einreichungen abgegeben hast."
+    },
+    "howRewards": {
+      "title": "So funktionieren Belohnungen",
+      "body": "Jede angenommene Einreichung bringt <strong>{submitter} cUSD</strong>, sobald sie drei übereinstimmende Bestätigungen erhält. Jede Bestätigung auf eine angenommene Einreichung bringt <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Belohnungen sammeln sich im Vertrag, bis du sie abhebst, eine Transaktion überträgt das gesamte Guthaben in dein Wallet.",
+      "valuesNote": "Die Werte werden direkt aus dem deployten PriceOracle gelesen und stimmen daher immer mit dem aktiven Netzwerk überein."
+    },
+    "claim": {
+      "title": "Ausstehende Belohnungen",
+      "emptyHint": "Noch nichts abzuheben, reiche einen Preis ein oder bestätige Einreichungen anderer, um zu verdienen.",
+      "submitting": "Im Wallet bestätigen…",
+      "confirming": "Warten auf Bestätigung…",
+      "button": "cUSD abheben",
+      "error": "Fehler: {message}",
+      "success": "Abgehoben.",
+      "toastLoading": "Belohnungen werden abgehoben…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Belohnungen abgehoben",
+      "toastSuccessDesc": "Die Mittel sind unterwegs zu deinem Wallet.",
+      "toastErrorTitle": "Abhebung fehlgeschlagen",
+      "fallbackError": "Abhebung fehlgeschlagen"
+    }
+  },
   "basket": {
     "index": {
       "kicker": "Lebenshaltungs-Index",
