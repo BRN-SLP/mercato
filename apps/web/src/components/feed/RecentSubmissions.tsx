@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
 import { CountryMark } from "@/components/brand/CountryMark";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,22 +20,25 @@ const MAX_ROWS = 8;
  * landing page's narrative arc.
  */
 export async function RecentSubmissions() {
-  const rows = await getRecentFeed(MAX_ROWS);
+  const [rows, t] = await Promise.all([
+    getRecentFeed(MAX_ROWS),
+    getTranslations("feed"),
+  ]);
 
   if (rows.length === 0) {
     return (
       <Card className="border-dashed border-border/80 bg-card/40">
         <CardContent className="py-10 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            The feed is quiet
+            {t("emptyTitle")}
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
-            No Mercato submissions yet.{" "}
+            {t("emptyBody")}{" "}
             <Link
               href="/scan"
               className="font-medium text-primary hover:underline"
             >
-              Add the first price →
+              {t("emptyCta")}
             </Link>
           </p>
         </CardContent>
@@ -42,32 +46,44 @@ export async function RecentSubmissions() {
     );
   }
 
+  // Build per-row status label up-front so FeedItem stays sync.
   return (
     <Card className="border-border/60">
       <CardContent className="p-0">
         <ul className="divide-y divide-border/60 text-sm">
-          {rows.map((row) => (
-            <FeedItem key={row.submissionId.toString()} row={row} />
-          ))}
+          {rows.map((row) => {
+            const statusLabel = row.finalized
+              ? row.accepted
+                ? t("accepted")
+                : t("rejected")
+              : t("pending", { votes: row.totalVotes });
+            return (
+              <FeedItem
+                key={row.submissionId.toString()}
+                row={row}
+                statusLabel={statusLabel}
+              />
+            );
+          })}
         </ul>
       </CardContent>
     </Card>
   );
 }
 
-function FeedItem({ row }: { row: FeedRow }) {
+function FeedItem({ row, statusLabel }: { row: FeedRow; statusLabel: string }) {
   const major = (row.priceCents / 100).toLocaleString(undefined, {
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   });
-  // Status — kept as plain mono caps. The earlier "✓ accepted" / "✗
-  // rejected" pseudo-icons read as emoji noise in this register, so
-  // we drop them and let the colored dot carry the semantic weight.
-  const status = row.finalized
+  // Status tone — kept as plain mono caps with a colored dot. The
+  // earlier "✓ accepted" / "✗ rejected" pseudo-icons read as emoji
+  // noise in this register, so the dot carries the semantic weight.
+  const tone = row.finalized
     ? row.accepted
-      ? { label: "accepted", tone: "bg-emerald-500/80" }
-      : { label: "rejected", tone: "bg-destructive/80" }
-    : { label: `pending · ${row.totalVotes}/3`, tone: "bg-amber-500/80" };
+      ? "bg-emerald-500/80"
+      : "bg-destructive/80"
+    : "bg-amber-500/80";
 
   return (
     <li
@@ -108,9 +124,9 @@ function FeedItem({ row }: { row: FeedRow }) {
         <p className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
           <span
             aria-hidden="true"
-            className={`inline-block h-1.5 w-1.5 rounded-full ${status.tone}`}
+            className={`inline-block h-1.5 w-1.5 rounded-full ${tone}`}
           />
-          {status.label}
+          {statusLabel}
         </p>
       </div>
     </li>
