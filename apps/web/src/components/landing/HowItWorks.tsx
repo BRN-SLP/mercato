@@ -107,7 +107,7 @@ export function HowItWorks() {
           visible card-on-card stacking; gone. */}
       <div
         role="tablist"
-        aria-label="How it works stages"
+        aria-label={t("tabsAria")}
         onKeyDown={onKeyDown}
         className="relative flex items-end gap-1 border-b border-border/60 sm:gap-2"
       >
