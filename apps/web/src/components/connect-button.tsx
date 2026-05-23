@@ -95,7 +95,7 @@ export function ConnectButton() {
                     onClick={openChainModal}
                     whileTap={{ scale: 0.97 }}
                     className="inline-flex items-center gap-2 border-r border-primary/20 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/80 transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    aria-label={t("switchAria", { network: chain.name })}
+                    aria-label={t("switchAria", { network: chain.name ?? "" })}
                   >
                     <span aria-hidden="true" className="relative inline-flex">
                       <span className="h-1.5 w-1.5 rounded-full bg-accent" />
