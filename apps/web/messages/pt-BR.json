@@ -336,6 +336,10 @@
     "acceptAria": "Aceitar envio #{id}",
     "rejectAria": "Rejeitar envio #{id}"
   },
+  "medianChart": {
+    "empty": "Ainda não há envios aceitos nos últimos 30 dias.",
+    "sampleSize": "n = {count}"
+  },
   "languageSwitcher": {
     "label": "Idioma",
     "english": "English",

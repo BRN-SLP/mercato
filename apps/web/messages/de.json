@@ -336,6 +336,10 @@
     "acceptAria": "Einreichung #{id} annehmen",
     "rejectAria": "Einreichung #{id} ablehnen"
   },
+  "medianChart": {
+    "empty": "In den letzten 30 Tagen noch keine angenommenen Einreichungen.",
+    "sampleSize": "n = {count}"
+  },
   "languageSwitcher": {
     "label": "Sprache",
     "english": "English",

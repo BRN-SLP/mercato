@@ -336,6 +336,10 @@
     "acceptAria": "Aceptar aportación #{id}",
     "rejectAria": "Rechazar aportación #{id}"
   },
+  "medianChart": {
+    "empty": "Aún no hay aportaciones aceptadas en los últimos 30 días.",
+    "sampleSize": "n = {count}"
+  },
   "languageSwitcher": {
     "label": "Idioma",
     "english": "English",

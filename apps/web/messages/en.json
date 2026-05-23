@@ -336,6 +336,10 @@
     "acceptAria": "Accept submission #{id}",
     "rejectAria": "Reject submission #{id}"
   },
+  "medianChart": {
+    "empty": "No accepted submissions in the last 30 days yet.",
+    "sampleSize": "n = {count}"
+  },
   "languageSwitcher": {
     "label": "Language",
     "english": "English",

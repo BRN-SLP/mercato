@@ -336,6 +336,10 @@
     "acceptAria": "Accepter la soumission #{id}",
     "rejectAria": "Rejeter la soumission #{id}"
   },
+  "medianChart": {
+    "empty": "Aucune soumission acceptée ces 30 derniers jours pour l'instant.",
+    "sampleSize": "n = {count}"
+  },
   "languageSwitcher": {
     "label": "Langue",
     "english": "English",

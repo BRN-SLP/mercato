@@ -336,6 +336,10 @@
     "acceptAria": "Прийняти заявку #{id}",
     "rejectAria": "Відхилити заявку #{id}"
   },
+  "medianChart": {
+    "empty": "Прийнятих заявок за останні 30 днів ще немає.",
+    "sampleSize": "n = {count}"
+  },
   "languageSwitcher": {
     "label": "Мова",
     "english": "English",
