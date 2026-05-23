@@ -1,6 +1,7 @@
 "use client";
 
 import { useAccount, useBalance } from "wagmi";
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { truncateAddress } from "@/lib/app-utils";
 
@@ -35,6 +36,7 @@ function BalanceDisplay({
 }
 
 export function UserBalance() {
+  const t = useTranslations("balance");
   const { address, isConnected } = useAccount();
 
   if (!isConnected || !address) {
@@ -44,7 +46,7 @@ export function UserBalance() {
   return (
     <Card className="w-full max-w-md mx-auto mb-8">
       <CardHeader>
-        <CardTitle className="text-lg font-medium">Your balances</CardTitle>
+        <CardTitle className="text-lg font-medium">{t("title")}</CardTitle>
         <p
           className="text-sm text-muted-foreground pt-1 font-mono"
           title={address}
