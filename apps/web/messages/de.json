@@ -96,6 +96,10 @@
   },
   "item": {
     "feedTitle": "Produkt-Feed",
+    "meta": {
+      "title": "Produkt {barcode}",
+      "description": "Medianpreis, aktuelle Einreichungen und ausstehende Verifizierungen für dieses Produkt in der Mercato-Community."
+    },
     "median": {
       "title": "Median-Preis",
       "subtitle": "Aus {count} angenommenen Einreichungen • letzte 30 Tage"

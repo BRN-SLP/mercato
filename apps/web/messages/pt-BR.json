@@ -96,6 +96,10 @@
   },
   "item": {
     "feedTitle": "Feed do produto",
+    "meta": {
+      "title": "Produto {barcode}",
+      "description": "Preço mediano, envios recentes e verificações pendentes para este produto na comunidade Mercato."
+    },
     "median": {
       "title": "Preço mediano",
       "subtitle": "De {count} envios aceitos • últimos 30 dias"

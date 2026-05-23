@@ -96,6 +96,10 @@
   },
   "item": {
     "feedTitle": "Flux du produit",
+    "meta": {
+      "title": "Produit {barcode}",
+      "description": "Prix médian, soumissions récentes et vérifications en attente pour ce produit dans la communauté Mercato."
+    },
     "median": {
       "title": "Prix médian",
       "subtitle": "Sur {count} soumissions acceptées • 30 derniers jours"

@@ -96,6 +96,10 @@
   },
   "item": {
     "feedTitle": "Feed del producto",
+    "meta": {
+      "title": "Producto {barcode}",
+      "description": "Precio mediano, aportaciones recientes y verificaciones pendientes para este producto en la comunidad Mercato."
+    },
     "median": {
       "title": "Precio mediano",
       "subtitle": "De {count} aportaciones aceptadas • últimos 30 días"

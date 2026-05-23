@@ -96,6 +96,10 @@
   },
   "item": {
     "feedTitle": "Item feed",
+    "meta": {
+      "title": "Item {barcode}",
+      "description": "Median price, recent submissions, and pending verifications for this item across the Mercato community."
+    },
     "median": {
       "title": "Median price",
       "subtitle": "From {count} accepted submissions • last 30 days"
