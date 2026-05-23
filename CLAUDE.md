@@ -67,6 +67,50 @@ pnpm --filter web build
 
 Must exit green before you commit. If it fails, fix the issue and re-stage. Do NOT `--no-verify` to bypass.
 
+## Git Workflow, PR only, NEVER push to main
+
+**Direct push to `main` is FORBIDDEN.** Every logical change ships through a pull request.
+
+### Why this rule exists
+
+1. **Production safety.** Vercel auto-deploys every commit on `main` straight to `mercato-rho.vercel.app`. Pushing to `main` without a preview build means regressions land in prod before anyone sees them. We learned this the expensive way: a `useSearchParams` regression survived 1-2 days on prod because nobody ran the local build in time.
+2. **External contribution tracking.** The contributor relies on an external program that counts pull requests as a first-class contribution signal alongside commits. Direct push to `main` produces commits but no PR record, so the work scores lower than it should.
+
+### Workflow
+
+```bash
+# 1. Start a feature branch off latest main
+git checkout main && git pull
+git checkout -b pass-X/short-slug
+
+# 2. Make atomic commits (same rules as before)
+# ...edit, build verify, commit, repeat...
+
+# 3. Push branch and open PR
+git push -u origin pass-X/short-slug
+gh pr create --title "..." --body "..." --base main
+
+# 4. Wait for the Vercel preview deployment URL to appear
+#    on the PR. Check it visually (or with /impeccable audit live)
+#    before merging. If the preview build fails, fix in the same
+#    branch, do not bypass.
+
+# 5. Merge preserving atomic history, do NOT squash
+gh pr merge --merge --delete-branch
+```
+
+### Merge strategy
+
+Use `--merge` (regular merge commit), NEVER `--squash`. Squash collapses the atomic per-decision history that the contributor explicitly values into a single fat commit.
+
+### Branch naming
+
+`<pass-letter>/<short-slug>` (e.g. `pass-I/legal-pages`, `pass-J/landing-spine`) or `feat/<slug>`, `fix/<slug>`, `i18n/<slug>` for non-pass work. Lowercase, dashes, under 40 chars.
+
+### Exceptions
+
+There are none for code. The only direct-push exception is fixing a typo in a non-code root file (e.g. this CLAUDE.md itself, or hot wiki references) when no code or i18n string is touched. Even then, prefer a PR.
+
 ## Code Style
 
 ### Country flags
