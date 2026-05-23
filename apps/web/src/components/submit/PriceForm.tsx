@@ -215,7 +215,7 @@ export function PriceForm({ onCancel }: PriceFormProps) {
               {group.products.map((p) => (
                 <option key={p.slug} value={p.slug}>
                   {p.label}
-                  {p.hint ? ` — ${p.hint}` : ""}
+                  {p.hint ? ` · ${p.hint}` : ""}
                 </option>
               ))}
             </optgroup>
