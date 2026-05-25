@@ -83,6 +83,10 @@ export const metadata: Metadata = {
     images: ['/og.png'],
   },
   robots: { index: true, follow: true },
+  other: {
+    'talentapp:project_verification':
+      '1aae525ad56b47b253e35c1f1283fc04f7bc66d4f381ab12fa7a9e80b49e4b8b6cd5b231f40fee8f7554d003604990838850ddd2b2d9efd987652167c502ccba',
+  },
 };
 
 /**
