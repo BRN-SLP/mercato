@@ -102,7 +102,7 @@ function HomeContent() {
 
       <CountryBasketPreview />
 
-      <section className="border-t bg-secondary/40">
+      <section>
         <div className="container mx-auto max-w-5xl px-4 py-20">
           <RevealOnScroll>
             <div className="mb-6 flex items-end justify-between gap-4">
