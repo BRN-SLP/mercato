@@ -89,15 +89,18 @@ function HomeContent() {
         </div>
       </section>
 
-      {/* HOW IT WORKS — editorial three-stage flow with artifact mocks. */}
-      <HowItWorks />
-
       {/* MERACLE ATTRIBUTION — the autonomous oracle that seeds the
           index for new countries / products before community
           submissions catch up. */}
       <MeracleAttribution />
 
       <CountryBasketPreview />
+
+      {/* HOW IT WORKS — editorial three-stage flow with artifact mocks.
+          Anchored at the bottom of the landing so the page leads with
+          live data (live ranking, attribution, country index) and only
+          then walks the reader through the on-chain mechanics. */}
+      <HowItWorks />
     </main>
   );
 }
