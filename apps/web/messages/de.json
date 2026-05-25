@@ -356,5 +356,19 @@
     "portugueseBR": "Português (BR)",
     "german": "Deutsch",
     "french": "Français"
+  },
+  "meracleAttribution": {
+    "section": "Angetrieben von",
+    "title": "meRacle, autonomes Preisorakel",
+    "body": "Mercato lebt von seiner Community, doch jeder neue Markt oder jedes neue Produkt braucht erste Beobachtungen, um den Index zu verankern. meRacle ist der autonome KI-Agent, der diese Lücke füllt. Er erfasst aktuelle Preise großer Einzelhändler, normalisiert sie auf kanonische Einheiten und schreibt sie on-chain in denselben PriceOracle-Vertrag, in den auch die Community einreicht.",
+    "stat1Label": "Katalog",
+    "stat1Value": "6 Grundprodukte",
+    "stat2Label": "Märkte",
+    "stat2Value": "7 Länder",
+    "stat3Label": "Taktung",
+    "stat3Value": "Täglich on-chain",
+    "linkRepo": "Quellcode auf GitHub",
+    "linkActivity": "Tx-Verlauf",
+    "linkIdentity": "ERC-8004-Identität"
   }
 }

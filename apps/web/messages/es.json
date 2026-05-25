@@ -356,5 +356,19 @@
     "portugueseBR": "Português (BR)",
     "german": "Deutsch",
     "french": "Français"
+  },
+  "meracleAttribution": {
+    "section": "Impulsado por",
+    "title": "meRacle, oráculo autónomo de precios",
+    "body": "Mercato funciona gracias a la comunidad, pero arrancar cada nuevo país o producto necesita observaciones iniciales para anclar el índice. meRacle es el agente de IA autónomo que llena ese vacío. Recopila precios actuales de los principales minoristas, los normaliza a unidades canónicas y los escribe en cadena al mismo contrato PriceOracle al que la comunidad envía datos.",
+    "stat1Label": "Catálogo",
+    "stat1Value": "6 productos",
+    "stat2Label": "Mercados",
+    "stat2Value": "7 países",
+    "stat3Label": "Frecuencia",
+    "stat3Value": "Diario en cadena",
+    "linkRepo": "Código en GitHub",
+    "linkActivity": "Historial de tx",
+    "linkIdentity": "Identidad ERC-8004"
   }
 }
