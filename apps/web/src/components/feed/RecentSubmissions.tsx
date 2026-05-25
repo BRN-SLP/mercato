@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
 import { CountryMark } from "@/components/brand/CountryMark";
-import { Card, CardContent } from "@/components/ui/card";
 import { getRecentFeed, type FeedRow } from "@/lib/recent-feed";
 
 const ROW_HEIGHT_CLASS = "min-h-[68px]";
@@ -27,47 +26,43 @@ export async function RecentSubmissions() {
 
   if (rows.length === 0) {
     return (
-      <Card className="border-dashed border-border/80 bg-card/40">
-        <CardContent className="py-10 text-center">
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            {t("emptyTitle")}
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("emptyBody")}{" "}
-            <Link
-              href="/scan"
-              className="font-medium text-primary hover:underline"
-            >
-              {t("emptyCta")}
-            </Link>
-          </p>
-        </CardContent>
-      </Card>
+      <div className="border-y border-dashed border-border/80 py-10 text-center">
+        <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+          {t("emptyTitle")}
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {t("emptyBody")}{" "}
+          <Link
+            href="/scan"
+            className="font-medium text-primary hover:underline"
+          >
+            {t("emptyCta")}
+          </Link>
+        </p>
+      </div>
     );
   }
 
   // Build per-row status label up-front so FeedItem stays sync.
+  // No card chrome on the list, divide-y handles inter-row rhythm
+  // and the section's own type already frames the feed editorially.
   return (
-    <Card className="border-border/60">
-      <CardContent className="p-0">
-        <ul className="divide-y divide-border/60 text-sm">
-          {rows.map((row) => {
-            const statusLabel = row.finalized
-              ? row.accepted
-                ? t("accepted")
-                : t("rejected")
-              : t("pending", { votes: row.totalVotes });
-            return (
-              <FeedItem
-                key={row.submissionId.toString()}
-                row={row}
-                statusLabel={statusLabel}
-              />
-            );
-          })}
-        </ul>
-      </CardContent>
-    </Card>
+    <ul className="divide-y divide-border/60 border-y border-border/60 text-sm">
+      {rows.map((row) => {
+        const statusLabel = row.finalized
+          ? row.accepted
+            ? t("accepted")
+            : t("rejected")
+          : t("pending", { votes: row.totalVotes });
+        return (
+          <FeedItem
+            key={row.submissionId.toString()}
+            row={row}
+            statusLabel={statusLabel}
+          />
+        );
+      })}
+    </ul>
   );
 }
 
