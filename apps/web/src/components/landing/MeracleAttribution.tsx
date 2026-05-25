@@ -69,7 +69,7 @@ export async function MeracleAttribution() {
             {t("body")}
           </p>
 
-          <dl className="grid max-w-prose grid-cols-2 gap-x-8 gap-y-4 font-mono text-[11px] uppercase tracking-[0.18em] sm:grid-cols-3">
+          <dl className="grid max-w-prose grid-cols-2 gap-x-8 gap-y-4 font-mono text-[11px] uppercase tracking-[0.18em] sm:grid-cols-[1fr_1fr_auto]">
             <div>
               <dt className="text-muted-foreground">{t("stat1Label")}</dt>
               <dd className="mt-1 text-foreground/90">
