@@ -421,5 +421,25 @@
     "linkRepo": "Source on GitHub",
     "linkActivity": "Live tx history",
     "linkIdentity": "ERC-8004 identity"
+  },
+  "support": {
+    "section": "Back the project",
+    "title1": "Put your name",
+    "titleAccent": "on-chain.",
+    "body": "Sign one transaction to back Mercato on Celo. It costs only the network fee, moves no funds, and leaves a permanent public vote of confidence, optionally with a short message.",
+    "supporters": "supporters",
+    "signals": "signals",
+    "messagePlaceholder": "Optional message (recorded on-chain)",
+    "messageAria": "Optional support message",
+    "button": "Support on-chain",
+    "buttonBusy": "Recording…",
+    "buttonAgain": "Support again",
+    "already": "You have already shown support. Thank you.",
+    "connectHint": "Connect a Celo wallet to record your support.",
+    "toastLoading": "Recording your support…",
+    "toastSuccessTitle": "Support recorded on-chain",
+    "toastSuccessDesc": "Thank you for backing Mercato.",
+    "toastErrorTitle": "Could not record support",
+    "fallbackError": "transaction failed"
   }
 }
