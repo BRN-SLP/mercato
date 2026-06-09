@@ -1,0 +1,18 @@
+import { setRequestLocale } from "next-intl/server";
+
+import { SupportOnChain } from "@/components/landing/SupportOnChain";
+
+interface SupportPageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function SupportPage({ params }: SupportPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return (
+    <main className="flex-1">
+      <SupportOnChain />
+    </main>
+  );
+}
