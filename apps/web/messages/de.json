@@ -421,5 +421,25 @@
     "linkRepo": "Quellcode auf GitHub",
     "linkActivity": "Tx-Verlauf",
     "linkIdentity": "ERC-8004-Identität"
+  },
+  "support": {
+    "section": "Projekt unterstützen",
+    "title1": "Hinterlasse deinen Namen",
+    "titleAccent": "on-chain.",
+    "body": "Signiere eine Transaktion, um Mercato auf Celo zu unterstützen. Es kostet nur die Netzwerkgebühr, bewegt keine Gelder und hinterlässt ein dauerhaftes, öffentliches Vertrauensvotum, auf Wunsch mit einer kurzen Nachricht.",
+    "supporters": "Unterstützer",
+    "signals": "Signale",
+    "messagePlaceholder": "Optionale Nachricht (on-chain gespeichert)",
+    "messageAria": "Optionale Unterstützungsnachricht",
+    "button": "On-chain unterstützen",
+    "buttonBusy": "Wird gespeichert…",
+    "buttonAgain": "Erneut unterstützen",
+    "already": "Du hast bereits unterstützt. Danke.",
+    "connectHint": "Verbinde eine Celo-Wallet, um deine Unterstützung zu hinterlegen.",
+    "toastLoading": "Deine Unterstützung wird gespeichert…",
+    "toastSuccessTitle": "Unterstützung on-chain gespeichert",
+    "toastSuccessDesc": "Danke, dass du Mercato unterstützt.",
+    "toastErrorTitle": "Unterstützung konnte nicht gespeichert werden",
+    "fallbackError": "Transaktion fehlgeschlagen"
   }
 }
