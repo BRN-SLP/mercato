@@ -421,5 +421,25 @@
     "linkRepo": "Source sur GitHub",
     "linkActivity": "Historique des tx",
     "linkIdentity": "Identité ERC-8004"
+  },
+  "support": {
+    "section": "Soutenir le projet",
+    "title1": "Inscris ton nom",
+    "titleAccent": "sur la chaîne.",
+    "body": "Signe une transaction pour soutenir Mercato sur Celo. Cela ne coûte que les frais de réseau, ne déplace aucun fonds et laisse un vote de confiance public et permanent, avec un court message si tu veux.",
+    "supporters": "soutiens",
+    "signals": "signaux",
+    "messagePlaceholder": "Message facultatif (enregistré sur la chaîne)",
+    "messageAria": "Message de soutien facultatif",
+    "button": "Soutenir sur la chaîne",
+    "buttonBusy": "Enregistrement…",
+    "buttonAgain": "Soutenir encore",
+    "already": "Tu as déjà apporté ton soutien. Merci.",
+    "connectHint": "Connecte un portefeuille Celo pour enregistrer ton soutien.",
+    "toastLoading": "Enregistrement de ton soutien…",
+    "toastSuccessTitle": "Soutien enregistré sur la chaîne",
+    "toastSuccessDesc": "Merci de soutenir Mercato.",
+    "toastErrorTitle": "Impossible d'enregistrer le soutien",
+    "fallbackError": "la transaction a échoué"
   }
 }
