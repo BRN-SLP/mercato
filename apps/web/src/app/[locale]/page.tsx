@@ -8,6 +8,7 @@ import { CountryBasketPreview } from "@/components/landing/CountryBasketPreview"
 import { HeroLiveRankingServer } from "@/components/landing/HeroLiveRankingServer";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { MeracleAttribution } from "@/components/landing/MeracleAttribution";
+import { SupportOnChain } from "@/components/landing/SupportOnChain";
 import { Link } from "@/i18n/navigation";
 
 interface HomeProps {
@@ -101,6 +102,10 @@ function HomeContent() {
           live data (live ranking, attribution, country index) and only
           then walks the reader through the on-chain mechanics. */}
       <HowItWorks />
+
+      {/* ON-CHAIN SUPPORT: free, gas-only endorsement on the PriceOracle.
+          Auto-shows once the V3 upgrade is live (the read reverts before). */}
+      <SupportOnChain />
     </main>
   );
 }
