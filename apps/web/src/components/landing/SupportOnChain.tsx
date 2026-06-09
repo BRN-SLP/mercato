@@ -127,7 +127,10 @@ export function SupportOnChain() {
   const signals = total !== undefined ? Number(total) : 0;
 
   return (
-    <section className="container mx-auto max-w-5xl px-4 py-20 md:py-24">
+    <section
+      id="support"
+      className="container mx-auto max-w-5xl scroll-mt-20 px-4 py-20 md:py-24"
+    >
       <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
         {t("section")}
       </p>

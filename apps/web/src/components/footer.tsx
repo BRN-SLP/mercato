@@ -1,11 +1,12 @@
 "use client";
 
-import { Github, LifeBuoy } from "lucide-react";
+import { Github, Heart, LifeBuoy } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useChainId } from "wagmi";
+import { useChainId, useReadContract } from "wagmi";
 import { celo, celoSepolia } from "wagmi/chains";
 
 import { Link } from "@/i18n/navigation";
+import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 
 const VERSION = "0.2.0-alpha";
 const REPO_URL = "https://github.com/BRN-SLP/mercato";
@@ -13,7 +14,25 @@ const SUPPORT_URL = "https://github.com/BRN-SLP/mercato/issues";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tSupport = useTranslations("support");
   const chainId = useChainId();
+  const oracleAddress = (() => {
+    try {
+      return getPriceOracleAddress(chainId);
+    } catch {
+      return undefined;
+    }
+  })();
+  // The uniqueSupporters read reverts on the pre-V3 impl, so the on-chain
+  // support link stays hidden until the support upgrade is live.
+  const { data: supporters, isError: supportUnavailable } = useReadContract({
+    chainId,
+    address: oracleAddress,
+    abi: priceOracleAbi,
+    functionName: "uniqueSupporters",
+    query: { enabled: !!oracleAddress },
+  });
+  const supportLive = !(supporters === undefined && supportUnavailable);
   const networkLabel =
     chainId === celo.id
       ? { name: "Celo Mainnet", color: "bg-emerald-500" }
@@ -54,6 +73,15 @@ export function Footer() {
 
         {/* Network + repo */}
         <div className="flex flex-wrap items-center gap-4 font-mono text-[11px] uppercase tracking-[0.16em]">
+          {supportLive && (
+            <Link
+              href="/#support"
+              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
+            >
+              <Heart className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+              <span>{tSupport("button")}</span>
+            </Link>
+          )}
           <span className="inline-flex items-center gap-2">
             <span
               aria-hidden="true"
