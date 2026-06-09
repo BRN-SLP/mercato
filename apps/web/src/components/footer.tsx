@@ -75,7 +75,7 @@ export function Footer() {
         <div className="flex flex-wrap items-center gap-4 font-mono text-[11px] uppercase tracking-[0.16em]">
           {supportLive && (
             <Link
-              href="/#support"
+              href="/support"
               className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
             >
               <Heart className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
