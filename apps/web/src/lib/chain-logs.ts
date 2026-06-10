@@ -23,21 +23,12 @@ import {
 } from "viem";
 import { celo, celoSepolia } from "viem/chains";
 
-import { ADDRESSES, priceOracleAbi } from "./contracts";
+import { ADDRESSES, DEPLOY_BLOCK, priceOracleAbi } from "./contracts";
 
 /** Public RPC endpoint per chain. */
 const RPC: Record<number, string> = {
   [celo.id]: "https://forno.celo.org",
   [celoSepolia.id]: "https://forno.celo-sepolia.celo-testnet.org/",
-};
-
-/**
- * Block at which the PriceOracle proxy was deployed on each chain; full-history
- * scans start here. Mainnet proxy `0x18DD82...` was created in block 67086500
- * (2026-05-17). Single source of truth for every server-side scan.
- */
-export const DEPLOY_BLOCK: Record<number, bigint> = {
-  [celo.id]: 67_086_500n,
 };
 
 /** Forno is comfortable with ~1M-block getLogs ranges; stay just under. */
