@@ -6,9 +6,9 @@
  *
  * Pipeline:
  *   1. Identify which chain has a configured PriceOracle address.
- *   2. Pull events from the last LOOKBACK blocks (Celo runs ~1s blocks
- *      post-L2 migration, so 1M blocks ≈ 11.6 days). A single
- *      `eth_getLogs` covers this comfortably on Forno.
+ *   2. Pull the COMPLETE PriceSubmitted history from the proxy deploy
+ *      block (paginated in chain-logs.ts), so submissions never roll
+ *      out of a block window as the chain advances.
  *   3. Filter:
  *        - drop submissions whose barcode doesn't match any canonical
  *          Mercato product (legacy non-Mercato EAN-13 submissions from
@@ -28,14 +28,12 @@
 import "server-only";
 
 import { unstable_cache } from "next/cache";
-import { createPublicClient, http, type PublicClient } from "viem";
-import { celo, celoSepolia } from "viem/chains";
-
 import {
   priceCentsFromChain,
   timestampFromChain,
 } from "./chain-boundary";
-import { ADDRESSES, priceOracleAbi } from "./contracts";
+import { fetchAllEvents, getActiveChainId } from "./chain-logs";
+import { ADDRESSES } from "./contracts";
 import {
   COUNTRIES,
   getCountryByCode,
@@ -83,25 +81,6 @@ export interface BasketSnapshot {
   chainId: number;
 }
 
-const RPC: Record<number, string> = {
-  [celo.id]: "https://forno.celo.org",
-  [celoSepolia.id]: "https://forno.celo-sepolia.celo-testnet.org/",
-};
-
-function getActiveChainId(): number | null {
-  if (ADDRESSES[celo.id]?.priceOracle) return celo.id;
-  if (ADDRESSES[celoSepolia.id]?.priceOracle) return celoSepolia.id;
-  return null;
-}
-
-function buildClient(chainId: number): PublicClient {
-  const chain = chainId === celo.id ? celo : celoSepolia;
-  return createPublicClient({
-    chain,
-    transport: http(RPC[chainId]),
-  }) as PublicClient;
-}
-
 /**
  * Pre-compute the bytes12 barcode for every canonical product so we can
  * filter incoming submissions in O(1). The map is barcode → product so
@@ -131,10 +110,6 @@ function median(values: readonly number[]): number {
   return sorted[mid];
 }
 
-/** Block-count lookback for event scanning. Stays `bigint` because
- *  it's used directly with viem's `getBlockNumber()` / `fromBlock`. */
-const LOOKBACK_BLOCKS = 1_000_000n;
-
 /**
  * Inner cached fetch — assembles the full snapshot from on-chain events
  * and returns it. Cache key is constant; we don't allow per-caller
@@ -163,16 +138,10 @@ const fetchBasketSnapshot = unstable_cache(
 
     let submissions: RawSubmission[] = [];
     try {
-      const client = buildClient(chainId);
-      const latestBlock = await client.getBlockNumber();
-      const fromBlock =
-        latestBlock > LOOKBACK_BLOCKS ? latestBlock - LOOKBACK_BLOCKS : 0n;
-      const logs = await client.getContractEvents({
+      const logs = await fetchAllEvents({
+        chainId,
         address,
-        abi: priceOracleAbi,
         eventName: "PriceSubmitted",
-        fromBlock,
-        toBlock: "latest",
       });
 
       submissions = logs.flatMap((log) => {
@@ -213,9 +182,10 @@ const fetchBasketSnapshot = unstable_cache(
     };
   },
   // v1 → v2: snapshot shape switched cent fields from bigint to
-  // number. v1 cache entries from any prior deploy are stale and
-  // would deserialize as objects with string-coerced bigints.
-  ["mercato-basket-snapshot-v2"],
+  // number. v2 → v3: scan switched from a rolling 1M-block window to
+  // the full deploy-block history, so cached v2 snapshots are
+  // incomplete and must not be served after deploy.
+  ["mercato-basket-snapshot-v3"],
   { revalidate: 60, tags: ["basket"] },
 );
 
