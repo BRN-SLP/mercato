@@ -5,6 +5,7 @@ import { useAccount, useChainId, usePublicClient } from "wagmi";
 import type { Log } from "viem";
 
 import { blockNumberFromChain } from "@/lib/chain-boundary";
+import { getAllContractEvents } from "@/lib/client-logs";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 
 /**
@@ -55,39 +56,34 @@ export function useRewardsActivity() {
       }
       setLoading(true);
       try {
-        // Same RPC-timeout safeguard as usePriceFeed: scanning from
-        // block 0 over Celo Mainnet exceeds Forno's single-call budget
-        // and the three calls below would all return empty, hiding the
-        // user's actual reward history. Bound to the last ~200k blocks
-        // (~11 days), which covers the realistic lifetime of a session
-        // in the V1 deployment.
-        const latestBlock = await publicClient.getBlockNumber();
-        const LOOKBACK = 200_000n;
-        const fromBlock =
-          latestBlock > LOOKBACK ? latestBlock - LOOKBACK : 0n;
+        // Scan the COMPLETE history from the deploy block (paginated in
+        // client-logs.ts) so lifetime submission, verification, and claim
+        // totals never roll out of a block window. Verified and
+        // RewardsClaimed are filtered by the indexed verifier/user, so only
+        // the PriceSubmitted scan (submitter is not indexed) is unfiltered.
         const [submittedLogs, verifiedLogs, claimedLogs] = await Promise.all([
-          publicClient.getContractEvents({
+          getAllContractEvents({
+            client: publicClient,
+            chainId,
             address: oracleAddress,
             abi: priceOracleAbi,
             eventName: "PriceSubmitted",
-            fromBlock,
-            toBlock: "latest",
           }),
-          publicClient.getContractEvents({
+          getAllContractEvents({
+            client: publicClient,
+            chainId,
             address: oracleAddress,
             abi: priceOracleAbi,
             eventName: "Verified",
             args: { verifier: address },
-            fromBlock,
-            toBlock: "latest",
           }),
-          publicClient.getContractEvents({
+          getAllContractEvents({
+            client: publicClient,
+            chainId,
             address: oracleAddress,
             abi: priceOracleAbi,
             eventName: "RewardsClaimed",
             args: { user: address },
-            fromBlock,
-            toBlock: "latest",
           }),
         ]);
         if (cancelled) return;
