@@ -23,6 +23,17 @@ export const ADDRESSES: Record<
   },
 };
 
+/**
+ * Block at which the PriceOracle proxy was deployed per chain. Full-history
+ * event scans (server and client) start here so data never rolls out of a
+ * block window as the chain advances. Mainnet proxy created in block 67086500
+ * (2026-05-17). Single source of truth, imported by both chain-logs.ts
+ * (server) and client-logs.ts (client).
+ */
+export const DEPLOY_BLOCK: Record<number, bigint> = {
+  [celo.id]: 67_086_500n,
+};
+
 export function getPriceOracleAddress(chainId: number): `0x${string}` {
   const cfg = ADDRESSES[chainId as SupportedChainId];
   if (!cfg?.priceOracle) {
