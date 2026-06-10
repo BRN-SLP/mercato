@@ -9,6 +9,7 @@ import {
   submissionIdFromChain,
   timestampFromChain,
 } from "@/lib/chain-boundary";
+import { getAllContractEvents } from "@/lib/client-logs";
 import { getPriceOracleAddress, priceOracleAbi } from "@/lib/contracts";
 
 /**
@@ -67,40 +68,33 @@ export function usePriceFeed(
         return;
       }
       try {
-        // Forno (and most public Celo RPCs) timeout on `fromBlock: 0n` —
-        // scanning ~30M blocks of mainnet history is too expensive for
-        // a single eth_getLogs call, and the three calls below would
-        // all fail simultaneously, leaving the landing-page feed empty.
-        // Bound the window to the last ~200k blocks (~11 days at Celo's
-        // ~5s block time), which comfortably covers seeded submissions
-        // and recent organic activity. `useWatchContractEvent` below
-        // continues to pick up anything newer in real time.
-        const latestBlock = await publicClient.getBlockNumber();
-        const LOOKBACK = 200_000n;
-        const fromBlock =
-          latestBlock > LOOKBACK ? latestBlock - LOOKBACK : 0n;
+        // Scan the COMPLETE history from the deploy block (paginated in
+        // client-logs.ts) so an item's price history never rolls out of a
+        // block window as the chain advances. PriceSubmitted is filtered by
+        // the indexed barcode, so the per-item scan stays cheap.
+        // `useWatchContractEvent` below picks up anything newer in real time.
         const [submittedLogs, verifiedLogs, finalizedLogs] = await Promise.all([
-          publicClient.getContractEvents({
+          getAllContractEvents({
+            client: publicClient,
+            chainId,
             address: oracleAddress,
             abi: priceOracleAbi,
             eventName: "PriceSubmitted",
             args: options.barcode ? { barcode: options.barcode } : undefined,
-            fromBlock,
-            toBlock: "latest",
           }),
-          publicClient.getContractEvents({
+          getAllContractEvents({
+            client: publicClient,
+            chainId,
             address: oracleAddress,
             abi: priceOracleAbi,
             eventName: "Verified",
-            fromBlock,
-            toBlock: "latest",
           }),
-          publicClient.getContractEvents({
+          getAllContractEvents({
+            client: publicClient,
+            chainId,
             address: oracleAddress,
             abi: priceOracleAbi,
             eventName: "SubmissionFinalized",
-            fromBlock,
-            toBlock: "latest",
           }),
         ]);
         if (cancelled) return;
