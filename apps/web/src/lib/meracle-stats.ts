@@ -17,11 +17,11 @@
 import "server-only";
 
 import { unstable_cache } from "next/cache";
-import { createPublicClient, http, type Hex, type PublicClient } from "viem";
-import { celo, celoSepolia } from "viem/chains";
+import { type Hex } from "viem";
 
 import { timestampFromChain } from "./chain-boundary";
-import { ADDRESSES, priceOracleAbi } from "./contracts";
+import { fetchAllEvents, getActiveChainId } from "./chain-logs";
+import { ADDRESSES } from "./contracts";
 import { productSlugToBarcode, zoneKeyToCountry } from "./encode";
 import { PRODUCTS, type Product } from "./products";
 
@@ -33,14 +33,6 @@ import { PRODUCTS, type Product } from "./products";
 const MERACLE_SUBMITTER =
   "0x1B94d56f723d8939661D94eD1f899C5c27136b2c".toLowerCase();
 
-/** Match the recent-feed scan window so Forno serves both at once. */
-const LOOKBACK_BLOCKS = 1_000_000n;
-
-const RPC: Record<number, string> = {
-  [celo.id]: "https://forno.celo.org",
-  [celoSepolia.id]: "https://forno.celo-sepolia.celo-testnet.org/",
-};
-
 export interface MeracleStats {
   /** Distinct canonical product slugs meRacle has ever submitted. */
   staples: number;
@@ -51,20 +43,6 @@ export interface MeracleStats {
 }
 
 const EMPTY: MeracleStats = { staples: 0, countries: 0, lastSyncTs: 0 };
-
-function getActiveChainId(): number | null {
-  if (ADDRESSES[celo.id]?.priceOracle) return celo.id;
-  if (ADDRESSES[celoSepolia.id]?.priceOracle) return celoSepolia.id;
-  return null;
-}
-
-function buildClient(chainId: number): PublicClient {
-  const chain = chainId === celo.id ? celo : celoSepolia;
-  return createPublicClient({
-    chain,
-    transport: http(RPC[chainId]),
-  }) as PublicClient;
-}
 
 /** Barcode → Product so we only count submissions for canonical SKUs. */
 const BARCODE_TO_PRODUCT: ReadonlyMap<string, Product> = new Map(
@@ -86,19 +64,11 @@ const fetchMeracleStats = unstable_cache(
       ADDRESSES[chainId as keyof typeof ADDRESSES]?.priceOracle;
     if (!address) return EMPTY;
 
-    const client = buildClient(chainId);
-
     try {
-      const latestBlock = await client.getBlockNumber();
-      const fromBlock =
-        latestBlock > LOOKBACK_BLOCKS ? latestBlock - LOOKBACK_BLOCKS : 0n;
-
-      const logs = await client.getContractEvents({
+      const logs = await fetchAllEvents({
+        chainId,
         address,
-        abi: priceOracleAbi,
         eventName: "PriceSubmitted",
-        fromBlock,
-        toBlock: "latest",
       });
 
       const barcodes = new Set<string>();
@@ -132,7 +102,7 @@ const fetchMeracleStats = unstable_cache(
       return EMPTY;
     }
   },
-  ["mercato-meracle-stats-v1"],
+  ["mercato-meracle-stats-v2"],
   { revalidate: 60, tags: ["basket", "feed", "meracle"] },
 );
 
