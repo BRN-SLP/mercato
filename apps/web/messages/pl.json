@@ -23,5 +23,9 @@
     "wrongNet": "zła sieć",
     "switchAria": "Zmień sieć (aktualna: {network})",
     "accountAria": "Szczegóły konta"
+  },
+  "fxBaseToggle": {
+    "label": "Waluta wyświetlania",
+    "local": "Lokalna"
   }
 }
