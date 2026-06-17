@@ -23,5 +23,9 @@
     "wrongNet": "blogas tinklas",
     "switchAria": "Keisti tinklą (dabartinis: {network})",
     "accountAria": "Paskyros informacija"
+  },
+  "fxBaseToggle": {
+    "label": "Rodoma valiuta",
+    "local": "Vietinė"
   }
 }
