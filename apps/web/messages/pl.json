@@ -7,5 +7,15 @@
     "menu": "Przełącz menu",
     "logoAria": "Mercato, strona główna",
     "close": "Zamknij"
+  },
+  "footer": {
+    "version": "v{version} · mit · indeks kosztów życia · celo",
+    "terms": "Regulamin",
+    "privacy": "Prywatność",
+    "support": "Wsparcie",
+    "github": "github",
+    "networkUnsupported": "Nieobsługiwana sieć",
+    "legalAria": "Informacje prawne i wsparcie",
+    "githubAria": "Zobacz źródło na GitHub"
   }
 }
