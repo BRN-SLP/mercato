@@ -7,5 +7,15 @@
     "menu": "Lülita menüü",
     "logoAria": "Mercato, avaleht",
     "close": "Sulge"
+  },
+  "footer": {
+    "version": "v{version} · mit · elukalliduse indeks · celo",
+    "terms": "Tingimused",
+    "privacy": "Privaatsus",
+    "support": "Tugi",
+    "github": "github",
+    "networkUnsupported": "Toetamata võrk",
+    "legalAria": "Õigusteave ja tugi",
+    "githubAria": "Vaata lähtekoodi GitHubis"
   }
 }
