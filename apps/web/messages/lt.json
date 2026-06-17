@@ -17,5 +17,11 @@
     "networkUnsupported": "Nepalaikomas tinklas",
     "legalAria": "Teisinė informacija ir pagalba",
     "githubAria": "Peržiūrėti šaltinį GitHub"
+  },
+  "connectButton": {
+    "connect": "[ prisijungti ]",
+    "wrongNet": "blogas tinklas",
+    "switchAria": "Keisti tinklą (dabartinis: {network})",
+    "accountAria": "Paskyros informacija"
   }
 }
