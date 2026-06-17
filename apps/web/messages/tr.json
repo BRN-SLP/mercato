@@ -17,5 +17,11 @@
     "networkUnsupported": "Desteklenmeyen ağ",
     "legalAria": "Yasal bilgiler ve destek",
     "githubAria": "Kaynağı GitHub üzerinde görüntüle"
+  },
+  "connectButton": {
+    "connect": "[ bağlan ]",
+    "wrongNet": "yanlış ağ",
+    "switchAria": "Ağı değiştir (mevcut: {network})",
+    "accountAria": "Hesap ayrıntıları"
   }
 }
