@@ -17,5 +17,11 @@
     "networkUnsupported": "Rețea neacceptată",
     "legalAria": "Informații legale și asistență",
     "githubAria": "Vezi sursa pe GitHub"
+  },
+  "connectButton": {
+    "connect": "[ conectează ]",
+    "wrongNet": "rețea greșită",
+    "switchAria": "Schimbă rețeaua (curentă: {network})",
+    "accountAria": "Detalii cont"
   }
 }
