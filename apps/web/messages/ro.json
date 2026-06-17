@@ -7,5 +7,15 @@
     "menu": "Comută meniul",
     "logoAria": "Mercato, acasă",
     "close": "Închide"
+  },
+  "footer": {
+    "version": "v{version} · mit · indice al costului vieții · celo",
+    "terms": "Termeni",
+    "privacy": "Confidențialitate",
+    "support": "Asistență",
+    "github": "github",
+    "networkUnsupported": "Rețea neacceptată",
+    "legalAria": "Informații legale și asistență",
+    "githubAria": "Vezi sursa pe GitHub"
   }
 }
