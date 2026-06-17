@@ -7,5 +7,15 @@
     "menu": "Pārslēgt izvēlni",
     "logoAria": "Mercato, sākums",
     "close": "Aizvērt"
+  },
+  "footer": {
+    "version": "v{version} · mit · dzīves dārdzības indekss · celo",
+    "terms": "Noteikumi",
+    "privacy": "Privātums",
+    "support": "Atbalsts",
+    "github": "github",
+    "networkUnsupported": "Neatbalstīts tīkls",
+    "legalAria": "Juridiskā informācija un atbalsts",
+    "githubAria": "Skatīt avotu GitHub"
   }
 }
