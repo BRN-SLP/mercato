@@ -17,5 +17,11 @@
     "networkUnsupported": "Neatbalstīts tīkls",
     "legalAria": "Juridiskā informācija un atbalsts",
     "githubAria": "Skatīt avotu GitHub"
+  },
+  "connectButton": {
+    "connect": "[ pievienot ]",
+    "wrongNet": "nepareizs tīkls",
+    "switchAria": "Mainīt tīklu (pašreizējais: {network})",
+    "accountAria": "Konta informācija"
   }
 }
