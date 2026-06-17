@@ -7,5 +7,15 @@
     "menu": "Menüyü aç/kapat",
     "logoAria": "Mercato, ana sayfa",
     "close": "Kapat"
+  },
+  "footer": {
+    "version": "v{version} · mit · yaşam maliyeti endeksi · celo",
+    "terms": "Şartlar",
+    "privacy": "Gizlilik",
+    "support": "Destek",
+    "github": "github",
+    "networkUnsupported": "Desteklenmeyen ağ",
+    "legalAria": "Yasal bilgiler ve destek",
+    "githubAria": "Kaynağı GitHub üzerinde görüntüle"
   }
 }
