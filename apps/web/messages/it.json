@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "basket": "Paniere",
+    "submit": "Invia",
+    "rewards": "Premi",
+    "menu": "Attiva/disattiva menu",
+    "logoAria": "Mercato, home",
+    "close": "Chiudi"
+  }
+}
