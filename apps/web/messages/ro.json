@@ -23,5 +23,9 @@
     "wrongNet": "rețea greșită",
     "switchAria": "Schimbă rețeaua (curentă: {network})",
     "accountAria": "Detalii cont"
+  },
+  "fxBaseToggle": {
+    "label": "Monedă afișată",
+    "local": "Locală"
   }
 }
