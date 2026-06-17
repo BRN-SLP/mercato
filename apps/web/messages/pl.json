@@ -17,5 +17,11 @@
     "networkUnsupported": "Nieobsługiwana sieć",
     "legalAria": "Informacje prawne i wsparcie",
     "githubAria": "Zobacz źródło na GitHub"
+  },
+  "connectButton": {
+    "connect": "[ połącz ]",
+    "wrongNet": "zła sieć",
+    "switchAria": "Zmień sieć (aktualna: {network})",
+    "accountAria": "Szczegóły konta"
   }
 }
