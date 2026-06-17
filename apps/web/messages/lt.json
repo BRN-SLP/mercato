@@ -7,5 +7,15 @@
     "menu": "Perjungti meniu",
     "logoAria": "Mercato, pradžia",
     "close": "Uždaryti"
+  },
+  "footer": {
+    "version": "v{version} · mit · pragyvenimo išlaidų indeksas · celo",
+    "terms": "Sąlygos",
+    "privacy": "Privatumas",
+    "support": "Pagalba",
+    "github": "github",
+    "networkUnsupported": "Nepalaikomas tinklas",
+    "legalAria": "Teisinė informacija ir pagalba",
+    "githubAria": "Peržiūrėti šaltinį GitHub"
   }
 }
