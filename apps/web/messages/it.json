@@ -23,5 +23,9 @@
     "wrongNet": "rete errata",
     "switchAria": "Cambia rete (attuale: {network})",
     "accountAria": "Dettagli account"
+  },
+  "fxBaseToggle": {
+    "label": "Valuta visualizzata",
+    "local": "Locale"
   }
 }
