@@ -23,5 +23,9 @@
     "wrongNet": "nepareizs tīkls",
     "switchAria": "Mainīt tīklu (pašreizējais: {network})",
     "accountAria": "Konta informācija"
+  },
+  "fxBaseToggle": {
+    "label": "Attēlotā valūta",
+    "local": "Vietējā"
   }
 }
