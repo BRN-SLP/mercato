@@ -23,5 +23,9 @@
     "wrongNet": "yanlış ağ",
     "switchAria": "Ağı değiştir (mevcut: {network})",
     "accountAria": "Hesap ayrıntıları"
+  },
+  "fxBaseToggle": {
+    "label": "Görüntülenen para birimi",
+    "local": "Yerel"
   }
 }
