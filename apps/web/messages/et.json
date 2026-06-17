@@ -17,5 +17,11 @@
     "networkUnsupported": "Toetamata võrk",
     "legalAria": "Õigusteave ja tugi",
     "githubAria": "Vaata lähtekoodi GitHubis"
+  },
+  "connectButton": {
+    "connect": "[ ühenda ]",
+    "wrongNet": "vale võrk",
+    "switchAria": "Vaheta võrku (praegune: {network})",
+    "accountAria": "Konto üksikasjad"
   }
 }
