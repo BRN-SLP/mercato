@@ -23,5 +23,9 @@
     "wrongNet": "vale võrk",
     "switchAria": "Vaheta võrku (praegune: {network})",
     "accountAria": "Konto üksikasjad"
+  },
+  "fxBaseToggle": {
+    "label": "Kuvatav valuuta",
+    "local": "Kohalik"
   }
 }
