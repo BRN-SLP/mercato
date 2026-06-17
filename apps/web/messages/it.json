@@ -17,5 +17,11 @@
     "networkUnsupported": "Rete non supportata",
     "legalAria": "Note legali e supporto",
     "githubAria": "Vedi il sorgente su GitHub"
+  },
+  "connectButton": {
+    "connect": "[ connetti ]",
+    "wrongNet": "rete errata",
+    "switchAria": "Cambia rete (attuale: {network})",
+    "accountAria": "Dettagli account"
   }
 }
