@@ -7,5 +7,15 @@
     "menu": "Attiva/disattiva menu",
     "logoAria": "Mercato, home",
     "close": "Chiudi"
+  },
+  "footer": {
+    "version": "v{version} · mit · indice del costo della vita · celo",
+    "terms": "Termini",
+    "privacy": "Privacy",
+    "support": "Supporto",
+    "github": "github",
+    "networkUnsupported": "Rete non supportata",
+    "legalAria": "Note legali e supporto",
+    "githubAria": "Vedi il sorgente su GitHub"
   }
 }
