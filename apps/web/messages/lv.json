@@ -91,5 +91,20 @@
     "emptyAddCta": "Pievieno cenu",
     "itemAria": "{country}: {symbol}{amount} {base} pamatgrozs",
     "partialItemAria": "{country}: {filled} no {total} pamatproduktiem ar cenu"
+  },
+  "hero": {
+    "liveBadge": "tiešraidē · celo mainnet",
+    "title1": "Ikdienas dzīves",
+    "title2": "cena,",
+    "title3": "ko mēra visi.",
+    "subtitle": "Mercato ir kopienas veidots dzīves dārdzības indekss. Jebkurš, jebkurā valstī, iesniedz vietējo cenu maizei, īrei, transportam, komunālajiem pakalpojumiem. Līdzbiedri pārbauda ķēdē. Visi iesaistītie nopelna cUSD.",
+    "cta_addPrice": "Pievieno cenu",
+    "cta_myRewards": "Manas balvas",
+    "stats": {
+      "verified": "pārbaudītu cenu",
+      "countries": "aktīvu valstu",
+      "pending": "gaida kopienas balsi",
+      "ariaLabel": "Tīkla tiešraides statistika"
+    }
   }
 }
