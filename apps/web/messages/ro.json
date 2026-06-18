@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Monedă afișată",
     "local": "Locală"
+  },
+  "balance": {
+    "title": "Soldurile tale"
   }
 }
