@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Brak zaakceptowanych zgłoszeń w ostatnich 30 dniach.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "Na żywo",
+    "title": "Ostatnie zgłoszenia",
+    "loading": "Ładowanie kanału…",
+    "emptyTitle": "Kanał jest pusty",
+    "emptyBody": "Brak zgłoszeń Mercato.",
+    "emptyCta": "Dodaj pierwszą cenę →",
+    "accepted": "zaakceptowane",
+    "rejected": "odrzucone",
+    "pending": "oczekuje · {votes}/3"
   }
 }
