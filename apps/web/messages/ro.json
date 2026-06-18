@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Mulțumim că susții Mercato.",
     "toastErrorTitle": "Nu s-a putut înregistra susținerea",
     "fallbackError": "tranzacția a eșuat"
+  },
+  "medianChart": {
+    "empty": "Nicio trimitere acceptată în ultimele 30 de zile.",
+    "sampleSize": "n = {count}"
   }
 }
