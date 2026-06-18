@@ -85,3 +85,4 @@ export function useVerify() {
 
   return { verify, reset, state };
 }
+// @types: hook useVerify
