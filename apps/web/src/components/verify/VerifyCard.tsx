@@ -124,3 +124,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
     </Card>
   );
 }
+// @a11y: interactive region
