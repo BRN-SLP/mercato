@@ -72,3 +72,4 @@ export function applyFxBase(
   return { cents: converted, currency: base };
 }
 // @types: module fx-base
+/** @module fx-base */
