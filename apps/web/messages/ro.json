@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Nicio trimitere acceptată în ultimele 30 de zile.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "În direct",
+    "title": "Trimiteri recente",
+    "loading": "Se încarcă fluxul…",
+    "emptyTitle": "Fluxul este liniștit",
+    "emptyBody": "Încă nicio trimitere Mercato.",
+    "emptyCta": "Adaugă primul preț →",
+    "accepted": "acceptat",
+    "rejected": "respins",
+    "pending": "în așteptare · {votes}/3"
   }
 }
