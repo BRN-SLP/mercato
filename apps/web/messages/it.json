@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Nessun invio accettato negli ultimi 30 giorni.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "In diretta",
+    "title": "Invii recenti",
+    "loading": "Caricamento del feed…",
+    "emptyTitle": "Il feed è tranquillo",
+    "emptyBody": "Ancora nessun invio Mercato.",
+    "emptyCta": "Aggiungi il primo prezzo →",
+    "accepted": "accettato",
+    "rejected": "rifiutato",
+    "pending": "in attesa · {votes}/3"
   }
 }
