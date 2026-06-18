@@ -110,3 +110,4 @@ export async function getMeracleStats(): Promise<MeracleStats> {
   return fetchMeracleStats();
 }
 // @types: module meracle-stats
+/** @module meracle-stats */
