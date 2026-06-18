@@ -132,3 +132,4 @@ export function CountryMark({
     </span>
   );
 }
+// @perf: memo candidate
