@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "Jūsų balansai"
+  },
+  "verifyCard": {
+    "title": "Pateikimas #{id}",
+    "zoneLabel": "zona {lat}, {lng}",
+    "votesLabel": "balsai {accept} iš 3 už, {reject} iš 3 prieš",
+    "accept": "Atrodo teisingai",
+    "reject": "Negerai",
+    "groupAria": "Patikrinti pateikimą #{id}",
+    "acceptAria": "Priimti pateikimą #{id}",
+    "rejectAria": "Atmesti pateikimą #{id}"
   }
 }
