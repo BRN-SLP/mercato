@@ -91,5 +91,20 @@
     "emptyAddCta": "Fiyat ekle",
     "itemAria": "{country}: {symbol}{amount} {base} temel sepet",
     "partialItemAria": "{country}: {total} temel üründen {filled} tanesi fiyatlandı"
+  },
+  "hero": {
+    "liveBadge": "canlı · celo mainnet",
+    "title1": "Günlük yaşamın",
+    "title2": "fiyatı,",
+    "title3": "herkes tarafından ölçülüyor.",
+    "subtitle": "Mercato, toplulukça oluşturulan bir yaşam maliyeti endeksidir. Herkes, her ülkede, ekmek, kira, ulaşım, faturalar için yerel bir fiyat girer. Akranlar zincir üstünde doğrular. Katılan herkes cUSD kazanır.",
+    "cta_addPrice": "Fiyat ekle",
+    "cta_myRewards": "Ödüllerim",
+    "stats": {
+      "verified": "doğrulanmış fiyat",
+      "countries": "aktif ülke",
+      "pending": "topluluk oyu bekliyor",
+      "ariaLabel": "Canlı ağ istatistikleri"
+    }
   }
 }
