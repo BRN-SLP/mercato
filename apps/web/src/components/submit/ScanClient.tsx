@@ -33,3 +33,4 @@ export function ScanClient() {
     </div>
   );
 }
+// @a11y: interactive region
