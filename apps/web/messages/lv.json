@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Pēdējās 30 dienās nav apstiprinātu iesniegumu.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "Tiešraides plūsma",
+    "title": "Jaunākie iesniegumi",
+    "loading": "Notiek plūsmas ielāde…",
+    "emptyTitle": "Plūsma ir klusa",
+    "emptyBody": "Vēl nav Mercato iesniegumu.",
+    "emptyCta": "Pievieno pirmo cenu →",
+    "accepted": "apstiprināts",
+    "rejected": "noraidīts",
+    "pending": "gaida · {votes}/3"
   }
 }
