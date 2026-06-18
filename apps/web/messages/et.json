@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "Sinu saldod"
+  },
+  "verifyCard": {
+    "title": "Esitus #{id}",
+    "zoneLabel": "tsoon {lat}, {lng}",
+    "votesLabel": "hääled {accept} 3-st nõus, {reject} 3-st vastu",
+    "accept": "Tundub õige",
+    "reject": "Vale",
+    "groupAria": "Kontrolli esitust #{id}",
+    "acceptAria": "Nõustu esitusega #{id}",
+    "rejectAria": "Lükka esitus #{id} tagasi"
   }
 }
