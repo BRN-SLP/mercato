@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Son 30 günde kabul edilmiş gönderim yok.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "Canlı akış",
+    "title": "Son gönderimler",
+    "loading": "Akış yükleniyor…",
+    "emptyTitle": "Akış sessiz",
+    "emptyBody": "Henüz Mercato gönderimi yok.",
+    "emptyCta": "İlk fiyatı ekle →",
+    "accepted": "kabul edildi",
+    "rejected": "reddedildi",
+    "pending": "bekliyor · {votes}/3"
   }
 }
