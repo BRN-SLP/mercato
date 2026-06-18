@@ -106,5 +106,19 @@
       "pending": "topluluk oyu bekliyor",
       "ariaLabel": "Canlı ağ istatistikleri"
     }
+  },
+  "meracleAttribution": {
+    "section": "Destekleyen",
+    "title": "meRacle, otonom fiyat oracle",
+    "body": "Mercato toplulukça yönetilir, ancak her yeni ülke veya ürünü beslemek, endeksi sabitlemek için ilk gözlemleri gerektirir. meRacle bu boşluğu dolduran otonom yapay zeka ajanıdır. Büyük perakendecilerden canlı fiyatları toplar, kanonik birimlere normalleştirir ve topluluğun gönderdiği aynı PriceOracle sözleşmesine zincir üstünde yazar.",
+    "stat1Label": "Katalog",
+    "stat1Unit": "{count, plural, =0 {henüz ürün yok} one {# ürün} other {# ürün}}",
+    "stat2Label": "Pazarlar",
+    "stat2Unit": "{count, plural, =0 {henüz ülke yok} one {# ülke} other {# ülke}}",
+    "stat3Label": "Son senkronizasyon",
+    "stat3Empty": "İlk senkronizasyon bekleniyor",
+    "linkRepo": "GitHub kaynağı",
+    "linkActivity": "Canlı tx geçmişi",
+    "linkIdentity": "ERC-8004 kimliği"
   }
 }
