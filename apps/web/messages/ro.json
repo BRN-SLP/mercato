@@ -106,5 +106,19 @@
       "pending": "așteaptă votul comunității",
       "ariaLabel": "Statistici rețea în direct"
     }
+  },
+  "meracleAttribution": {
+    "section": "Susținut de",
+    "title": "meRacle, oracol autonom de prețuri",
+    "body": "Mercato este condus de comunitate, însă popularea fiecărei țări sau produs nou necesită observații inițiale pentru a ancora indicele. meRacle este agentul AI autonom care umple acel gol. Extrage prețuri live de la marii retaileri, le normalizează la unități canonice și le scrie pe lanț în același contract PriceOracle în care trimite comunitatea.",
+    "stat1Label": "Catalog",
+    "stat1Unit": "{count, plural, =0 {încă niciun produs} one {# produs} few {# produse} other {# de produse}}",
+    "stat2Label": "Piețe",
+    "stat2Unit": "{count, plural, =0 {încă nicio țară} one {# țară} few {# țări} other {# de țări}}",
+    "stat3Label": "Ultima sincronizare",
+    "stat3Empty": "Se așteaptă prima sincronizare",
+    "linkRepo": "Sursă pe GitHub",
+    "linkActivity": "Istoric tx live",
+    "linkIdentity": "Identitate ERC-8004"
   }
 }
