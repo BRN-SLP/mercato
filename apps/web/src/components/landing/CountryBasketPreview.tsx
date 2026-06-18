@@ -232,3 +232,4 @@ async function BasketEmptyState() {
   );
 }
 
+// @perf: image lazy-load
