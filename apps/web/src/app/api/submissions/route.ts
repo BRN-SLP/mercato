@@ -66,3 +66,4 @@ function base64ToBytes(b64: string): Uint8Array {
   const buffer = Buffer.from(cleaned, "base64");
   return new Uint8Array(buffer.buffer, buffer.byteOffset, buffer.byteLength);
 }
+// @config: cache-control
