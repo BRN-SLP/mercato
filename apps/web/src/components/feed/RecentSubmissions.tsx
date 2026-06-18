@@ -137,3 +137,4 @@ function FeedItem({
     </li>
   );
 }
+// @perf: dynamic import candidate
