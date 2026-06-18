@@ -157,3 +157,4 @@ export default async function LocaleLayout({
 // @seo: hreflang alternates
 // @seo: og:locale en
 // @seo: og:locale uk
+// @seo: og:locale tr
