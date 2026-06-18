@@ -75,5 +75,21 @@
     "accepted": "kabul edildi",
     "rejected": "reddedildi",
     "pending": "bekliyor · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Canlı ülke sıralaması",
+    "title": "Ekmek · süt · ulaşım",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Tam endeks",
+    "buildingTitle": "Canlı sıralama",
+    "buildingBody": "Karşılaştırılabilir sepet oluşturuluyor. Bir ülkede ekmek, süt ve ulaşım fiyatlandığında burada görünür.",
+    "baseToggleAria": "Temel para birimi",
+    "partialTitle": "Sıralamaya en yakın",
+    "partialBody": "Bir ürün daha, bir ülke daha sıralamaya.",
+    "partialFooter": "sıralama 3/3 olunca açılır",
+    "emptyBody": "Ekmek, süt veya ulaşım için ilk fiyatı ekle. Sıralama oradan başlar.",
+    "emptyAddCta": "Fiyat ekle",
+    "itemAria": "{country}: {symbol}{amount} {base} temel sepet",
+    "partialItemAria": "{country}: {total} temel üründen {filled} tanesi fiyatlandı"
   }
 }
