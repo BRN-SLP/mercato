@@ -40,5 +40,25 @@
     "groupAria": "Patikrinti pateikimą #{id}",
     "acceptAria": "Priimti pateikimą #{id}",
     "rejectAria": "Atmesti pateikimą #{id}"
+  },
+  "support": {
+    "section": "Palaikyk projektą",
+    "title1": "Įrašyk savo vardą",
+    "titleAccent": "grandinėje.",
+    "body": "Pasirašyk vieną transakciją, kad palaikytum Mercato Celo tinkle. Kainuoja tik tinklo mokestį, neperkelia lėšų ir palieka nuolatinį viešą pasitikėjimo balsą, pasirinktinai su trumpa žinute.",
+    "supporters": "rėmėjai",
+    "signals": "signalai",
+    "messagePlaceholder": "Neprivaloma žinutė (įrašoma grandinėje)",
+    "messageAria": "Neprivaloma palaikymo žinutė",
+    "button": "Palaikyk grandinėje",
+    "buttonBusy": "Įrašoma…",
+    "buttonAgain": "Palaikyk dar kartą",
+    "already": "Jau parodei palaikymą. Ačiū.",
+    "connectHint": "Prijunk Celo piniginę, kad įrašytum savo palaikymą.",
+    "toastLoading": "Įrašomas palaikymas…",
+    "toastSuccessTitle": "Palaikymas įrašytas grandinėje",
+    "toastSuccessDesc": "Ačiū, kad palaikai Mercato.",
+    "toastErrorTitle": "Nepavyko įrašyti palaikymo",
+    "fallbackError": "transakcija nepavyko"
   }
 }
