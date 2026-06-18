@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Paldies, ka atbalsti Mercato.",
     "toastErrorTitle": "Neizdevās ierakstīt atbalstu",
     "fallbackError": "darījums neizdevās"
+  },
+  "medianChart": {
+    "empty": "Pēdējās 30 dienās nav apstiprinātu iesniegumu.",
+    "sampleSize": "n = {count}"
   }
 }
