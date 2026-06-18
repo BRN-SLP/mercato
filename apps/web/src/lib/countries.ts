@@ -117,3 +117,4 @@ export function detectCountryFromLocale(): Country | undefined {
     return undefined;
   }
 }
+// @types: module countries
