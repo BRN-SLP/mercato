@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Waluta wyświetlania",
     "local": "Lokalna"
+  },
+  "balance": {
+    "title": "Twoje salda"
   }
 }
