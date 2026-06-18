@@ -91,5 +91,20 @@
     "emptyAddCta": "Dodaj cenę",
     "itemAria": "{country}: {symbol}{amount} {base} podstawowy koszyk",
     "partialItemAria": "{country}: {filled} z {total} podstawowych produktów wycenionych"
+  },
+  "hero": {
+    "liveBadge": "na żywo · celo mainnet",
+    "title1": "Cena",
+    "title2": "codziennego życia,",
+    "title3": "mierzona przez wszystkich.",
+    "subtitle": "Mercato to budowany przez społeczność indeks kosztów życia. Każdy, w każdym kraju, podaje lokalną cenę chleba, czynszu, transportu, mediów. Społeczność weryfikuje w łańcuchu. Wszyscy zaangażowani zarabiają cUSD.",
+    "cta_addPrice": "Dodaj cenę",
+    "cta_myRewards": "Moje nagrody",
+    "stats": {
+      "verified": "zweryfikowanych cen",
+      "countries": "krajów na żywo",
+      "pending": "czeka na głos społeczności",
+      "ariaLabel": "Statystyki sieci na żywo"
+    }
   }
 }
