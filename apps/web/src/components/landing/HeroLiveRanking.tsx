@@ -250,3 +250,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
     </div>
   );
 }
+// @perf: image lazy-load
