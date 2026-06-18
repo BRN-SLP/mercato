@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Rodoma valiuta",
     "local": "Vietinė"
+  },
+  "balance": {
+    "title": "Jūsų balansai"
   }
 }
