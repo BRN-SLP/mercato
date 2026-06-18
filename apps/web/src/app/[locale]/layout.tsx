@@ -161,3 +161,4 @@ export default async function LocaleLayout({
 // @seo: og:locale ro
 // @seo: og:locale pl
 // @seo: og:locale lv
+// @seo: og:locale lt
