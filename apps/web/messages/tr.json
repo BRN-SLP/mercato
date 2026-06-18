@@ -40,5 +40,25 @@
     "groupAria": "Gönderim #{id} doğrula",
     "acceptAria": "Gönderim #{id} kabul et",
     "rejectAria": "Gönderim #{id} reddet"
+  },
+  "support": {
+    "section": "Projeyi destekle",
+    "title1": "Adını yaz",
+    "titleAccent": "zincir üstüne.",
+    "body": "Mercato'yu Celo üzerinde desteklemek için tek bir işlem imzala. Yalnızca ağ ücreti tutar, fon taşımaz ve isteğe bağlı kısa bir mesajla kalıcı, herkese açık bir güven oyu bırakır.",
+    "supporters": "destekçiler",
+    "signals": "sinyaller",
+    "messagePlaceholder": "İsteğe bağlı mesaj (zincire kaydedilir)",
+    "messageAria": "İsteğe bağlı destek mesajı",
+    "button": "Zincir üstünde destekle",
+    "buttonBusy": "Kaydediliyor…",
+    "buttonAgain": "Tekrar destekle",
+    "already": "Zaten destek gösterdin. Teşekkürler.",
+    "connectHint": "Desteğini kaydetmek için bir Celo cüzdanı bağla.",
+    "toastLoading": "Desteğin kaydediliyor…",
+    "toastSuccessTitle": "Destek zincire kaydedildi",
+    "toastSuccessDesc": "Mercato'yu desteklediğin için teşekkürler.",
+    "toastErrorTitle": "Destek kaydedilemedi",
+    "fallbackError": "işlem başarısız"
   }
 }
