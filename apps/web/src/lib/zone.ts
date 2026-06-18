@@ -70,3 +70,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @bei-dev-pass:4
 // @bei-dev-pass:5
 // @bei-dev-pass:6
+// @bei-dev-pass:7
