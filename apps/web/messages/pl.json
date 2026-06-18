@@ -120,5 +120,21 @@
     "linkRepo": "Źródło na GitHub",
     "linkActivity": "Historia tx na żywo",
     "linkIdentity": "Tożsamość ERC-8004"
+  },
+  "basketPreview": {
+    "section": "Koszyk do tej pory",
+    "title1": "Gdzie indeks jest",
+    "titleAccent": "już żywy.",
+    "subtitle": "Każdy słupek mierzy, jaka część koszyka {total} produktów ma co najmniej jedną zweryfikowaną cenę w danym kraju. Dotknij wiersza, by zobaczyć pełny rozkład kraju.",
+    "seeFull": "Zobacz pełny indeks",
+    "basketSum": "suma koszyka",
+    "empty": {
+      "section": "Koszyk jest pusty",
+      "title1": "Żaden kraj nie został wyceniony",
+      "titleAccent": "jeszcze.",
+      "body": "Mercato startuje od zera zgłoszeń. Bądź pierwszym, który doda cenę w swoim kraju, a reszta koszyka zbuduje się sama.",
+      "cta": "Dodaj cenę"
+    },
+    "rowAria": "{country}: {coverage} z {total} produktów wycenionych"
   }
 }
