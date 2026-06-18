@@ -91,5 +91,20 @@
     "emptyAddCta": "Pridėk kainą",
     "itemAria": "{country}: {symbol}{amount} {base} pagrindinis krepšelis",
     "partialItemAria": "{country}: {filled} iš {total} pagrindinių produktų įkainota"
+  },
+  "hero": {
+    "liveBadge": "tiesiogiai · celo mainnet",
+    "title1": "Kasdienio gyvenimo",
+    "title2": "kaina,",
+    "title3": "matuojama visų.",
+    "subtitle": "Mercato yra bendruomenės kuriamas pragyvenimo išlaidų indeksas. Bet kas, bet kurioje šalyje, pateikia vietinę duonos, nuomos, transporto, komunalinių paslaugų kainą. Bendraamžiai patikrina grandinėje. Visi dalyvaujantys uždirba cUSD.",
+    "cta_addPrice": "Pridėk kainą",
+    "cta_myRewards": "Mano atlygiai",
+    "stats": {
+      "verified": "patikrintų kainų",
+      "countries": "aktyvių šalių",
+      "pending": "laukia bendruomenės balso",
+      "ariaLabel": "Tinklo statistika tiesiogiai"
+    }
   }
 }
