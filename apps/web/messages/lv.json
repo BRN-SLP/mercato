@@ -40,5 +40,25 @@
     "groupAria": "Pārbaudīt iesniegumu #{id}",
     "acceptAria": "Apstiprināt iesniegumu #{id}",
     "rejectAria": "Noraidīt iesniegumu #{id}"
+  },
+  "support": {
+    "section": "Atbalsti projektu",
+    "title1": "Ieraksti savu vārdu",
+    "titleAccent": "ķēdē.",
+    "body": "Paraksti vienu darījumu, lai atbalstītu Mercato tīklā Celo. Tas maksā tikai tīkla maksu, nepārvieto līdzekļus un atstāj pastāvīgu publisku uzticības balsi, pēc izvēles ar īsu ziņu.",
+    "supporters": "atbalstītāji",
+    "signals": "signāli",
+    "messagePlaceholder": "Neobligāta ziņa (ierakstīta ķēdē)",
+    "messageAria": "Neobligāta atbalsta ziņa",
+    "button": "Atbalsti ķēdē",
+    "buttonBusy": "Notiek ierakstīšana…",
+    "buttonAgain": "Atbalsti vēlreiz",
+    "already": "Tu jau esi izrādījis atbalstu. Paldies.",
+    "connectHint": "Pievieno Celo maku, lai ierakstītu savu atbalstu.",
+    "toastLoading": "Notiek atbalsta ierakstīšana…",
+    "toastSuccessTitle": "Atbalsts ierakstīts ķēdē",
+    "toastSuccessDesc": "Paldies, ka atbalsti Mercato.",
+    "toastErrorTitle": "Neizdevās ierakstīt atbalstu",
+    "fallbackError": "darījums neizdevās"
   }
 }
