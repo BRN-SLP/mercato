@@ -75,5 +75,21 @@
     "accepted": "priimta",
     "rejected": "atmesta",
     "pending": "laukiama · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Šalių reitingas tiesiogiai",
+    "title": "Duona · pienas · transportas",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Pilnas indeksas",
+    "buildingTitle": "Reitingas tiesiogiai",
+    "buildingBody": "Kuriamas palyginamas krepšelis. Kai tik viena šalis turės duonos, pieno ir transporto kainas, ji pasirodys čia.",
+    "baseToggleAria": "Bazinė valiuta",
+    "partialTitle": "Arčiausiai reitingo",
+    "partialBody": "Dar vienas produktas, dar viena šalis į reitingą.",
+    "partialFooter": "reitingas atsirakina ties 3/3",
+    "emptyBody": "Pridėk pirmą duonos, pieno ar transporto kainą. Reitingas iš ten pradeda augti.",
+    "emptyAddCta": "Pridėk kainą",
+    "itemAria": "{country}: {symbol}{amount} {base} pagrindinis krepšelis",
+    "partialItemAria": "{country}: {filled} iš {total} pagrindinių produktų įkainota"
   }
 }
