@@ -89,3 +89,4 @@ export function MercatoLogo({ className, ariaLabel, ...rest }: MercatoLogoProps)
     </svg>
   );
 }
+// @perf: memo candidate
