@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "Jūsu atlikumi"
+  },
+  "verifyCard": {
+    "title": "Iesniegums #{id}",
+    "zoneLabel": "zona {lat}, {lng}",
+    "votesLabel": "balsis {accept} no 3 par, {reject} no 3 pret",
+    "accept": "Izskatās pareizi",
+    "reject": "Nepareizi",
+    "groupAria": "Pārbaudīt iesniegumu #{id}",
+    "acceptAria": "Apstiprināt iesniegumu #{id}",
+    "rejectAria": "Noraidīt iesniegumu #{id}"
   }
 }
