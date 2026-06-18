@@ -106,5 +106,19 @@
       "pending": "laukia bendruomenės balso",
       "ariaLabel": "Tinklo statistika tiesiogiai"
     }
+  },
+  "meracleAttribution": {
+    "section": "Palaiko",
+    "title": "meRacle, autonominis kainų orakulas",
+    "body": "Mercato yra bendruomenės valdoma, tačiau kiekvienos naujos šalies ar produkto užpildymas reikalauja pradinių stebėjimų indeksui įtvirtinti. meRacle yra autonominis dirbtinio intelekto agentas, užpildantis tą spragą. Jis renka tiesiogines kainas iš didelių mažmenininkų, normalizuoja jas į kanoninius vienetus ir rašo grandinėje į tą patį PriceOracle kontraktą, į kurį teikia bendruomenė.",
+    "stat1Label": "Katalogas",
+    "stat1Unit": "{count, plural, =0 {produktų dar nėra} one {# produktas} few {# produktai} other {# produktų}}",
+    "stat2Label": "Rinkos",
+    "stat2Unit": "{count, plural, =0 {šalių dar nėra} one {# šalis} few {# šalys} other {# šalių}}",
+    "stat3Label": "Paskutinė sinchronizacija",
+    "stat3Empty": "Laukiama pirmos sinchronizacijos",
+    "linkRepo": "Šaltinis GitHub",
+    "linkActivity": "Tiesioginė tx istorija",
+    "linkIdentity": "ERC-8004 tapatybė"
   }
 }
