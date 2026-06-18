@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Kuvatav valuuta",
     "local": "Kohalik"
+  },
+  "balance": {
+    "title": "Sinu saldod"
   }
 }
