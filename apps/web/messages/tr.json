@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Mercato'yu desteklediğin için teşekkürler.",
     "toastErrorTitle": "Destek kaydedilemedi",
     "fallbackError": "işlem başarısız"
+  },
+  "medianChart": {
+    "empty": "Son 30 günde kabul edilmiş gönderim yok.",
+    "sampleSize": "n = {count}"
   }
 }
