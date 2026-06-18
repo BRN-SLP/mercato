@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Dziękujemy za wsparcie Mercato.",
     "toastErrorTitle": "Nie udało się zapisać wsparcia",
     "fallbackError": "transakcja nie powiodła się"
+  },
+  "medianChart": {
+    "empty": "Brak zaakceptowanych zgłoszeń w ostatnich 30 dniach.",
+    "sampleSize": "n = {count}"
   }
 }
