@@ -91,5 +91,20 @@
     "emptyAddCta": "Lisa hind",
     "itemAria": "{country}: {symbol}{amount} {base} põhikorv",
     "partialItemAria": "{country}: {filled} / {total} põhitoodet hinnastatud"
+  },
+  "hero": {
+    "liveBadge": "otse · celo mainnet",
+    "title1": "Igapäevaelu",
+    "title2": "hind,",
+    "title3": "mõõdetuna kõigi poolt.",
+    "subtitle": "Mercato on kogukonna loodud elukalliduse indeks. Igaüks, igas riigis, esitab kohaliku hinna leiva, üüri, transpordi ja kommunaalkulude eest. Kaaslased kinnitavad ahelas. Kõik osalejad teenivad cUSD.",
+    "cta_addPrice": "Lisa hind",
+    "cta_myRewards": "Minu auhinnad",
+    "stats": {
+      "verified": "kinnitatud hinda",
+      "countries": "aktiivset riiki",
+      "pending": "ootab kogukonna häält",
+      "ariaLabel": "Võrgu otsestatistika"
+    }
   }
 }
