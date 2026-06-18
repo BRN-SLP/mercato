@@ -120,5 +120,21 @@
     "linkRepo": "Avots GitHub",
     "linkActivity": "Reāllaika tx vēsture",
     "linkIdentity": "ERC-8004 identitāte"
+  },
+  "basketPreview": {
+    "section": "Grozs līdz šim",
+    "title1": "Kur indekss ir",
+    "titleAccent": "jau dzīvs.",
+    "subtitle": "Katra josla mēra, cik liela daļa no {total} produktu groza katrā valstī ir vismaz viena apstiprināta cena. Pieskaries rindai, lai redzētu pilnu valsts sadalījumu.",
+    "seeFull": "Skatīt pilnu indeksu",
+    "basketSum": "groza summa",
+    "empty": {
+      "section": "Grozs ir tukšs",
+      "title1": "Neviena valsts nav novērtēta",
+      "titleAccent": "vēl.",
+      "body": "Mercato sākas ar nulli iesniegumu. Esi pirmais, kas pievieno cenu savā valstī, un pārējais grozs uzbūvēsies pats.",
+      "cta": "Pievieno cenu"
+    },
+    "rowAria": "{country}: {coverage} no {total} produktiem novērtēti"
   }
 }
