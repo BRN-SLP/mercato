@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "Bakiyeleriniz"
+  },
+  "verifyCard": {
+    "title": "Gönderim #{id}",
+    "zoneLabel": "bölge {lat}, {lng}",
+    "votesLabel": "oylar: 3 oydan {accept} kabul, 3 oydan {reject} ret",
+    "accept": "Doğru görünüyor",
+    "reject": "Yanlış",
+    "groupAria": "Gönderim #{id} doğrula",
+    "acceptAria": "Gönderim #{id} kabul et",
+    "rejectAria": "Gönderim #{id} reddet"
   }
 }
