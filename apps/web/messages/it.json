@@ -91,5 +91,20 @@
     "emptyAddCta": "Aggiungi un prezzo",
     "itemAria": "{country}: {symbol}{amount} {base} paniere base",
     "partialItemAria": "{country}: {filled} di {total} prodotti base con prezzo"
+  },
+  "hero": {
+    "liveBadge": "in diretta · celo mainnet",
+    "title1": "Il prezzo",
+    "title2": "della vita quotidiana,",
+    "title3": "misurato da tutti.",
+    "subtitle": "Mercato è un indice del costo della vita costruito dalla comunità. Chiunque, in qualsiasi paese, invia un prezzo locale per pane, affitto, trasporti, utenze. I pari verificano on-chain. Tutti i partecipanti guadagnano cUSD.",
+    "cta_addPrice": "Aggiungi un prezzo",
+    "cta_myRewards": "I miei premi",
+    "stats": {
+      "verified": "prezzi verificati",
+      "countries": "paesi attivi",
+      "pending": "in attesa del voto",
+      "ariaLabel": "Statistiche di rete in diretta"
+    }
   }
 }
