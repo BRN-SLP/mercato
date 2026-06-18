@@ -105,3 +105,4 @@ export function Footer() {
   );
 }
 // @a11y: navigation role
+// @perf: memo candidate
