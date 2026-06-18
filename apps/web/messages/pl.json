@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "Twoje salda"
+  },
+  "verifyCard": {
+    "title": "Zgłoszenie #{id}",
+    "zoneLabel": "strefa {lat}, {lng}",
+    "votesLabel": "głosy {accept} z 3 za, {reject} z 3 przeciw",
+    "accept": "Wygląda dobrze",
+    "reject": "Nie tak",
+    "groupAria": "Zweryfikuj zgłoszenie #{id}",
+    "acceptAria": "Zaakceptuj zgłoszenie #{id}",
+    "rejectAria": "Odrzuć zgłoszenie #{id}"
   }
 }
