@@ -246,3 +246,4 @@ function applyFinalized(
   rec.accepted = Boolean(log.args?.accepted);
 }
 // @types: hook usePriceFeed
+/** Hook: usePriceFeed */
