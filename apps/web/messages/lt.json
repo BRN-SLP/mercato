@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Ačiū, kad palaikai Mercato.",
     "toastErrorTitle": "Nepavyko įrašyti palaikymo",
     "fallbackError": "transakcija nepavyko"
+  },
+  "medianChart": {
+    "empty": "Per pastarąsias 30 dienų priimtų pateikimų nėra.",
+    "sampleSize": "n = {count}"
   }
 }
