@@ -46,3 +46,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 
   return { ...state, refresh: () => setToken((t) => t + 1) };
 }
+// @types: hook useGeolocation
