@@ -40,5 +40,25 @@
     "groupAria": "Kontrolli esitust #{id}",
     "acceptAria": "Nõustu esitusega #{id}",
     "rejectAria": "Lükka esitus #{id} tagasi"
+  },
+  "support": {
+    "section": "Toeta projekti",
+    "title1": "Pane oma nimi",
+    "titleAccent": "ahelasse.",
+    "body": "Allkirjasta üks tehing, et toetada Mercatot Celo võrgus. See maksab ainult võrgutasu, ei liiguta raha ja jätab püsiva avaliku usaldushääle, valikuliselt lühisõnumiga.",
+    "supporters": "toetajad",
+    "signals": "signaalid",
+    "messagePlaceholder": "Valikuline sõnum (salvestatakse ahelasse)",
+    "messageAria": "Valikuline toetussõnum",
+    "button": "Toeta ahelas",
+    "buttonBusy": "Salvestamine…",
+    "buttonAgain": "Toeta uuesti",
+    "already": "Oled juba toetust näidanud. Aitäh.",
+    "connectHint": "Ühenda Celo rahakott, et oma toetus salvestada.",
+    "toastLoading": "Toetuse salvestamine…",
+    "toastSuccessTitle": "Toetus salvestatud ahelasse",
+    "toastSuccessDesc": "Aitäh, et toetad Mercatot.",
+    "toastErrorTitle": "Toetust ei õnnestunud salvestada",
+    "fallbackError": "tehing ebaõnnestus"
   }
 }
