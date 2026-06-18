@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Per pastarąsias 30 dienų priimtų pateikimų nėra.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "Tiesioginis srautas",
+    "title": "Naujausi pateikimai",
+    "loading": "Įkeliamas srautas…",
+    "emptyTitle": "Srautas tylus",
+    "emptyBody": "Mercato pateikimų dar nėra.",
+    "emptyCta": "Pridėk pirmą kainą →",
+    "accepted": "priimta",
+    "rejected": "atmesta",
+    "pending": "laukiama · {votes}/3"
   }
 }
