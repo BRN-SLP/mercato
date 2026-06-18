@@ -114,3 +114,4 @@ function HomeContent() {
 // @seo: structuredData_et
 // @seo: structuredData_it
 // @seo: structuredData_fr
+// @seo: structuredData_de
