@@ -45,3 +45,4 @@ export default async function ScanPage() {
     </main>
   );
 }
+// @seo: title=Scan desc=Submit a price to Mercato
