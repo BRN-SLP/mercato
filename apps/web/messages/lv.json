@@ -136,5 +136,43 @@
       "cta": "Pievieno cenu"
     },
     "rowAria": "{country}: {coverage} no {total} produktiem novērtēti"
+  },
+  "rewards": {
+    "h1": "Balvas",
+    "notConnected": "Pievieno maku, lai redzētu gaidošās balvas un izmaksu vēsturi.",
+    "wrongNetwork": "Mercato vēl nav izvietota šajā tīklā. Pārslēdzies uz atbalstītu tīklu.",
+    "lifetimeClaimed": {
+      "title": "Kopā izmaksāts",
+      "claimsCount": "{count, plural, zero {# izmaksu} one {# izmaksa} other {# izmaksas}} reģistrā."
+    },
+    "submissions": {
+      "title": "Iesniegumi",
+      "body": "Cenas, ko iesniedzi ķēdē."
+    },
+    "verifications": {
+      "title": "Pārbaudes",
+      "body": "Balsis, ko atdevi citu iesniegumiem."
+    },
+    "howRewards": {
+      "title": "Kā darbojas balvas",
+      "body": "Katrs apstiprināts iesniegums nopelna <strong>{submitter} cUSD</strong>, kad tas savāc trīs konsekventas pārbaudes. Katra apstiprināta iesnieguma pārbaude nopelna <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Balvas uzkrājas līgumā, līdz tās izņem; viens darījums pārskaita visu atlikumu uz tavu maku.",
+      "valuesNote": "Vērtības tiek nolasītas tieši no izvietotā PriceOracle, tāpēc tās vienmēr atbilst aktīvajam tīklam."
+    },
+    "claim": {
+      "title": "Gaidošās balvas",
+      "emptyHint": "Vēl nav ko izņemt; nopelni, iesniedzot cenu vai pārbaudot citu iesniegumus.",
+      "submitting": "Apstiprini makā…",
+      "confirming": "Gaida apstiprinājumu…",
+      "button": "Izņemt cUSD",
+      "error": "Kļūda: {message}",
+      "success": "Izņemts.",
+      "toastLoading": "Balvas tiek izņemtas…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Balvas izņemtas",
+      "toastSuccessDesc": "Līdzekļi ceļā uz tavu maku.",
+      "toastErrorTitle": "Izņemšana neizdevās",
+      "fallbackError": "izņemšana neizdevās"
+    }
   }
 }
