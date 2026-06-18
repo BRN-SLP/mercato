@@ -136,5 +136,43 @@
       "cta": "Lisa hind"
     },
     "rowAria": "{country}: {coverage} / {total} toodet hinnastatud"
+  },
+  "rewards": {
+    "h1": "Auhinnad",
+    "notConnected": "Ühenda rahakott, et näha ootel auhindu ja väljamaksete ajalugu.",
+    "wrongNetwork": "Mercato pole sellesse võrku veel juurutatud. Lülitu toetatud võrgule.",
+    "lifetimeClaimed": {
+      "title": "Kokku välja makstud",
+      "claimsCount": "{count, plural, one {# väljamakse} other {# väljamakset}} kirjas."
+    },
+    "submissions": {
+      "title": "Esitused",
+      "body": "Sinu ahelas esitatud hinnad."
+    },
+    "verifications": {
+      "title": "Kinnitused",
+      "body": "Hääled, mille andsid teiste esitustele."
+    },
+    "howRewards": {
+      "title": "Kuidas auhinnad toimivad",
+      "body": "Iga heakskiidetud esitus teenib <strong>{submitter} cUSD</strong>, kui see kogub kolm järjepidevat kinnitust. Iga kinnitus heakskiidetud esitusele teenib <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Auhinnad kogunevad lepingusse, kuni need välja võtad; üks tehing kannab kogu saldo sinu rahakotti.",
+      "valuesNote": "Väärtused loetakse otse juurutatud PriceOracle lepingust, seega vastavad need alati aktiivsele võrgule."
+    },
+    "claim": {
+      "title": "Ootel auhinnad",
+      "emptyHint": "Veel pole midagi välja võtta; teeni, esitades hinna või kinnitades teiste esitusi.",
+      "submitting": "Kinnita rahakotis…",
+      "confirming": "Kinnituse ootamine…",
+      "button": "Võta cUSD välja",
+      "error": "Viga: {message}",
+      "success": "Välja võetud.",
+      "toastLoading": "Auhindade väljavõtmine…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Auhinnad välja võetud",
+      "toastSuccessDesc": "Raha on teel sinu rahakotti.",
+      "toastErrorTitle": "Väljavõtmine ebaõnnestus",
+      "fallbackError": "väljavõtmine ebaõnnestus"
+    }
   }
 }
