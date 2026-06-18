@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Valuta visualizzata",
     "local": "Locale"
+  },
+  "balance": {
+    "title": "I tuoi saldi"
   }
 }
