@@ -75,5 +75,21 @@
     "accepted": "acceptat",
     "rejected": "respins",
     "pending": "în așteptare · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Clasament țări în direct",
+    "title": "Pâine · lapte · transport",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Index complet",
+    "buildingTitle": "Clasament în direct",
+    "buildingBody": "Se construiește coșul comparabil. De îndată ce o țară are pâine, lapte și transport cu preț, apare aici.",
+    "baseToggleAria": "Monedă de bază",
+    "partialTitle": "Cel mai aproape de clasament",
+    "partialBody": "Încă un produs, încă o țară în clasament.",
+    "partialFooter": "clasamentul se deblochează la 3/3",
+    "emptyBody": "Adaugă primul preț pentru pâine, lapte sau transport. Clasamentul pornește de acolo.",
+    "emptyAddCta": "Adaugă un preț",
+    "itemAria": "{country}: {symbol}{amount} {base} coș de bază",
+    "partialItemAria": "{country}: {filled} din {total} produse de bază cu preț"
   }
 }
