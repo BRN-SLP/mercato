@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Görüntülenen para birimi",
     "local": "Yerel"
+  },
+  "balance": {
+    "title": "Bakiyeleriniz"
   }
 }
