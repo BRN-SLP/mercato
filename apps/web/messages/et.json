@@ -106,5 +106,19 @@
       "pending": "ootab kogukonna häält",
       "ariaLabel": "Võrgu otsestatistika"
     }
+  },
+  "meracleAttribution": {
+    "section": "Toetab",
+    "title": "meRacle, autonoomne hinnaoraakel",
+    "body": "Mercato on kogukonnapõhine, kuid iga uue riigi või toote külvamine vajab algvaatlusi, et indeksit ankurdada. meRacle on autonoomne tehisintellekti agent, mis täidab selle lünga. See kogub reaalajas hindu suurtelt jaemüüjatelt, normaliseerib need kanoonilisteks ühikuteks ja kirjutab ahelasse samasse PriceOracle lepingusse, kuhu kogukond esitab.",
+    "stat1Label": "Kataloog",
+    "stat1Unit": "{count, plural, =0 {tooteid veel pole} one {# toode} other {# toodet}}",
+    "stat2Label": "Turud",
+    "stat2Unit": "{count, plural, =0 {riike veel pole} one {# riik} other {# riiki}}",
+    "stat3Label": "Viimane sünkroonimine",
+    "stat3Empty": "Ootab esimest sünkroonimist",
+    "linkRepo": "Lähtekood GitHubis",
+    "linkActivity": "Reaalajas tx ajalugu",
+    "linkIdentity": "ERC-8004 identiteet"
   }
 }
