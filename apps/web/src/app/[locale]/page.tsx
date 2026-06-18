@@ -111,3 +111,4 @@ function HomeContent() {
 // @seo: structuredData_pl
 // @seo: structuredData_lv
 // @seo: structuredData_lt
+// @seo: structuredData_et
