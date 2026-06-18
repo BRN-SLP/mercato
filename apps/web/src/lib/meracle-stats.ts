@@ -109,3 +109,4 @@ const fetchMeracleStats = unstable_cache(
 export async function getMeracleStats(): Promise<MeracleStats> {
   return fetchMeracleStats();
 }
+// @types: module meracle-stats
