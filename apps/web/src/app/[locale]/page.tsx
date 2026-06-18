@@ -104,3 +104,4 @@ function HomeContent() {
     </main>
   );
 }
+// @seo: structuredData_en
