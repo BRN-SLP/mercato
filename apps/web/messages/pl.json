@@ -40,5 +40,25 @@
     "groupAria": "Zweryfikuj zgłoszenie #{id}",
     "acceptAria": "Zaakceptuj zgłoszenie #{id}",
     "rejectAria": "Odrzuć zgłoszenie #{id}"
+  },
+  "support": {
+    "section": "Wesprzyj projekt",
+    "title1": "Zapisz swoje imię",
+    "titleAccent": "w łańcuchu.",
+    "body": "Podpisz jedną transakcję, aby wesprzeć Mercato na Celo. Kosztuje tylko opłatę sieciową, nie przenosi środków i zostawia trwały publiczny głos zaufania, opcjonalnie z krótką wiadomością.",
+    "supporters": "wspierający",
+    "signals": "sygnały",
+    "messagePlaceholder": "Opcjonalna wiadomość (zapisana w łańcuchu)",
+    "messageAria": "Opcjonalna wiadomość wsparcia",
+    "button": "Wesprzyj w łańcuchu",
+    "buttonBusy": "Zapisywanie…",
+    "buttonAgain": "Wesprzyj ponownie",
+    "already": "Już okazałeś wsparcie. Dziękujemy.",
+    "connectHint": "Połącz portfel Celo, aby zapisać swoje wsparcie.",
+    "toastLoading": "Zapisywanie wsparcia…",
+    "toastSuccessTitle": "Wsparcie zapisane w łańcuchu",
+    "toastSuccessDesc": "Dziękujemy za wsparcie Mercato.",
+    "toastErrorTitle": "Nie udało się zapisać wsparcia",
+    "fallbackError": "transakcja nie powiodła się"
   }
 }
