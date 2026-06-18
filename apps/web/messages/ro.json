@@ -136,5 +136,43 @@
       "cta": "Adaugă un preț"
     },
     "rowAria": "{country}: {coverage} din {total} produse evaluate"
+  },
+  "rewards": {
+    "h1": "Recompense",
+    "notConnected": "Conectează portofelul pentru a vedea recompensele în așteptare și istoricul revendicărilor.",
+    "wrongNetwork": "Mercato nu este încă implementat pe această rețea. Comută la o rețea acceptată.",
+    "lifetimeClaimed": {
+      "title": "Revendicat total",
+      "claimsCount": "{count, plural, one {# revendicare} few {# revendicări} other {# de revendicări}} înregistrate."
+    },
+    "submissions": {
+      "title": "Trimiteri",
+      "body": "Prețuri trimise de tine on-chain."
+    },
+    "verifications": {
+      "title": "Verificări",
+      "body": "Voturi date pe trimiterile altora."
+    },
+    "howRewards": {
+      "title": "Cum funcționează recompensele",
+      "body": "Fiecare trimitere acceptată câștigă <strong>{submitter} cUSD</strong> după ce adună trei verificări consistente. Fiecare verificare a unei trimiteri acceptate câștigă <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Recompensele se acumulează în contract până le revendici; o tranzacție transferă tot soldul în portofelul tău.",
+      "valuesNote": "Valorile sunt citite direct din PriceOracle implementat, deci se potrivesc mereu cu rețeaua activă."
+    },
+    "claim": {
+      "title": "Recompense în așteptare",
+      "emptyHint": "Nimic de revendicat încă; trimite un preț sau verifică trimiterile altora pentru a câștiga.",
+      "submitting": "Confirmă în portofel…",
+      "confirming": "Se așteaptă confirmarea…",
+      "button": "Revendică cUSD",
+      "error": "Eroare: {message}",
+      "success": "Revendicat.",
+      "toastLoading": "Se revendică recompensele…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Recompense revendicate",
+      "toastSuccessDesc": "Fondurile sunt pe drum către portofelul tău.",
+      "toastErrorTitle": "Revendicare eșuată",
+      "fallbackError": "revendicare eșuată"
+    }
   }
 }
