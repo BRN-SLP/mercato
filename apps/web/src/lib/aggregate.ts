@@ -284,3 +284,4 @@ export function getProductByBarcode(barcode: string): Product | undefined {
 // Re-export so consumers don't import from products.ts separately.
 export { getProductBySlug };
 // @types: module aggregate
+/** @module aggregate */
