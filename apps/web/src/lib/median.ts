@@ -56,3 +56,4 @@ export function dailyMedianSeries(
       sampleSize: arr.length,
     }));
 }
+/** @module median */
