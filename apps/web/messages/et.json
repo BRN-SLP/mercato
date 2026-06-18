@@ -75,5 +75,21 @@
     "accepted": "heaks kiidetud",
     "rejected": "tagasi lükatud",
     "pending": "ootel · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Riikide edetabel otse",
+    "title": "Leib · piim · transport",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Täisindeks",
+    "buildingTitle": "Edetabel otse",
+    "buildingBody": "Võrreldava korvi koostamine. Niipea kui ühel riigil on leib, piim ja transport hinnastatud, ilmub see siia.",
+    "baseToggleAria": "Baasvaluuta",
+    "partialTitle": "Edetabelile lähim",
+    "partialBody": "Veel üks toode, veel üks riik edetabelisse.",
+    "partialFooter": "edetabel avaneb 3/3 juures",
+    "emptyBody": "Lisa esimene hind leivale, piimale või transpordile. Edetabel kasvab sealt.",
+    "emptyAddCta": "Lisa hind",
+    "itemAria": "{country}: {symbol}{amount} {base} põhikorv",
+    "partialItemAria": "{country}: {filled} / {total} põhitoodet hinnastatud"
   }
 }
