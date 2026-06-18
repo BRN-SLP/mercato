@@ -154,3 +154,4 @@ export default async function LocaleLayout({
     </html>
   );
 }
+// @seo: hreflang alternates
