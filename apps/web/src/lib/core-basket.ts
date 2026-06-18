@@ -154,3 +154,4 @@ export function rankCoreBasketPartial(
   });
 }
 // @types: module core-basket
+/** @module core-basket */
