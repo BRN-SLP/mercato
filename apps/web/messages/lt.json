@@ -136,5 +136,43 @@
       "cta": "Pridėk kainą"
     },
     "rowAria": "{country}: {coverage} iš {total} produktų įkainota"
+  },
+  "rewards": {
+    "h1": "Atlygiai",
+    "notConnected": "Prijunk piniginę, kad pamatytum laukiančius atlygius ir išmokų istoriją.",
+    "wrongNetwork": "Mercato dar neįdiegta šiame tinkle. Perjunk į palaikomą tinklą.",
+    "lifetimeClaimed": {
+      "title": "Iš viso atsiimta",
+      "claimsCount": "{count, plural, one {# išmoka} few {# išmokos} other {# išmokų}} įraše."
+    },
+    "submissions": {
+      "title": "Pateikimai",
+      "body": "Tavo grandinėje pateiktos kainos."
+    },
+    "verifications": {
+      "title": "Patikrinimai",
+      "body": "Balsai, kuriuos atidavei kitų pateikimams."
+    },
+    "howRewards": {
+      "title": "Kaip veikia atlygiai",
+      "body": "Kiekvienas priimtas pateikimas uždirba <strong>{submitter} cUSD</strong>, kai surenka tris nuoseklius patikrinimus. Kiekvienas priimto pateikimo patikrinimas uždirba <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Atlygiai kaupiasi kontrakte, kol juos atsiimi; viena transakcija perveda visą likutį į tavo piniginę.",
+      "valuesNote": "Reikšmės skaitomos tiesiai iš įdiegto PriceOracle, todėl visada atitinka aktyvų tinklą."
+    },
+    "claim": {
+      "title": "Laukiantys atlygiai",
+      "emptyHint": "Dar nėra ką atsiimti; uždirbk pateikdamas kainą arba patikrindamas kitų pateikimus.",
+      "submitting": "Patvirtink piniginėje…",
+      "confirming": "Laukiama patvirtinimo…",
+      "button": "Atsiimti cUSD",
+      "error": "Klaida: {message}",
+      "success": "Atsiimta.",
+      "toastLoading": "Atsiimami atlygiai…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Atlygiai atsiimti",
+      "toastSuccessDesc": "Lėšos pakeliui į tavo piniginę.",
+      "toastErrorTitle": "Atsiėmimas nepavyko",
+      "fallbackError": "atsiėmimas nepavyko"
+    }
   }
 }
