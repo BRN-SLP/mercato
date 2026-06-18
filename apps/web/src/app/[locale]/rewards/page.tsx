@@ -143,3 +143,4 @@ export default function RewardsPage() {
     </main>
   );
 }
+// @seo: title=Rewards desc=Your cUSD rewards on Mercato
