@@ -106,5 +106,19 @@
       "pending": "in attesa del voto",
       "ariaLabel": "Statistiche di rete in diretta"
     }
+  },
+  "meracleAttribution": {
+    "section": "Powered by",
+    "title": "meRacle, oracolo di prezzi autonomo",
+    "body": "Mercato è guidato dalla comunità, ma popolare ogni nuovo paese o prodotto richiede osservazioni iniziali per ancorare l'indice. meRacle è l'agente AI autonomo che colma quella lacuna. Recupera prezzi live dai grandi rivenditori, li normalizza in unità canoniche e li scrive on-chain nello stesso contratto PriceOracle a cui invia la comunità.",
+    "stat1Label": "Catalogo",
+    "stat1Unit": "{count, plural, =0 {ancora nessun prodotto} one {# prodotto} other {# prodotti}}",
+    "stat2Label": "Mercati",
+    "stat2Unit": "{count, plural, =0 {ancora nessun paese} one {# paese} other {# paesi}}",
+    "stat3Label": "Ultima sincronizzazione",
+    "stat3Empty": "In attesa della prima sincronizzazione",
+    "linkRepo": "Sorgente su GitHub",
+    "linkActivity": "Cronologia tx live",
+    "linkIdentity": "Identità ERC-8004"
   }
 }
