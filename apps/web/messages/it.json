@@ -136,5 +136,43 @@
       "cta": "Aggiungi un prezzo"
     },
     "rowAria": "{country}: {coverage} di {total} prodotti con prezzo"
+  },
+  "rewards": {
+    "h1": "Premi",
+    "notConnected": "Connetti il wallet per vedere i premi in sospeso e la cronologia dei riscatti.",
+    "wrongNetwork": "Mercato non è ancora implementato su questa rete. Passa a una rete supportata.",
+    "lifetimeClaimed": {
+      "title": "Riscattato totale",
+      "claimsCount": "{count, plural, one {# riscatto} other {# riscatti}} registrati."
+    },
+    "submissions": {
+      "title": "Invii",
+      "body": "Prezzi che hai inviato on-chain."
+    },
+    "verifications": {
+      "title": "Verifiche",
+      "body": "Voti che hai espresso sugli invii altrui."
+    },
+    "howRewards": {
+      "title": "Come funzionano i premi",
+      "body": "Ogni invio accettato guadagna <strong>{submitter} cUSD</strong> una volta raccolte tre verifiche coerenti. Ogni verifica su un invio accettato guadagna <strong>{verifier} cUSD</strong>.",
+      "accumulate": "I premi si accumulano nel contratto finché non li riscatti; una transazione trasferisce l'intero saldo al tuo wallet.",
+      "valuesNote": "I valori sono letti direttamente dal PriceOracle implementato, quindi corrispondono sempre alla rete attiva."
+    },
+    "claim": {
+      "title": "Premi in sospeso",
+      "emptyHint": "Niente da riscattare ancora; invia un prezzo o verifica gli invii altrui per guadagnare.",
+      "submitting": "Conferma nel wallet…",
+      "confirming": "In attesa di conferma…",
+      "button": "Riscatta cUSD",
+      "error": "Errore: {message}",
+      "success": "Riscattato.",
+      "toastLoading": "Riscatto dei premi…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Premi riscattati",
+      "toastSuccessDesc": "I fondi sono in arrivo sul tuo wallet.",
+      "toastErrorTitle": "Riscatto fallito",
+      "fallbackError": "riscatto fallito"
+    }
   }
 }
