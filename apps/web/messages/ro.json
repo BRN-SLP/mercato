@@ -91,5 +91,20 @@
     "emptyAddCta": "Adaugă un preț",
     "itemAria": "{country}: {symbol}{amount} {base} coș de bază",
     "partialItemAria": "{country}: {filled} din {total} produse de bază cu preț"
+  },
+  "hero": {
+    "liveBadge": "în direct · celo mainnet",
+    "title1": "Prețul",
+    "title2": "vieții de zi cu zi,",
+    "title3": "măsurat de toți.",
+    "subtitle": "Mercato este un indice al costului vieții construit de comunitate. Oricine, în orice țară, trimite un preț local pentru pâine, chirie, transport, utilități. Colegii verifică on-chain. Toți cei implicați câștigă cUSD.",
+    "cta_addPrice": "Adaugă un preț",
+    "cta_myRewards": "Recompensele mele",
+    "stats": {
+      "verified": "prețuri verificate",
+      "countries": "țări active",
+      "pending": "așteaptă votul comunității",
+      "ariaLabel": "Statistici rețea în direct"
+    }
   }
 }
