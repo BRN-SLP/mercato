@@ -64,5 +64,16 @@
   "medianChart": {
     "empty": "Viimase 30 päeva jooksul pole heakskiidetud esitusi.",
     "sampleSize": "n = {count}"
+  },
+  "feed": {
+    "section": "Otsevoog",
+    "title": "Hiljutised esitused",
+    "loading": "Voo laadimine…",
+    "emptyTitle": "Voog on vaikne",
+    "emptyBody": "Mercato esitusi veel pole.",
+    "emptyCta": "Lisa esimene hind →",
+    "accepted": "heaks kiidetud",
+    "rejected": "tagasi lükatud",
+    "pending": "ootel · {votes}/3"
   }
 }
