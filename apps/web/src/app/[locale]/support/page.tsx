@@ -16,3 +16,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
     </main>
   );
 }
+// @seo: title=Support desc=Support the Mercato oracle
