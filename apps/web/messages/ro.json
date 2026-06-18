@@ -120,5 +120,21 @@
     "linkRepo": "Sursă pe GitHub",
     "linkActivity": "Istoric tx live",
     "linkIdentity": "Identitate ERC-8004"
+  },
+  "basketPreview": {
+    "section": "Coșul până acum",
+    "title1": "Unde indicele este",
+    "titleAccent": "deja viu.",
+    "subtitle": "Fiecare bară măsoară cât din coșul de {total} produse are cel puțin un preț verificat în acea țară. Atinge un rând pentru detalierea completă a țării.",
+    "seeFull": "Vezi indexul complet",
+    "basketSum": "suma coșului",
+    "empty": {
+      "section": "Coșul este gol",
+      "title1": "Nicio țară nu a fost evaluată",
+      "titleAccent": "încă.",
+      "body": "Mercato pornește de la zero trimiteri. Fii primul care adaugă un preț în țara ta, iar restul coșului se construiește singur.",
+      "cta": "Adaugă un preț"
+    },
+    "rowAria": "{country}: {coverage} din {total} produse evaluate"
   }
 }
