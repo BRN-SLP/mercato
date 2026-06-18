@@ -120,5 +120,21 @@
     "linkRepo": "Sorgente su GitHub",
     "linkActivity": "Cronologia tx live",
     "linkIdentity": "Identità ERC-8004"
+  },
+  "basketPreview": {
+    "section": "Il paniere finora",
+    "title1": "Dove l'indice è",
+    "titleAccent": "già vivo.",
+    "subtitle": "Ogni barra misura quanta parte del paniere di {total} prodotti ha almeno un prezzo verificato in quel paese. Tocca una riga per il dettaglio completo del paese.",
+    "seeFull": "Vedi indice completo",
+    "basketSum": "somma del paniere",
+    "empty": {
+      "section": "Il paniere è vuoto",
+      "title1": "Nessun paese ha un prezzo",
+      "titleAccent": "ancora.",
+      "body": "Mercato parte da zero invii. Sii il primo ad aggiungere un prezzo nel tuo paese, e il resto del paniere si costruisce da sé.",
+      "cta": "Aggiungi un prezzo"
+    },
+    "rowAria": "{country}: {coverage} di {total} prodotti con prezzo"
   }
 }
