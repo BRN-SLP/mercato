@@ -75,5 +75,21 @@
     "accepted": "apstiprināts",
     "rejected": "noraidīts",
     "pending": "gaida · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Valstu reitings tiešraidē",
+    "title": "Maize · piens · transports",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Pilns indekss",
+    "buildingTitle": "Reitings tiešraidē",
+    "buildingBody": "Tiek veidots salīdzināmais grozs. Tiklīdz kādai valstij būs cena maizei, pienam un transportam, tā parādīsies šeit.",
+    "baseToggleAria": "Bāzes valūta",
+    "partialTitle": "Tuvākais reitingam",
+    "partialBody": "Vēl viens produkts, vēl viena valsts reitingā.",
+    "partialFooter": "reitings atveras pie 3/3",
+    "emptyBody": "Pievieno pirmo cenu maizei, pienam vai transportam. Reitings sākas no turienes.",
+    "emptyAddCta": "Pievieno cenu",
+    "itemAria": "{country}: {symbol}{amount} {base} pamatgrozs",
+    "partialItemAria": "{country}: {filled} no {total} pamatproduktiem ar cenu"
   }
 }
