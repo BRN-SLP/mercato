@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Aitäh, et toetad Mercatot.",
     "toastErrorTitle": "Toetust ei õnnestunud salvestada",
     "fallbackError": "tehing ebaõnnestus"
+  },
+  "medianChart": {
+    "empty": "Viimase 30 päeva jooksul pole heakskiidetud esitusi.",
+    "sampleSize": "n = {count}"
   }
 }
