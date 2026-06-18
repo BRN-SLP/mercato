@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "Soldurile tale"
+  },
+  "verifyCard": {
+    "title": "Trimitere #{id}",
+    "zoneLabel": "zonă {lat}, {lng}",
+    "votesLabel": "voturi {accept} din 3 acceptă, {reject} din 3 resping",
+    "accept": "Pare corect",
+    "reject": "Greșit",
+    "groupAria": "Verifică trimiterea #{id}",
+    "acceptAria": "Acceptă trimiterea #{id}",
+    "rejectAria": "Respinge trimiterea #{id}"
   }
 }
