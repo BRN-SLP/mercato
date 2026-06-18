@@ -60,5 +60,9 @@
     "toastSuccessDesc": "Grazie per aver sostenuto Mercato.",
     "toastErrorTitle": "Impossibile registrare il sostegno",
     "fallbackError": "transazione fallita"
+  },
+  "medianChart": {
+    "empty": "Nessun invio accettato negli ultimi 30 giorni.",
+    "sampleSize": "n = {count}"
   }
 }
