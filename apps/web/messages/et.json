@@ -120,5 +120,21 @@
     "linkRepo": "Lähtekood GitHubis",
     "linkActivity": "Reaalajas tx ajalugu",
     "linkIdentity": "ERC-8004 identiteet"
+  },
+  "basketPreview": {
+    "section": "Senine korv",
+    "title1": "Kus indeks on",
+    "titleAccent": "juba elus.",
+    "subtitle": "Iga riba mõõdab, kui suurel osal {total}-tootelisest korvist on selles riigis vähemalt üks kinnitatud hind. Puuduta rida riigi täieliku jaotuse jaoks.",
+    "seeFull": "Vaata täisindeksit",
+    "basketSum": "korvi summa",
+    "empty": {
+      "section": "Korv on tühi",
+      "title1": "Ühtegi riiki pole hinnastatud",
+      "titleAccent": "veel.",
+      "body": "Mercato alustab nullist esitusest. Ole esimene, kes lisab oma riigis hinna, ja ülejäänud korv ehitab end ise.",
+      "cta": "Lisa hind"
+    },
+    "rowAria": "{country}: {coverage} / {total} toodet hinnastatud"
   }
 }
