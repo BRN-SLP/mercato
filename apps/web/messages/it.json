@@ -30,5 +30,15 @@
   },
   "balance": {
     "title": "I tuoi saldi"
+  },
+  "verifyCard": {
+    "title": "Invio #{id}",
+    "zoneLabel": "zona {lat}, {lng}",
+    "votesLabel": "voti {accept} di 3 accettano, {reject} di 3 rifiutano",
+    "accept": "Sembra giusto",
+    "reject": "Sbagliato",
+    "groupAria": "Verifica invio #{id}",
+    "acceptAria": "Accetta invio #{id}",
+    "rejectAria": "Rifiuta invio #{id}"
   }
 }
