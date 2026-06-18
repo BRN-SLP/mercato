@@ -120,5 +120,21 @@
     "linkRepo": "GitHub kaynağı",
     "linkActivity": "Canlı tx geçmişi",
     "linkIdentity": "ERC-8004 kimliği"
+  },
+  "basketPreview": {
+    "section": "Şu ana kadarki sepet",
+    "title1": "Endeksin zaten",
+    "titleAccent": "canlı olduğu yer.",
+    "subtitle": "Her çubuk, {total} ürünlük sepetin o ülkede en az bir doğrulanmış fiyata sahip kısmını ölçer. Ülkenin tam dökümü için bir satıra dokun.",
+    "seeFull": "Tam endeksi gör",
+    "basketSum": "sepet toplamı",
+    "empty": {
+      "section": "Sepet boş",
+      "title1": "Hiçbir ülke fiyatlandırılmadı",
+      "titleAccent": "henüz.",
+      "body": "Mercato sıfır gönderimle başlar. Ülkende ilk fiyatı ekleyen sen ol, sepetin geri kalanı kendini inşa eder.",
+      "cta": "Fiyat ekle"
+    },
+    "rowAria": "{country}: {total} üründen {coverage} tanesi fiyatlandı"
   }
 }
