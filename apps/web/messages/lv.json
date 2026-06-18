@@ -27,5 +27,8 @@
   "fxBaseToggle": {
     "label": "Attēlotā valūta",
     "local": "Vietējā"
+  },
+  "balance": {
+    "title": "Jūsu atlikumi"
   }
 }
