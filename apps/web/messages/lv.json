@@ -106,5 +106,19 @@
       "pending": "gaida kopienas balsi",
       "ariaLabel": "Tīkla tiešraides statistika"
     }
+  },
+  "meracleAttribution": {
+    "section": "Nodrošina",
+    "title": "meRacle, autonoms cenu orākuls",
+    "body": "Mercato ir kopienas vadīta, taču katras jaunas valsts vai produkta sēšana prasa sākotnējus novērojumus, lai noenkurotu indeksu. meRacle ir autonoms mākslīgā intelekta aģents, kas aizpilda šo robu. Tas vāc reāllaika cenas no lieliem mazumtirgotājiem, normalizē tās kanoniskās vienībās un raksta ķēdē tajā pašā PriceOracle līgumā, kuram iesniedz kopiena.",
+    "stat1Label": "Katalogs",
+    "stat1Unit": "{count, plural, =0 {vēl nav produktu} zero {# produktu} one {# produkts} other {# produkti}}",
+    "stat2Label": "Tirgi",
+    "stat2Unit": "{count, plural, =0 {vēl nav valstu} zero {# valstu} one {# valsts} other {# valstis}}",
+    "stat3Label": "Pēdējā sinhronizācija",
+    "stat3Empty": "Gaida pirmo sinhronizāciju",
+    "linkRepo": "Avots GitHub",
+    "linkActivity": "Reāllaika tx vēsture",
+    "linkIdentity": "ERC-8004 identitāte"
   }
 }
