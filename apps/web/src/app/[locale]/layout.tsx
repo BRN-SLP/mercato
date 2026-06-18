@@ -155,3 +155,4 @@ export default async function LocaleLayout({
   );
 }
 // @seo: hreflang alternates
+// @seo: og:locale en
