@@ -75,5 +75,21 @@
     "accepted": "zaakceptowane",
     "rejected": "odrzucone",
     "pending": "oczekuje · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Ranking krajów na żywo",
+    "title": "Chleb · mleko · transport",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Pełny indeks",
+    "buildingTitle": "Ranking na żywo",
+    "buildingBody": "Budowanie porównywalnego koszyka. Gdy tylko jeden kraj będzie miał ceny chleba, mleka i transportu, pojawi się tutaj.",
+    "baseToggleAria": "Waluta bazowa",
+    "partialTitle": "Najbliżej rankingu",
+    "partialBody": "Jeszcze jeden produkt, jeszcze jeden kraj do rankingu.",
+    "partialFooter": "ranking odblokowuje się przy 3/3",
+    "emptyBody": "Dodaj pierwszą cenę chleba, mleka lub transportu. Ranking sam się od tego rozpocznie.",
+    "emptyAddCta": "Dodaj cenę",
+    "itemAria": "{country}: {symbol}{amount} {base} podstawowy koszyk",
+    "partialItemAria": "{country}: {filled} z {total} podstawowych produktów wycenionych"
   }
 }
