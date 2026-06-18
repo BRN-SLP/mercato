@@ -136,5 +136,43 @@
       "cta": "Dodaj cenę"
     },
     "rowAria": "{country}: {coverage} z {total} produktów wycenionych"
+  },
+  "rewards": {
+    "h1": "Nagrody",
+    "notConnected": "Połącz portfel, aby zobaczyć oczekujące nagrody i historię wypłat.",
+    "wrongNetwork": "Mercato nie jest jeszcze wdrożone w tej sieci. Przełącz na obsługiwaną sieć.",
+    "lifetimeClaimed": {
+      "title": "Wypłacono łącznie",
+      "claimsCount": "{count, plural, one {# wypłata} few {# wypłaty} many {# wypłat} other {# wypłaty}} w rejestrze."
+    },
+    "submissions": {
+      "title": "Zgłoszenia",
+      "body": "Ceny zgłoszone przez Ciebie w łańcuchu."
+    },
+    "verifications": {
+      "title": "Weryfikacje",
+      "body": "Głosy oddane na zgłoszenia innych."
+    },
+    "howRewards": {
+      "title": "Jak działają nagrody",
+      "body": "Każde zaakceptowane zgłoszenie daje <strong>{submitter} cUSD</strong>, gdy zbierze trzy zgodne weryfikacje. Każda weryfikacja zaakceptowanego zgłoszenia daje <strong>{verifier} cUSD</strong>.",
+      "accumulate": "Nagrody gromadzą się w kontrakcie do momentu odbioru; jedna transakcja przelewa całe saldo na Twój portfel.",
+      "valuesNote": "Wartości są odczytywane bezpośrednio z wdrożonego PriceOracle, więc zawsze pasują do aktywnej sieci."
+    },
+    "claim": {
+      "title": "Oczekujące nagrody",
+      "emptyHint": "Nie ma jeszcze nic do odebrania; zgłoś cenę lub zweryfikuj zgłoszenia innych, aby zarobić.",
+      "submitting": "Potwierdź w portfelu…",
+      "confirming": "Oczekiwanie na potwierdzenie…",
+      "button": "Odbierz cUSD",
+      "error": "Błąd: {message}",
+      "success": "Odebrano.",
+      "toastLoading": "Odbieranie nagród…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Nagrody odebrane",
+      "toastSuccessDesc": "Środki są w drodze do Twojego portfela.",
+      "toastErrorTitle": "Odbiór nie powiódł się",
+      "fallbackError": "odbiór nie powiódł się"
+    }
   }
 }
