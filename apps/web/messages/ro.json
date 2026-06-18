@@ -40,5 +40,25 @@
     "groupAria": "Verifică trimiterea #{id}",
     "acceptAria": "Acceptă trimiterea #{id}",
     "rejectAria": "Respinge trimiterea #{id}"
+  },
+  "support": {
+    "section": "Susține proiectul",
+    "title1": "Pune-ți numele",
+    "titleAccent": "on-chain.",
+    "body": "Semnează o singură tranzacție pentru a susține Mercato pe Celo. Costă doar taxa de rețea, nu mută fonduri și lasă un vot public permanent de încredere, opțional cu un mesaj scurt.",
+    "supporters": "susținători",
+    "signals": "semnale",
+    "messagePlaceholder": "Mesaj opțional (înregistrat on-chain)",
+    "messageAria": "Mesaj de susținere opțional",
+    "button": "Susține on-chain",
+    "buttonBusy": "Se înregistrează…",
+    "buttonAgain": "Susține din nou",
+    "already": "Ai arătat deja susținere. Mulțumim.",
+    "connectHint": "Conectează un portofel Celo pentru a-ți înregistra susținerea.",
+    "toastLoading": "Se înregistrează susținerea…",
+    "toastSuccessTitle": "Susținere înregistrată on-chain",
+    "toastSuccessDesc": "Mulțumim că susții Mercato.",
+    "toastErrorTitle": "Nu s-a putut înregistra susținerea",
+    "fallbackError": "tranzacția a eșuat"
   }
 }
