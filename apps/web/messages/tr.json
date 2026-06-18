@@ -136,5 +136,43 @@
       "cta": "Fiyat ekle"
     },
     "rowAria": "{country}: {total} üründen {coverage} tanesi fiyatlandı"
+  },
+  "rewards": {
+    "h1": "Ödüller",
+    "notConnected": "Bekleyen ödülleri ve talep geçmişini görmek için cüzdanını bağla.",
+    "wrongNetwork": "Mercato bu ağda henüz dağıtılmadı. Desteklenen bir ağa geç.",
+    "lifetimeClaimed": {
+      "title": "Toplam talep edilen",
+      "claimsCount": "{count, plural, one {# talep} other {# talep}} kayıtlı."
+    },
+    "submissions": {
+      "title": "Gönderimler",
+      "body": "Zincir üstünde gönderdiğin fiyatlar."
+    },
+    "verifications": {
+      "title": "Doğrulamalar",
+      "body": "Başkalarının gönderimlerine verdiğin oylar."
+    },
+    "howRewards": {
+      "title": "Ödüller nasıl çalışır",
+      "body": "Kabul edilen her gönderim, üç tutarlı doğrulama topladığında <strong>{submitter} cUSD</strong> kazanır. Kabul edilen bir gönderimdeki her doğrulama <strong>{verifier} cUSD</strong> kazanır.",
+      "accumulate": "Ödüller, sen talep edene kadar sözleşmede birikir; tek bir işlem tüm bakiyeyi cüzdanına aktarır.",
+      "valuesNote": "Değerler doğrudan dağıtılan PriceOracle kaynağından okunur, böylece her zaman aktif ağla eşleşir."
+    },
+    "claim": {
+      "title": "Bekleyen ödüller",
+      "emptyHint": "Henüz talep edilecek bir şey yok; kazanmak için bir fiyat gönder veya başkalarının gönderimlerini doğrula.",
+      "submitting": "Cüzdanda onayla…",
+      "confirming": "Onay bekleniyor…",
+      "button": "cUSD talep et",
+      "error": "Hata: {message}",
+      "success": "Talep edildi.",
+      "toastLoading": "Ödüller talep ediliyor…",
+      "toastLoadingDesc": "{value} cUSD",
+      "toastSuccessTitle": "Ödüller talep edildi",
+      "toastSuccessDesc": "Fonlar cüzdanına geliyor.",
+      "toastErrorTitle": "Talep başarısız",
+      "fallbackError": "talep başarısız"
+    }
   }
 }
