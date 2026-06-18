@@ -120,5 +120,21 @@
     "linkRepo": "Šaltinis GitHub",
     "linkActivity": "Tiesioginė tx istorija",
     "linkIdentity": "ERC-8004 tapatybė"
+  },
+  "basketPreview": {
+    "section": "Krepšelis iki šiol",
+    "title1": "Kur indeksas jau",
+    "titleAccent": "gyvas.",
+    "subtitle": "Kiekviena juosta matuoja, kokia {total} produktų krepšelio dalis turi bent vieną patvirtintą kainą toje šalyje. Palieskite eilutę, kad pamatytumėte visą šalies suskirstymą.",
+    "seeFull": "Žiūrėti pilną indeksą",
+    "basketSum": "krepšelio suma",
+    "empty": {
+      "section": "Krepšelis tuščias",
+      "title1": "Nė viena šalis neįkainota",
+      "titleAccent": "kol kas.",
+      "body": "Mercato pradeda nuo nulio pateikimų. Būk pirmas, pridėjęs kainą savo šalyje, ir likusi krepšelio dalis susikurs pati.",
+      "cta": "Pridėk kainą"
+    },
+    "rowAria": "{country}: {coverage} iš {total} produktų įkainota"
   }
 }
