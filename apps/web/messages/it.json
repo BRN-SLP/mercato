@@ -75,5 +75,21 @@
     "accepted": "accettato",
     "rejected": "rifiutato",
     "pending": "in attesa · {votes}/3"
+  },
+  "heroRanking": {
+    "section": "Classifica paesi in diretta",
+    "title": "Pane · latte · trasporti",
+    "fxFooter": "fx · ecb · {date}",
+    "fullIndex": "Indice completo",
+    "buildingTitle": "Classifica in diretta",
+    "buildingBody": "Costruzione del paniere comparabile. Appena un paese ha pane, latte e trasporti con prezzo, appare qui.",
+    "baseToggleAria": "Valuta di base",
+    "partialTitle": "Più vicino alla classifica",
+    "partialBody": "Un altro prodotto, un altro paese nella classifica.",
+    "partialFooter": "la classifica si sblocca a 3/3",
+    "emptyBody": "Aggiungi il primo prezzo per pane, latte o trasporti. La classifica si avvia da lì.",
+    "emptyAddCta": "Aggiungi un prezzo",
+    "itemAria": "{country}: {symbol}{amount} {base} paniere base",
+    "partialItemAria": "{country}: {filled} di {total} prodotti base con prezzo"
   }
 }
