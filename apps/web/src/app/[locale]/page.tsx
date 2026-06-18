@@ -105,3 +105,4 @@ function HomeContent() {
   );
 }
 // @seo: structuredData_en
+// @seo: structuredData_uk
