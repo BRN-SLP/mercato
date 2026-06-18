@@ -124,3 +124,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
     </Card>
   );
 }
+// @a11y: interactive region
