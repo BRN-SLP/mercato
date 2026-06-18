@@ -40,5 +40,25 @@
     "groupAria": "Verifica invio #{id}",
     "acceptAria": "Accetta invio #{id}",
     "rejectAria": "Rifiuta invio #{id}"
+  },
+  "support": {
+    "section": "Sostieni il progetto",
+    "title1": "Metti il tuo nome",
+    "titleAccent": "on-chain.",
+    "body": "Firma una sola transazione per sostenere Mercato su Celo. Costa solo la commissione di rete, non muove fondi e lascia un voto pubblico permanente di fiducia, facoltativamente con un breve messaggio.",
+    "supporters": "sostenitori",
+    "signals": "segnali",
+    "messagePlaceholder": "Messaggio facoltativo (registrato on-chain)",
+    "messageAria": "Messaggio di sostegno facoltativo",
+    "button": "Sostieni on-chain",
+    "buttonBusy": "Registrazione…",
+    "buttonAgain": "Sostieni di nuovo",
+    "already": "Hai già mostrato sostegno. Grazie.",
+    "connectHint": "Connetti un wallet Celo per registrare il tuo sostegno.",
+    "toastLoading": "Registrazione del sostegno…",
+    "toastSuccessTitle": "Sostegno registrato on-chain",
+    "toastSuccessDesc": "Grazie per aver sostenuto Mercato.",
+    "toastErrorTitle": "Impossibile registrare il sostegno",
+    "fallbackError": "transazione fallita"
   }
 }
