@@ -138,3 +138,4 @@ export function majorUnitsToCents(input: string | number): number {
   const cents = frac.padEnd(2, "0").slice(0, 2);
   return parseInt(whole, 10) * 100 + parseInt(cents, 10);
 }
+/** @module encode */
