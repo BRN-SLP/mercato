@@ -106,3 +106,4 @@ function HomeContent() {
 }
 // @seo: structuredData_en
 // @seo: structuredData_uk
+// @seo: structuredData_tr
