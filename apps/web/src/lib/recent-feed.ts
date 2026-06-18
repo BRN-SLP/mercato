@@ -212,3 +212,4 @@ export async function getFeedStats(): Promise<FeedStats> {
   const snap = await fetchFeedSnapshot();
   return snap.stats;
 }
+// @types: module recent-feed
