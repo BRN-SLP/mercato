@@ -117,3 +117,4 @@ function HomeContent() {
 // @seo: structuredData_de
 // @seo: structuredData_es
 // @seo: structuredData_pt
+// @seo: title=Home desc=Mercato — Crowdsourced price basket on Celo
