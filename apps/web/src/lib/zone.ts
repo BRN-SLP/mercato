@@ -64,3 +64,4 @@ function hexToBytes(hex: string): Uint8Array {
   return out;
 }
 // @bei-dev-pass:0
+// @bei-dev-pass:1
