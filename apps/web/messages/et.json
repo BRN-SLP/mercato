@@ -416,5 +416,37 @@
       "label": "Üür, 3 magamistuba, kesklinn",
       "hint": "Kuus, kesklinn"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Elukalliduse indeks",
+      "title1": "Mercato korv,",
+      "titleAccent": "riik riigi haaval.",
+      "body": "Kogukonna esitatud ja kinnitatud igapäevased mediaanhinnad. Iga korv liidab {count} põhikauba mediaanhinna kohalikus valuutas: leib, üür, transport, kommunaalid. Klõpsa real toodete kaupa jaotuse nägemiseks.",
+      "columns": {
+        "country": "Riik",
+        "coverage": "Katvus",
+        "basketTotal": "Korvi kogusumma"
+      },
+      "rowAria": "{country}: {total} tootest {coverage} hinnastatud",
+      "viewAfford": "vaata →",
+      "beFirstAfford": "ole esimene →"
+    },
+    "detail": {
+      "back": "Tagasi indeksisse",
+      "kicker": "{currency} · elukallidus",
+      "summary": "Korvi mediaansumma <strong>{value} {currency}</strong> {total} põhitootest {filled} kohta.",
+      "subsCount": "{count, plural, one {# esitus} other {# esitust}}",
+      "emptyTitle": "<accent>{country}</accent> jaoks pole veel hindu",
+      "emptyBody": "Korv on siin tühi. Lisa esimesena hind.",
+      "emptyCta": "Lisa hind →"
+    },
+    "empty": {
+      "kicker": "Korv on tühi",
+      "title1": "Ühtegi hinda pole veel",
+      "titleAccent": "esitatud.",
+      "body": "Mercato algab igas riigis nullist esitustest. Vali toode, vali oma riik, sisesta hind, ja indeks hakkab end ise üles ehitama.",
+      "cta": "Lisa esimene hind →"
+    }
   }
 }
