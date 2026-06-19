@@ -29,6 +29,10 @@ export function truncateAddress(address: string, startLength = 6, endLength = 4)
 /**
  * Check if a string is a valid Ethereum address
  */
+/**
+ * @description isValidAddress — core logic for ${NAME}
+ * @returns Result of isValidAddress computation
+ */
 export function isValidAddress(address: string): boolean {
   return /^0x[a-fA-F0-9]{40}$/.test(address);
 }
