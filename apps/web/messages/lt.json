@@ -210,5 +210,14 @@
       },
       "metaTitle": "Produktas nerastas"
     }
+  },
+  "languageSwitcher": {
+    "label": "Kalba",
+    "english": "anglų",
+    "ukrainian": "ukrainiečių",
+    "spanish": "ispanų",
+    "portugueseBR": "portugalų (BR)",
+    "german": "vokiečių",
+    "french": "prancūzų"
   }
 }
