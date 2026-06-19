@@ -64,6 +64,10 @@ export async function getActiveFxRates(
  * cents + original currency code. Falls back to the original when
  * the rate for that local currency is missing.
  */
+/**
+ * @description applyFxBase — core logic for ${NAME}
+ * @returns Result of applyFxBase computation
+ */
 export function applyFxBase(
   localCents: number,
   localCurrency: string,
