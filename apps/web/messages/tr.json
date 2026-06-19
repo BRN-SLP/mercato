@@ -219,5 +219,51 @@
     "portugueseBR": "Portekizce (BR)",
     "german": "Almanca",
     "french": "Fransızca"
+  },
+  "scan": {
+    "connectPrompt": "Göndermek için sağ üstten cüzdanını bağla. Aşağıdaki form cüzdansız önizleme modunda çalışır.",
+    "form": {
+      "title": "Sepete fiyat ekle",
+      "subtitle": "Bir ürün, ülkeni ve ödediğin fiyatı seç.",
+      "cancel": "İptal",
+      "product": {
+        "label": "Ürün",
+        "aria": "Bir ürün seç"
+      },
+      "country": {
+        "label": "Ülke",
+        "aria": "Ülkeni seç",
+        "currencyHint": "Para birimi ülkene göre: fiyatlar {currency} cinsinden."
+      },
+      "price": {
+        "label": "Ödediğin fiyat",
+        "wholeAria": "Tam birimler",
+        "centsAria": "Kuruş veya kesirli birimler"
+      },
+      "receipt": {
+        "label": "Fiş fotoğrafı (isteğe bağlı)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "{product} gönder",
+        "busy": "Gönderiliyor…"
+      }
+    },
+    "success": {
+      "title": "Gönderim #{id} zincire kabul edildi.",
+      "body": "Topluluk doğrulaması bekleniyor (3 oy gerekli). Ödül, sonuçlandığında /rewards sayfanda görünecek.",
+      "again": "Bir tane daha gönder"
+    },
+    "errors": {
+      "unsupportedFile": "Desteklenmeyen dosya türü {type}. JPEG, PNG veya WebP kullan.",
+      "fileTooLarge": "Fiş çok büyük ({size} bayt, maks {max}).",
+      "uploadFailed": "yükleme başarısız ({status})",
+      "unknown": "bilinmeyen hata"
+    },
+    "status": {
+      "uploading": "Fiş yükleniyor…",
+      "awaitingSignature": "Cüzdanda onayla…",
+      "confirming": "Onay bekleniyor…"
+    }
   }
 }
