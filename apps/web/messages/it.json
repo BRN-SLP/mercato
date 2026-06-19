@@ -416,5 +416,37 @@
       "label": "Affitto, 3 camere, centro",
       "hint": "Mensile, centro città"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Indice del costo della vita",
+      "title1": "Il paniere Mercato,",
+      "titleAccent": "paese per paese.",
+      "body": "Prezzi mediani giornalieri inviati e verificati dalla comunità. Ogni paniere somma il prezzo mediano di {count} beni canonici in valuta locale: pane, affitto, trasporti, utenze. Clicca una riga per il dettaglio per prodotto.",
+      "columns": {
+        "country": "Paese",
+        "coverage": "Copertura",
+        "basketTotal": "Totale paniere"
+      },
+      "rowAria": "{country}: {coverage} di {total} prodotti con prezzo",
+      "viewAfford": "vedi →",
+      "beFirstAfford": "sii il primo →"
+    },
+    "detail": {
+      "back": "Torna all'indice",
+      "kicker": "{currency} · costo della vita",
+      "summary": "Totale mediano del paniere di <strong>{value} {currency}</strong> su {filled} di {total} prodotti canonici.",
+      "subsCount": "{count, plural, one {# invio} other {# invii}}",
+      "emptyTitle": "Ancora nessun prezzo in <accent>{country}</accent>",
+      "emptyBody": "Il paniere qui è vuoto. Sii il primo ad aggiungere un prezzo.",
+      "emptyCta": "Aggiungi un prezzo →"
+    },
+    "empty": {
+      "kicker": "Il paniere è vuoto",
+      "title1": "Non è stato inviato ancora",
+      "titleAccent": "nessun prezzo.",
+      "body": "Mercato parte da zero invii in ogni paese. Scegli un prodotto, scegli il tuo paese, digita un prezzo, e l'indice inizia a costruirsi da solo.",
+      "cta": "Aggiungi il primo prezzo →"
+    }
   }
 }
