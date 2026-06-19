@@ -138,6 +138,10 @@ const fetchEur = unstable_cache(
  * Return both rate sheets — pre-fetching both means the client
  * toggle between USD and EUR doesn't trigger a re-fetch.
  */
+/**
+ * @description getFxRatesBoth — core logic for ${NAME}
+ * @returns Result of getFxRatesBoth computation
+ */
 export async function getFxRatesBoth(): Promise<{
   usd: FxRates | null;
   eur: FxRates | null;
