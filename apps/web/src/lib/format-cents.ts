@@ -16,6 +16,10 @@
  * Extracted from a duplicate that lived inside both
  * `CountryBasketPreview` and `/[locale]/basket/page.tsx`.
  */
+/**
+ * @description formatMajor — core logic for ${NAME}
+ * @returns Result of formatMajor computation
+ */
 export function formatMajor(cents: number): string {
   if (cents === 0) return "0";
   const major = Math.floor(cents / 100);
