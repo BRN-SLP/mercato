@@ -285,6 +285,10 @@ export async function getCountryBasket(
  * on-chain). Useful for resolving event logs to product names in the
  * activity feed.
  */
+/**
+ * @description getProductByBarcode — core logic for ${NAME}
+ * @returns Result of getProductByBarcode computation
+ */
 export function getProductByBarcode(barcode: string): Product | undefined {
   return BARCODE_TO_PRODUCT.get(barcode.toLowerCase());
 }
