@@ -219,5 +219,51 @@
     "portugueseBR": "portugalų (BR)",
     "german": "vokiečių",
     "french": "prancūzų"
+  },
+  "scan": {
+    "connectPrompt": "Norėdamas pateikti, prijunk piniginę viršuje dešinėje. Žemiau esanti forma veikia peržiūros režimu be piniginės.",
+    "form": {
+      "title": "Pridėk kainą į krepšelį",
+      "subtitle": "Pasirink produktą, savo šalį, sumokėtą kainą.",
+      "cancel": "Atšaukti",
+      "product": {
+        "label": "Produktas",
+        "aria": "Pasirink produktą"
+      },
+      "country": {
+        "label": "Šalis",
+        "aria": "Pasirink savo šalį",
+        "currencyHint": "Valiuta priklauso nuo šalies: kainos {currency}."
+      },
+      "price": {
+        "label": "Sumokėta kaina",
+        "wholeAria": "Sveiki vienetai",
+        "centsAria": "Centai ar trupmeniniai vienetai"
+      },
+      "receipt": {
+        "label": "Čekio nuotrauka (neprivaloma)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "Pateikti {product}",
+        "busy": "Pateikiama…"
+      }
+    },
+    "success": {
+      "title": "Pateikimas #{id} priimtas grandinėje.",
+      "body": "Laukiama bendruomenės patikrinimo (reikia 3 balsų). Atlygis pasirodys tavo /rewards puslapyje po užbaigimo.",
+      "again": "Pateikti dar vieną"
+    },
+    "errors": {
+      "unsupportedFile": "Nepalaikomas failo tipas {type}. Naudok JPEG, PNG arba WebP.",
+      "fileTooLarge": "Čekis per didelis ({size} baitų, maks {max}).",
+      "uploadFailed": "įkėlimas nepavyko ({status})",
+      "unknown": "nežinoma klaida"
+    },
+    "status": {
+      "uploading": "Įkeliamas čekis…",
+      "awaitingSignature": "Patvirtink piniginėje…",
+      "confirming": "Laukiama patvirtinimo…"
+    }
   }
 }
