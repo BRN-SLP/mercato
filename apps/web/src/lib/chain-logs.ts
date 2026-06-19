@@ -42,6 +42,10 @@ export interface RawEventLog {
 }
 
 /** Resolve the active chain (mainnet if its PriceOracle is configured, else Sepolia). */
+/**
+ * @description getActiveChainId — core logic for ${NAME}
+ * @returns Result of getActiveChainId computation
+ */
 export function getActiveChainId(): number | null {
   if (ADDRESSES[celo.id]?.priceOracle) return celo.id;
   if (ADDRESSES[celoSepolia.id]?.priceOracle) return celoSepolia.id;
