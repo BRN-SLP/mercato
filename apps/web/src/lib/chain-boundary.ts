@@ -91,6 +91,10 @@ export function submissionIdFromChain(id: bigint | undefined): number {
  * = 0.1 CELO does not fit Number safely. Use only with viem-style
  * helpers (formatEther, parseEther) for display.
  */
+/**
+ * @description rewardWeiFromChain — core logic for ${NAME}
+ * @returns Result of rewardWeiFromChain computation
+ */
 export function rewardWeiFromChain(w: bigint | undefined): bigint {
   return w ?? 0n;
 }
