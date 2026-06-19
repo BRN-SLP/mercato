@@ -174,5 +174,41 @@
       "toastErrorTitle": "Riscatto fallito",
       "fallbackError": "riscatto fallito"
     }
+  },
+  "item": {
+    "feedTitle": "Feed prodotto",
+    "meta": {
+      "title": "Prodotto {barcode}",
+      "description": "Prezzo mediano, invii recenti e verifiche in sospeso per questo prodotto nella comunità Mercato."
+    },
+    "median": {
+      "title": "Prezzo mediano",
+      "subtitle": "Da {count} invii accettati • ultimi 30 giorni"
+    },
+    "verify": {
+      "title": "Aiuta a verificare",
+      "loading": "Caricamento…",
+      "empty": "Nessun invio in sospeso al momento."
+    },
+    "recent": {
+      "title": "Invii recenti",
+      "empty": "Ancora nessun invio per questo codice a barre.",
+      "status": {
+        "accepted": "accettato",
+        "rejected": "rifiutato",
+        "locked": "bloccato (misto)",
+        "pending": "in sospeso ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Prodotto",
+      "title": "Impossibile aprire questo prodotto.",
+      "body": "O il codice a barre nell'URL è malformato (servono 12 byte esadecimali con prefisso 0x), oppure nessuno ha ancora inviato un prezzo. Scansionalo tu per avviare il feed.",
+      "cta": {
+        "scan": "Scansiona un prezzo",
+        "home": "Torna alla home"
+      },
+      "metaTitle": "Prodotto non trovato"
+    }
   }
 }
