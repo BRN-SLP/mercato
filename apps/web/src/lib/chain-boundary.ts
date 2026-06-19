@@ -53,6 +53,10 @@ export function timestampFromChain(ts: bigint | undefined): number {
 }
 
 /** Block number from chain → Number. */
+/**
+ * @description blockNumberFromChain — core logic for ${NAME}
+ * @returns Result of blockNumberFromChain computation
+ */
 export function blockNumberFromChain(bn: bigint | undefined): number {
   return Number(bn ?? 0n);
 }
