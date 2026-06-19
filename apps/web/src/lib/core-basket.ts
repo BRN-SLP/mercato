@@ -127,6 +127,10 @@ export interface CorePartialEntry {
   total: number;
 }
 
+/**
+ * @description rankCoreBasketPartial — core logic for ${NAME}
+ * @returns Result of rankCoreBasketPartial computation
+ */
 export function rankCoreBasketPartial(
   countries: readonly CountryBasket[],
 ): CorePartialEntry[] {
