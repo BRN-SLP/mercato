@@ -46,6 +46,10 @@ export async function getFxBase(): Promise<FxBase> {
  * For a given FX base, return the matching rate sheet, or null if
  * the base is "local" or the upstream FX provider was unreachable.
  */
+/**
+ * @description getActiveFxRates — core logic for ${NAME}
+ * @returns Result of getActiveFxRates computation
+ */
 export async function getActiveFxRates(
   base: FxBase,
 ): Promise<FxRates | null> {
