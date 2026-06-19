@@ -265,5 +265,156 @@
       "awaitingSignature": "Patvirtink piniginėje…",
       "confirming": "Laukiama patvirtinimo…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Maistas",
+      "beverages": "Gėrimai",
+      "transport": "Transportas",
+      "utilities": "Komunaliniai",
+      "lifestyle": "Gyvenimo būdas",
+      "clothing": "Apranga",
+      "housing": "Būstas"
+    },
+    "bread_500g": {
+      "label": "Duona",
+      "hint": "500 g kepalas, balta"
+    },
+    "milk_1l": {
+      "label": "Pienas",
+      "hint": "1 L, įprastas"
+    },
+    "eggs_12": {
+      "label": "Kiaušiniai",
+      "hint": "12 vnt., įprasto dydžio"
+    },
+    "butter_200g": {
+      "label": "Sviestas",
+      "hint": "200 g, nesūdytas"
+    },
+    "rice_1kg": {
+      "label": "Ryžiai",
+      "hint": "1 kg, balti"
+    },
+    "sugar_1kg": {
+      "label": "Cukrus",
+      "hint": "1 kg, baltas smulkus"
+    },
+    "chicken_breast_1kg": {
+      "label": "Vištienos krūtinėlė",
+      "hint": "1 kg, be kaulų"
+    },
+    "beef_ground_1kg": {
+      "label": "Malta jautiena",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Obuoliai",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Bananai",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Pomidorai",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Bulvės",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Sūris",
+      "hint": "500 g, vietinis kietas sūris"
+    },
+    "olive_oil_1l": {
+      "label": "Alyvuogių aliejus",
+      "hint": "1 L, ypač tyras"
+    },
+    "water_bottled_1500ml": {
+      "label": "Buteliuotas vanduo",
+      "hint": "1,5 L"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Kapučino",
+      "hint": "Įprasto dydžio, kavinėje"
+    },
+    "beer_imported_500ml": {
+      "label": "Alus",
+      "hint": "500 mL, importuotas prekės ženklas"
+    },
+    "gasoline_95_1l": {
+      "label": "Benzinas",
+      "hint": "1 L, 95 oktanai"
+    },
+    "diesel_1l": {
+      "label": "Dyzelinas",
+      "hint": "1 L"
+    },
+    "public_transport_oneway": {
+      "label": "Viešasis transportas",
+      "hint": "Vienos kelionės bilietas, vietinis"
+    },
+    "taxi_5km": {
+      "label": "Kelionė taksi",
+      "hint": "Apie 5 km, dieną"
+    },
+    "internet_60mbps_monthly": {
+      "label": "Internetas",
+      "hint": "60+ Mbps, neribotas, per mėnesį"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Mobilieji duomenys",
+      "hint": "10 GB planas, per mėnesį"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Elektra",
+      "hint": "Vid. mėnesio sąskaita, 1 miegamojo butas"
+    },
+    "gas_apartment_monthly": {
+      "label": "Dujos / šildymas",
+      "hint": "Vid. mėnesio sąskaita, 1 miegamojo butas"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Pigus maistas mieste",
+      "hint": "Pigus restoranas, 1 asmuo"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Vidutinės klasės vakarienė",
+      "hint": "Vidutinės klasės restoranas, 2 asmenys, 3 patiekalai"
+    },
+    "gym_monthly_pass": {
+      "label": "Sporto klubo narystė",
+      "hint": "Per mėnesį, suaugęs"
+    },
+    "cinema_ticket": {
+      "label": "Kino bilietas",
+      "hint": "1 suaugęs, vakare"
+    },
+    "haircut_basic": {
+      "label": "Kirpimas",
+      "hint": "Bazinis, vyrų kirpykla ar paprastas salonas"
+    },
+    "jeans_branded_pair": {
+      "label": "Džinsai",
+      "hint": "1 pora, firminiai (Levi's lygis)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Sportbačiai",
+      "hint": "1 pora, firminiai (Nike lygis)"
+    },
+    "rent_1bd_center": {
+      "label": "Nuoma, 1 miegamasis, centras",
+      "hint": "Per mėnesį, miesto centras"
+    },
+    "rent_1bd_outside": {
+      "label": "Nuoma, 1 miegamasis, pakraštys",
+      "hint": "Per mėnesį, už centro ribų"
+    },
+    "rent_3bd_center": {
+      "label": "Nuoma, 3 miegamieji, centras",
+      "hint": "Per mėnesį, miesto centras"
+    }
   }
 }
