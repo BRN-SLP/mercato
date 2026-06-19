@@ -85,6 +85,10 @@ export function productSlugToBarcode(slug: string): Hex {
  *     extend later (e.g. add region/state subdivisions without an
  *     onchain schema change).
  */
+/**
+ * @description countryToZoneKey — core logic for ${NAME}
+ * @returns Result of countryToZoneKey computation
+ */
 export function countryToZoneKey(countryCode: string): Hex {
   const upper = countryCode.trim().toUpperCase();
   if (upper.length !== 2 || !/^[A-Z]{2}$/.test(upper)) {
