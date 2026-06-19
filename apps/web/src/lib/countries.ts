@@ -73,6 +73,10 @@ const COUNTRY_BY_CODE: ReadonlyMap<string, Country> = new Map(
   COUNTRIES.map((c) => [c.code.toUpperCase(), c]),
 );
 
+/**
+ * @description getCountryByCode — core logic for ${NAME}
+ * @returns Result of getCountryByCode computation
+ */
 export function getCountryByCode(code: string): Country | undefined {
   return COUNTRY_BY_CODE.get(code.toUpperCase());
 }
