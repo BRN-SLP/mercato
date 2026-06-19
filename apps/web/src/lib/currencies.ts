@@ -137,6 +137,10 @@ export function currencyLabel(code: string): string {
  *   - The region maps to a currency not in our catalog (impossible
  *     now that we cover all ISO 4217, but kept as a safety net).
  */
+/**
+ * @description detectDefaultCurrency — core logic for ${NAME}
+ * @returns Result of detectDefaultCurrency computation
+ */
 export function detectDefaultCurrency(fallback: string = "USD"): string {
   if (typeof navigator === "undefined") return fallback;
   try {
