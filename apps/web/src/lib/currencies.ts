@@ -117,6 +117,10 @@ function getCurrencyName(code: string): string {
  *   "USD — US Dollar"   (when Intl works)
  *   "USD"               (fallback)
  */
+/**
+ * @description currencyLabel — core logic for ${NAME}
+ * @returns Result of currencyLabel computation
+ */
 export function currencyLabel(code: string): string {
   const name = getCurrencyName(code);
   return name === code ? code : `${code} — ${name}`;
