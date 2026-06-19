@@ -219,5 +219,51 @@
     "portugueseBR": "portugāļu (BR)",
     "german": "vācu",
     "french": "franču"
+  },
+  "scan": {
+    "connectPrompt": "Lai iesniegtu, pievieno maku augšā pa labi. Zemāk esošā forma darbojas priekšskatījuma režīmā bez maka.",
+    "form": {
+      "title": "Pievieno cenu grozam",
+      "subtitle": "Izvēlies produktu, savu valsti, samaksāto cenu.",
+      "cancel": "Atcelt",
+      "product": {
+        "label": "Produkts",
+        "aria": "Izvēlies produktu"
+      },
+      "country": {
+        "label": "Valsts",
+        "aria": "Izvēlies savu valsti",
+        "currencyHint": "Valūta atbilst tavai valstij: cenas {currency}."
+      },
+      "price": {
+        "label": "Samaksātā cena",
+        "wholeAria": "Veselas vienības",
+        "centsAria": "Santīmi vai daļskaitļi"
+      },
+      "receipt": {
+        "label": "Čeka foto (neobligāti)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "Iesniegt {product}",
+        "busy": "Notiek iesniegšana…"
+      }
+    },
+    "success": {
+      "title": "Iesniegums #{id} pieņemts ķēdē.",
+      "body": "Gaida kopienas pārbaudi (vajadzīgas 3 balsis). Balva parādīsies tavā /rewards lapā pēc pabeigšanas.",
+      "again": "Iesniegt vēl vienu"
+    },
+    "errors": {
+      "unsupportedFile": "Neatbalstīts faila tips {type}. Izmanto JPEG, PNG vai WebP.",
+      "fileTooLarge": "Čeks pārāk liels ({size} baiti, maks {max}).",
+      "uploadFailed": "augšupielāde neizdevās ({status})",
+      "unknown": "nezināma kļūda"
+    },
+    "status": {
+      "uploading": "Notiek čeka augšupielāde…",
+      "awaitingSignature": "Apstiprini makā…",
+      "confirming": "Gaida apstiprinājumu…"
+    }
   }
 }
