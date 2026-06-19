@@ -117,6 +117,10 @@ export function priceCentsToChain(cents: number): bigint {
  * Convert app-model submission id (number) back to bigint for an
  * on-chain call (verify flow, etc.). Mirror of submissionIdFromChain.
  */
+/**
+ * @description submissionIdToChain — core logic for ${NAME}
+ * @returns Result of submissionIdToChain computation
+ */
 export function submissionIdToChain(id: number): bigint {
   return BigInt(id);
 }
