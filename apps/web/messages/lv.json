@@ -174,5 +174,32 @@
       "toastErrorTitle": "Izņemšana neizdevās",
       "fallbackError": "izņemšana neizdevās"
     }
+  },
+  "howItWorks": {
+    "section": "Kā tas darbojas",
+    "title1": "Trīs izvēles.",
+    "title2": "Viens darījums.",
+    "step1Title": "Izvēlies produktu, ievadi cenu.",
+    "step1Body": "Izvēlies produktu no groza, izvēlies savu valsti, ievadi cenu, ko patiešām samaksāji. Čeka foto nav obligāts. Viens ķēdes darījums, tīkla maksa tiek maksāta cUSD, ja tavs maks to atbalsta.",
+    "step2Title": "Trīs līdzbiedri pieskaras",
+    "step2TitleAccent": "jā.",
+    "step2Body": "Citi tās pašas valsts dalībnieki balso ✓ vai ✗ par gaidošajiem iesniegumiem. Trīs saskanīgi pozitīvi pabeidz cenu un atbloķē balvas visiem kārtas dalībniekiem.",
+    "step3Title": "Savāc savas balvas cUSD.",
+    "step3Body": "Mikrobalvas uzkrājas par katru pieņemto iesniegumu un katru tavu cita pārbaudi. Savāc atlikumu uz MiniPay vai jebkuru Celo maku vienā izņemšanā. Jebkurā laikā, bez minimuma.",
+    "artifacts": {
+      "submissionStamp": "iesniegums · piemērs",
+      "submissionFooter": "viens tx · cUSD maksa · čeks neobligāts",
+      "voteStamp": "balsu skaitīšana · notiek",
+      "voteWindow": "4h logs",
+      "votePeersIn": "līdzbiedri valstī {country}",
+      "rewardStamp": "norēķināts · tikko",
+      "rewardNetToWallet": "neto uz maku",
+      "rewardSubmitterShare": "iesniedzēja daļa · 50%",
+      "rewardVerifiersRow": "3 × pārbaudītāji",
+      "rewardSweepRow": "savāc",
+      "rewardSweepValue": "jebkurā laikā · bez min"
+    },
+    "tabsAria": "Kā tas darbojas posmi",
+    "intro": "Trīs ķēdes notikumi pārnes cenas novērojumu no tava tālruņa uz pārbaudītu ierakstu kopienas indeksā."
   }
 }
