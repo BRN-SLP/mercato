@@ -210,5 +210,14 @@
       },
       "metaTitle": "Produkt nie znaleziony"
     }
+  },
+  "languageSwitcher": {
+    "label": "Język",
+    "english": "angielski",
+    "ukrainian": "ukraiński",
+    "spanish": "hiszpański",
+    "portugueseBR": "portugalski (BR)",
+    "german": "niemiecki",
+    "french": "francuski"
   }
 }
