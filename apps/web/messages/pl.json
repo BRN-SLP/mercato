@@ -219,5 +219,51 @@
     "portugueseBR": "portugalski (BR)",
     "german": "niemiecki",
     "french": "francuski"
+  },
+  "scan": {
+    "connectPrompt": "Połącz portfel w prawym górnym rogu, by wysłać. Formularz poniżej działa w trybie podglądu bez portfela.",
+    "form": {
+      "title": "Dodaj cenę do koszyka",
+      "subtitle": "Wybierz produkt, swój kraj, cenę którą zapłaciłeś.",
+      "cancel": "Anuluj",
+      "product": {
+        "label": "Produkt",
+        "aria": "Wybierz produkt"
+      },
+      "country": {
+        "label": "Kraj",
+        "aria": "Wybierz swój kraj",
+        "currencyHint": "Waluta zależy od kraju: ceny w {currency}."
+      },
+      "price": {
+        "label": "Zapłacona cena",
+        "wholeAria": "Jednostki całkowite",
+        "centsAria": "Grosze lub części ułamkowe"
+      },
+      "receipt": {
+        "label": "Zdjęcie paragonu (opcjonalne)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "Wyślij {product}",
+        "busy": "Wysyłanie…"
+      }
+    },
+    "success": {
+      "title": "Zgłoszenie #{id} przyjęte w łańcuchu.",
+      "body": "Oczekiwanie na weryfikację społeczności (potrzeba 3 głosów). Nagroda pojawi się na twojej stronie /rewards po sfinalizowaniu.",
+      "again": "Wyślij kolejne"
+    },
+    "errors": {
+      "unsupportedFile": "Nieobsługiwany typ pliku {type}. Użyj JPEG, PNG lub WebP.",
+      "fileTooLarge": "Paragon za duży ({size} bajtów, maks {max}).",
+      "uploadFailed": "przesyłanie nie powiodło się ({status})",
+      "unknown": "nieznany błąd"
+    },
+    "status": {
+      "uploading": "Przesyłanie paragonu…",
+      "awaitingSignature": "Potwierdź w portfelu…",
+      "confirming": "Oczekiwanie na potwierdzenie…"
+    }
   }
 }
