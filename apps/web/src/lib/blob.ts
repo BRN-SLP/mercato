@@ -36,6 +36,10 @@ export async function receiptExists(
   }
 }
 
+/**
+ * @description putReceipt — core logic for ${NAME}
+ * @returns Result of putReceipt computation
+ */
 export async function putReceipt(
   hash: string,
   bytes: Uint8Array,
