@@ -1,6 +1,10 @@
 /**
  * Format a number as currency
  */
+/**
+ * @description formatCurrency — core logic for ${NAME}
+ * @returns Result of formatCurrency computation
+ */
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
