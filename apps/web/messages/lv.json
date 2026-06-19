@@ -265,5 +265,156 @@
       "awaitingSignature": "Apstiprini makā…",
       "confirming": "Gaida apstiprinājumu…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Pārtika",
+      "beverages": "Dzērieni",
+      "transport": "Transports",
+      "utilities": "Komunālie",
+      "lifestyle": "Dzīvesveids",
+      "clothing": "Apģērbs",
+      "housing": "Mājoklis"
+    },
+    "bread_500g": {
+      "label": "Maize",
+      "hint": "500 g klaips, balta"
+    },
+    "milk_1l": {
+      "label": "Piens",
+      "hint": "1 L, parastais"
+    },
+    "eggs_12": {
+      "label": "Olas",
+      "hint": "12 gab., parastais izmērs"
+    },
+    "butter_200g": {
+      "label": "Sviests",
+      "hint": "200 g, nesālīts"
+    },
+    "rice_1kg": {
+      "label": "Rīsi",
+      "hint": "1 kg, baltie"
+    },
+    "sugar_1kg": {
+      "label": "Cukurs",
+      "hint": "1 kg, baltais smalkais"
+    },
+    "chicken_breast_1kg": {
+      "label": "Vistas krūtiņa",
+      "hint": "1 kg, bez kauliem"
+    },
+    "beef_ground_1kg": {
+      "label": "Maltā liellopu gaļa",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Āboli",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Banāni",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Tomāti",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Kartupeļi",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Siers",
+      "hint": "500 g, vietējais cietais siers"
+    },
+    "olive_oil_1l": {
+      "label": "Olīveļļa",
+      "hint": "1 L, neapstrādāta"
+    },
+    "water_bottled_1500ml": {
+      "label": "Pudeļu ūdens",
+      "hint": "1,5 L"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Kapučīno",
+      "hint": "Parastais izmērs, kafejnīcā"
+    },
+    "beer_imported_500ml": {
+      "label": "Alus",
+      "hint": "500 mL, importēts zīmols"
+    },
+    "gasoline_95_1l": {
+      "label": "Benzīns",
+      "hint": "1 L, 95 oktāni"
+    },
+    "diesel_1l": {
+      "label": "Dīzelis",
+      "hint": "1 L"
+    },
+    "public_transport_oneway": {
+      "label": "Sabiedriskais transports",
+      "hint": "Vienas braukšanas biļete, vietējais"
+    },
+    "taxi_5km": {
+      "label": "Taksometra brauciens",
+      "hint": "Apm. 5 km, dienā"
+    },
+    "internet_60mbps_monthly": {
+      "label": "Internets",
+      "hint": "60+ Mbps, neierobežots, mēnesī"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Mobilie dati",
+      "hint": "10 GB plāns, mēnesī"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Elektrība",
+      "hint": "Vid. mēneša rēķins, 1 guļamistabas dzīvoklis"
+    },
+    "gas_apartment_monthly": {
+      "label": "Gāze / apkure",
+      "hint": "Vid. mēneša rēķins, 1 guļamistabas dzīvoklis"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Lēts ēdiens ārpus mājas",
+      "hint": "Lēts restorāns, 1 persona"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Vidējas klases vakariņas",
+      "hint": "Vidējas klases restorāns, 2 personas, 3 ēdieni"
+    },
+    "gym_monthly_pass": {
+      "label": "Sporta zāles abonements",
+      "hint": "Mēnesī, pieaugušais"
+    },
+    "cinema_ticket": {
+      "label": "Kino biļete",
+      "hint": "1 pieaugušais, vakarā"
+    },
+    "haircut_basic": {
+      "label": "Matu griezums",
+      "hint": "Pamata, vīriešu frizētava vai vienkāršs salons"
+    },
+    "jeans_branded_pair": {
+      "label": "Džinsi",
+      "hint": "1 pāris, zīmola (Levi's līmenis)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Sporta apavi",
+      "hint": "1 pāris, zīmola (Nike līmenis)"
+    },
+    "rent_1bd_center": {
+      "label": "Īre, 1 guļamistaba, centrs",
+      "hint": "Mēnesī, pilsētas centrs"
+    },
+    "rent_1bd_outside": {
+      "label": "Īre, 1 guļamistaba, nomale",
+      "hint": "Mēnesī, ārpus centra"
+    },
+    "rent_3bd_center": {
+      "label": "Īre, 3 guļamistabas, centrs",
+      "hint": "Mēnesī, pilsētas centrs"
+    }
   }
 }
