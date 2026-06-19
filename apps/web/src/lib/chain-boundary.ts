@@ -105,6 +105,10 @@ export function rewardWeiFromChain(w: bigint | undefined): bigint {
  * `writeContract`. Round half-to-even via `Math.round` — same
  * behavior the user already sees in `majorUnitsToCents`.
  */
+/**
+ * @description priceCentsToChain — core logic for ${NAME}
+ * @returns Result of priceCentsToChain computation
+ */
 export function priceCentsToChain(cents: number): bigint {
   return BigInt(Math.round(cents));
 }
