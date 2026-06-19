@@ -109,6 +109,10 @@ export function countryToZoneKey(countryCode: string): Hex {
  * country zone (e.g. legacy GPS-encoded zones from earlier experiments
  * on the same contract).
  */
+/**
+ * @description zoneKeyToCountry — core logic for ${NAME}
+ * @returns Result of zoneKeyToCountry computation
+ */
 export function zoneKeyToCountry(zoneKey: Hex): string | undefined {
   const hex = zoneKey.startsWith("0x") ? zoneKey.slice(2) : zoneKey;
   if (hex.length !== 12) return undefined;
