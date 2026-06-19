@@ -20,6 +20,10 @@ function pathnameFor(hash: string, mimeType: string): string {
   return `${RECEIPT_PREFIX}/${hash}.${extensionFor(mimeType)}`;
 }
 
+/**
+ * @description receiptExists — core logic for ${NAME}
+ * @returns Result of receiptExists computation
+ */
 export async function receiptExists(
   hash: string,
   mimeType: string,
