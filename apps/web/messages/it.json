@@ -265,5 +265,156 @@
       "awaitingSignature": "Conferma nel wallet…",
       "confirming": "In attesa di conferma…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Alimentari",
+      "beverages": "Bevande",
+      "transport": "Trasporti",
+      "utilities": "Utenze",
+      "lifestyle": "Stile di vita",
+      "clothing": "Abbigliamento",
+      "housing": "Casa"
+    },
+    "bread_500g": {
+      "label": "Pane",
+      "hint": "Pagnotta 500 g, bianco"
+    },
+    "milk_1l": {
+      "label": "Latte",
+      "hint": "1 L, normale"
+    },
+    "eggs_12": {
+      "label": "Uova",
+      "hint": "12 pz, misura normale"
+    },
+    "butter_200g": {
+      "label": "Burro",
+      "hint": "200 g, non salato"
+    },
+    "rice_1kg": {
+      "label": "Riso",
+      "hint": "1 kg, bianco"
+    },
+    "sugar_1kg": {
+      "label": "Zucchero",
+      "hint": "1 kg, bianco semolato"
+    },
+    "chicken_breast_1kg": {
+      "label": "Petto di pollo",
+      "hint": "1 kg, disossato"
+    },
+    "beef_ground_1kg": {
+      "label": "Carne macinata di manzo",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Mele",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Banane",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Pomodori",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Patate",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Formaggio",
+      "hint": "500 g, formaggio stagionato locale"
+    },
+    "olive_oil_1l": {
+      "label": "Olio d'oliva",
+      "hint": "1 L, extravergine"
+    },
+    "water_bottled_1500ml": {
+      "label": "Acqua in bottiglia",
+      "hint": "1,5 L"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Cappuccino",
+      "hint": "Misura normale, al bar"
+    },
+    "beer_imported_500ml": {
+      "label": "Birra",
+      "hint": "500 mL, marca importata"
+    },
+    "gasoline_95_1l": {
+      "label": "Benzina",
+      "hint": "1 L, 95 ottani"
+    },
+    "diesel_1l": {
+      "label": "Diesel",
+      "hint": "1 L"
+    },
+    "public_transport_oneway": {
+      "label": "Trasporto pubblico",
+      "hint": "Biglietto di corsa singola, locale"
+    },
+    "taxi_5km": {
+      "label": "Corsa in taxi",
+      "hint": "Circa 5 km, di giorno"
+    },
+    "internet_60mbps_monthly": {
+      "label": "Internet",
+      "hint": "60+ Mbps, illimitato, mensile"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Dati mobili",
+      "hint": "Piano 10 GB, mensile"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Elettricità",
+      "hint": "Bolletta media mensile, bilocale"
+    },
+    "gas_apartment_monthly": {
+      "label": "Gas / riscaldamento",
+      "hint": "Bolletta media mensile, bilocale"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Pasto economico fuori",
+      "hint": "Ristorante economico, 1 persona"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Cena di fascia media",
+      "hint": "Ristorante di fascia media, 2 persone, 3 portate"
+    },
+    "gym_monthly_pass": {
+      "label": "Abbonamento in palestra",
+      "hint": "Mensile, adulto"
+    },
+    "cinema_ticket": {
+      "label": "Biglietto del cinema",
+      "hint": "1 adulto, serale"
+    },
+    "haircut_basic": {
+      "label": "Taglio di capelli",
+      "hint": "Base, barbiere o salone semplice"
+    },
+    "jeans_branded_pair": {
+      "label": "Jeans",
+      "hint": "1 paio, di marca (livello Levi's)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Sneaker",
+      "hint": "1 paio, di marca (livello Nike)"
+    },
+    "rent_1bd_center": {
+      "label": "Affitto, 1 camera, centro",
+      "hint": "Mensile, centro città"
+    },
+    "rent_1bd_outside": {
+      "label": "Affitto, 1 camera, periferia",
+      "hint": "Mensile, fuori dal centro"
+    },
+    "rent_3bd_center": {
+      "label": "Affitto, 3 camere, centro",
+      "hint": "Mensile, centro città"
+    }
   }
 }
