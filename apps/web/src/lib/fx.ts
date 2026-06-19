@@ -171,6 +171,10 @@ export async function getFxRatesBoth(): Promise<{
  *   baseMajor  = 52.00 / 41.5 = 1.2530
  *   baseCents  = round(1.2530 * 100) = 125
  */
+/**
+ * @description convertCents — core logic for ${NAME}
+ * @returns Result of convertCents computation
+ */
 export function convertCents(
   localCents: number,
   localCurrency: string,
