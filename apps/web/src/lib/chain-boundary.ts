@@ -66,6 +66,10 @@ export function blockNumberFromChain(bn: bigint | undefined): number {
  * realistic value is ~10^8 cents = $1M item. 7+ orders of magnitude
  * below `Number.MAX_SAFE_INTEGER` (~9 × 10^15).
  */
+/**
+ * @description priceCentsFromChain — core logic for ${NAME}
+ * @returns Result of priceCentsFromChain computation
+ */
 export function priceCentsFromChain(c: bigint | undefined): number {
   return Number(c ?? 0n);
 }
