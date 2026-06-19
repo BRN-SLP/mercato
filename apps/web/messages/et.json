@@ -174,5 +174,32 @@
       "toastErrorTitle": "Väljavõtmine ebaõnnestus",
       "fallbackError": "väljavõtmine ebaõnnestus"
     }
+  },
+  "howItWorks": {
+    "section": "Kuidas see töötab",
+    "title1": "Kolm valikut.",
+    "title2": "Üks tehing.",
+    "step1Title": "Vali toode, sisesta hind.",
+    "step1Body": "Vali korvist toode, vali oma riik, sisesta hind, mille tegelikult maksid. Tšeki foto on valikuline. Üks ahelas tehing, võrgutasu makstakse cUSD-s, kui su rahakott seda toetab.",
+    "step2Title": "Kolm kaaslast vajutavad",
+    "step2TitleAccent": "jah.",
+    "step2Body": "Teised sama riigi panustajad hääletavad ootel esituste üle ✓ või ✗. Kolm kokkulangevat positiivset viimistlevad hinna ja avavad auhinnad kõigile ringis osalejatele.",
+    "step3Title": "Kogu oma auhinnad cUSD-s.",
+    "step3Body": "Mikroauhinnad kogunevad iga heakskiidetud esituse ja iga teise oma kinnituse eest. Kogu saldo MiniPaysse või mis tahes Celo rahakotti ühe väljavõttega. Igal ajal, ilma miinimumita.",
+    "artifacts": {
+      "submissionStamp": "esitus · näide",
+      "submissionFooter": "üks tx · cUSD tasu · tšekk valikuline",
+      "voteStamp": "häälte lugemine · käib",
+      "voteWindow": "4h aken",
+      "votePeersIn": "kaaslased riigis {country}",
+      "rewardStamp": "arveldatud · just nüüd",
+      "rewardNetToWallet": "neto rahakotti",
+      "rewardSubmitterShare": "esitaja osa · 50%",
+      "rewardVerifiersRow": "3 × kinnitajat",
+      "rewardSweepRow": "kogu",
+      "rewardSweepValue": "igal ajal · ilma miinimumita"
+    },
+    "tabsAria": "Kuidas see töötab etapid",
+    "intro": "Kolm ahelas sündmust viivad hinnavaatluse su telefonist kogukonna indeksi kinnitatud kandeni."
   }
 }
