@@ -210,5 +210,14 @@
       },
       "metaTitle": "Ürün bulunamadı"
     }
+  },
+  "languageSwitcher": {
+    "label": "Dil",
+    "english": "İngilizce",
+    "ukrainian": "Ukraynaca",
+    "spanish": "İspanyolca",
+    "portugueseBR": "Portekizce (BR)",
+    "german": "Almanca",
+    "french": "Fransızca"
   }
 }
