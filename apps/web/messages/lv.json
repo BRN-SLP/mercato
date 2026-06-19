@@ -210,5 +210,14 @@
       },
       "metaTitle": "Produkts nav atrasts"
     }
+  },
+  "languageSwitcher": {
+    "label": "Valoda",
+    "english": "angļu",
+    "ukrainian": "ukraiņu",
+    "spanish": "spāņu",
+    "portugueseBR": "portugāļu (BR)",
+    "german": "vācu",
+    "french": "franču"
   }
 }
