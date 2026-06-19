@@ -174,5 +174,41 @@
       "toastErrorTitle": "Väljavõtmine ebaõnnestus",
       "fallbackError": "väljavõtmine ebaõnnestus"
     }
+  },
+  "item": {
+    "feedTitle": "Toote voog",
+    "meta": {
+      "title": "Toode {barcode}",
+      "description": "Selle toote mediaanhind, hiljutised esitused ja ootel kinnitused Mercato kogukonnas."
+    },
+    "median": {
+      "title": "Mediaanhind",
+      "subtitle": "{count} heakskiidetud esitusest • viimased 30 päeva"
+    },
+    "verify": {
+      "title": "Aita kinnitada",
+      "loading": "Laadimine…",
+      "empty": "Praegu pole ootel esitusi."
+    },
+    "recent": {
+      "title": "Hiljutised esitused",
+      "empty": "Selle vöötkoodi jaoks pole veel esitusi.",
+      "status": {
+        "accepted": "heaks kiidetud",
+        "rejected": "tagasi lükatud",
+        "locked": "lukus (segatud)",
+        "pending": "ootel ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Toode",
+      "title": "Toodet ei õnnestunud avada.",
+      "body": "Kas aadressi vöötkood on vigane (ootame 12 baiti hex 0x eesliitega) või pole keegi veel hinda esitanud. Skaneeri see ise, et voog käivitada.",
+      "cta": {
+        "scan": "Skaneeri hind",
+        "home": "Tagasi avalehele"
+      },
+      "metaTitle": "Toodet ei leitud"
+    }
   }
 }
