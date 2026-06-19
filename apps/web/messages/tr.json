@@ -416,5 +416,37 @@
       "label": "Kira, 3 yatak odası, merkez",
       "hint": "Aylık, şehir merkezi"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Yaşam maliyeti endeksi",
+      "title1": "Mercato sepeti,",
+      "titleAccent": "ülke ülke.",
+      "body": "Topluluk tarafından gönderilen ve doğrulanan günlük medyan fiyatlar. Her sepet, {count} temel ürünün medyan fiyatını yerel para biriminde toplar: ekmek, kira, ulaşım, faturalar. Ürün bazında dağılım için bir satıra tıkla.",
+      "columns": {
+        "country": "Ülke",
+        "coverage": "Kapsam",
+        "basketTotal": "Sepet toplamı"
+      },
+      "rowAria": "{country}: {total} üründen {coverage} fiyatlandırıldı",
+      "viewAfford": "gör →",
+      "beFirstAfford": "ilk sen ol →"
+    },
+    "detail": {
+      "back": "Endekse dön",
+      "kicker": "{currency} · yaşam maliyeti",
+      "summary": "{total} temel üründen {filled} için medyan sepet toplamı <strong>{value} {currency}</strong>.",
+      "subsCount": "{count, plural, one {# gönderim} other {# gönderim}}",
+      "emptyTitle": "<accent>{country}</accent> için henüz fiyat yok",
+      "emptyBody": "Buradaki sepet boş. İlk fiyatı sen ekle.",
+      "emptyCta": "Fiyat ekle →"
+    },
+    "empty": {
+      "kicker": "Sepet boş",
+      "title1": "Henüz hiç fiyat",
+      "titleAccent": "gönderilmedi.",
+      "body": "Mercato her ülkede sıfır gönderimle başlar. Bir ürün seç, ülkeni seç, bir fiyat yaz, endeks kendini kurmaya başlasın.",
+      "cta": "İlk fiyatı ekle →"
+    }
   }
 }
