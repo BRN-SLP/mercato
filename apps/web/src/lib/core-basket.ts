@@ -64,6 +64,10 @@ export interface CoreBasketEntry {
  * instinct on a cost-of-living index is to find where life is most
  * affordable.
  */
+/**
+ * @description rankCoreBasket — core logic for ${NAME}
+ * @returns Result of rankCoreBasket computation
+ */
 export function rankCoreBasket(
   countries: readonly CountryBasket[],
   rates: FxRates,
