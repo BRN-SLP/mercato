@@ -174,5 +174,41 @@
       "toastErrorTitle": "Odbiór nie powiódł się",
       "fallbackError": "odbiór nie powiódł się"
     }
+  },
+  "item": {
+    "feedTitle": "Lista produktu",
+    "meta": {
+      "title": "Produkt {barcode}",
+      "description": "Mediana ceny, ostatnie zgłoszenia i oczekujące weryfikacje tego produktu w społeczności Mercato."
+    },
+    "median": {
+      "title": "Mediana ceny",
+      "subtitle": "Z {count} przyjętych zgłoszeń • ostatnie 30 dni"
+    },
+    "verify": {
+      "title": "Pomóż zweryfikować",
+      "loading": "Ładowanie…",
+      "empty": "Brak oczekujących zgłoszeń."
+    },
+    "recent": {
+      "title": "Ostatnie zgłoszenia",
+      "empty": "Brak zgłoszeń dla tego kodu kreskowego.",
+      "status": {
+        "accepted": "przyjęte",
+        "rejected": "odrzucone",
+        "locked": "zablokowane (mieszane)",
+        "pending": "oczekuje ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Produkt",
+      "title": "Nie udało się otworzyć produktu.",
+      "body": "Albo kod kreskowy w adresie jest nieprawidłowy (oczekujemy 12 bajtów hex z prefiksem 0x), albo nikt jeszcze nie zgłosił dla niego ceny. Zeskanuj go sam, by rozpocząć listę.",
+      "cta": {
+        "scan": "Zeskanuj cenę",
+        "home": "Powrót na stronę główną"
+      },
+      "metaTitle": "Produkt nie znaleziony"
+    }
   }
 }
