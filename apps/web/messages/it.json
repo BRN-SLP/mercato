@@ -219,5 +219,51 @@
     "portugueseBR": "portoghese (BR)",
     "german": "tedesco",
     "french": "francese"
+  },
+  "scan": {
+    "connectPrompt": "Connetti il wallet in alto a destra per inviare. Il modulo sotto funziona in modalità anteprima senza wallet.",
+    "form": {
+      "title": "Aggiungi un prezzo al paniere",
+      "subtitle": "Scegli un prodotto, il tuo paese, il prezzo pagato.",
+      "cancel": "Annulla",
+      "product": {
+        "label": "Prodotto",
+        "aria": "Scegli un prodotto"
+      },
+      "country": {
+        "label": "Paese",
+        "aria": "Scegli il tuo paese",
+        "currencyHint": "La valuta segue il tuo paese: prezzi in {currency}."
+      },
+      "price": {
+        "label": "Prezzo pagato",
+        "wholeAria": "Unità intere",
+        "centsAria": "Centesimi o unità frazionarie"
+      },
+      "receipt": {
+        "label": "Foto scontrino (facoltativa)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "Invia {product}",
+        "busy": "Invio…"
+      }
+    },
+    "success": {
+      "title": "Invio #{id} accettato on-chain.",
+      "body": "In attesa della verifica della comunità (servono 3 voti). La ricompensa apparirà sulla tua pagina /rewards una volta finalizzata.",
+      "again": "Invia un altro"
+    },
+    "errors": {
+      "unsupportedFile": "Tipo di file non supportato {type}. Usa JPEG, PNG o WebP.",
+      "fileTooLarge": "Scontrino troppo grande ({size} byte, max {max}).",
+      "uploadFailed": "caricamento fallito ({status})",
+      "unknown": "errore sconosciuto"
+    },
+    "status": {
+      "uploading": "Caricamento scontrino…",
+      "awaitingSignature": "Conferma nel wallet…",
+      "confirming": "In attesa di conferma…"
+    }
   }
 }
