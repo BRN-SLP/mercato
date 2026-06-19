@@ -55,6 +55,10 @@ export const ZERO_RECEIPT_HASH =
  *     so the encoder ↔ decoder can be reproduced inside a future
  *     V2 contract if needed.
  */
+/**
+ * @description productSlugToBarcode — core logic for ${NAME}
+ * @returns Result of productSlugToBarcode computation
+ */
 export function productSlugToBarcode(slug: string): Hex {
   if (!slug) {
     throw new Error("productSlugToBarcode: slug must be non-empty");
