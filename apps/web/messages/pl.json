@@ -416,5 +416,37 @@
       "label": "Wynajem, 3 sypialnie, centrum",
       "hint": "Miesięcznie, centrum miasta"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Indeks kosztów życia",
+      "title1": "Koszyk Mercato,",
+      "titleAccent": "kraj po kraju.",
+      "body": "Dzienne mediany cen zgłaszane i weryfikowane przez społeczność. Każdy koszyk sumuje medianę ceny {count} podstawowych towarów w lokalnej walucie: chleb, czynsz, transport, media. Kliknij wiersz, by zobaczyć rozbicie na produkty.",
+      "columns": {
+        "country": "Kraj",
+        "coverage": "Pokrycie",
+        "basketTotal": "Suma koszyka"
+      },
+      "rowAria": "{country}: wycenione {coverage} z {total} produktów",
+      "viewAfford": "zobacz →",
+      "beFirstAfford": "bądź pierwszy →"
+    },
+    "detail": {
+      "back": "Powrót do indeksu",
+      "kicker": "{currency} · koszty życia",
+      "summary": "Mediana sumy koszyka <strong>{value} {currency}</strong> dla {filled} z {total} podstawowych produktów.",
+      "subsCount": "{count, plural, one {# zgłoszenie} few {# zgłoszenia} many {# zgłoszeń} other {# zgłoszenia}}",
+      "emptyTitle": "Brak cen w <accent>{country}</accent>",
+      "emptyBody": "Koszyk tutaj jest pusty. Dodaj cenę jako pierwszy.",
+      "emptyCta": "Dodaj cenę →"
+    },
+    "empty": {
+      "kicker": "Koszyk jest pusty",
+      "title1": "Nie zgłoszono jeszcze",
+      "titleAccent": "żadnych cen.",
+      "body": "Mercato startuje z zerową liczbą zgłoszeń w każdym kraju. Wybierz produkt, wybierz kraj, wpisz cenę, a indeks zacznie budować się sam.",
+      "cta": "Dodaj pierwszą cenę →"
+    }
   }
 }
