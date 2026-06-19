@@ -219,5 +219,51 @@
     "portugueseBR": "portugheză (BR)",
     "german": "germană",
     "french": "franceză"
+  },
+  "scan": {
+    "connectPrompt": "Conectează portofelul în dreapta sus pentru a trimite. Formularul de mai jos funcționează în mod previzualizare fără portofel.",
+    "form": {
+      "title": "Adaugă un preț în coș",
+      "subtitle": "Alege un produs, țara ta, prețul plătit.",
+      "cancel": "Anulează",
+      "product": {
+        "label": "Produs",
+        "aria": "Alege un produs"
+      },
+      "country": {
+        "label": "Țară",
+        "aria": "Alege-ți țara",
+        "currencyHint": "Moneda urmează țara ta: prețuri în {currency}."
+      },
+      "price": {
+        "label": "Prețul plătit",
+        "wholeAria": "Unități întregi",
+        "centsAria": "Bani sau unități fracționare"
+      },
+      "receipt": {
+        "label": "Poză bon (opțional)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "Trimite {product}",
+        "busy": "Se trimite…"
+      }
+    },
+    "success": {
+      "title": "Trimiterea #{id} acceptată on-chain.",
+      "body": "Se așteaptă verificarea comunității (3 voturi necesare). Recompensa va apărea pe pagina ta /rewards după finalizare.",
+      "again": "Trimite alta"
+    },
+    "errors": {
+      "unsupportedFile": "Tip de fișier neacceptat {type}. Folosește JPEG, PNG sau WebP.",
+      "fileTooLarge": "Bon prea mare ({size} octeți, max {max}).",
+      "uploadFailed": "încărcare eșuată ({status})",
+      "unknown": "eroare necunoscută"
+    },
+    "status": {
+      "uploading": "Se încarcă bonul…",
+      "awaitingSignature": "Confirmă în portofel…",
+      "confirming": "Se așteaptă confirmarea…"
+    }
   }
 }
