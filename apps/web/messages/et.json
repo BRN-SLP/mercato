@@ -265,5 +265,156 @@
       "awaitingSignature": "Kinnita rahakotis…",
       "confirming": "Kinnituse ootamine…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Toit",
+      "beverages": "Joogid",
+      "transport": "Transport",
+      "utilities": "Kommunaalid",
+      "lifestyle": "Elustiil",
+      "clothing": "Rõivad",
+      "housing": "Eluase"
+    },
+    "bread_500g": {
+      "label": "Leib",
+      "hint": "500 g päts, valge"
+    },
+    "milk_1l": {
+      "label": "Piim",
+      "hint": "1 L, tavaline"
+    },
+    "eggs_12": {
+      "label": "Munad",
+      "hint": "12 tk, tavaline suurus"
+    },
+    "butter_200g": {
+      "label": "Või",
+      "hint": "200 g, soolamata"
+    },
+    "rice_1kg": {
+      "label": "Riis",
+      "hint": "1 kg, valge"
+    },
+    "sugar_1kg": {
+      "label": "Suhkur",
+      "hint": "1 kg, valge kristall"
+    },
+    "chicken_breast_1kg": {
+      "label": "Kanafilee",
+      "hint": "1 kg, kondita"
+    },
+    "beef_ground_1kg": {
+      "label": "Hakkliha (veise)",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Õunad",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Banaanid",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Tomatid",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Kartulid",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Juust",
+      "hint": "500 g, kohalik kõva juust"
+    },
+    "olive_oil_1l": {
+      "label": "Oliiviõli",
+      "hint": "1 L, ekstra neitsi"
+    },
+    "water_bottled_1500ml": {
+      "label": "Pudelivesi",
+      "hint": "1,5 L"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Cappuccino",
+      "hint": "Tavaline suurus, kohvikus"
+    },
+    "beer_imported_500ml": {
+      "label": "Õlu",
+      "hint": "500 mL, imporditud mark"
+    },
+    "gasoline_95_1l": {
+      "label": "Bensiin",
+      "hint": "1 L, 95 oktaani"
+    },
+    "diesel_1l": {
+      "label": "Diisel",
+      "hint": "1 L"
+    },
+    "public_transport_oneway": {
+      "label": "Ühistransport",
+      "hint": "Ühe sõidu pilet, kohalik"
+    },
+    "taxi_5km": {
+      "label": "Taksosõit",
+      "hint": "Umbes 5 km, päeval"
+    },
+    "internet_60mbps_monthly": {
+      "label": "Internet",
+      "hint": "60+ Mbps, piiramatu, kuus"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Mobiilne andmeside",
+      "hint": "10 GB pakett, kuus"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Elekter",
+      "hint": "Keskmine kuuarve, 1 magamistoaga korter"
+    },
+    "gas_apartment_monthly": {
+      "label": "Gaas / küte",
+      "hint": "Keskmine kuuarve, 1 magamistoaga korter"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Odav söök väljas",
+      "hint": "Odav restoran, 1 inimene"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Keskklassi õhtusöök",
+      "hint": "Keskklassi restoran, 2 inimest, 3 käiku"
+    },
+    "gym_monthly_pass": {
+      "label": "Jõusaali liikmesus",
+      "hint": "Kuus, täiskasvanu"
+    },
+    "cinema_ticket": {
+      "label": "Kinopilet",
+      "hint": "1 täiskasvanu, õhtul"
+    },
+    "haircut_basic": {
+      "label": "Juukselõikus",
+      "hint": "Põhiline, meeste juuksur või lihtne salong"
+    },
+    "jeans_branded_pair": {
+      "label": "Teksad",
+      "hint": "1 paar, bränd (Levi's tase)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Tossud",
+      "hint": "1 paar, bränd (Nike tase)"
+    },
+    "rent_1bd_center": {
+      "label": "Üür, 1 magamistuba, kesklinn",
+      "hint": "Kuus, kesklinn"
+    },
+    "rent_1bd_outside": {
+      "label": "Üür, 1 magamistuba, äärelinn",
+      "hint": "Kuus, väljaspool kesklinna"
+    },
+    "rent_3bd_center": {
+      "label": "Üür, 3 magamistuba, kesklinn",
+      "hint": "Kuus, kesklinn"
+    }
   }
 }
