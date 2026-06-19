@@ -265,5 +265,156 @@
       "awaitingSignature": "Confirmă în portofel…",
       "confirming": "Se așteaptă confirmarea…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Alimente",
+      "beverages": "Băuturi",
+      "transport": "Transport",
+      "utilities": "Utilități",
+      "lifestyle": "Stil de viață",
+      "clothing": "Îmbrăcăminte",
+      "housing": "Locuință"
+    },
+    "bread_500g": {
+      "label": "Pâine",
+      "hint": "Franzelă 500 g, albă"
+    },
+    "milk_1l": {
+      "label": "Lapte",
+      "hint": "1 L, normal"
+    },
+    "eggs_12": {
+      "label": "Ouă",
+      "hint": "12 buc., mărime normală"
+    },
+    "butter_200g": {
+      "label": "Unt",
+      "hint": "200 g, nesărat"
+    },
+    "rice_1kg": {
+      "label": "Orez",
+      "hint": "1 kg, alb"
+    },
+    "sugar_1kg": {
+      "label": "Zahăr",
+      "hint": "1 kg, alb tos"
+    },
+    "chicken_breast_1kg": {
+      "label": "Piept de pui",
+      "hint": "1 kg, dezosat"
+    },
+    "beef_ground_1kg": {
+      "label": "Carne tocată de vită",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Mere",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Banane",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Roșii",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Cartofi",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Brânză",
+      "hint": "500 g, brânză tare locală"
+    },
+    "olive_oil_1l": {
+      "label": "Ulei de măsline",
+      "hint": "1 L, extravirgin"
+    },
+    "water_bottled_1500ml": {
+      "label": "Apă îmbuteliată",
+      "hint": "1,5 L"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Cappuccino",
+      "hint": "Mărime normală, la cafenea"
+    },
+    "beer_imported_500ml": {
+      "label": "Bere",
+      "hint": "500 mL, marcă importată"
+    },
+    "gasoline_95_1l": {
+      "label": "Benzină",
+      "hint": "1 L, 95 octani"
+    },
+    "diesel_1l": {
+      "label": "Motorină",
+      "hint": "1 L"
+    },
+    "public_transport_oneway": {
+      "label": "Transport public",
+      "hint": "Bilet dus, local"
+    },
+    "taxi_5km": {
+      "label": "Cursă cu taxiul",
+      "hint": "Aprox. 5 km, ziua"
+    },
+    "internet_60mbps_monthly": {
+      "label": "Internet",
+      "hint": "60+ Mbps, nelimitat, lunar"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Date mobile",
+      "hint": "Plan 10 GB, lunar"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Electricitate",
+      "hint": "Factură medie lunară, apart. cu 1 dormitor"
+    },
+    "gas_apartment_monthly": {
+      "label": "Gaz / încălzire",
+      "hint": "Factură medie lunară, apart. cu 1 dormitor"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Masă ieftină în oraș",
+      "hint": "Restaurant ieftin, 1 persoană"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Cină de gamă medie",
+      "hint": "Restaurant de gamă medie, 2 persoane, 3 feluri"
+    },
+    "gym_monthly_pass": {
+      "label": "Abonament la sală",
+      "hint": "Lunar, adult"
+    },
+    "cinema_ticket": {
+      "label": "Bilet la cinema",
+      "hint": "1 adult, seara"
+    },
+    "haircut_basic": {
+      "label": "Tuns",
+      "hint": "De bază, frizerie sau salon simplu"
+    },
+    "jeans_branded_pair": {
+      "label": "Blugi",
+      "hint": "1 pereche, de firmă (nivel Levi's)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Adidași",
+      "hint": "1 pereche, de firmă (nivel Nike)"
+    },
+    "rent_1bd_center": {
+      "label": "Chirie, 1 dormitor, centru",
+      "hint": "Lunar, centrul orașului"
+    },
+    "rent_1bd_outside": {
+      "label": "Chirie, 1 dormitor, periferie",
+      "hint": "Lunar, în afara centrului"
+    },
+    "rent_3bd_center": {
+      "label": "Chirie, 3 dormitoare, centru",
+      "hint": "Lunar, centrul orașului"
+    }
   }
 }
