@@ -174,5 +174,32 @@
       "toastErrorTitle": "Atsiėmimas nepavyko",
       "fallbackError": "atsiėmimas nepavyko"
     }
+  },
+  "howItWorks": {
+    "section": "Kaip tai veikia",
+    "title1": "Trys pasirinkimai.",
+    "title2": "Viena transakcija.",
+    "step1Title": "Pasirink produktą, įvesk kainą.",
+    "step1Body": "Pasirink produktą iš krepšelio, pasirink savo šalį, įvesk kainą, kurią iš tikrųjų sumokėjai. Čekio nuotrauka neprivaloma. Viena grandinės transakcija, tinklo mokestis mokamas cUSD, jei tavo piniginė tai palaiko.",
+    "step2Title": "Trys bendraamžiai paspaudžia",
+    "step2TitleAccent": "taip.",
+    "step2Body": "Kiti tos pačios šalies dalyviai balsuoja ✓ arba ✗ dėl laukiančių pateikimų. Trys sutampantys teigiami užbaigia kainą ir atrakina atlygius visiems rato dalyviams.",
+    "step3Title": "Susirink atlygius cUSD.",
+    "step3Body": "Mikroatlygiai kaupiasi už kiekvieną priimtą pateikimą ir kiekvieną tavo atliktą kito patikrinimą. Susirink likutį į MiniPay ar bet kurią Celo piniginę vienu atsiėmimu. Bet kada, be minimumo.",
+    "artifacts": {
+      "submissionStamp": "pateikimas · pavyzdys",
+      "submissionFooter": "viena tx · cUSD mokestis · čekis neprivalomas",
+      "voteStamp": "balsų skaičiavimas · vyksta",
+      "voteWindow": "4h langas",
+      "votePeersIn": "bendraamžiai šalyje {country}",
+      "rewardStamp": "atsiskaityta · ką tik",
+      "rewardNetToWallet": "grynasis į piniginę",
+      "rewardSubmitterShare": "pateikėjo dalis · 50%",
+      "rewardVerifiersRow": "3 × tikrintojai",
+      "rewardSweepRow": "susirink",
+      "rewardSweepValue": "bet kada · be min"
+    },
+    "tabsAria": "Kaip tai veikia etapai",
+    "intro": "Trys grandinės įvykiai perkelia kainos stebėjimą iš tavo telefono į patvirtintą įrašą bendruomenės indekse."
   }
 }
