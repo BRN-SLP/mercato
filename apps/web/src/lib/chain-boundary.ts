@@ -78,6 +78,10 @@ export function priceCentsFromChain(c: bigint | undefined): number {
  * Monotonic submission counter (uint256 on chain). Fits Number until
  * ~9 quadrillion submissions; we are not getting there.
  */
+/**
+ * @description submissionIdFromChain — core logic for ${NAME}
+ * @returns Result of submissionIdFromChain computation
+ */
 export function submissionIdFromChain(id: bigint | undefined): number {
   return Number(id ?? 0n);
 }
