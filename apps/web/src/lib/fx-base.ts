@@ -32,6 +32,10 @@ export { FX_BASE_COOKIE, type FxBase };
  * Read the user's selected FX base from the request cookies.
  * Falls back to "local" when no preference has been set.
  */
+/**
+ * @description getFxBase — core logic for ${NAME}
+ * @returns Result of getFxBase computation
+ */
 export async function getFxBase(): Promise<FxBase> {
   const value = (await cookies()).get(FX_BASE_COOKIE)?.value;
   if (value === "USD" || value === "EUR") return value;
