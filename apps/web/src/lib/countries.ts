@@ -86,6 +86,10 @@ export function getCountryByCode(code: string): Country | undefined {
  * `<optgroup>`s. Countries appear inside their region in declaration
  * order (already curated above).
  */
+/**
+ * @description getCountriesByRegion — core logic for ${NAME}
+ * @returns Result of getCountriesByRegion computation
+ */
 export function getCountriesByRegion(): Array<{
   region: Country["region"];
   label: string;
