@@ -83,6 +83,10 @@ export interface FetchAllEventsArgs {
  * block, paginating in {@link CHUNK}-sized ranges. Indexed `args` are pushed
  * down to the node so a scan scoped to one submitter stays cheap.
  */
+/**
+ * @description fetchAllEvents — core logic for ${NAME}
+ * @returns Result of fetchAllEvents computation
+ */
 export async function fetchAllEvents({
   chainId,
   address,
