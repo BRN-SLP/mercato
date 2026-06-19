@@ -15,6 +15,10 @@ export function formatCurrency(amount: number, currency = 'USD'): string {
 /**
  * Truncate an address for display
  */
+/**
+ * @description truncateAddress — core logic for ${NAME}
+ * @returns Result of truncateAddress computation
+ */
 export function truncateAddress(address: string, startLength = 6, endLength = 4): string {
   if (address.length <= startLength + endLength) {
     return address;
