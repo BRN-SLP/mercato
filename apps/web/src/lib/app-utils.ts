@@ -40,6 +40,10 @@ export function isValidAddress(address: string): boolean {
 /**
  * Sleep for a given number of milliseconds
  */
+/**
+ * @description sleep — core logic for ${NAME}
+ * @returns Result of sleep computation
+ */
 export function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
