@@ -174,5 +174,41 @@
       "toastErrorTitle": "Revendicare eșuată",
       "fallbackError": "revendicare eșuată"
     }
+  },
+  "item": {
+    "feedTitle": "Flux produs",
+    "meta": {
+      "title": "Produs {barcode}",
+      "description": "Prețul median, trimiterile recente și verificările în așteptare pentru acest produs în comunitatea Mercato."
+    },
+    "median": {
+      "title": "Preț median",
+      "subtitle": "Din {count} trimiteri acceptate • ultimele 30 de zile"
+    },
+    "verify": {
+      "title": "Ajută la verificare",
+      "loading": "Se încarcă…",
+      "empty": "Nicio trimitere în așteptare acum."
+    },
+    "recent": {
+      "title": "Trimiteri recente",
+      "empty": "Încă nicio trimitere pentru acest cod de bare.",
+      "status": {
+        "accepted": "acceptat",
+        "rejected": "respins",
+        "locked": "blocat (mixt)",
+        "pending": "în așteptare ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Produs",
+      "title": "Nu s-a putut deschide produsul.",
+      "body": "Fie codul de bare din adresă este greșit (așteptăm 12 octeți hex cu prefix 0x), fie nimeni nu a trimis încă un preț. Scanează-l tu pentru a porni fluxul.",
+      "cta": {
+        "scan": "Scanează un preț",
+        "home": "Înapoi acasă"
+      },
+      "metaTitle": "Produs negăsit"
+    }
   }
 }
