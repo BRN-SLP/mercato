@@ -174,5 +174,41 @@
       "toastErrorTitle": "Talep başarısız",
       "fallbackError": "talep başarısız"
     }
+  },
+  "item": {
+    "feedTitle": "Ürün akışı",
+    "meta": {
+      "title": "Ürün {barcode}",
+      "description": "Bu ürün için Mercato topluluğundaki medyan fiyat, son gönderimler ve bekleyen doğrulamalar."
+    },
+    "median": {
+      "title": "Medyan fiyat",
+      "subtitle": "{count} kabul edilen gönderimden • son 30 gün"
+    },
+    "verify": {
+      "title": "Doğrulamaya yardım et",
+      "loading": "Yükleniyor…",
+      "empty": "Şu anda bekleyen gönderim yok."
+    },
+    "recent": {
+      "title": "Son gönderimler",
+      "empty": "Bu barkod için henüz gönderim yok.",
+      "status": {
+        "accepted": "kabul edildi",
+        "rejected": "reddedildi",
+        "locked": "kilitli (karışık)",
+        "pending": "bekliyor ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Ürün",
+      "title": "Bu ürün açılamadı.",
+      "body": "Ya adresteki barkod hatalı (0x önekli 12 bayt hex bekliyoruz) ya da henüz kimse fiyat göndermedi. Akışı başlatmak için kendin tara.",
+      "cta": {
+        "scan": "Fiyat tara",
+        "home": "Ana sayfaya dön"
+      },
+      "metaTitle": "Ürün bulunamadı"
+    }
   }
 }
