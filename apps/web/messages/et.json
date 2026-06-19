@@ -219,5 +219,51 @@
     "portugueseBR": "portugali (BR)",
     "german": "saksa",
     "french": "prantsuse"
+  },
+  "scan": {
+    "connectPrompt": "Esitamiseks ühenda rahakott üleval paremal. Allolev vorm töötab eelvaaterežiimis ka ilma rahakotita.",
+    "form": {
+      "title": "Lisa hind korvi",
+      "subtitle": "Vali toode, oma riik ja makstud hind.",
+      "cancel": "Tühista",
+      "product": {
+        "label": "Toode",
+        "aria": "Vali toode"
+      },
+      "country": {
+        "label": "Riik",
+        "aria": "Vali oma riik",
+        "currencyHint": "Valuuta järgib su riiki: hinnad valuutas {currency}."
+      },
+      "price": {
+        "label": "Makstud hind",
+        "wholeAria": "Täisühikud",
+        "centsAria": "Sendid või murdühikud"
+      },
+      "receipt": {
+        "label": "Tšeki foto (valikuline)",
+        "fileSize": "{name} ({kb} KB)"
+      },
+      "submit": {
+        "idle": "Esita {product}",
+        "busy": "Esitamine…"
+      }
+    },
+    "success": {
+      "title": "Esitus #{id} ahelas vastu võetud.",
+      "body": "Oodatakse kogukonna kinnitust (vaja 3 häält). Auhind ilmub su /rewards lehele pärast lõpetamist.",
+      "again": "Esita veel üks"
+    },
+    "errors": {
+      "unsupportedFile": "Toetamata failitüüp {type}. Kasuta JPEG, PNG või WebP.",
+      "fileTooLarge": "Tšekk liiga suur ({size} baiti, max {max}).",
+      "uploadFailed": "üleslaadimine ebaõnnestus ({status})",
+      "unknown": "tundmatu viga"
+    },
+    "status": {
+      "uploading": "Tšeki üleslaadimine…",
+      "awaitingSignature": "Kinnita rahakotis…",
+      "confirming": "Kinnituse ootamine…"
+    }
   }
 }
