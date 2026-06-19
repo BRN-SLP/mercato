@@ -114,6 +114,10 @@ export function getCountriesByRegion(): Array<{
  * recognised region is in the locale (e.g. just "en") so the caller
  * can fall back to a default.
  */
+/**
+ * @description detectCountryFromLocale — core logic for ${NAME}
+ * @returns Result of detectCountryFromLocale computation
+ */
 export function detectCountryFromLocale(): Country | undefined {
   if (typeof navigator === "undefined") return undefined;
   try {
