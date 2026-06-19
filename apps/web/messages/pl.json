@@ -265,5 +265,156 @@
       "awaitingSignature": "Potwierdź w portfelu…",
       "confirming": "Oczekiwanie na potwierdzenie…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Żywność",
+      "beverages": "Napoje",
+      "transport": "Transport",
+      "utilities": "Media",
+      "lifestyle": "Styl życia",
+      "clothing": "Odzież",
+      "housing": "Mieszkanie"
+    },
+    "bread_500g": {
+      "label": "Chleb",
+      "hint": "Bochenek 500 g, biały"
+    },
+    "milk_1l": {
+      "label": "Mleko",
+      "hint": "1 l, zwykłe"
+    },
+    "eggs_12": {
+      "label": "Jajka",
+      "hint": "12 szt., standardowy rozmiar"
+    },
+    "butter_200g": {
+      "label": "Masło",
+      "hint": "200 g, niesolone"
+    },
+    "rice_1kg": {
+      "label": "Ryż",
+      "hint": "1 kg, biały"
+    },
+    "sugar_1kg": {
+      "label": "Cukier",
+      "hint": "1 kg, biały kryształ"
+    },
+    "chicken_breast_1kg": {
+      "label": "Pierś z kurczaka",
+      "hint": "1 kg, bez kości"
+    },
+    "beef_ground_1kg": {
+      "label": "Mielona wołowina",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Jabłka",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Banany",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Pomidory",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Ziemniaki",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Ser",
+      "hint": "500 g, lokalny ser twardy"
+    },
+    "olive_oil_1l": {
+      "label": "Oliwa z oliwek",
+      "hint": "1 l, extra virgin"
+    },
+    "water_bottled_1500ml": {
+      "label": "Woda butelkowana",
+      "hint": "1,5 l"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Cappuccino",
+      "hint": "Standardowa wielkość, w kawiarni"
+    },
+    "beer_imported_500ml": {
+      "label": "Piwo",
+      "hint": "500 ml, marka importowana"
+    },
+    "gasoline_95_1l": {
+      "label": "Benzyna",
+      "hint": "1 l, 95 oktanów"
+    },
+    "diesel_1l": {
+      "label": "Olej napędowy",
+      "hint": "1 l"
+    },
+    "public_transport_oneway": {
+      "label": "Transport publiczny",
+      "hint": "Bilet jednorazowy, lokalny"
+    },
+    "taxi_5km": {
+      "label": "Przejazd taksówką",
+      "hint": "Ok. 5 km, w dzień"
+    },
+    "internet_60mbps_monthly": {
+      "label": "Internet",
+      "hint": "60+ Mb/s, bez limitu, miesięcznie"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Dane mobilne",
+      "hint": "Pakiet 10 GB, miesięcznie"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Prąd",
+      "hint": "Śr. rachunek miesięczny, mieszkanie z 1 sypialnią"
+    },
+    "gas_apartment_monthly": {
+      "label": "Gaz / ogrzewanie",
+      "hint": "Śr. rachunek miesięczny, mieszkanie z 1 sypialnią"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Tani posiłek na mieście",
+      "hint": "Tania restauracja, 1 osoba"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Obiad średniej klasy",
+      "hint": "Restauracja średniej klasy, 2 osoby, 3 dania"
+    },
+    "gym_monthly_pass": {
+      "label": "Karnet na siłownię",
+      "hint": "Miesięcznie, dorosły"
+    },
+    "cinema_ticket": {
+      "label": "Bilet do kina",
+      "hint": "1 dorosły, wieczorem"
+    },
+    "haircut_basic": {
+      "label": "Strzyżenie",
+      "hint": "Podstawowe, barber męski lub prosty salon"
+    },
+    "jeans_branded_pair": {
+      "label": "Dżinsy",
+      "hint": "1 para, markowe (klasa Levi's)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Sneakersy",
+      "hint": "1 para, markowe (klasa Nike)"
+    },
+    "rent_1bd_center": {
+      "label": "Wynajem, 1 sypialnia, centrum",
+      "hint": "Miesięcznie, centrum miasta"
+    },
+    "rent_1bd_outside": {
+      "label": "Wynajem, 1 sypialnia, obrzeża",
+      "hint": "Miesięcznie, poza centrum"
+    },
+    "rent_3bd_center": {
+      "label": "Wynajem, 3 sypialnie, centrum",
+      "hint": "Miesięcznie, centrum miasta"
+    }
   }
 }
