@@ -174,5 +174,41 @@
       "toastErrorTitle": "Atsiėmimas nepavyko",
       "fallbackError": "atsiėmimas nepavyko"
     }
+  },
+  "item": {
+    "feedTitle": "Produkto srautas",
+    "meta": {
+      "title": "Produktas {barcode}",
+      "description": "Šio produkto mediana kaina, naujausi pateikimai ir laukiantys patikrinimai Mercato bendruomenėje."
+    },
+    "median": {
+      "title": "Mediana kaina",
+      "subtitle": "Iš {count} priimtų pateikimų • paskutinės 30 dienų"
+    },
+    "verify": {
+      "title": "Padėk patikrinti",
+      "loading": "Įkeliama…",
+      "empty": "Šiuo metu laukiančių pateikimų nėra."
+    },
+    "recent": {
+      "title": "Naujausi pateikimai",
+      "empty": "Šiam brūkšniniam kodui pateikimų dar nėra.",
+      "status": {
+        "accepted": "priimta",
+        "rejected": "atmesta",
+        "locked": "užrakinta (mišri)",
+        "pending": "laukiama ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Produktas",
+      "title": "Nepavyko atidaryti produkto.",
+      "body": "Arba brūkšninis kodas adrese netinkamas (laukiame 12 baitų hex su 0x priešdėliu), arba niekas dar nepateikė kainos. Nuskenuok jį pats, kad pradėtum srautą.",
+      "cta": {
+        "scan": "Nuskenuoti kainą",
+        "home": "Atgal į pradžią"
+      },
+      "metaTitle": "Produktas nerastas"
+    }
   }
 }
