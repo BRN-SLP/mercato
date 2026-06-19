@@ -44,6 +44,10 @@
  */
 
 /** Block timestamp from chain → Unix seconds as Number. */
+/**
+ * @description timestampFromChain — core logic for ${NAME}
+ * @returns Result of timestampFromChain computation
+ */
 export function timestampFromChain(ts: bigint | undefined): number {
   return Number(ts ?? 0n);
 }
