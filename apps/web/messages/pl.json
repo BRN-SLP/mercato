@@ -174,5 +174,32 @@
       "toastErrorTitle": "Odbiór nie powiódł się",
       "fallbackError": "odbiór nie powiódł się"
     }
+  },
+  "howItWorks": {
+    "section": "Jak to działa",
+    "title1": "Trzy wybory.",
+    "title2": "Jedna transakcja.",
+    "step1Title": "Wybierz produkt, wpisz cenę.",
+    "step1Body": "Wybierz produkt z koszyka, wskaż swój kraj, wpisz cenę, którą faktycznie zapłaciłeś. Zdjęcie paragonu opcjonalne. Jedna transakcja w łańcuchu, z opłatą sieciową w cUSD, jeśli portfel to wspiera.",
+    "step2Title": "Trzej sąsiedzi stukają",
+    "step2TitleAccent": "tak.",
+    "step2Body": "Inni współtwórcy z tego samego kraju głosują ✓ lub ✗ na oczekujące zgłoszenia. Trzy zgodne pozytywy finalizują cenę i odblokowują nagrody dla wszystkich w rundzie.",
+    "step3Title": "Odbierz nagrody w cUSD.",
+    "step3Body": "Mikronagrody gromadzą się za każde przyjęte zgłoszenie i każdą weryfikację cudzego. Odbierz saldo do MiniPay lub dowolnego portfela Celo w jednym roszczeniu. W każdej chwili, bez minimum.",
+    "artifacts": {
+      "submissionStamp": "zgłoszenie · przykład",
+      "submissionFooter": "jedna tx · opłata cUSD · paragon opcjonalny",
+      "voteStamp": "liczenie głosów · w toku",
+      "voteWindow": "okno 4h",
+      "votePeersIn": "sąsiedzi w {country}",
+      "rewardStamp": "rozliczono · przed chwilą",
+      "rewardNetToWallet": "netto do portfela",
+      "rewardSubmitterShare": "udział zgłaszającego · 50%",
+      "rewardVerifiersRow": "3 × weryfikatorzy",
+      "rewardSweepRow": "odbiór",
+      "rewardSweepValue": "w każdej chwili · bez min"
+    },
+    "tabsAria": "Etapy jak to działa",
+    "intro": "Trzy zdarzenia w łańcuchu przeprowadzają obserwację ceny z twojego telefonu do zweryfikowanego wpisu w indeksie społeczności."
   }
 }
