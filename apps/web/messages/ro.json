@@ -210,5 +210,14 @@
       },
       "metaTitle": "Produs negăsit"
     }
+  },
+  "languageSwitcher": {
+    "label": "Limbă",
+    "english": "engleză",
+    "ukrainian": "ucraineană",
+    "spanish": "spaniolă",
+    "portugueseBR": "portugheză (BR)",
+    "german": "germană",
+    "french": "franceză"
   }
 }
