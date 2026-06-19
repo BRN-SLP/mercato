@@ -174,5 +174,32 @@
       "toastErrorTitle": "Revendicare eșuată",
       "fallbackError": "revendicare eșuată"
     }
+  },
+  "howItWorks": {
+    "section": "Cum funcționează",
+    "title1": "Trei alegeri.",
+    "title2": "O tranzacție.",
+    "step1Title": "Alege produsul, scrie prețul.",
+    "step1Body": "Alege un produs din coș, alege-ți țara, scrie prețul pe care l-ai plătit efectiv. Poza bonului este opțională. O tranzacție on-chain, cu taxa de rețea plătită în cUSD dacă portofelul tău o permite.",
+    "step2Title": "Trei colegi confirmă",
+    "step2TitleAccent": "da.",
+    "step2Body": "Alți contribuitori din aceeași țară votează ✓ sau ✗ pe trimiterile în așteptare. Trei pozitive care se potrivesc finalizează prețul și deblochează recompense pentru toți cei din rundă.",
+    "step3Title": "Strânge-ți recompensele în cUSD.",
+    "step3Body": "Micro-recompensele se acumulează pentru fiecare trimitere acceptată și fiecare verificare a altcuiva. Strânge soldul în MiniPay sau orice portofel Celo într-o singură revendicare. Oricând, fără minim.",
+    "artifacts": {
+      "submissionStamp": "trimitere · exemplu",
+      "submissionFooter": "o tx · taxă cUSD · bon opțional",
+      "voteStamp": "numărătoare voturi · în curs",
+      "voteWindow": "fereastră 4h",
+      "votePeersIn": "colegi în {country}",
+      "rewardStamp": "decontat · chiar acum",
+      "rewardNetToWallet": "net în portofel",
+      "rewardSubmitterShare": "cota trimițătorului · 50%",
+      "rewardVerifiersRow": "3 × verificatori",
+      "rewardSweepRow": "strânge",
+      "rewardSweepValue": "oricând · fără min"
+    },
+    "tabsAria": "Etapele cum funcționează",
+    "intro": "Trei evenimente on-chain duc o observație de preț de pe telefonul tău la o intrare verificată în indicele comunității."
   }
 }
