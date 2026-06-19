@@ -174,5 +174,32 @@
       "toastErrorTitle": "Talep başarısız",
       "fallbackError": "talep başarısız"
     }
+  },
+  "howItWorks": {
+    "section": "Nasıl çalışır",
+    "title1": "Üç seçim.",
+    "title2": "Tek işlem.",
+    "step1Title": "Ürünü seç, fiyatı yaz.",
+    "step1Body": "Sepetten bir ürün seç, ülkeni seç, gerçekten ödediğin fiyatı yaz. Fiş fotoğrafı isteğe bağlı. Tek bir zincir üstü işlem, cüzdanın destekliyorsa ağ ücreti cUSD ile ödenir.",
+    "step2Title": "Üç akran onaylar",
+    "step2TitleAccent": "evet.",
+    "step2Body": "Aynı ülkedeki diğer katkıda bulunanlar bekleyen gönderimlere ✓ veya ✗ oy verir. Üç uyumlu olumlu oy fiyatı kesinleştirir ve turdaki herkes için ödülleri açar.",
+    "step3Title": "Ödüllerini cUSD ile topla.",
+    "step3Body": "Kabul edilen her gönderim ve başkasının gönderimine verdiğin her doğrulama için mikro ödüller birikir. Bakiyeyi tek bir talep ile MiniPay veya herhangi bir Celo cüzdanına aktar. İstediğin zaman, asgari yok.",
+    "artifacts": {
+      "submissionStamp": "gönderim · örnek",
+      "submissionFooter": "tek tx · cUSD ücreti · fiş isteğe bağlı",
+      "voteStamp": "oy sayımı · sürüyor",
+      "voteWindow": "4s pencere",
+      "votePeersIn": "{country} ülkesindeki akranlar",
+      "rewardStamp": "ödendi · az önce",
+      "rewardNetToWallet": "cüzdana net",
+      "rewardSubmitterShare": "gönderen payı · 50%",
+      "rewardVerifiersRow": "3 × doğrulayıcı",
+      "rewardSweepRow": "topla",
+      "rewardSweepValue": "istediğin zaman · asgari yok"
+    },
+    "tabsAria": "Nasıl çalışır aşamaları",
+    "intro": "Üç zincir üstü olay, bir fiyat gözlemini telefonundan topluluk endeksindeki doğrulanmış bir kayda taşır."
   }
 }
