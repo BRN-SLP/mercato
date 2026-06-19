@@ -174,5 +174,32 @@
       "toastErrorTitle": "Riscatto fallito",
       "fallbackError": "riscatto fallito"
     }
+  },
+  "howItWorks": {
+    "section": "Come funziona",
+    "title1": "Tre scelte.",
+    "title2": "Una transazione.",
+    "step1Title": "Scegli il prodotto, scrivi il prezzo.",
+    "step1Body": "Scegli un prodotto dal paniere, scegli il tuo paese, scrivi il prezzo che hai effettivamente pagato. La foto dello scontrino è facoltativa. Una transazione on-chain, con la commissione di rete pagata in cUSD se il tuo wallet lo supporta.",
+    "step2Title": "Tre pari toccano",
+    "step2TitleAccent": "sì.",
+    "step2Body": "Altri contributori dello stesso paese votano ✓ o ✗ sugli invii in sospeso. Tre positivi concordi finalizzano il prezzo e sbloccano i premi per tutti i partecipanti al round.",
+    "step3Title": "Riscatta i tuoi premi in cUSD.",
+    "step3Body": "I micro-premi si accumulano per ogni invio accettato e ogni verifica che fai su quella altrui. Riscatta il saldo su MiniPay o qualsiasi wallet Celo in un solo claim. In qualsiasi momento, senza minimo.",
+    "artifacts": {
+      "submissionStamp": "invio · esempio",
+      "submissionFooter": "una tx · commissione cUSD · scontrino facoltativo",
+      "voteStamp": "conteggio voti · in corso",
+      "voteWindow": "finestra 4h",
+      "votePeersIn": "pari in {country}",
+      "rewardStamp": "liquidato · proprio ora",
+      "rewardNetToWallet": "netto al wallet",
+      "rewardSubmitterShare": "quota mittente · 50%",
+      "rewardVerifiersRow": "3 × verificatori",
+      "rewardSweepRow": "riscatto",
+      "rewardSweepValue": "in qualsiasi momento · senza min"
+    },
+    "tabsAria": "Fasi di come funziona",
+    "intro": "Tre eventi on-chain portano un'osservazione di prezzo dal tuo telefono a una voce verificata nell'indice della comunità."
   }
 }
