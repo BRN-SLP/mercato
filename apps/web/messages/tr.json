@@ -265,5 +265,156 @@
       "awaitingSignature": "Cüzdanda onayla…",
       "confirming": "Onay bekleniyor…"
     }
+  },
+  "products": {
+    "categories": {
+      "food": "Gıda",
+      "beverages": "İçecekler",
+      "transport": "Ulaşım",
+      "utilities": "Faturalar",
+      "lifestyle": "Yaşam tarzı",
+      "clothing": "Giyim",
+      "housing": "Konut"
+    },
+    "bread_500g": {
+      "label": "Ekmek",
+      "hint": "500 g somun, beyaz"
+    },
+    "milk_1l": {
+      "label": "Süt",
+      "hint": "1 L, normal"
+    },
+    "eggs_12": {
+      "label": "Yumurta",
+      "hint": "12 adet, normal boy"
+    },
+    "butter_200g": {
+      "label": "Tereyağı",
+      "hint": "200 g, tuzsuz"
+    },
+    "rice_1kg": {
+      "label": "Pirinç",
+      "hint": "1 kg, beyaz"
+    },
+    "sugar_1kg": {
+      "label": "Şeker",
+      "hint": "1 kg, beyaz toz"
+    },
+    "chicken_breast_1kg": {
+      "label": "Tavuk göğsü",
+      "hint": "1 kg, kemiksiz"
+    },
+    "beef_ground_1kg": {
+      "label": "Kıyma (dana)",
+      "hint": "1 kg, 80/20"
+    },
+    "apples_1kg": {
+      "label": "Elma",
+      "hint": "1 kg"
+    },
+    "bananas_1kg": {
+      "label": "Muz",
+      "hint": "1 kg"
+    },
+    "tomatoes_1kg": {
+      "label": "Domates",
+      "hint": "1 kg"
+    },
+    "potatoes_1kg": {
+      "label": "Patates",
+      "hint": "1 kg"
+    },
+    "cheese_local_500g": {
+      "label": "Peynir",
+      "hint": "500 g, yerel sert peynir"
+    },
+    "olive_oil_1l": {
+      "label": "Zeytinyağı",
+      "hint": "1 L, sızma"
+    },
+    "water_bottled_1500ml": {
+      "label": "Şişe su",
+      "hint": "1,5 L"
+    },
+    "coffee_cappuccino_cafe": {
+      "label": "Cappuccino",
+      "hint": "Normal boy, kafede"
+    },
+    "beer_imported_500ml": {
+      "label": "Bira",
+      "hint": "500 mL, ithal marka"
+    },
+    "gasoline_95_1l": {
+      "label": "Benzin",
+      "hint": "1 L, 95 oktan"
+    },
+    "diesel_1l": {
+      "label": "Motorin",
+      "hint": "1 L"
+    },
+    "public_transport_oneway": {
+      "label": "Toplu taşıma",
+      "hint": "Tek yön bilet, yerel"
+    },
+    "taxi_5km": {
+      "label": "Taksi yolculuğu",
+      "hint": "Yaklaşık 5 km, gündüz"
+    },
+    "internet_60mbps_monthly": {
+      "label": "İnternet",
+      "hint": "60+ Mbps, sınırsız, aylık"
+    },
+    "mobile_10gb_monthly": {
+      "label": "Mobil veri",
+      "hint": "10 GB paket, aylık"
+    },
+    "electricity_apartment_monthly": {
+      "label": "Elektrik",
+      "hint": "Ort. aylık fatura, 1+1 daire"
+    },
+    "gas_apartment_monthly": {
+      "label": "Gaz / ısınma",
+      "hint": "Ort. aylık fatura, 1+1 daire"
+    },
+    "meal_inexpensive_restaurant": {
+      "label": "Ucuz dışarıda yemek",
+      "hint": "Ucuz restoran, 1 kişi"
+    },
+    "meal_midrange_restaurant": {
+      "label": "Orta sınıf akşam yemeği",
+      "hint": "Orta sınıf restoran, 2 kişi, 3 kap"
+    },
+    "gym_monthly_pass": {
+      "label": "Spor salonu üyeliği",
+      "hint": "Aylık, yetişkin"
+    },
+    "cinema_ticket": {
+      "label": "Sinema bileti",
+      "hint": "1 yetişkin, akşam"
+    },
+    "haircut_basic": {
+      "label": "Saç kesimi",
+      "hint": "Temel, erkek berberi veya basit kuaför"
+    },
+    "jeans_branded_pair": {
+      "label": "Kot pantolon",
+      "hint": "1 adet, markalı (Levi's seviyesi)"
+    },
+    "sneakers_branded_pair": {
+      "label": "Spor ayakkabı",
+      "hint": "1 çift, markalı (Nike seviyesi)"
+    },
+    "rent_1bd_center": {
+      "label": "Kira, 1 yatak odası, merkez",
+      "hint": "Aylık, şehir merkezi"
+    },
+    "rent_1bd_outside": {
+      "label": "Kira, 1 yatak odası, dışarısı",
+      "hint": "Aylık, merkez dışı"
+    },
+    "rent_3bd_center": {
+      "label": "Kira, 3 yatak odası, merkez",
+      "hint": "Aylık, şehir merkezi"
+    }
   }
 }
