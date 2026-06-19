@@ -141,6 +141,10 @@ export function zoneKeyToCountry(zoneKey: Hex): string | undefined {
  * Number.MAX_SAFE_INTEGER — see `chain-boundary.ts` for the rationale.
  * Convert with `priceCentsToChain(cents)` at the on-chain write site.
  */
+/**
+ * @description majorUnitsToCents — core logic for ${NAME}
+ * @returns Result of majorUnitsToCents computation
+ */
 export function majorUnitsToCents(input: string | number): number {
   const str = String(input).trim();
   if (!/^\d+(\.\d+)?$/.test(str)) {
