@@ -174,5 +174,41 @@
       "toastErrorTitle": "Izņemšana neizdevās",
       "fallbackError": "izņemšana neizdevās"
     }
+  },
+  "item": {
+    "feedTitle": "Produkta plūsma",
+    "meta": {
+      "title": "Produkts {barcode}",
+      "description": "Šī produkta mediānas cena, jaunākie iesniegumi un gaidošās pārbaudes Mercato kopienā."
+    },
+    "median": {
+      "title": "Mediānas cena",
+      "subtitle": "No {count} apstiprinātiem iesniegumiem • pēdējās 30 dienas"
+    },
+    "verify": {
+      "title": "Palīdzi pārbaudīt",
+      "loading": "Notiek ielāde…",
+      "empty": "Pašlaik nav gaidošu iesniegumu."
+    },
+    "recent": {
+      "title": "Jaunākie iesniegumi",
+      "empty": "Šim svītrkodam vēl nav iesniegumu.",
+      "status": {
+        "accepted": "apstiprināts",
+        "rejected": "noraidīts",
+        "locked": "bloķēts (jaukts)",
+        "pending": "gaida ({votes}/3)"
+      }
+    },
+    "notFound": {
+      "kicker": "404 · Produkts",
+      "title": "Neizdevās atvērt šo produktu.",
+      "body": "Vai nu svītrkods adresē ir nepareizs (gaidām 12 baitus hex ar 0x prefiksu), vai arī neviens vēl nav iesniedzis cenu. Noskenē to pats, lai sāktu plūsmu.",
+      "cta": {
+        "scan": "Skenēt cenu",
+        "home": "Atpakaļ uz sākumu"
+      },
+      "metaTitle": "Produkts nav atrasts"
+    }
   }
 }
