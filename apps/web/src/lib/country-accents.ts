@@ -40,6 +40,10 @@ export const COUNTRY_ACCENT: Record<string, string> = {
 /** Fallback when a country isn't in the accent table. */
 export const DEFAULT_ACCENT = "#6b7280";
 
+/**
+ * @description getCountryAccent — core logic for ${NAME}
+ * @returns Result of getCountryAccent computation
+ */
 export function getCountryAccent(code: string): string {
   return COUNTRY_ACCENT[code] ?? DEFAULT_ACCENT;
 }
