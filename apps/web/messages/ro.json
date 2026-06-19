@@ -416,5 +416,37 @@
       "label": "Chirie, 3 dormitoare, centru",
       "hint": "Lunar, centrul orașului"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Indicele costului vieții",
+      "title1": "Coșul Mercato,",
+      "titleAccent": "țară cu țară.",
+      "body": "Prețuri mediane zilnice trimise și verificate de comunitate. Fiecare coș însumează prețul median pentru {count} produse canonice în moneda locală: pâine, chirie, transport, utilități. Dă clic pe un rând pentru detalierea pe produs.",
+      "columns": {
+        "country": "Țară",
+        "coverage": "Acoperire",
+        "basketTotal": "Total coș"
+      },
+      "rowAria": "{country}: {coverage} din {total} produse cu preț",
+      "viewAfford": "vezi →",
+      "beFirstAfford": "fii primul →"
+    },
+    "detail": {
+      "back": "Înapoi la indice",
+      "kicker": "{currency} · costul vieții",
+      "summary": "Total median al coșului de <strong>{value} {currency}</strong> pentru {filled} din {total} produse canonice.",
+      "subsCount": "{count, plural, one {# trimitere} few {# trimiteri} other {# de trimiteri}}",
+      "emptyTitle": "Încă niciun preț în <accent>{country}</accent>",
+      "emptyBody": "Coșul de aici este gol. Fii primul care adaugă un preț.",
+      "emptyCta": "Adaugă un preț →"
+    },
+    "empty": {
+      "kicker": "Coșul este gol",
+      "title1": "Nu a fost trimis niciun preț",
+      "titleAccent": "încă.",
+      "body": "Mercato pornește cu zero trimiteri în fiecare țară. Alege un produs, alege-ți țara, scrie un preț, iar indicele începe să se construiască singur.",
+      "cta": "Adaugă primul preț →"
+    }
   }
 }
