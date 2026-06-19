@@ -416,5 +416,37 @@
       "label": "Īre, 3 guļamistabas, centrs",
       "hint": "Mēnesī, pilsētas centrs"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Dzīves dārdzības indekss",
+      "title1": "Mercato grozs,",
+      "titleAccent": "valsts pēc valsts.",
+      "body": "Ikdienas mediānas cenas, ko iesniedz un pārbauda kopiena. Katrs grozs summē {count} pamatpreču mediānas cenu vietējā valūtā: maize, īre, transports, komunālie. Noklikšķini uz rindas, lai redzētu sadalījumu pa produktiem.",
+      "columns": {
+        "country": "Valsts",
+        "coverage": "Pārklājums",
+        "basketTotal": "Groza kopsumma"
+      },
+      "rowAria": "{country}: {coverage} no {total} produktiem ar cenu",
+      "viewAfford": "skatīt →",
+      "beFirstAfford": "esi pirmais →"
+    },
+    "detail": {
+      "back": "Atpakaļ uz indeksu",
+      "kicker": "{currency} · dzīves dārdzība",
+      "summary": "Groza mediānas kopsumma <strong>{value} {currency}</strong> par {filled} no {total} pamatproduktiem.",
+      "subsCount": "{count, plural, zero {# iesniegumu} one {# iesniegums} other {# iesniegumi}}",
+      "emptyTitle": "Vēl nav cenu <accent>{country}</accent>",
+      "emptyBody": "Grozs šeit ir tukšs. Pievieno cenu pirmais.",
+      "emptyCta": "Pievienot cenu →"
+    },
+    "empty": {
+      "kicker": "Grozs ir tukšs",
+      "title1": "Vēl nav iesniegta neviena",
+      "titleAccent": "cena.",
+      "body": "Mercato katrā valstī sākas ar nulli iesniegumu. Izvēlies produktu, izvēlies savu valsti, ievadi cenu, un indekss sāk veidoties pats.",
+      "cta": "Pievienot pirmo cenu →"
+    }
   }
 }
