@@ -54,6 +54,10 @@ export async function putReceipt(
   return { url: result.url };
 }
 
+/**
+ * @description getReceiptUrl — core logic for ${NAME}
+ * @returns Result of getReceiptUrl computation
+ */
 export async function getReceiptUrl(
   hash: string,
   mimeType: string,
