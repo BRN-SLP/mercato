@@ -416,5 +416,37 @@
       "label": "Nuoma, 3 miegamieji, centras",
       "hint": "Per mėnesį, miesto centras"
     }
+  },
+  "basket": {
+    "index": {
+      "kicker": "Pragyvenimo išlaidų indeksas",
+      "title1": "Mercato krepšelis,",
+      "titleAccent": "šalis po šalies.",
+      "body": "Kasdienės medianos kainos, pateiktos ir patvirtintos bendruomenės. Kiekvienas krepšelis sumuoja {count} pagrindinių prekių medianos kainą vietine valiuta: duona, nuoma, transportas, komunaliniai. Spustelėk eilutę, kad pamatytum išskaidymą pagal produktą.",
+      "columns": {
+        "country": "Šalis",
+        "coverage": "Aprėptis",
+        "basketTotal": "Krepšelio suma"
+      },
+      "rowAria": "{country}: įkainota {coverage} iš {total} produktų",
+      "viewAfford": "žiūrėti →",
+      "beFirstAfford": "būk pirmas →"
+    },
+    "detail": {
+      "back": "Atgal į indeksą",
+      "kicker": "{currency} · pragyvenimo išlaidos",
+      "summary": "Medianos krepšelio suma <strong>{value} {currency}</strong>, įkainota {filled} iš {total} pagrindinių produktų.",
+      "subsCount": "{count, plural, one {# pateikimas} few {# pateikimai} other {# pateikimų}}",
+      "emptyTitle": "Dar nėra kainų <accent>{country}</accent>",
+      "emptyBody": "Krepšelis čia tuščias. Pridėk kainą pirmas.",
+      "emptyCta": "Pridėti kainą →"
+    },
+    "empty": {
+      "kicker": "Krepšelis tuščias",
+      "title1": "Dar nepateikta jokių",
+      "titleAccent": "kainų.",
+      "body": "Mercato kiekvienoje šalyje pradeda nuo nulio pateikimų. Pasirink produktą, pasirink šalį, įvesk kainą, ir indeksas pradės kurtis pats.",
+      "cta": "Pridėti pirmą kainą →"
+    }
   }
 }
