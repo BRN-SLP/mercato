@@ -266,6 +266,10 @@ export async function getBasketSnapshot(): Promise<BasketSnapshot> {
  * launch list). Reads from the same cached snapshot so this composes
  * cheaply with `getBasketSnapshot`.
  */
+/**
+ * @description getCountryBasket — core logic for ${NAME}
+ * @returns Result of getCountryBasket computation
+ */
 export async function getCountryBasket(
   countryCode: string,
 ): Promise<CountryBasket | null> {
