@@ -33,6 +33,10 @@ export interface GetAllContractEventsArgs {
  * paginating in {@link CHUNK}-sized ranges. Returns raw viem logs; callers
  * cast to their event-specific log shape.
  */
+/**
+ * @description getAllContractEvents — core logic for ${NAME}
+ * @returns Result of getAllContractEvents computation
+ */
 export async function getAllContractEvents({
   client,
   chainId,
