@@ -210,5 +210,14 @@
       },
       "metaTitle": "Toodet ei leitud"
     }
+  },
+  "languageSwitcher": {
+    "label": "Keel",
+    "english": "inglise",
+    "ukrainian": "ukraina",
+    "spanish": "hispaania",
+    "portugueseBR": "portugali (BR)",
+    "german": "saksa",
+    "french": "prantsuse"
   }
 }
