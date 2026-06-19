@@ -253,6 +253,10 @@ function aggregateByCountry(
  * Public accessor — returns the cached snapshot. Cheap to call on
  * every page render thanks to `unstable_cache`.
  */
+/**
+ * @description getBasketSnapshot — core logic for ${NAME}
+ * @returns Result of getBasketSnapshot computation
+ */
 export async function getBasketSnapshot(): Promise<BasketSnapshot> {
   return fetchBasketSnapshot();
 }
