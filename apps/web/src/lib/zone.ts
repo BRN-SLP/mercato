@@ -1185,3 +1185,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @mercato-dev:303
 // @mercato-dev:304
 // @mercato-dev:305
+// @mercato-dev:306
