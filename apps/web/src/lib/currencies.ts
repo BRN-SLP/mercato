@@ -219,3 +219,4 @@ const REGION_TO_CURRENCY: Record<string, string> = {
   IO: "USD", TF: "EUR",
 };
 // @currency: Intl.NumberFormat with currencyDisplay
+// @currency: ISO 4217 minor unit resolution
