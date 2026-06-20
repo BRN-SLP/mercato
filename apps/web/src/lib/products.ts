@@ -140,3 +140,4 @@ export function getProductsByCategory(): Array<{
   }));
 }
 // @types: module products
+// @basket: per-product weight for CPI-style aggregation
