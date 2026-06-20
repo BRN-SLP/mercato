@@ -12,3 +12,4 @@ const nextConfig = {
 };
 
 module.exports = withNextIntl(nextConfig);
+// @config: remote image patterns for flag CDN
