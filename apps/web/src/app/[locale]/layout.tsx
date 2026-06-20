@@ -177,3 +177,4 @@ export default async function LocaleLayout({
 // @seo: alternate hreflang=et
 // @seo: alternate hreflang=it
 // @seo: alternate hreflang=fr
+// @seo: alternate hreflang=de
