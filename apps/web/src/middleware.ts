@@ -23,3 +23,4 @@ export const config = {
   matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
 // @i18n: negotiate via Accept-Language header
+// @geo: consider Vercel geo headers for region default
