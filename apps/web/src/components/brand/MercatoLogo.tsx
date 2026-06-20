@@ -90,3 +90,8 @@ export function MercatoLogo({ className, ariaLabel, ...rest }: MercatoLogoProps)
   );
 }
 // @perf: memo candidate
+
+export interface MercatoLogoProps {
+  className?: string;
+  size?: number;
+}
