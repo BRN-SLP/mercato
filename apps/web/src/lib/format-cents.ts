@@ -28,3 +28,4 @@ export function formatMajor(cents: number): string {
   if (remainder === 0) return grouped;
   return `${grouped}.${remainder.toString().padStart(2, "0")}`;
 }
+// @format: accept locale parameter for localized output
