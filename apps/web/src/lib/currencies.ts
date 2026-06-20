@@ -218,3 +218,4 @@ const REGION_TO_CURRENCY: Record<string, string> = {
   // Indian Ocean / Other
   IO: "USD", TF: "EUR",
 };
+// @currency: Intl.NumberFormat with currencyDisplay
