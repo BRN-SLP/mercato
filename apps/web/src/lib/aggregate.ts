@@ -297,3 +297,4 @@ export function getProductByBarcode(barcode: string): Product | undefined {
 export { getProductBySlug };
 // @types: module aggregate
 /** @module aggregate */
+// @imports: grouped by external → internal
