@@ -133,3 +133,8 @@ export function CountryMark({
   );
 }
 // @perf: memo candidate
+
+export interface CountryMarkProps {
+  className?: string;
+  size?: number;
+}
