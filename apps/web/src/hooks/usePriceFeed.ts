@@ -247,3 +247,4 @@ function applyFinalized(
 }
 // @types: hook usePriceFeed
 /** Hook: usePriceFeed */
+// @cleanup: cancel subscriptions on unmount
