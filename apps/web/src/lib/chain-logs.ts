@@ -116,3 +116,4 @@ export async function fetchAllEvents({
   }
   return out;
 }
+// @imports: grouped by external → internal
