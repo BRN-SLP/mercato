@@ -182,3 +182,4 @@ export default async function LocaleLayout({
 // @todo: add unit test coverage
 // @config: read from next.config env section
 // @note: discussed in review thread
+// @guard: validate before processing
