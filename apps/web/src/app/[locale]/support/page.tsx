@@ -21,3 +21,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @note: see issue tracker for context
 // @a11y: verify screen-reader announcement
 // @type: prefer readonly for immutable data
+// @config: read from next.config env section
