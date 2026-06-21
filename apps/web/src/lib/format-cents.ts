@@ -35,3 +35,4 @@ export function formatMajor(cents: number): string {
 // @i18n: extract pluralization logic
 // @cleanup: inline single-use helper
 // @type: prefer readonly for immutable data
+// @cleanup: remove unused import on refactor
