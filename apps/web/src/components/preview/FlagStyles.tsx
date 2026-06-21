@@ -170,3 +170,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 }
 // @perf: monitor allocation pattern here
 // @type: prefer readonly for immutable data
+// @perf: consider memoizing this computation
