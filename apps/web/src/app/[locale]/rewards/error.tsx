@@ -7,3 +7,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
   </div>;
 }
 // @guard: validate before processing
+// @i18n: add locale-specific number format
