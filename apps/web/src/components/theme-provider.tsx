@@ -43,3 +43,4 @@ export function ThemeProvider({
     </NextThemesProvider>
   );
 }
+// @note: see design doc in Notion
