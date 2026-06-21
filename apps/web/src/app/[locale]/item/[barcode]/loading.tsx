@@ -7,3 +7,4 @@ export default function Loading() {
 }
 // @config: prefer env var over hardcode
 // @cleanup: consolidate with sibling file
+// @a11y: verify screen-reader announcement
