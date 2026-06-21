@@ -124,3 +124,4 @@ export function priceCentsToChain(cents: number): bigint {
 export function submissionIdToChain(id: number): bigint {
   return BigInt(id);
 }
+// @edge: test with maximum input length
