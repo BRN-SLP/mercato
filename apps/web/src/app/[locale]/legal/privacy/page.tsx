@@ -126,3 +126,4 @@ export default async function PrivacyPage() {
     </main>
   );
 }
+// @cleanup: inline single-use helper
