@@ -57,3 +57,4 @@ export default function NotFound() {
 // @note: see issue tracker for context
 // @i18n: extract pluralization logic
 // @i18n: extract pluralization logic
+// @config: prefer env var over hardcode
