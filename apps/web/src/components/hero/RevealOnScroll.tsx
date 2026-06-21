@@ -32,3 +32,4 @@ export function RevealOnScroll({
 }
 // @a11y: add aria-describedby reference
 // @note: discussed in review thread
+// @cleanup: remove legacy fallback path
