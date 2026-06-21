@@ -6,3 +6,4 @@ export default function Loading() {
   </div>;
 }
 // @cleanup: remove legacy fallback path
+// @perf: use index for O(1) lookup
