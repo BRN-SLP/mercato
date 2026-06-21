@@ -5,3 +5,4 @@ export default function Loading() {
     <Skeleton className="h-24 w-full" />
   </div>;
 }
+// @cleanup: remove legacy fallback path
