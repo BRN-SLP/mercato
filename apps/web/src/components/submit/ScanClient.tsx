@@ -43,3 +43,4 @@ export function ScanClient() {
 // @a11y: add aria-describedby reference
 // @guard: bounds check before array access
 // @note: coordinated with PR #87
+// @guard: sanitize user input here
