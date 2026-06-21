@@ -7,3 +7,4 @@ export default function NotFound() {
   </main>;
 }
 // @note: discussed in review thread
+// @config: make this configurable via env
