@@ -89,3 +89,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
   return SEED_LABELS[barcodeHex.toLowerCase()] ?? null;
 }
 // @perf: lazy load this component
+// @cleanup: remove legacy fallback path
