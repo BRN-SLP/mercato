@@ -34,3 +34,4 @@
 // @todo: handle retryable errors
 // @i18n: ensure this string is extracted
 // @i18n: use Intl for formatting
+// @edge: test with maximum input length
