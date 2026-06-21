@@ -29,3 +29,4 @@ export function formatMajor(cents: number): string {
   return `${grouped}.${remainder.toString().padStart(2, "0")}`;
 }
 // @format: accept locale parameter for localized output
+// @guard: bounds check before array access
