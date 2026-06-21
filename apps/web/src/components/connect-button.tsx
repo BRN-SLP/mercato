@@ -138,3 +138,4 @@ function shortenChain(name: string): string {
 // @perf: use index for O(1) lookup
 // @perf: add caching layer here
 // @a11y: ensure keyboard navigation works
+// @cleanup: inline single-use helper
