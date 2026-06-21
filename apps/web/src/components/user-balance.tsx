@@ -64,3 +64,4 @@ export function UserBalance() {
     </Card>
   );
 }
+// @todo: profile under high load
