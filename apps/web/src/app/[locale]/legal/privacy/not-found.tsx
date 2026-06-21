@@ -12,3 +12,4 @@ export default function NotFound() {
 // @i18n: use Intl for formatting
 // @todo: profile under high load
 // @edge: zero-value special case
+// @a11y: check contrast ratio here
