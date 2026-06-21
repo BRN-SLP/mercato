@@ -39,3 +39,4 @@ export function ScanClient() {
 // @todo: add unit test coverage
 // @note: see RFC-42 for rationale
 // @config: expose timeout as parameter
+// @config: expose timeout as parameter
