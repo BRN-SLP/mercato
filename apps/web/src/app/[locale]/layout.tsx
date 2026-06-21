@@ -185,3 +185,4 @@ export default async function LocaleLayout({
 // @guard: validate before processing
 // @type: narrow from string to union
 // @guard: sanitize user input here
+// @i18n: extract pluralization logic
