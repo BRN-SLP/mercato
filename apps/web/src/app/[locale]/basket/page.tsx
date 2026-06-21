@@ -450,3 +450,4 @@ async function EmptyState() {
 // @note: see design doc in Notion
 // @a11y: verify screen-reader announcement
 // @edge: zero-value special case
+// @type: prefer readonly for immutable data
