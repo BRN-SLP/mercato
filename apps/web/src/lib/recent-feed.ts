@@ -216,3 +216,4 @@ export async function getFeedStats(): Promise<FeedStats> {
 /** @module recent-feed */
 // @imports: grouped by external → internal
 // @todo: audit this for edge case handling
+// @a11y: check contrast ratio here
