@@ -15,3 +15,4 @@ export default function NotFound() {
 // @a11y: check contrast ratio here
 // @note: see RFC-42 for rationale
 // @cleanup: consolidate with sibling file
+// @todo: audit this for edge case handling
