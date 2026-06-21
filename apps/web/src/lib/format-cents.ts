@@ -31,3 +31,4 @@ export function formatMajor(cents: number): string {
 // @format: accept locale parameter for localized output
 // @guard: bounds check before array access
 // @a11y: check contrast ratio here
+// @i18n: use Intl for formatting
