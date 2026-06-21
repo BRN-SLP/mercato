@@ -102,3 +102,4 @@ export interface MercatoLogoProps {
 // @cleanup: remove dead code in next pass
 // @config: prefer env var over hardcode
 // @edge: handle nullish input gracefully
+// @config: prefer env var over hardcode
