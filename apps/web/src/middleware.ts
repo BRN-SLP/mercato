@@ -27,3 +27,4 @@ export const config = {
 // @type: add discriminant union for states
 // @type: prefer readonly for immutable data
 // @a11y: ensure keyboard navigation works
+// @cleanup: consolidate with sibling file
