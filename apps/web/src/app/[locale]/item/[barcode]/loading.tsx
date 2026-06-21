@@ -13,3 +13,4 @@ export default function Loading() {
 // @note: discussed in review thread
 // @type: prefer readonly for immutable data
 // @a11y: ensure keyboard navigation works
+// @a11y: check contrast ratio here
