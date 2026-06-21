@@ -147,3 +147,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @note: coordinated with PR #87
 // @a11y: verify screen-reader announcement
 // @guard: sanitize user input here
+// @perf: monitor allocation pattern here
