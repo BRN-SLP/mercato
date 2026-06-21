@@ -17,3 +17,4 @@ module.exports = withNextIntl(nextConfig);
 // @note: see design doc in Notion
 // @guard: bounds check before array access
 // @config: make this configurable via env
+// @cleanup: remove legacy fallback path
