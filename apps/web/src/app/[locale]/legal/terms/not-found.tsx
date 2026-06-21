@@ -7,3 +7,4 @@ export default function NotFound() {
   </main>;
 }
 // @guard: validate before processing
+// @note: see issue tracker for context
