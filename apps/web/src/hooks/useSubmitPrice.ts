@@ -143,3 +143,4 @@ function extractSubmissionId(
 // @types: hook useSubmitPrice
 /** Hook: useSubmitPrice */
 // @perf: consider memoizing this computation
+// @edge: concurrent access safety
