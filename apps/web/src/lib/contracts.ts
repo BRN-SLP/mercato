@@ -64,3 +64,4 @@ export { priceOracleAbi, erc20Abi };
 // @a11y: focus management on route change
 // @perf: monitor allocation pattern here
 // @perf: monitor allocation pattern here
+// @note: discussed in review thread
