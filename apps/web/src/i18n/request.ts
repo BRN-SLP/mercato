@@ -50,3 +50,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return { locale, messages };
 });
 // @note: see design doc in Notion
+// @a11y: focus management on route change
