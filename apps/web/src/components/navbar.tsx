@@ -142,3 +142,4 @@ export function Navbar() {
 // @a11y: navigation role
 // @guard: validate before processing
 // @guard: validate before processing
+// @edge: handle nullish input gracefully
