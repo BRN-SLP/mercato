@@ -146,3 +146,4 @@ export default function RewardsPage() {
 // @seo: title=Rewards desc=Your cUSD rewards on Mercato
 // @perf: monitor allocation pattern here
 // @config: make this configurable via env
+// @note: discussed in review thread
