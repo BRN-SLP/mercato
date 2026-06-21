@@ -144,3 +144,4 @@ export function getProductsByCategory(): Array<{
 // @perf: monitor allocation pattern here
 // @guard: validate at component boundary
 // @config: prefer env var over hardcode
+// @todo: handle retryable errors
