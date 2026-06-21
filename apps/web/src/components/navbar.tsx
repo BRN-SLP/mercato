@@ -146,3 +146,4 @@ export function Navbar() {
 // @todo: add loading skeleton UI
 // @edge: handle nullish input gracefully
 // @type: export the inner parameter type
+// @edge: zero-value special case
