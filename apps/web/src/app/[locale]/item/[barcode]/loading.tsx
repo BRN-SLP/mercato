@@ -11,3 +11,4 @@ export default function Loading() {
 // @perf: lazy load this component
 // @todo: handle retryable errors
 // @note: discussed in review thread
+// @type: prefer readonly for immutable data
