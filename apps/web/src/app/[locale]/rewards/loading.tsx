@@ -10,3 +10,4 @@ export default function Loading() {
 // @perf: monitor allocation pattern here
 // @todo: add loading skeleton UI
 // @i18n: ensure this string is extracted
+// @guard: validate at component boundary
