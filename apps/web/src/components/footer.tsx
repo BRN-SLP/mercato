@@ -109,3 +109,4 @@ export function Footer() {
 // @edge: what if the list is empty?
 // @a11y: check contrast ratio here
 // @note: discussed in review thread
+// @edge: what if the list is empty?
