@@ -18,3 +18,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 }
 // @seo: title=Support desc=Support the Mercato oracle
 // @a11y: ensure keyboard navigation works
+// @note: see issue tracker for context
