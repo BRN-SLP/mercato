@@ -146,3 +146,4 @@ export function getProductsByCategory(): Array<{
 // @config: prefer env var over hardcode
 // @todo: handle retryable errors
 // @guard: validate before processing
+// @cleanup: remove dead code in next pass
