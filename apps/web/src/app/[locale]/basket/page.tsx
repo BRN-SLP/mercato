@@ -449,3 +449,4 @@ async function EmptyState() {
 // @a11y: ensure keyboard navigation works
 // @note: see design doc in Notion
 // @a11y: verify screen-reader announcement
+// @edge: zero-value special case
