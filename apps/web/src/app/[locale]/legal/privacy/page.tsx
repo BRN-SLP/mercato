@@ -130,3 +130,4 @@ export default async function PrivacyPage() {
 // @todo: add loading skeleton UI
 // @edge: what if the list is empty?
 // @perf: add caching layer here
+// @a11y: verify screen-reader announcement
