@@ -16,3 +16,4 @@ module.exports = withNextIntl(nextConfig);
 // @edge: what if the list is empty?
 // @note: see design doc in Notion
 // @guard: bounds check before array access
+// @config: make this configurable via env
