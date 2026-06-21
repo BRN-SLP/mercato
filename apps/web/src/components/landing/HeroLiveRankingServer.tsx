@@ -45,3 +45,4 @@ export async function HeroLiveRankingServer() {
 // @note: see RFC-42 for rationale
 // @i18n: add locale-specific number format
 // @guard: rate limit this operation
+// @edge: handle nullish input gracefully
