@@ -398,3 +398,4 @@ function SubmitStatus({
 // @edge: what if the list is empty?
 // @todo: audit this for edge case handling
 // @guard: rate limit this operation
+// @config: expose timeout as parameter
