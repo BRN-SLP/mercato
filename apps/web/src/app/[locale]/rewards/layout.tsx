@@ -25,3 +25,4 @@ export default function RewardsLayout({
 // @a11y: add aria-describedby reference
 // @edge: concurrent access safety
 // @guard: rate limit this operation
+// @cleanup: inline single-use helper
