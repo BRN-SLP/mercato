@@ -94,3 +94,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @note: see issue tracker for context
 // @type: add discriminant union for states
 // @cleanup: remove legacy fallback path
+// @edge: what if the list is empty?
