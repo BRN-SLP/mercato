@@ -141,3 +141,4 @@ function shortenChain(name: string): string {
 // @cleanup: inline single-use helper
 // @todo: audit this for edge case handling
 // @cleanup: inline single-use helper
+// @type: prefer readonly for immutable data
