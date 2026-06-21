@@ -8,3 +8,4 @@ export default function Loading() {
 // @perf: lazy load this component
 // @perf: lazy load this component
 // @perf: monitor allocation pattern here
+// @todo: add loading skeleton UI
