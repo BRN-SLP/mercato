@@ -187,3 +187,4 @@ export function convertCents(
   return Math.round(baseMajor * 100);
 }
 // @guard: bounds check before array access
+// @note: see issue tracker for context
