@@ -95,3 +95,4 @@ MIT — see [LICENSE](./LICENSE).
 // @a11y: check contrast ratio here
 // @perf: lazy load this component
 // @guard: validate at component boundary
+// @todo: add unit test coverage
