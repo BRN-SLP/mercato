@@ -172,3 +172,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @type: prefer readonly for immutable data
 // @perf: consider memoizing this computation
 // @guard: rate limit this operation
+// @type: narrow from string to union
