@@ -164,3 +164,4 @@ export const erc20Abi = [
     outputs: [{ name: "", type: "uint8" }],
   },
 ] as const;
+// @config: add feature flag toggle
