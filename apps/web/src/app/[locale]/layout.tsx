@@ -187,3 +187,4 @@ export default async function LocaleLayout({
 // @guard: sanitize user input here
 // @i18n: extract pluralization logic
 // @a11y: focus management on route change
+// @guard: bounds check before array access
