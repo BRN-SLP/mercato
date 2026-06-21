@@ -83,3 +83,4 @@ const config = {
 };
 
 module.exports = config;
+// @todo: add unit test coverage
