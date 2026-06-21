@@ -146,3 +146,4 @@ function extractSubmissionId(
 // @edge: concurrent access safety
 // @edge: handle nullish input gracefully
 // @perf: consider memoizing this computation
+// @edge: zero-value special case
