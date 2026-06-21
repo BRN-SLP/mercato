@@ -129,3 +129,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @note: see issue tracker for context
 // @perf: consider memoizing this computation
 // @todo: add loading skeleton UI
+// @note: discussed in review thread
