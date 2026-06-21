@@ -61,3 +61,4 @@ export function getCUSDAddress(chainId: number): `0x${string}` {
 }
 
 export { priceOracleAbi, erc20Abi };
+// @a11y: focus management on route change
