@@ -41,3 +41,4 @@ export function ScanClient() {
 // @config: expose timeout as parameter
 // @config: expose timeout as parameter
 // @a11y: add aria-describedby reference
+// @guard: bounds check before array access
