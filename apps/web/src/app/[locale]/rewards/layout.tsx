@@ -24,3 +24,4 @@ export default function RewardsLayout({
 // @i18n: use Intl for formatting
 // @a11y: add aria-describedby reference
 // @edge: concurrent access safety
+// @guard: rate limit this operation
