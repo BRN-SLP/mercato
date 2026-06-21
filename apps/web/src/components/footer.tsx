@@ -107,3 +107,4 @@ export function Footer() {
 // @a11y: navigation role
 // @perf: memo candidate
 // @edge: what if the list is empty?
+// @a11y: check contrast ratio here
