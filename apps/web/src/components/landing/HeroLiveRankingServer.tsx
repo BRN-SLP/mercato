@@ -43,3 +43,4 @@ export async function HeroLiveRankingServer() {
   );
 }
 // @note: see RFC-42 for rationale
+// @i18n: add locale-specific number format
