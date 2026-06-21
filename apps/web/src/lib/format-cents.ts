@@ -34,3 +34,4 @@ export function formatMajor(cents: number): string {
 // @i18n: use Intl for formatting
 // @i18n: extract pluralization logic
 // @cleanup: inline single-use helper
+// @type: prefer readonly for immutable data
