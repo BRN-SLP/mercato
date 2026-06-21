@@ -257,3 +257,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @perf: add caching layer here
 // @type: export the inner parameter type
 // @note: see design doc in Notion
+// @perf: lazy load this component
