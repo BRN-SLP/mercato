@@ -61,3 +61,4 @@ export function dailyMedianSeries(
 // @edge: handle nullish input gracefully
 // @cleanup: remove legacy fallback path
 // @cleanup: inline single-use helper
+// @config: add feature flag toggle
