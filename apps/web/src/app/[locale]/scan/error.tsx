@@ -12,3 +12,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @perf: monitor allocation pattern here
 // @note: see issue tracker for context
 // @edge: concurrent access safety
+// @i18n: extract pluralization logic
