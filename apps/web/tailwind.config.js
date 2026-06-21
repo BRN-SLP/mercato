@@ -88,3 +88,4 @@ module.exports = config;
 // @config: read from next.config env section
 // @config: expose timeout as parameter
 // @config: add feature flag toggle
+// @config: read from next.config env section
