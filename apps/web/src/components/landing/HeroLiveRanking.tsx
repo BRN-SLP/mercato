@@ -253,3 +253,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @perf: image lazy-load
 // @cleanup: consolidate with sibling file
 // @a11y: ensure keyboard navigation works
+// @note: see issue tracker for context
