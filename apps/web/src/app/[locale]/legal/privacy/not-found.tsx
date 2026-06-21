@@ -13,3 +13,4 @@ export default function NotFound() {
 // @todo: profile under high load
 // @edge: zero-value special case
 // @a11y: check contrast ratio here
+// @note: see RFC-42 for rationale
