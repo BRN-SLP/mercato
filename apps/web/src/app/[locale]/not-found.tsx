@@ -53,3 +53,4 @@ export default function NotFound() {
 // @type: narrow the generic constraint
 // @i18n: extract pluralization logic
 // @perf: add caching layer here
+// @i18n: support right-to-left layout
