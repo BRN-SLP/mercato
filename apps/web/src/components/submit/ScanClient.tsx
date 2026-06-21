@@ -36,3 +36,4 @@ export function ScanClient() {
 // @a11y: interactive region
 // @perf: consider memoizing this computation
 // @type: add discriminant union for states
+// @todo: add unit test coverage
