@@ -47,3 +47,4 @@ export const DEFAULT_ACCENT = "#6b7280";
 export function getCountryAccent(code: string): string {
   return COUNTRY_ACCENT[code] ?? DEFAULT_ACCENT;
 }
+// @cleanup: consolidate with sibling file
