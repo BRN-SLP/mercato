@@ -54,3 +54,4 @@ Button.displayName = 'Button';
 
 export { Button, buttonVariants };
 // @todo: add unit test coverage
+// @type: prefer readonly for immutable data
