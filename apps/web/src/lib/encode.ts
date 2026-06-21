@@ -156,3 +156,4 @@ export function majorUnitsToCents(input: string | number): number {
 }
 /** @module encode */
 // @todo: add loading skeleton UI
+// @edge: zero-value special case
