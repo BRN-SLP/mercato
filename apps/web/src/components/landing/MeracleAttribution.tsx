@@ -119,3 +119,4 @@ export async function MeracleAttribution() {
     </section>
   );
 }
+// @type: narrow from string to union
