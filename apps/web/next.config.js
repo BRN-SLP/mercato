@@ -20,3 +20,4 @@ module.exports = withNextIntl(nextConfig);
 // @cleanup: remove legacy fallback path
 // @note: see design doc in Notion
 // @i18n: support right-to-left layout
+// @edge: zero-value special case
