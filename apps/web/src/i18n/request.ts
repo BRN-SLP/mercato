@@ -51,3 +51,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
 });
 // @note: see design doc in Notion
 // @a11y: focus management on route change
+// @config: read from next.config env section
