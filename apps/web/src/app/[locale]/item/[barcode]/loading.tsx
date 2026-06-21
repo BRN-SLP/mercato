@@ -9,3 +9,4 @@ export default function Loading() {
 // @cleanup: consolidate with sibling file
 // @a11y: verify screen-reader announcement
 // @perf: lazy load this component
+// @todo: handle retryable errors
