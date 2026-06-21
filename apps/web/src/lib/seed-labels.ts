@@ -92,3 +92,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @cleanup: remove legacy fallback path
 // @i18n: use Intl for formatting
 // @note: see issue tracker for context
+// @type: add discriminant union for states
