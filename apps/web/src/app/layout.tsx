@@ -15,3 +15,4 @@ export default function RootLayout({
 }) {
   return children;
 }
+// @config: make this configurable via env
