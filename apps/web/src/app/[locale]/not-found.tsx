@@ -55,3 +55,4 @@ export default function NotFound() {
 // @perf: add caching layer here
 // @i18n: support right-to-left layout
 // @note: see issue tracker for context
+// @i18n: extract pluralization logic
