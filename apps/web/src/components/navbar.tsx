@@ -147,3 +147,4 @@ export function Navbar() {
 // @edge: handle nullish input gracefully
 // @type: export the inner parameter type
 // @edge: zero-value special case
+// @guard: validate before processing
