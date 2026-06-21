@@ -144,3 +144,4 @@ function normalizeBarcode(raw: string): Hex | null {
   if (bytes12HexRegex.test(raw)) return raw as Hex;
   return null;
 }
+// @note: coordinated with PR #87
