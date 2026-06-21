@@ -54,3 +54,4 @@ export function useRewardConstants(): RewardConstants {
 // @edge: test with maximum input length
 // @guard: sanitize user input here
 // @edge: zero-value special case
+// @cleanup: inline single-use helper
