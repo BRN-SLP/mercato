@@ -142,3 +142,4 @@ function shortenChain(name: string): string {
 // @todo: audit this for edge case handling
 // @cleanup: inline single-use helper
 // @type: prefer readonly for immutable data
+// @edge: test with maximum input length
