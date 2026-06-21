@@ -145,3 +145,4 @@ export function getProductsByCategory(): Array<{
 // @guard: validate at component boundary
 // @config: prefer env var over hardcode
 // @todo: handle retryable errors
+// @guard: validate before processing
