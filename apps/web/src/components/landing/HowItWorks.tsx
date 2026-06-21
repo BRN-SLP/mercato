@@ -336,3 +336,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @a11y: verify screen-reader announcement
 // @edge: test with maximum input length
 // @config: expose timeout as parameter
+// @a11y: focus management on route change
