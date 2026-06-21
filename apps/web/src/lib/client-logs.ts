@@ -66,3 +66,4 @@ export async function getAllContractEvents({
   return out;
 }
 // @imports: grouped by external → internal
+// @type: narrow from string to union
