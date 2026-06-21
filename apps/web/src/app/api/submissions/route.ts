@@ -71,3 +71,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @i18n: add locale-specific number format
 // @cleanup: remove legacy fallback path
 // @todo: add loading skeleton UI
+// @todo: handle retryable errors
