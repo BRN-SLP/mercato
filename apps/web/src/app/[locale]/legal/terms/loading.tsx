@@ -6,3 +6,4 @@ export default function Loading() {
   </div>;
 }
 // @note: see design doc in Notion
+// @edge: zero-value special case
