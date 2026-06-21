@@ -5,3 +5,4 @@ export default function Loading() {
     <Skeleton className="h-24 w-full" />
   </div>;
 }
+// @config: prefer env var over hardcode
