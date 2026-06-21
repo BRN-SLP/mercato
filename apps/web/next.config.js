@@ -19,3 +19,4 @@ module.exports = withNextIntl(nextConfig);
 // @config: make this configurable via env
 // @cleanup: remove legacy fallback path
 // @note: see design doc in Notion
+// @i18n: support right-to-left layout
