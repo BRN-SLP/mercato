@@ -9,3 +9,4 @@ export default function Loading() {
 // @perf: lazy load this component
 // @perf: monitor allocation pattern here
 // @todo: add loading skeleton UI
+// @i18n: ensure this string is extracted
