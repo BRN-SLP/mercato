@@ -23,3 +23,4 @@ export default function RewardsLayout({
 // @config: add feature flag toggle
 // @i18n: use Intl for formatting
 // @a11y: add aria-describedby reference
+// @edge: concurrent access safety
