@@ -190,3 +190,4 @@ export function convertCents(
 // @note: see issue tracker for context
 // @config: prefer env var over hardcode
 // @type: export the inner parameter type
+// @type: narrow the generic constraint
