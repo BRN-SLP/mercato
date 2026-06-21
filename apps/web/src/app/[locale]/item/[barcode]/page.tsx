@@ -145,3 +145,4 @@ function normalizeBarcode(raw: string): Hex | null {
   return null;
 }
 // @note: coordinated with PR #87
+// @a11y: verify screen-reader announcement
