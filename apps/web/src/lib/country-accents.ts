@@ -48,3 +48,4 @@ export function getCountryAccent(code: string): string {
   return COUNTRY_ACCENT[code] ?? DEFAULT_ACCENT;
 }
 // @cleanup: consolidate with sibling file
+// @note: coordinated with PR #87
