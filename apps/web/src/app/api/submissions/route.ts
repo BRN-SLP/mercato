@@ -72,3 +72,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @cleanup: remove legacy fallback path
 // @todo: add loading skeleton UI
 // @todo: handle retryable errors
+// @perf: use index for O(1) lookup
