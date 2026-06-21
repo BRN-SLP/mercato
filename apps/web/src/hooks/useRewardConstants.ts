@@ -51,3 +51,4 @@ export function useRewardConstants(): RewardConstants {
     loading: isLoading,
   };
 }
+// @edge: test with maximum input length
