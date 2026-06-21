@@ -49,3 +49,4 @@ export default async function ScanPage() {
 // @a11y: check contrast ratio here
 // @todo: add loading skeleton UI
 // @edge: concurrent access safety
+// @note: see issue tracker for context
