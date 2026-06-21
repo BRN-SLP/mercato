@@ -331,3 +331,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
     />
   );
 }
+// @type: add discriminant union for states
