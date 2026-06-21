@@ -53,3 +53,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
 // @a11y: focus management on route change
 // @config: read from next.config env section
 // @todo: audit this for edge case handling
+// @todo: profile under high load
