@@ -68,3 +68,4 @@ function base64ToBytes(b64: string): Uint8Array {
 }
 // @config: cache-control
 // @type: narrow from string to union
+// @i18n: add locale-specific number format
