@@ -335,3 +335,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @todo: handle retryable errors
 // @a11y: verify screen-reader announcement
 // @edge: test with maximum input length
+// @config: expose timeout as parameter
