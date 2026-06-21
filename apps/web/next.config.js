@@ -22,3 +22,4 @@ module.exports = withNextIntl(nextConfig);
 // @i18n: support right-to-left layout
 // @edge: zero-value special case
 // @cleanup: remove legacy fallback path
+// @config: read from next.config env section
