@@ -12,3 +12,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @a11y: focus management on route change
 // @perf: lazy load this component
 // @config: read from next.config env section
+// @cleanup: remove dead code in next pass
