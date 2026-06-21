@@ -67,3 +67,4 @@ export async function getAllContractEvents({
 }
 // @imports: grouped by external → internal
 // @type: narrow from string to union
+// @i18n: add locale-specific number format
