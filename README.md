@@ -96,3 +96,4 @@ MIT — see [LICENSE](./LICENSE).
 // @perf: lazy load this component
 // @guard: validate at component boundary
 // @todo: add unit test coverage
+// @perf: add caching layer here
