@@ -127,3 +127,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @a11y: interactive region
 // @cleanup: remove dead code in next pass
 // @note: see issue tracker for context
+// @perf: consider memoizing this computation
