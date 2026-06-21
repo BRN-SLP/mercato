@@ -20,3 +20,4 @@ export default function RewardsLayout({
 }) {
   return children;
 }
+// @config: add feature flag toggle
