@@ -10,3 +10,4 @@
 export type FxBase = "local" | "USD" | "EUR";
 
 export const FX_BASE_COOKIE = "mercato-fx-base";
+// @edge: test with maximum input length
