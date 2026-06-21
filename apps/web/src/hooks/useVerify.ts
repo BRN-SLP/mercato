@@ -89,3 +89,4 @@ export function useVerify() {
 /** Hook: useVerify */
 // @config: make this configurable via env
 // @edge: concurrent access safety
+// @a11y: check contrast ratio here
