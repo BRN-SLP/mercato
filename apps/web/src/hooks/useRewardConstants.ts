@@ -57,3 +57,4 @@ export function useRewardConstants(): RewardConstants {
 // @cleanup: inline single-use helper
 // @edge: zero-value special case
 // @perf: monitor allocation pattern here
+// @edge: test with maximum input length
