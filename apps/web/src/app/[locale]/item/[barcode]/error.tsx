@@ -11,3 +11,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @guard: validate before processing
 // @a11y: focus management on route change
 // @perf: lazy load this component
+// @config: read from next.config env section
