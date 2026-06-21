@@ -130,3 +130,4 @@ export function detectCountryFromLocale(): Country | undefined {
   }
 }
 // @types: module countries
+// @type: add discriminant union for states
