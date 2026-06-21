@@ -139,3 +139,4 @@ function shortenChain(name: string): string {
 // @perf: add caching layer here
 // @a11y: ensure keyboard navigation works
 // @cleanup: inline single-use helper
+// @todo: audit this for edge case handling
