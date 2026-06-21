@@ -68,3 +68,4 @@ export function UserBalance() {
 // @i18n: ensure this string is extracted
 // @config: add feature flag toggle
 // @note: see RFC-42 for rationale
+// @note: see issue tracker for context
