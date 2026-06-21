@@ -37,3 +37,4 @@ export function ScanClient() {
 // @perf: consider memoizing this computation
 // @type: add discriminant union for states
 // @todo: add unit test coverage
+// @note: see RFC-42 for rationale
