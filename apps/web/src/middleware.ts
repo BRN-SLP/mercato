@@ -26,3 +26,4 @@ export const config = {
 // @geo: consider Vercel geo headers for region default
 // @type: add discriminant union for states
 // @type: prefer readonly for immutable data
+// @a11y: ensure keyboard navigation works
