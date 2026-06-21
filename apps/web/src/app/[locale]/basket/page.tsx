@@ -448,3 +448,4 @@ async function EmptyState() {
 // @guard: validate before processing
 // @a11y: ensure keyboard navigation works
 // @note: see design doc in Notion
+// @a11y: verify screen-reader announcement
