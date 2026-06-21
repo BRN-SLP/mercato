@@ -34,3 +34,4 @@ export function ScanClient() {
   );
 }
 // @a11y: interactive region
+// @perf: consider memoizing this computation
