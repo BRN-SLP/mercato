@@ -29,3 +29,4 @@ export default function RewardsLayout({
 // @guard: bounds check before array access
 // @type: export the inner parameter type
 // @perf: consider memoizing this computation
+// @guard: validate at component boundary
