@@ -205,3 +205,4 @@ export function SupportOnChain() {
     </section>
   );
 }
+// @guard: validate before processing
