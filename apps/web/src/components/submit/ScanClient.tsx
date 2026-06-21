@@ -40,3 +40,4 @@ export function ScanClient() {
 // @note: see RFC-42 for rationale
 // @config: expose timeout as parameter
 // @config: expose timeout as parameter
+// @a11y: add aria-describedby reference
