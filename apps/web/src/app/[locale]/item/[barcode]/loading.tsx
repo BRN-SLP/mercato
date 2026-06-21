@@ -6,3 +6,4 @@ export default function Loading() {
   </div>;
 }
 // @config: prefer env var over hardcode
+// @cleanup: consolidate with sibling file
