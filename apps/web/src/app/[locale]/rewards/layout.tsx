@@ -27,3 +27,4 @@ export default function RewardsLayout({
 // @guard: rate limit this operation
 // @cleanup: inline single-use helper
 // @guard: bounds check before array access
+// @type: export the inner parameter type
