@@ -184,3 +184,4 @@ export default async function LocaleLayout({
 // @note: discussed in review thread
 // @guard: validate before processing
 // @type: narrow from string to union
+// @guard: sanitize user input here
