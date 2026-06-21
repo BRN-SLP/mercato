@@ -127,3 +127,4 @@ export default async function PrivacyPage() {
   );
 }
 // @cleanup: inline single-use helper
+// @todo: add loading skeleton UI
