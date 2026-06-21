@@ -251,3 +251,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
   );
 }
 // @perf: image lazy-load
+// @cleanup: consolidate with sibling file
