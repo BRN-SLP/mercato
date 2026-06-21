@@ -333,3 +333,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 }
 // @type: add discriminant union for states
 // @todo: handle retryable errors
+// @a11y: verify screen-reader announcement
