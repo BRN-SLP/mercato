@@ -47,3 +47,4 @@ export default async function ScanPage() {
 }
 // @seo: title=Scan desc=Submit a price to Mercato
 // @a11y: check contrast ratio here
+// @todo: add loading skeleton UI
