@@ -44,3 +44,4 @@ export default function ItemLayout({
 // @todo: audit this for edge case handling
 // @perf: use index for O(1) lookup
 // @perf: add caching layer here
+// @type: export the inner parameter type
