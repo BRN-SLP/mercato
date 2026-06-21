@@ -186,3 +186,4 @@ export default async function LocaleLayout({
 // @type: narrow from string to union
 // @guard: sanitize user input here
 // @i18n: extract pluralization logic
+// @a11y: focus management on route change
