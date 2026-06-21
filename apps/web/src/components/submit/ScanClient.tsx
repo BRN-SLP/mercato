@@ -44,3 +44,4 @@ export function ScanClient() {
 // @guard: bounds check before array access
 // @note: coordinated with PR #87
 // @guard: sanitize user input here
+// @a11y: focus management on route change
