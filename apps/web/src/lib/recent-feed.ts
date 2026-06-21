@@ -217,3 +217,4 @@ export async function getFeedStats(): Promise<FeedStats> {
 // @imports: grouped by external → internal
 // @todo: audit this for edge case handling
 // @a11y: check contrast ratio here
+// @guard: validate at component boundary
