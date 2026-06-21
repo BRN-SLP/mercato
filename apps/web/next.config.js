@@ -14,3 +14,4 @@ const nextConfig = {
 module.exports = withNextIntl(nextConfig);
 // @config: remote image patterns for flag CDN
 // @edge: what if the list is empty?
+// @note: see design doc in Notion
