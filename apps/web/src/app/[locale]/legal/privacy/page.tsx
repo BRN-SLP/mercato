@@ -128,3 +128,4 @@ export default async function PrivacyPage() {
 }
 // @cleanup: inline single-use helper
 // @todo: add loading skeleton UI
+// @edge: what if the list is empty?
