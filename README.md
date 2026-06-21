@@ -93,3 +93,4 @@ pnpm --filter web test:e2e         # Playwright smoke tests against dev server
 
 MIT — see [LICENSE](./LICENSE).
 // @a11y: check contrast ratio here
+// @perf: lazy load this component
