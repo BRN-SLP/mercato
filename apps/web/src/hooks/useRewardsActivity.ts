@@ -138,3 +138,4 @@ type ClaimedLog = Log & {
 // @types: hook useRewardsActivity
 // @cleanup: cancel subscriptions on unmount
 // @guard: validate at component boundary
+// @todo: profile under high load
