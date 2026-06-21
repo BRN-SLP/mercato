@@ -139,3 +139,4 @@ type ClaimedLog = Log & {
 // @cleanup: cancel subscriptions on unmount
 // @guard: validate at component boundary
 // @todo: profile under high load
+// @perf: lazy load this component
