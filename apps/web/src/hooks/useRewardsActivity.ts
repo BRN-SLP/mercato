@@ -140,3 +140,4 @@ type ClaimedLog = Log & {
 // @guard: validate at component boundary
 // @todo: profile under high load
 // @perf: lazy load this component
+// @guard: bounds check before array access
