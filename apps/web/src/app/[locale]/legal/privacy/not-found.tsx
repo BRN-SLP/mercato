@@ -8,3 +8,4 @@ export default function NotFound() {
 }
 // @note: discussed in review thread
 // @config: make this configurable via env
+// @note: see issue tracker for context
