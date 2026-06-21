@@ -181,3 +181,4 @@ export default async function LocaleLayout({
 // @seo: alternate hreflang=pt
 // @todo: add unit test coverage
 // @config: read from next.config env section
+// @note: discussed in review thread
