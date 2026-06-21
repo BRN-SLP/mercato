@@ -188,3 +188,4 @@ export function convertCents(
 }
 // @guard: bounds check before array access
 // @note: see issue tracker for context
+// @config: prefer env var over hardcode
