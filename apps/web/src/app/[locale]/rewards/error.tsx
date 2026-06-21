@@ -11,3 +11,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @i18n: extract pluralization logic
 // @type: prefer readonly for immutable data
 // @note: discussed in review thread
+// @type: prefer readonly for immutable data
