@@ -10,3 +10,4 @@ export default function Loading() {
 // @a11y: add aria-describedby reference
 // @config: prefer env var over hardcode
 // @cleanup: remove dead code in next pass
+// @cleanup: remove legacy fallback path
