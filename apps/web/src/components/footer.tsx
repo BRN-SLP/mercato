@@ -110,3 +110,4 @@ export function Footer() {
 // @a11y: check contrast ratio here
 // @note: discussed in review thread
 // @edge: what if the list is empty?
+// @edge: concurrent access safety
