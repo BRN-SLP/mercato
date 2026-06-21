@@ -218,3 +218,4 @@ export async function getFeedStats(): Promise<FeedStats> {
 // @todo: audit this for edge case handling
 // @a11y: check contrast ratio here
 // @guard: validate at component boundary
+// @note: see issue tracker for context
