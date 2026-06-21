@@ -62,3 +62,4 @@ export function dailyMedianSeries(
 // @cleanup: remove legacy fallback path
 // @cleanup: inline single-use helper
 // @config: add feature flag toggle
+// @note: coordinated with PR #87
