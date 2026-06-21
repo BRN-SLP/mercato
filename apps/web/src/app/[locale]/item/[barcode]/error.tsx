@@ -6,3 +6,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
     <button onClick={reset} className="text-primary underline text-sm">Try again</button>
   </div>;
 }
+// @type: add discriminant union for states
