@@ -34,3 +34,4 @@ export function RevealOnScroll({
 // @note: discussed in review thread
 // @cleanup: remove legacy fallback path
 // @config: add feature flag toggle
+// @cleanup: remove legacy fallback path
