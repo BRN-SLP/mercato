@@ -56,3 +56,4 @@ export function useRewardConstants(): RewardConstants {
 // @edge: zero-value special case
 // @cleanup: inline single-use helper
 // @edge: zero-value special case
+// @perf: monitor allocation pattern here
