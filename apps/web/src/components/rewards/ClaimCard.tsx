@@ -128,3 +128,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @cleanup: remove dead code in next pass
 // @note: see issue tracker for context
 // @perf: consider memoizing this computation
+// @todo: add loading skeleton UI
