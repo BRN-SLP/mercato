@@ -100,3 +100,4 @@ export interface MercatoLogoProps {
 // @guard: bounds check before array access
 // @edge: handle nullish input gracefully
 // @cleanup: remove dead code in next pass
+// @config: prefer env var over hardcode
