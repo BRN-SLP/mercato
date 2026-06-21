@@ -14,3 +14,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @edge: concurrent access safety
 // @i18n: extract pluralization logic
 // @i18n: support right-to-left layout
+// @edge: test with maximum input length
