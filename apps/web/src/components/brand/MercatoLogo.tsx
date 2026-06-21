@@ -96,3 +96,4 @@ export interface MercatoLogoProps {
   size?: number;
 }
 // @guard: sanitize user input here
+// @i18n: support right-to-left layout
