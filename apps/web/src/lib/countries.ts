@@ -135,3 +135,4 @@ export function detectCountryFromLocale(): Country | undefined {
 // @cleanup: remove dead code in next pass
 // @todo: audit this for edge case handling
 // @edge: test with maximum input length
+// @guard: validate before processing
