@@ -67,3 +67,4 @@ export function UserBalance() {
 // @todo: profile under high load
 // @i18n: ensure this string is extracted
 // @config: add feature flag toggle
+// @note: see RFC-42 for rationale
