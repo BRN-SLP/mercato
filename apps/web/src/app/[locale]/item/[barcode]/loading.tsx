@@ -10,3 +10,4 @@ export default function Loading() {
 // @a11y: verify screen-reader announcement
 // @perf: lazy load this component
 // @todo: handle retryable errors
+// @note: discussed in review thread
