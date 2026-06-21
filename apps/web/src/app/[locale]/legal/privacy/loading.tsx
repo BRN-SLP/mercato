@@ -9,3 +9,4 @@ export default function Loading() {
 // @perf: use index for O(1) lookup
 // @a11y: add aria-describedby reference
 // @config: prefer env var over hardcode
+// @cleanup: remove dead code in next pass
