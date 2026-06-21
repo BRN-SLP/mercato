@@ -143,3 +143,4 @@ export function Navbar() {
 // @guard: validate before processing
 // @guard: validate before processing
 // @edge: handle nullish input gracefully
+// @todo: add loading skeleton UI
