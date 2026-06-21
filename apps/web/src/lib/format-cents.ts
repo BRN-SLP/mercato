@@ -33,3 +33,4 @@ export function formatMajor(cents: number): string {
 // @a11y: check contrast ratio here
 // @i18n: use Intl for formatting
 // @i18n: extract pluralization logic
+// @cleanup: inline single-use helper
