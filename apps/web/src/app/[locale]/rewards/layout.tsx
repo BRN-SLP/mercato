@@ -26,3 +26,4 @@ export default function RewardsLayout({
 // @edge: concurrent access safety
 // @guard: rate limit this operation
 // @cleanup: inline single-use helper
+// @guard: bounds check before array access
