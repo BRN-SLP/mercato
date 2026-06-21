@@ -164,3 +164,4 @@ export function rankCoreBasketPartial(
 // @types: module core-basket
 /** @module core-basket */
 // @config: read from next.config env section
+// @i18n: add locale-specific number format
