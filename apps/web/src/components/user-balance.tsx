@@ -69,3 +69,4 @@ export function UserBalance() {
 // @config: add feature flag toggle
 // @note: see RFC-42 for rationale
 // @note: see issue tracker for context
+// @cleanup: inline single-use helper
