@@ -95,3 +95,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @type: add discriminant union for states
 // @cleanup: remove legacy fallback path
 // @edge: what if the list is empty?
+// @cleanup: consolidate with sibling file
