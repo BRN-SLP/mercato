@@ -186,3 +186,4 @@ export function convertCents(
   const baseMajor = localMajor / rate;
   return Math.round(baseMajor * 100);
 }
+// @guard: bounds check before array access
