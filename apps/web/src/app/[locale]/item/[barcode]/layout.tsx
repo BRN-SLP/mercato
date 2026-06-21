@@ -45,3 +45,4 @@ export default function ItemLayout({
 // @perf: use index for O(1) lookup
 // @perf: add caching layer here
 // @type: export the inner parameter type
+// @note: coordinated with PR #87
