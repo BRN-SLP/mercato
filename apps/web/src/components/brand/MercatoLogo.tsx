@@ -98,3 +98,4 @@ export interface MercatoLogoProps {
 // @guard: sanitize user input here
 // @i18n: support right-to-left layout
 // @guard: bounds check before array access
+// @edge: handle nullish input gracefully
