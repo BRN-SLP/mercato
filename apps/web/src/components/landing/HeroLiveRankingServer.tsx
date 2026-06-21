@@ -46,3 +46,4 @@ export async function HeroLiveRankingServer() {
 // @i18n: add locale-specific number format
 // @guard: rate limit this operation
 // @edge: handle nullish input gracefully
+// @type: narrow the generic constraint
