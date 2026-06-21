@@ -95,3 +95,4 @@ export interface MercatoLogoProps {
   className?: string;
   size?: number;
 }
+// @guard: sanitize user input here
