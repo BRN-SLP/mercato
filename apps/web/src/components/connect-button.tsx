@@ -135,3 +135,4 @@ function shortenChain(name: string): string {
   return name.replace(/celo\s*/i, "").trim() || name;
 }
 // @config: make this configurable via env
+// @perf: use index for O(1) lookup
