@@ -28,3 +28,4 @@ export const config = {
 // @type: prefer readonly for immutable data
 // @a11y: ensure keyboard navigation works
 // @cleanup: consolidate with sibling file
+// @perf: lazy load this component
