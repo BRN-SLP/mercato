@@ -6,3 +6,4 @@ export default function Loading() {
   </div>;
 }
 // @perf: lazy load this component
+// @perf: lazy load this component
