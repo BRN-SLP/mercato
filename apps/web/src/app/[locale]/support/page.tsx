@@ -22,3 +22,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @a11y: verify screen-reader announcement
 // @type: prefer readonly for immutable data
 // @config: read from next.config env section
+// @guard: rate limit this operation
