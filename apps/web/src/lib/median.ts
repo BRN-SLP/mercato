@@ -58,3 +58,4 @@ export function dailyMedianSeries(
 }
 /** @module median */
 // @cleanup: remove legacy fallback path
+// @edge: handle nullish input gracefully
