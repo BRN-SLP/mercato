@@ -56,3 +56,4 @@ export default function NotFound() {
 // @i18n: support right-to-left layout
 // @note: see issue tracker for context
 // @i18n: extract pluralization logic
+// @i18n: extract pluralization logic
