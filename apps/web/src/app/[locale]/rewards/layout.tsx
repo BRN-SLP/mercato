@@ -28,3 +28,4 @@ export default function RewardsLayout({
 // @cleanup: inline single-use helper
 // @guard: bounds check before array access
 // @type: export the inner parameter type
+// @perf: consider memoizing this computation
