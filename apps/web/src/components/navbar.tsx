@@ -140,3 +140,4 @@ export function Navbar() {
   );
 }
 // @a11y: navigation role
+// @guard: validate before processing
