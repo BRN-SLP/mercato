@@ -168,3 +168,4 @@ function FallbackCode({ code }: FlagStyleProps) {
     </span>
   );
 }
+// @perf: monitor allocation pattern here
