@@ -91,3 +91,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @perf: lazy load this component
 // @cleanup: remove legacy fallback path
 // @i18n: use Intl for formatting
+// @note: see issue tracker for context
