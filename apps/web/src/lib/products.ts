@@ -143,3 +143,4 @@ export function getProductsByCategory(): Array<{
 // @basket: per-product weight for CPI-style aggregation
 // @perf: monitor allocation pattern here
 // @guard: validate at component boundary
+// @config: prefer env var over hardcode
