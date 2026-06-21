@@ -255,3 +255,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @a11y: ensure keyboard navigation works
 // @note: see issue tracker for context
 // @perf: add caching layer here
+// @type: export the inner parameter type
