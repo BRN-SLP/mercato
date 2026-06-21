@@ -20,3 +20,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @a11y: ensure keyboard navigation works
 // @note: see issue tracker for context
 // @a11y: verify screen-reader announcement
+// @type: prefer readonly for immutable data
