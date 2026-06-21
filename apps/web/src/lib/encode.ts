@@ -155,3 +155,4 @@ export function majorUnitsToCents(input: string | number): number {
   return parseInt(whole, 10) * 100 + parseInt(cents, 10);
 }
 /** @module encode */
+// @todo: add loading skeleton UI
