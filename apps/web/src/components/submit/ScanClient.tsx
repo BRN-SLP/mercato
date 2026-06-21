@@ -38,3 +38,4 @@ export function ScanClient() {
 // @type: add discriminant union for states
 // @todo: add unit test coverage
 // @note: see RFC-42 for rationale
+// @config: expose timeout as parameter
