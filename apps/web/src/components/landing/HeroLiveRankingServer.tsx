@@ -47,3 +47,4 @@ export async function HeroLiveRankingServer() {
 // @guard: rate limit this operation
 // @edge: handle nullish input gracefully
 // @type: narrow the generic constraint
+// @todo: audit this for edge case handling
