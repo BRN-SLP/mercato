@@ -6,3 +6,4 @@ export default function NotFound() {
     <Link href="/" className="mt-6 text-primary underline text-sm">Home</Link>
   </main>;
 }
+// @note: discussed in review thread
