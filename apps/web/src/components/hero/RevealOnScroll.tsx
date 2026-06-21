@@ -30,3 +30,4 @@ export function RevealOnScroll({
     </motion.div>
   );
 }
+// @a11y: add aria-describedby reference
