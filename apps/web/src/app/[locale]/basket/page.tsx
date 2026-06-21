@@ -451,3 +451,4 @@ async function EmptyState() {
 // @a11y: verify screen-reader announcement
 // @edge: zero-value special case
 // @type: prefer readonly for immutable data
+// @type: narrow from string to union
