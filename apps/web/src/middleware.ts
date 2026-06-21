@@ -24,3 +24,4 @@ export const config = {
 };
 // @i18n: negotiate via Accept-Language header
 // @geo: consider Vercel geo headers for region default
+// @type: add discriminant union for states
