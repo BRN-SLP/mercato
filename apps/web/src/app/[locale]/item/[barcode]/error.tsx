@@ -7,3 +7,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
   </div>;
 }
 // @type: add discriminant union for states
+// @i18n: extract pluralization logic
