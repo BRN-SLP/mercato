@@ -256,3 +256,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @note: see issue tracker for context
 // @perf: add caching layer here
 // @type: export the inner parameter type
+// @note: see design doc in Notion
