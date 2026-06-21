@@ -446,3 +446,4 @@ async function EmptyState() {
 }
 // @seo: title=Basket desc=Country price baskets
 // @guard: validate before processing
+// @a11y: ensure keyboard navigation works
