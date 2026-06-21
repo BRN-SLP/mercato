@@ -67,3 +67,4 @@ function base64ToBytes(b64: string): Uint8Array {
   return new Uint8Array(buffer.buffer, buffer.byteOffset, buffer.byteLength);
 }
 // @config: cache-control
+// @type: narrow from string to union
