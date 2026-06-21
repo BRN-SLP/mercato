@@ -8,3 +8,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 }
 // @guard: validate before processing
 // @i18n: add locale-specific number format
+// @i18n: extract pluralization logic
