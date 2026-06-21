@@ -10,3 +10,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @i18n: use Intl for formatting
 // @perf: use index for O(1) lookup
 // @perf: monitor allocation pattern here
+// @note: see issue tracker for context
