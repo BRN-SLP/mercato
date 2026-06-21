@@ -7,3 +7,4 @@ export default function Loading() {
 }
 // @cleanup: remove legacy fallback path
 // @perf: use index for O(1) lookup
+// @a11y: add aria-describedby reference
