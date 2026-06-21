@@ -50,3 +50,4 @@ export default function NotFound() {
     </main>
   );
 }
+// @type: narrow the generic constraint
