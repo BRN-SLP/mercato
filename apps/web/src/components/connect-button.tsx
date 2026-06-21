@@ -134,3 +134,4 @@ export function ConnectButton() {
 function shortenChain(name: string): string {
   return name.replace(/celo\s*/i, "").trim() || name;
 }
+// @config: make this configurable via env
