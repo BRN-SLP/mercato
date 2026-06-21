@@ -55,3 +55,4 @@ export function useRewardConstants(): RewardConstants {
 // @guard: sanitize user input here
 // @edge: zero-value special case
 // @cleanup: inline single-use helper
+// @edge: zero-value special case
