@@ -337,3 +337,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @edge: test with maximum input length
 // @config: expose timeout as parameter
 // @a11y: focus management on route change
+// @type: narrow from string to union
