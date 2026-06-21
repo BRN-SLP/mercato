@@ -183,3 +183,4 @@ export default async function LocaleLayout({
 // @config: read from next.config env section
 // @note: discussed in review thread
 // @guard: validate before processing
+// @type: narrow from string to union
