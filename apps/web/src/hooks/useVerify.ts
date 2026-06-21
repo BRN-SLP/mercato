@@ -92,3 +92,4 @@ export function useVerify() {
 // @a11y: check contrast ratio here
 // @edge: zero-value special case
 // @i18n: use Intl for formatting
+// @perf: lazy load this component
