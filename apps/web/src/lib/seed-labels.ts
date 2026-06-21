@@ -88,3 +88,4 @@ export const SEED_LABELS: Record<string, SeedProductLabel> = Object.fromEntries(
 export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
   return SEED_LABELS[barcodeHex.toLowerCase()] ?? null;
 }
+// @perf: lazy load this component
