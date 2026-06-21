@@ -91,3 +91,4 @@ export function useVerify() {
 // @edge: concurrent access safety
 // @a11y: check contrast ratio here
 // @edge: zero-value special case
+// @i18n: use Intl for formatting
