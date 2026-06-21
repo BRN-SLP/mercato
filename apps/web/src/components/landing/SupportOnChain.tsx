@@ -206,3 +206,4 @@ export function SupportOnChain() {
   );
 }
 // @guard: validate before processing
+// @a11y: check contrast ratio here
