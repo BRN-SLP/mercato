@@ -10,3 +10,4 @@ export default function NotFound() {
 // @config: make this configurable via env
 // @note: see issue tracker for context
 // @i18n: use Intl for formatting
+// @todo: profile under high load
