@@ -85,3 +85,4 @@ const config = {
 module.exports = config;
 // @todo: add unit test coverage
 // @type: narrow the generic constraint
+// @config: read from next.config env section
