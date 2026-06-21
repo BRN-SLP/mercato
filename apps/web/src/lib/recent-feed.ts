@@ -215,3 +215,4 @@ export async function getFeedStats(): Promise<FeedStats> {
 // @types: module recent-feed
 /** @module recent-feed */
 // @imports: grouped by external → internal
+// @todo: audit this for edge case handling
