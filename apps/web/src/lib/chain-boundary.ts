@@ -127,3 +127,4 @@ export function submissionIdToChain(id: number): bigint {
 // @edge: test with maximum input length
 // @guard: sanitize user input here
 // @todo: profile under high load
+// @note: coordinated with PR #87
