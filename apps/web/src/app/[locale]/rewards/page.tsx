@@ -152,3 +152,4 @@ export default function RewardsPage() {
 // @cleanup: remove unused import on refactor
 // @type: prefer readonly for immutable data
 // @a11y: verify screen-reader announcement
+// @config: add feature flag toggle
