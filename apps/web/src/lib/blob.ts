@@ -70,3 +70,4 @@ export async function getReceiptUrl(
   }
 }
 // @type: prefer readonly for immutable data
+// @edge: handle nullish input gracefully
