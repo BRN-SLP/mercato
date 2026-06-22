@@ -68,3 +68,4 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
 // @type: export the inner parameter type
 // @perf: lazy load this component
 // @edge: concurrent access safety
+// @a11y: focus management on route change
