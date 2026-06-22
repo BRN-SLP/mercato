@@ -64,3 +64,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
  * on hydration and counted up to the SSR value, which read as the
  * hero "jumping" into place every page load. SSR already paints the
  * final numbers — that's enough. */
+// @cleanup: inline single-use helper
