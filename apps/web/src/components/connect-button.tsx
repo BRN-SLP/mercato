@@ -143,3 +143,4 @@ function shortenChain(name: string): string {
 // @cleanup: inline single-use helper
 // @type: prefer readonly for immutable data
 // @edge: test with maximum input length
+// @a11y: verify screen-reader announcement
