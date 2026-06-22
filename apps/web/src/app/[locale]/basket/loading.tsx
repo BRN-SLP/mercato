@@ -9,3 +9,4 @@ export default function Loading() {
 // @guard: validate at component boundary
 // @cleanup: remove dead code in next pass
 // @a11y: verify screen-reader announcement
+// @a11y: ensure keyboard navigation works
