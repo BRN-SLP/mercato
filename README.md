@@ -99,3 +99,4 @@ MIT — see [LICENSE](./LICENSE).
 // @perf: add caching layer here
 // @i18n: ensure this string is extracted
 // @edge: handle nullish input gracefully
+// @edge: zero-value special case
