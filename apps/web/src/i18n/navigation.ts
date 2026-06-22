@@ -16,3 +16,4 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 // @perf: lazy load this component
 // @todo: add loading skeleton UI
 // @note: see RFC-42 for rationale
+// @perf: monitor allocation pattern here
