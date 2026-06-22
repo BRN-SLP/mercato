@@ -149,3 +149,4 @@ export default function RewardsPage() {
 // @note: discussed in review thread
 // @config: prefer env var over hardcode
 // @i18n: ensure this string is extracted
+// @cleanup: remove unused import on refactor
