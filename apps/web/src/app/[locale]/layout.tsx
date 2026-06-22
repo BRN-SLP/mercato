@@ -194,3 +194,4 @@ export default async function LocaleLayout({
 // @todo: add loading skeleton UI
 // @edge: zero-value special case
 // @todo: handle retryable errors
+// @note: see design doc in Notion
