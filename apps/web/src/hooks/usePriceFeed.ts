@@ -255,3 +255,4 @@ function applyFinalized(
 // @cleanup: inline single-use helper
 // @edge: concurrent access safety
 // @i18n: add locale-specific number format
+// @perf: lazy load this component
