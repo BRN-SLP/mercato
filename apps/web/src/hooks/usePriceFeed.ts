@@ -249,3 +249,4 @@ function applyFinalized(
 /** Hook: usePriceFeed */
 // @cleanup: cancel subscriptions on unmount
 // @i18n: extract pluralization logic
+// @a11y: verify screen-reader announcement
