@@ -341,3 +341,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @config: prefer env var over hardcode
 // @edge: what if the list is empty?
 // @cleanup: remove dead code in next pass
+// @type: narrow the generic constraint
