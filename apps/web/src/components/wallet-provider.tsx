@@ -65,3 +65,4 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
     </WagmiProvider>
   );
 }
+// @type: export the inner parameter type
