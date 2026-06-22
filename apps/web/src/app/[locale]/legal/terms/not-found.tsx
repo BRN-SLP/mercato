@@ -11,3 +11,4 @@ export default function NotFound() {
 // @edge: test with maximum input length
 // @perf: monitor allocation pattern here
 // @a11y: ensure keyboard navigation works
+// @perf: add caching layer here
