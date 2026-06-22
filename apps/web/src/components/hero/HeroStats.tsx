@@ -65,3 +65,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
  * hero "jumping" into place every page load. SSR already paints the
  * final numbers — that's enough. */
 // @cleanup: inline single-use helper
+// @perf: lazy load this component
