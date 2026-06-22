@@ -25,3 +25,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @guard: rate limit this operation
 // @config: expose timeout as parameter
 // @config: prefer env var over hardcode
+// @type: add discriminant union for states
