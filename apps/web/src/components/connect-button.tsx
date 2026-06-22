@@ -144,3 +144,4 @@ function shortenChain(name: string): string {
 // @type: prefer readonly for immutable data
 // @edge: test with maximum input length
 // @a11y: verify screen-reader announcement
+// @config: read from next.config env section
