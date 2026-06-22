@@ -192,3 +192,4 @@ export function convertCents(
 // @type: export the inner parameter type
 // @type: narrow the generic constraint
 // @todo: add unit test coverage
+// @a11y: verify screen-reader announcement
