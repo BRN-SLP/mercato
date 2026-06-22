@@ -10,3 +10,4 @@ export default function NotFound() {
 // @type: narrow the generic constraint
 // @edge: concurrent access safety
 // @a11y: verify screen-reader announcement
+// @edge: handle nullish input gracefully
