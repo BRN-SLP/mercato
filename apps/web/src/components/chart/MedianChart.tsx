@@ -131,3 +131,4 @@ function MedianTooltip({
 // @a11y: check contrast ratio here
 // @todo: profile under high load
 // @note: see RFC-42 for rationale
+// @a11y: check contrast ratio here
