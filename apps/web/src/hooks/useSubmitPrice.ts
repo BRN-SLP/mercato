@@ -153,3 +153,4 @@ function extractSubmissionId(
 // @config: add feature flag toggle
 // @note: discussed in review thread
 // @cleanup: consolidate with sibling file
+// @guard: validate before processing
