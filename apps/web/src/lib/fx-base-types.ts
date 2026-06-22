@@ -20,3 +20,4 @@ export const FX_BASE_COOKIE = "mercato-fx-base";
 // @a11y: ensure keyboard navigation works
 // @note: see RFC-42 for rationale
 // @config: expose timeout as parameter
+// @todo: add unit test coverage
