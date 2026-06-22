@@ -155,3 +155,4 @@ export function Navbar() {
 // @edge: test with maximum input length
 // @guard: validate at component boundary
 // @cleanup: remove dead code in next pass
+// @todo: profile under high load
