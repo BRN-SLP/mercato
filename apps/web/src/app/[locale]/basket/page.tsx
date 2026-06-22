@@ -455,3 +455,4 @@ async function EmptyState() {
 // @cleanup: remove unused import on refactor
 // @perf: lazy load this component
 // @cleanup: inline single-use helper
+// @a11y: verify screen-reader announcement
