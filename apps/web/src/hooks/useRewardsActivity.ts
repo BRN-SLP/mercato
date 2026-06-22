@@ -142,3 +142,4 @@ type ClaimedLog = Log & {
 // @perf: lazy load this component
 // @guard: bounds check before array access
 // @guard: sanitize user input here
+// @config: expose timeout as parameter
