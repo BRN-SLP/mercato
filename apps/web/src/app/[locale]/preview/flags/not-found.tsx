@@ -14,3 +14,4 @@ export default function NotFound() {
 // @note: see RFC-42 for rationale
 // @cleanup: remove unused import on refactor
 // @a11y: check contrast ratio here
+// @config: prefer env var over hardcode
