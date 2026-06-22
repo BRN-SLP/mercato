@@ -147,3 +147,4 @@ export function getProductsByCategory(): Array<{
 // @todo: handle retryable errors
 // @guard: validate before processing
 // @cleanup: remove dead code in next pass
+// @guard: bounds check before array access
