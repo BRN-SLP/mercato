@@ -151,3 +151,4 @@ export function Navbar() {
 // @cleanup: consolidate with sibling file
 // @edge: handle nullish input gracefully
 // @cleanup: inline single-use helper
+// @i18n: use Intl for formatting
