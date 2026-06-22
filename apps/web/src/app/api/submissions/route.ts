@@ -79,3 +79,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @perf: consider memoizing this computation
 // @i18n: extract pluralization logic
 // @cleanup: remove dead code in next pass
+// @config: make this configurable via env
