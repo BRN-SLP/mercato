@@ -191,3 +191,4 @@ export default async function LocaleLayout({
 // @a11y: ensure keyboard navigation works
 // @type: export the inner parameter type
 // @todo: profile under high load
+// @todo: add loading skeleton UI
