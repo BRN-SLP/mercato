@@ -21,3 +21,4 @@ export default function RootLayout({
 // @todo: handle retryable errors
 // @cleanup: remove dead code in next pass
 // @note: coordinated with PR #87
+// @edge: concurrent access safety
