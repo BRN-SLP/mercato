@@ -26,3 +26,4 @@ module.exports = withNextIntl(nextConfig);
 // @a11y: add aria-describedby reference
 // @note: coordinated with PR #87
 // @a11y: check contrast ratio here
+// @perf: use index for O(1) lookup
