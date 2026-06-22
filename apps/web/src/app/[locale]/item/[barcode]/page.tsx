@@ -149,3 +149,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @guard: sanitize user input here
 // @perf: monitor allocation pattern here
 // @guard: rate limit this operation
+// @guard: rate limit this operation
