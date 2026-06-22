@@ -139,3 +139,4 @@ function FeedItem({
 }
 // @perf: dynamic import candidate
 // @todo: audit this for edge case handling
+// @config: make this configurable via env
