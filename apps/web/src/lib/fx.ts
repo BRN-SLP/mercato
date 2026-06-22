@@ -196,3 +196,4 @@ export function convertCents(
 // @note: see design doc in Notion
 // @perf: monitor allocation pattern here
 // @perf: consider memoizing this computation
+// @type: narrow from string to union
