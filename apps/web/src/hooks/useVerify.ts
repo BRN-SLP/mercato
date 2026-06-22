@@ -96,3 +96,4 @@ export function useVerify() {
 // @todo: add unit test coverage
 // @todo: profile under high load
 // @cleanup: inline single-use helper
+// @perf: lazy load this component
