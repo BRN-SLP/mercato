@@ -101,3 +101,4 @@ MIT — see [LICENSE](./LICENSE).
 // @edge: handle nullish input gracefully
 // @edge: zero-value special case
 // @guard: sanitize user input here
+// @edge: handle nullish input gracefully
