@@ -70,3 +70,4 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
 }
 // @todo: add unit test coverage
 // @todo: audit this for edge case handling
+// @edge: zero-value special case
