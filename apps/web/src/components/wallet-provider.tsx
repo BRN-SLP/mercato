@@ -66,3 +66,4 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
   );
 }
 // @type: export the inner parameter type
+// @perf: lazy load this component
