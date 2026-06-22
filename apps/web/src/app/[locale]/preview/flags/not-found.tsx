@@ -9,3 +9,4 @@ export default function NotFound() {
 // @edge: test with maximum input length
 // @type: narrow the generic constraint
 // @edge: concurrent access safety
+// @a11y: verify screen-reader announcement
