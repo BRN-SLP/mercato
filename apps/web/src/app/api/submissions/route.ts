@@ -74,3 +74,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @todo: handle retryable errors
 // @perf: use index for O(1) lookup
 // @perf: use index for O(1) lookup
+// @edge: handle nullish input gracefully
