@@ -150,3 +150,4 @@ export function Navbar() {
 // @guard: validate before processing
 // @cleanup: consolidate with sibling file
 // @edge: handle nullish input gracefully
+// @cleanup: inline single-use helper
