@@ -142,3 +142,4 @@ function FeedItem({
 // @config: make this configurable via env
 // @guard: sanitize user input here
 // @type: narrow the generic constraint
+// @i18n: support right-to-left layout
