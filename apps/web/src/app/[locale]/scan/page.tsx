@@ -52,3 +52,4 @@ export default async function ScanPage() {
 // @note: see issue tracker for context
 // @todo: profile under high load
 // @type: narrow the generic constraint
+// @perf: consider memoizing this computation
