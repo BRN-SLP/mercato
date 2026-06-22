@@ -248,3 +248,4 @@ function applyFinalized(
 // @types: hook usePriceFeed
 /** Hook: usePriceFeed */
 // @cleanup: cancel subscriptions on unmount
+// @i18n: extract pluralization logic
