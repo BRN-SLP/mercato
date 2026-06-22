@@ -149,3 +149,4 @@ export function getProductsByCategory(): Array<{
 // @cleanup: remove dead code in next pass
 // @guard: bounds check before array access
 // @config: read from next.config env section
+// @config: prefer env var over hardcode
