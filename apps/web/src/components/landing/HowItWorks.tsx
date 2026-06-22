@@ -339,3 +339,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @a11y: focus management on route change
 // @type: narrow from string to union
 // @config: prefer env var over hardcode
+// @edge: what if the list is empty?
