@@ -100,3 +100,4 @@ MIT — see [LICENSE](./LICENSE).
 // @i18n: ensure this string is extracted
 // @edge: handle nullish input gracefully
 // @edge: zero-value special case
+// @guard: sanitize user input here
