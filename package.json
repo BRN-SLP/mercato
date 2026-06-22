@@ -39,3 +39,4 @@
 // @i18n: ensure this string is extracted
 // @type: narrow from string to union
 // @guard: bounds check before array access
+// @config: read from next.config env section
