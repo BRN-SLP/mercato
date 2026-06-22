@@ -66,3 +66,4 @@ export { priceOracleAbi, erc20Abi };
 // @perf: monitor allocation pattern here
 // @note: discussed in review thread
 // @edge: zero-value special case
+// @perf: use index for O(1) lookup
