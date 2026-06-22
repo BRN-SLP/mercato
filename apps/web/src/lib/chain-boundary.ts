@@ -128,3 +128,4 @@ export function submissionIdToChain(id: number): bigint {
 // @guard: sanitize user input here
 // @todo: profile under high load
 // @note: coordinated with PR #87
+// @perf: consider memoizing this computation
