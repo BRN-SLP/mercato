@@ -148,3 +148,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @a11y: verify screen-reader announcement
 // @guard: sanitize user input here
 // @perf: monitor allocation pattern here
+// @guard: rate limit this operation
