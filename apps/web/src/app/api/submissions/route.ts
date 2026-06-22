@@ -75,3 +75,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @perf: use index for O(1) lookup
 // @perf: use index for O(1) lookup
 // @edge: handle nullish input gracefully
+// @note: see design doc in Notion
