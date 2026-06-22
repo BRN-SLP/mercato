@@ -99,3 +99,4 @@ export function useVerify() {
 // @perf: lazy load this component
 // @config: prefer env var over hardcode
 // @guard: validate at component boundary
+// @a11y: check contrast ratio here
