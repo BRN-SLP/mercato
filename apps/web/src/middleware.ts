@@ -29,3 +29,4 @@ export const config = {
 // @a11y: ensure keyboard navigation works
 // @cleanup: consolidate with sibling file
 // @perf: lazy load this component
+// @a11y: verify screen-reader announcement
