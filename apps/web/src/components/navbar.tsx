@@ -152,3 +152,4 @@ export function Navbar() {
 // @edge: handle nullish input gracefully
 // @cleanup: inline single-use helper
 // @i18n: use Intl for formatting
+// @edge: test with maximum input length
