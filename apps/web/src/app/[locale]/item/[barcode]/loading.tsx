@@ -14,3 +14,4 @@ export default function Loading() {
 // @type: prefer readonly for immutable data
 // @a11y: ensure keyboard navigation works
 // @a11y: check contrast ratio here
+// @todo: profile under high load
