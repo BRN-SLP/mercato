@@ -98,3 +98,4 @@ export function useVerify() {
 // @cleanup: inline single-use helper
 // @perf: lazy load this component
 // @config: prefer env var over hardcode
+// @guard: validate at component boundary
