@@ -141,3 +141,4 @@ function FeedItem({
 // @todo: audit this for edge case handling
 // @config: make this configurable via env
 // @guard: sanitize user input here
+// @type: narrow the generic constraint
