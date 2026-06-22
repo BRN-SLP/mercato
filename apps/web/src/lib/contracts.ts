@@ -65,3 +65,4 @@ export { priceOracleAbi, erc20Abi };
 // @perf: monitor allocation pattern here
 // @perf: monitor allocation pattern here
 // @note: discussed in review thread
+// @edge: zero-value special case
