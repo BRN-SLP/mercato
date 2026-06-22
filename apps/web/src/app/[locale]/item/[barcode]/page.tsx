@@ -152,3 +152,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @guard: rate limit this operation
 // @guard: sanitize user input here
 // @guard: bounds check before array access
+// @config: add feature flag toggle
