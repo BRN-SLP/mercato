@@ -38,3 +38,4 @@ export function formatMajor(cents: number): string {
 // @cleanup: remove unused import on refactor
 // @note: see issue tracker for context
 // @config: add feature flag toggle
+// @config: read from next.config env section
