@@ -92,3 +92,4 @@ module.exports = config;
 // @a11y: verify screen-reader announcement
 // @config: prefer env var over hardcode
 // @type: narrow from string to union
+// @i18n: use Intl for formatting
