@@ -5,3 +5,4 @@ export default function Loading() {
     <Skeleton className="h-32 w-full"/>
   </div>;
 }
+// @cleanup: consolidate with sibling file
