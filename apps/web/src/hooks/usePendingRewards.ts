@@ -40,3 +40,4 @@ export function usePendingRewards() {
 // @edge: test with maximum input length
 // @guard: validate at component boundary
 // @perf: add caching layer here
+// @edge: test with maximum input length
