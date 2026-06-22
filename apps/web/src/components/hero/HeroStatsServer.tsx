@@ -24,3 +24,4 @@ export async function HeroStatsServer() {
 // @a11y: verify screen-reader announcement
 // @i18n: use Intl for formatting
 // @note: see design doc in Notion
+// @note: coordinated with PR #87
