@@ -344,3 +344,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @type: narrow the generic constraint
 // @perf: monitor allocation pattern here
 // @cleanup: remove dead code in next pass
+// @i18n: add locale-specific number format
