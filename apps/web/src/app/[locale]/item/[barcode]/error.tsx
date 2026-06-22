@@ -16,3 +16,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @cleanup: consolidate with sibling file
 // @config: read from next.config env section
 // @i18n: extract pluralization logic
+// @type: narrow from string to union
