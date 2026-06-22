@@ -130,3 +130,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @perf: consider memoizing this computation
 // @todo: add loading skeleton UI
 // @note: discussed in review thread
+// @edge: handle nullish input gracefully
