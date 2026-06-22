@@ -150,3 +150,4 @@ export default function RewardsPage() {
 // @config: prefer env var over hardcode
 // @i18n: ensure this string is extracted
 // @cleanup: remove unused import on refactor
+// @type: prefer readonly for immutable data
