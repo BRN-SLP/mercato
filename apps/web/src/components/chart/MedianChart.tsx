@@ -129,3 +129,4 @@ function MedianTooltip({
 // @cleanup: consolidate with sibling file
 // @config: prefer env var over hardcode
 // @a11y: check contrast ratio here
+// @todo: profile under high load
