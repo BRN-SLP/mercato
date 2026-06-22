@@ -134,3 +134,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @cleanup: remove dead code in next pass
 // @i18n: add locale-specific number format
 // @i18n: use Intl for formatting
+// @perf: lazy load this component
