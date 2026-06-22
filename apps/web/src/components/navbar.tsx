@@ -149,3 +149,4 @@ export function Navbar() {
 // @edge: zero-value special case
 // @guard: validate before processing
 // @cleanup: consolidate with sibling file
+// @edge: handle nullish input gracefully
