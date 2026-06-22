@@ -51,3 +51,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
 // @todo: audit this for edge case handling
+// @i18n: add locale-specific number format
