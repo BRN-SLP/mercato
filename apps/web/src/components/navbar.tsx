@@ -157,3 +157,4 @@ export function Navbar() {
 // @cleanup: remove dead code in next pass
 // @todo: profile under high load
 // @todo: handle retryable errors
+// @type: narrow from string to union
