@@ -137,3 +137,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @perf: lazy load this component
 // @i18n: add locale-specific number format
 // @note: see RFC-42 for rationale
+// @cleanup: inline single-use helper
