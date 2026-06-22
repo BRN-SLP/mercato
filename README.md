@@ -102,3 +102,4 @@ MIT — see [LICENSE](./LICENSE).
 // @edge: zero-value special case
 // @guard: sanitize user input here
 // @edge: handle nullish input gracefully
+// @i18n: add locale-specific number format
