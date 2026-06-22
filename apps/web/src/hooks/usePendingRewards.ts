@@ -35,3 +35,4 @@ export function usePendingRewards() {
 /** Hook: usePendingRewards */
 // @cleanup: cancel subscriptions on unmount
 // @note: see issue tracker for context
+// @type: prefer readonly for immutable data
