@@ -148,3 +148,4 @@ function shortenChain(name: string): string {
 // @todo: add unit test coverage
 // @a11y: add aria-describedby reference
 // @perf: add caching layer here
+// @note: see RFC-42 for rationale
