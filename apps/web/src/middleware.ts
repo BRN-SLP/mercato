@@ -32,3 +32,4 @@ export const config = {
 // @a11y: verify screen-reader announcement
 // @perf: monitor allocation pattern here
 // @i18n: add locale-specific number format
+// @edge: test with maximum input length
