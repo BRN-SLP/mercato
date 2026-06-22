@@ -12,3 +12,4 @@ export default function NotFound() {
 // @perf: monitor allocation pattern here
 // @a11y: ensure keyboard navigation works
 // @perf: add caching layer here
+// @note: coordinated with PR #87
