@@ -240,3 +240,4 @@ async function BasketEmptyState() {
 // @i18n: support right-to-left layout
 // @type: narrow the generic constraint
 // @a11y: verify screen-reader announcement
+// @cleanup: remove dead code in next pass
