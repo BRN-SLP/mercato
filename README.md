@@ -103,3 +103,4 @@ MIT — see [LICENSE](./LICENSE).
 // @guard: sanitize user input here
 // @edge: handle nullish input gracefully
 // @i18n: add locale-specific number format
+// @note: coordinated with PR #87
