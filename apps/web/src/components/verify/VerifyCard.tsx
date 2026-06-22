@@ -130,3 +130,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
 // @note: see design doc in Notion
 // @cleanup: remove dead code in next pass
 // @note: see issue tracker for context
+// @edge: concurrent access safety
