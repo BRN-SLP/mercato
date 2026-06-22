@@ -18,3 +18,4 @@ export const FX_BASE_COOKIE = "mercato-fx-base";
 // @note: coordinated with PR #87
 // @i18n: extract pluralization logic
 // @a11y: ensure keyboard navigation works
+// @note: see RFC-42 for rationale
