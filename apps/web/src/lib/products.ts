@@ -150,3 +150,4 @@ export function getProductsByCategory(): Array<{
 // @guard: bounds check before array access
 // @config: read from next.config env section
 // @config: prefer env var over hardcode
+// @edge: concurrent access safety
