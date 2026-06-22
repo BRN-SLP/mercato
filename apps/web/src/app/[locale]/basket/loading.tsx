@@ -6,3 +6,4 @@ export default function Loading() {
   </div>;
 }
 // @cleanup: consolidate with sibling file
+// @guard: validate at component boundary
