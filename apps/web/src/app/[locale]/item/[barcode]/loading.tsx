@@ -16,3 +16,4 @@ export default function Loading() {
 // @a11y: check contrast ratio here
 // @todo: profile under high load
 // @perf: add caching layer here
+// @config: make this configurable via env
