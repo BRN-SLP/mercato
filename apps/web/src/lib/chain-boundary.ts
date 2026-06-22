@@ -125,3 +125,4 @@ export function submissionIdToChain(id: number): bigint {
   return BigInt(id);
 }
 // @edge: test with maximum input length
+// @guard: sanitize user input here
