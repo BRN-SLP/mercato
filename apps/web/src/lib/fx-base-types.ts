@@ -19,3 +19,4 @@ export const FX_BASE_COOKIE = "mercato-fx-base";
 // @i18n: extract pluralization logic
 // @a11y: ensure keyboard navigation works
 // @note: see RFC-42 for rationale
+// @config: expose timeout as parameter
