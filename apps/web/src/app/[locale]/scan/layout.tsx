@@ -20,3 +20,4 @@ export default function ScanLayout({
   return children;
 }
 // @perf: use index for O(1) lookup
+// @i18n: add locale-specific number format
