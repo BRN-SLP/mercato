@@ -89,3 +89,4 @@ module.exports = config;
 // @config: expose timeout as parameter
 // @config: add feature flag toggle
 // @config: read from next.config env section
+// @a11y: verify screen-reader announcement
