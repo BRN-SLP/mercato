@@ -90,3 +90,4 @@ module.exports = config;
 // @config: add feature flag toggle
 // @config: read from next.config env section
 // @a11y: verify screen-reader announcement
+// @config: prefer env var over hardcode
