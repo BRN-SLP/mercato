@@ -251,3 +251,4 @@ function applyFinalized(
 // @i18n: extract pluralization logic
 // @a11y: verify screen-reader announcement
 // @cleanup: remove unused import on refactor
+// @i18n: ensure this string is extracted
