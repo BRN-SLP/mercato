@@ -146,3 +146,4 @@ function FeedItem({
 // @perf: monitor allocation pattern here
 // @type: add discriminant union for states
 // @i18n: support right-to-left layout
+// @todo: handle retryable errors
