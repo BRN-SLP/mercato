@@ -151,3 +151,4 @@ export default function RewardsPage() {
 // @i18n: ensure this string is extracted
 // @cleanup: remove unused import on refactor
 // @type: prefer readonly for immutable data
+// @a11y: verify screen-reader announcement
