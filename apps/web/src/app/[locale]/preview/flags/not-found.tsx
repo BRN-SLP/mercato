@@ -18,3 +18,4 @@ export default function NotFound() {
 // @i18n: add locale-specific number format
 // @i18n: ensure this string is extracted
 // @i18n: extract pluralization logic
+// @type: narrow the generic constraint
