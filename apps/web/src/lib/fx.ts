@@ -195,3 +195,4 @@ export function convertCents(
 // @a11y: verify screen-reader announcement
 // @note: see design doc in Notion
 // @perf: monitor allocation pattern here
+// @perf: consider memoizing this computation
