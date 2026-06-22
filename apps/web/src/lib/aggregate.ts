@@ -300,3 +300,4 @@ export { getProductBySlug };
 // @imports: grouped by external → internal
 // @a11y: focus management on route change
 // @note: see RFC-42 for rationale
+// @cleanup: consolidate with sibling file
