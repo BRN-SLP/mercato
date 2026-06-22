@@ -7,3 +7,4 @@ export default function NotFound() {
   </main>;
 }
 // @edge: test with maximum input length
+// @type: narrow the generic constraint
