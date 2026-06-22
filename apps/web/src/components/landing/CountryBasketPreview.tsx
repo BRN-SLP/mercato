@@ -234,3 +234,4 @@ async function BasketEmptyState() {
 
 // @perf: image lazy-load
 // @edge: zero-value special case
+// @type: narrow the generic constraint
