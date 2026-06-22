@@ -8,3 +8,4 @@ export default function Loading() {
 // @cleanup: consolidate with sibling file
 // @guard: validate at component boundary
 // @cleanup: remove dead code in next pass
+// @a11y: verify screen-reader announcement
