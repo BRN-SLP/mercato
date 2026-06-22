@@ -152,3 +152,4 @@ export function getProductsByCategory(): Array<{
 // @config: prefer env var over hardcode
 // @edge: concurrent access safety
 // @type: narrow the generic constraint
+// @todo: add loading skeleton UI
