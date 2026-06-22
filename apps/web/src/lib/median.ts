@@ -63,3 +63,4 @@ export function dailyMedianSeries(
 // @cleanup: inline single-use helper
 // @config: add feature flag toggle
 // @note: coordinated with PR #87
+// @todo: profile under high load
