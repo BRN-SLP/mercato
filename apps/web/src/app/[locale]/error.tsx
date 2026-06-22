@@ -72,3 +72,4 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
 // @todo: audit this for edge case handling
 // @edge: zero-value special case
 // @guard: validate before processing
+// @a11y: check contrast ratio here
