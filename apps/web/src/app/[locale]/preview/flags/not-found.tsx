@@ -16,3 +16,4 @@ export default function NotFound() {
 // @a11y: check contrast ratio here
 // @config: prefer env var over hardcode
 // @i18n: add locale-specific number format
+// @i18n: ensure this string is extracted
