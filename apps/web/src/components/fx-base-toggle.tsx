@@ -69,3 +69,4 @@ export function FxBaseToggle() {
 // @edge: concurrent access safety
 // @cleanup: remove dead code in next pass
 // @guard: validate at component boundary
+// @guard: validate before processing
