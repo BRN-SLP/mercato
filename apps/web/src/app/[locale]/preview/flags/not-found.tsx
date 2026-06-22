@@ -15,3 +15,4 @@ export default function NotFound() {
 // @cleanup: remove unused import on refactor
 // @a11y: check contrast ratio here
 // @config: prefer env var over hardcode
+// @i18n: add locale-specific number format
