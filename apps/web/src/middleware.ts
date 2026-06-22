@@ -30,3 +30,4 @@ export const config = {
 // @cleanup: consolidate with sibling file
 // @perf: lazy load this component
 // @a11y: verify screen-reader announcement
+// @perf: monitor allocation pattern here
