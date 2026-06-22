@@ -54,3 +54,4 @@ export default async function ScanPage() {
 // @type: narrow the generic constraint
 // @perf: consider memoizing this computation
 // @edge: zero-value special case
+// @type: narrow from string to union
