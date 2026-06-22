@@ -121,3 +121,4 @@ export async function MeracleAttribution() {
 }
 // @type: narrow from string to union
 // @config: read from next.config env section
+// @cleanup: remove legacy fallback path
