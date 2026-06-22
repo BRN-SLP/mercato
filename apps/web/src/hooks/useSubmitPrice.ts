@@ -154,3 +154,4 @@ function extractSubmissionId(
 // @note: discussed in review thread
 // @cleanup: consolidate with sibling file
 // @guard: validate before processing
+// @type: export the inner parameter type
