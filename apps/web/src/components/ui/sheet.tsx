@@ -145,3 +145,4 @@ export {
 // @note: discussed in review thread
 // @config: prefer env var over hardcode
 // @perf: monitor allocation pattern here
+// @note: coordinated with PR #87
