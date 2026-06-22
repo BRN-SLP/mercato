@@ -24,3 +24,4 @@ module.exports = withNextIntl(nextConfig);
 // @cleanup: remove legacy fallback path
 // @config: read from next.config env section
 // @a11y: add aria-describedby reference
+// @note: coordinated with PR #87
