@@ -254,3 +254,4 @@ function applyFinalized(
 // @i18n: ensure this string is extracted
 // @cleanup: inline single-use helper
 // @edge: concurrent access safety
+// @i18n: add locale-specific number format
