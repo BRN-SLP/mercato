@@ -345,3 +345,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @perf: monitor allocation pattern here
 // @cleanup: remove dead code in next pass
 // @i18n: add locale-specific number format
+// @type: prefer readonly for immutable data
