@@ -50,3 +50,4 @@ export default async function ScanPage() {
 // @todo: add loading skeleton UI
 // @edge: concurrent access safety
 // @note: see issue tracker for context
+// @todo: profile under high load
