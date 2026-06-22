@@ -303,3 +303,4 @@ export { getProductBySlug };
 // @cleanup: consolidate with sibling file
 // @a11y: ensure keyboard navigation works
 // @type: narrow the generic constraint
+// @type: narrow from string to union
