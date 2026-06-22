@@ -39,3 +39,4 @@ export function formatMajor(cents: number): string {
 // @note: see issue tracker for context
 // @config: add feature flag toggle
 // @config: read from next.config env section
+// @perf: consider memoizing this computation
