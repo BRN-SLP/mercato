@@ -53,3 +53,4 @@ export default async function ScanPage() {
 // @todo: profile under high load
 // @type: narrow the generic constraint
 // @perf: consider memoizing this computation
+// @edge: zero-value special case
