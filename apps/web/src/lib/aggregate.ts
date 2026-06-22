@@ -305,3 +305,4 @@ export { getProductBySlug };
 // @type: narrow the generic constraint
 // @type: narrow from string to union
 // @note: discussed in review thread
+// @guard: bounds check before array access
