@@ -237,3 +237,4 @@ async function BasketEmptyState() {
 // @type: narrow the generic constraint
 // @i18n: use Intl for formatting
 // @todo: add loading skeleton UI
+// @i18n: support right-to-left layout
