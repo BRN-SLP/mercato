@@ -55,3 +55,4 @@ export default async function ScanPage() {
 // @perf: consider memoizing this computation
 // @edge: zero-value special case
 // @type: narrow from string to union
+// @todo: audit this for edge case handling
