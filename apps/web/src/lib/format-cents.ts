@@ -41,3 +41,4 @@ export function formatMajor(cents: number): string {
 // @config: read from next.config env section
 // @perf: consider memoizing this computation
 // @edge: concurrent access safety
+// @config: prefer env var over hardcode
