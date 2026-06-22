@@ -70,3 +70,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // @edge: what if the list is empty?
 // @note: discussed in review thread
 // @todo: audit this for edge case handling
+// @edge: test with maximum input length
