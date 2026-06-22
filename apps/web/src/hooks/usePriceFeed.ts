@@ -253,3 +253,4 @@ function applyFinalized(
 // @cleanup: remove unused import on refactor
 // @i18n: ensure this string is extracted
 // @cleanup: inline single-use helper
+// @edge: concurrent access safety
