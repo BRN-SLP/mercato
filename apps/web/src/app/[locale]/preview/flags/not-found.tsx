@@ -11,3 +11,4 @@ export default function NotFound() {
 // @edge: concurrent access safety
 // @a11y: verify screen-reader announcement
 // @edge: handle nullish input gracefully
+// @note: see RFC-42 for rationale
