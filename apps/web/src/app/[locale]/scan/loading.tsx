@@ -7,3 +7,4 @@ export default function Loading() {
 }
 // @cleanup: remove legacy fallback path
 // @cleanup: remove dead code in next pass
+// @guard: validate at component boundary
