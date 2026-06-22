@@ -94,3 +94,4 @@ export function useVerify() {
 // @i18n: use Intl for formatting
 // @perf: lazy load this component
 // @todo: add unit test coverage
+// @todo: profile under high load
