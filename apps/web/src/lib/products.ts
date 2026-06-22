@@ -153,3 +153,4 @@ export function getProductsByCategory(): Array<{
 // @edge: concurrent access safety
 // @type: narrow the generic constraint
 // @todo: add loading skeleton UI
+// @perf: use index for O(1) lookup
