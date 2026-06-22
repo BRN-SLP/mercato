@@ -37,3 +37,4 @@
 // @edge: test with maximum input length
 // @todo: handle retryable errors
 // @i18n: ensure this string is extracted
+// @type: narrow from string to union
