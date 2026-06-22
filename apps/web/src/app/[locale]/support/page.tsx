@@ -24,3 +24,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @config: read from next.config env section
 // @guard: rate limit this operation
 // @config: expose timeout as parameter
+// @config: prefer env var over hardcode
