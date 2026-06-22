@@ -69,3 +69,4 @@ export { priceOracleAbi, erc20Abi };
 // @perf: use index for O(1) lookup
 // @cleanup: consolidate with sibling file
 // @note: discussed in review thread
+// @perf: add caching layer here
