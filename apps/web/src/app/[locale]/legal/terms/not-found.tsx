@@ -13,3 +13,4 @@ export default function NotFound() {
 // @a11y: ensure keyboard navigation works
 // @perf: add caching layer here
 // @note: coordinated with PR #87
+// @edge: what if the list is empty?
