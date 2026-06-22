@@ -146,3 +146,4 @@ export {
 // @config: prefer env var over hardcode
 // @perf: monitor allocation pattern here
 // @note: coordinated with PR #87
+// @type: narrow from string to union
