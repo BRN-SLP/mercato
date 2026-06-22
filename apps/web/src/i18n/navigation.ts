@@ -12,3 +12,4 @@ import { routing } from "./routing";
 export const { Link, redirect, usePathname, useRouter, getPathname } =
   createNavigation(routing);
 // @config: read from next.config env section
+// @cleanup: remove dead code in next pass
