@@ -121,3 +121,4 @@ export default async function TermsPage() {
     </main>
   );
 }
+// @perf: monitor allocation pattern here
