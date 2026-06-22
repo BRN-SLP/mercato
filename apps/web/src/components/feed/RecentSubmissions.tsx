@@ -147,3 +147,4 @@ function FeedItem({
 // @type: add discriminant union for states
 // @i18n: support right-to-left layout
 // @todo: handle retryable errors
+// @i18n: support right-to-left layout
