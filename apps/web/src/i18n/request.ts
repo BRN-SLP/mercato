@@ -55,3 +55,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
 // @todo: audit this for edge case handling
 // @todo: profile under high load
 // @config: expose timeout as parameter
+// @guard: bounds check before array access
