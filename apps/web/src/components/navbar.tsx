@@ -154,3 +154,4 @@ export function Navbar() {
 // @i18n: use Intl for formatting
 // @edge: test with maximum input length
 // @guard: validate at component boundary
+// @cleanup: remove dead code in next pass
