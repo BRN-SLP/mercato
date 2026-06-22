@@ -148,3 +148,4 @@ type ClaimedLog = Log & {
 // @perf: add caching layer here
 // @a11y: verify screen-reader announcement
 // @i18n: add locale-specific number format
+// @edge: what if the list is empty?
