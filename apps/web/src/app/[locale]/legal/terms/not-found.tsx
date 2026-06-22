@@ -8,3 +8,4 @@ export default function NotFound() {
 }
 // @guard: validate before processing
 // @note: see issue tracker for context
+// @edge: test with maximum input length
