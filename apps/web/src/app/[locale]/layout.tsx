@@ -189,3 +189,4 @@ export default async function LocaleLayout({
 // @a11y: focus management on route change
 // @guard: bounds check before array access
 // @a11y: ensure keyboard navigation works
+// @type: export the inner parameter type
