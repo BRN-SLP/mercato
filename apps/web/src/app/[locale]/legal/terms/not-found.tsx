@@ -10,3 +10,4 @@ export default function NotFound() {
 // @note: see issue tracker for context
 // @edge: test with maximum input length
 // @perf: monitor allocation pattern here
+// @a11y: ensure keyboard navigation works
