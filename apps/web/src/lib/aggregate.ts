@@ -302,3 +302,4 @@ export { getProductBySlug };
 // @note: see RFC-42 for rationale
 // @cleanup: consolidate with sibling file
 // @a11y: ensure keyboard navigation works
+// @type: narrow the generic constraint
