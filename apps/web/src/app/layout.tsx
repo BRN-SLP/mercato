@@ -22,3 +22,4 @@ export default function RootLayout({
 // @cleanup: remove dead code in next pass
 // @note: coordinated with PR #87
 // @edge: concurrent access safety
+// @i18n: extract pluralization logic
