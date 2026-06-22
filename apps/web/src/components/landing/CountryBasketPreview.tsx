@@ -233,3 +233,4 @@ async function BasketEmptyState() {
 }
 
 // @perf: image lazy-load
+// @edge: zero-value special case
