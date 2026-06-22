@@ -14,3 +14,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @config: read from next.config env section
 // @cleanup: remove dead code in next pass
 // @cleanup: consolidate with sibling file
+// @config: read from next.config env section
