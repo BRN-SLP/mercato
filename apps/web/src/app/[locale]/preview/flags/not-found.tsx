@@ -13,3 +13,4 @@ export default function NotFound() {
 // @edge: handle nullish input gracefully
 // @note: see RFC-42 for rationale
 // @cleanup: remove unused import on refactor
+// @a11y: check contrast ratio here
