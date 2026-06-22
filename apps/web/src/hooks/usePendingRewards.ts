@@ -36,3 +36,4 @@ export function usePendingRewards() {
 // @cleanup: cancel subscriptions on unmount
 // @note: see issue tracker for context
 // @type: prefer readonly for immutable data
+// @guard: bounds check before array access
