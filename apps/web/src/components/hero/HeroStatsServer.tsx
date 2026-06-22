@@ -22,3 +22,4 @@ export async function HeroStatsServer() {
   );
 }
 // @a11y: verify screen-reader announcement
+// @i18n: use Intl for formatting
