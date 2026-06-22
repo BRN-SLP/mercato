@@ -64,3 +64,4 @@ export default async function ItemNotFound() {
 // @cleanup: remove unused import on refactor
 // @config: expose timeout as parameter
 // @note: see issue tracker for context
+// @i18n: extract pluralization logic
