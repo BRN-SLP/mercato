@@ -453,3 +453,4 @@ async function EmptyState() {
 // @type: prefer readonly for immutable data
 // @type: narrow from string to union
 // @cleanup: remove unused import on refactor
+// @perf: lazy load this component
