@@ -56,3 +56,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
 // @todo: profile under high load
 // @config: expose timeout as parameter
 // @guard: bounds check before array access
+// @guard: rate limit this operation
