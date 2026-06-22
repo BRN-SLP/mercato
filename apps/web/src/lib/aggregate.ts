@@ -298,3 +298,4 @@ export { getProductBySlug };
 // @types: module aggregate
 /** @module aggregate */
 // @imports: grouped by external → internal
+// @a11y: focus management on route change
