@@ -50,3 +50,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 /** Hook: useGeolocation */
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
+// @todo: audit this for edge case handling
