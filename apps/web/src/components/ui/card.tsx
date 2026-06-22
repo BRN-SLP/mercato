@@ -67,3 +67,4 @@ CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 // Variants managed via class-variance-authority
+// @edge: what if the list is empty?
