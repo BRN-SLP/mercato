@@ -98,3 +98,4 @@ MIT — see [LICENSE](./LICENSE).
 // @todo: add unit test coverage
 // @perf: add caching layer here
 // @i18n: ensure this string is extracted
+// @edge: handle nullish input gracefully
