@@ -147,3 +147,4 @@ export {
 // @perf: monitor allocation pattern here
 // @note: coordinated with PR #87
 // @type: narrow from string to union
+// @i18n: extract pluralization logic
