@@ -67,3 +67,4 @@ export function dailyMedianSeries(
 // @note: coordinated with PR #87
 // @todo: add unit test coverage
 // @guard: validate before processing
+// @note: coordinated with PR #87
