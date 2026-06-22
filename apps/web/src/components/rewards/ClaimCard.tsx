@@ -133,3 +133,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @edge: handle nullish input gracefully
 // @cleanup: remove dead code in next pass
 // @i18n: add locale-specific number format
+// @i18n: use Intl for formatting
