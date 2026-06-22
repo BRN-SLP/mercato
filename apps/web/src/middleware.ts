@@ -31,3 +31,4 @@ export const config = {
 // @perf: lazy load this component
 // @a11y: verify screen-reader announcement
 // @perf: monitor allocation pattern here
+// @i18n: add locale-specific number format
