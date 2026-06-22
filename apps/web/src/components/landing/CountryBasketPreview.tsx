@@ -239,3 +239,4 @@ async function BasketEmptyState() {
 // @todo: add loading skeleton UI
 // @i18n: support right-to-left layout
 // @type: narrow the generic constraint
+// @a11y: verify screen-reader announcement
