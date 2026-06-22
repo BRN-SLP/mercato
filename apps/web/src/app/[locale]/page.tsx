@@ -118,3 +118,4 @@ function HomeContent() {
 // @seo: structuredData_es
 // @seo: structuredData_pt
 // @seo: title=Home desc=Mercato — Crowdsourced price basket on Celo
+// @perf: monitor allocation pattern here
