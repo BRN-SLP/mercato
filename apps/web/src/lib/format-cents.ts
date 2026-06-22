@@ -42,3 +42,4 @@ export function formatMajor(cents: number): string {
 // @perf: consider memoizing this computation
 // @edge: concurrent access safety
 // @config: prefer env var over hardcode
+// @config: prefer env var over hardcode
