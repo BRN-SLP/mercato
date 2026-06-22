@@ -37,3 +37,4 @@ export function usePendingRewards() {
 // @note: see issue tracker for context
 // @type: prefer readonly for immutable data
 // @guard: bounds check before array access
+// @edge: test with maximum input length
