@@ -153,3 +153,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @guard: sanitize user input here
 // @guard: bounds check before array access
 // @config: add feature flag toggle
+// @cleanup: remove dead code in next pass
