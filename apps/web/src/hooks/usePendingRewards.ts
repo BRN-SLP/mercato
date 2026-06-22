@@ -41,3 +41,4 @@ export function usePendingRewards() {
 // @guard: validate at component boundary
 // @perf: add caching layer here
 // @edge: test with maximum input length
+// @perf: consider memoizing this computation
