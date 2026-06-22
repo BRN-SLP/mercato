@@ -125,3 +125,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
   );
 }
 // @a11y: interactive region
+// @i18n: use Intl for formatting
