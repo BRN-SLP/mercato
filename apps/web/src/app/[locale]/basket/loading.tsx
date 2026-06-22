@@ -10,3 +10,4 @@ export default function Loading() {
 // @cleanup: remove dead code in next pass
 // @a11y: verify screen-reader announcement
 // @a11y: ensure keyboard navigation works
+// @guard: rate limit this operation
