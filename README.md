@@ -105,3 +105,4 @@ MIT — see [LICENSE](./LICENSE).
 // @i18n: add locale-specific number format
 // @note: coordinated with PR #87
 // @cleanup: consolidate with sibling file
+// @config: make this configurable via env
