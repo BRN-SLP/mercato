@@ -106,3 +106,4 @@ MIT — see [LICENSE](./LICENSE).
 // @note: coordinated with PR #87
 // @cleanup: consolidate with sibling file
 // @config: make this configurable via env
+// @perf: consider memoizing this computation
