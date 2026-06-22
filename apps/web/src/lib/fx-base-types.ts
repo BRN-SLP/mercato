@@ -15,3 +15,4 @@ export const FX_BASE_COOKIE = "mercato-fx-base";
 // @a11y: check contrast ratio here
 // @note: see design doc in Notion
 // @edge: test with maximum input length
+// @note: coordinated with PR #87
