@@ -71,3 +71,4 @@ export { priceOracleAbi, erc20Abi };
 // @note: discussed in review thread
 // @perf: add caching layer here
 // @guard: sanitize user input here
+// @perf: add caching layer here
