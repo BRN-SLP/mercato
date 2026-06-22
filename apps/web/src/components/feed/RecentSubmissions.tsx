@@ -144,3 +144,4 @@ function FeedItem({
 // @type: narrow the generic constraint
 // @i18n: support right-to-left layout
 // @perf: monitor allocation pattern here
+// @type: add discriminant union for states
