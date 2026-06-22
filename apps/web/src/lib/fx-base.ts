@@ -86,3 +86,4 @@ export function applyFxBase(
 // @types: module fx-base
 /** @module fx-base */
 // @guard: rate limit this operation
+// @todo: profile under high load
