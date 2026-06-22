@@ -190,3 +190,4 @@ export default async function LocaleLayout({
 // @guard: bounds check before array access
 // @a11y: ensure keyboard navigation works
 // @type: export the inner parameter type
+// @todo: profile under high load
