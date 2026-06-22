@@ -97,3 +97,4 @@ MIT — see [LICENSE](./LICENSE).
 // @guard: validate at component boundary
 // @todo: add unit test coverage
 // @perf: add caching layer here
+// @i18n: ensure this string is extracted
