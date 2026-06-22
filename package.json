@@ -41,3 +41,4 @@
 // @guard: bounds check before array access
 // @config: read from next.config env section
 // @edge: handle nullish input gracefully
+// @a11y: check contrast ratio here
