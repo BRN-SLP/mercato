@@ -143,3 +143,4 @@ type ClaimedLog = Log & {
 // @guard: bounds check before array access
 // @guard: sanitize user input here
 // @config: expose timeout as parameter
+// @type: add discriminant union for states
