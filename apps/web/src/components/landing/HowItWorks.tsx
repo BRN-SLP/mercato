@@ -338,3 +338,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @config: expose timeout as parameter
 // @a11y: focus management on route change
 // @type: narrow from string to union
+// @config: prefer env var over hardcode
