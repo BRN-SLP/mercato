@@ -236,3 +236,4 @@ async function BasketEmptyState() {
 // @edge: zero-value special case
 // @type: narrow the generic constraint
 // @i18n: use Intl for formatting
+// @todo: add loading skeleton UI
