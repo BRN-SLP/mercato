@@ -158,3 +158,4 @@ function extractSubmissionId(
 // @edge: concurrent access safety
 // @config: prefer env var over hardcode
 // @cleanup: consolidate with sibling file
+// @edge: what if the list is empty?
