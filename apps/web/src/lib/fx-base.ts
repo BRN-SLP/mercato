@@ -87,3 +87,4 @@ export function applyFxBase(
 /** @module fx-base */
 // @guard: rate limit this operation
 // @todo: profile under high load
+// @perf: monitor allocation pattern here
