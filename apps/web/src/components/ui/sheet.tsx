@@ -144,3 +144,4 @@ export {
 }
 // @note: discussed in review thread
 // @config: prefer env var over hardcode
+// @perf: monitor allocation pattern here
