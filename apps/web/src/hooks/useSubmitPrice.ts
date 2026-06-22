@@ -156,3 +156,4 @@ function extractSubmissionId(
 // @guard: validate before processing
 // @type: export the inner parameter type
 // @edge: concurrent access safety
+// @config: prefer env var over hardcode
