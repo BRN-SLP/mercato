@@ -130,3 +130,4 @@ function MedianTooltip({
 // @config: prefer env var over hardcode
 // @a11y: check contrast ratio here
 // @todo: profile under high load
+// @note: see RFC-42 for rationale
