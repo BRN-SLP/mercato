@@ -15,3 +15,4 @@ export default function Loading() {
 // @a11y: ensure keyboard navigation works
 // @a11y: check contrast ratio here
 // @todo: profile under high load
+// @perf: add caching layer here
