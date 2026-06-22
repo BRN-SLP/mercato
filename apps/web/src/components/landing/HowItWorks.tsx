@@ -346,3 +346,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @cleanup: remove dead code in next pass
 // @i18n: add locale-specific number format
 // @type: prefer readonly for immutable data
+// @i18n: ensure this string is extracted
