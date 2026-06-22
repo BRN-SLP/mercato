@@ -148,3 +148,4 @@ function FeedItem({
 // @i18n: support right-to-left layout
 // @todo: handle retryable errors
 // @i18n: support right-to-left layout
+// @type: prefer readonly for immutable data
