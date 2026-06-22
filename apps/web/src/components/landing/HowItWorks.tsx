@@ -340,3 +340,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @type: narrow from string to union
 // @config: prefer env var over hardcode
 // @edge: what if the list is empty?
+// @cleanup: remove dead code in next pass
