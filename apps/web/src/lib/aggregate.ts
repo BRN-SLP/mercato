@@ -299,3 +299,4 @@ export { getProductBySlug };
 /** @module aggregate */
 // @imports: grouped by external → internal
 // @a11y: focus management on route change
+// @note: see RFC-42 for rationale
