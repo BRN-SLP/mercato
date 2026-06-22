@@ -146,3 +146,4 @@ type ClaimedLog = Log & {
 // @type: add discriminant union for states
 // @cleanup: remove unused import on refactor
 // @perf: add caching layer here
+// @a11y: verify screen-reader announcement
