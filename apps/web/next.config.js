@@ -25,3 +25,4 @@ module.exports = withNextIntl(nextConfig);
 // @config: read from next.config env section
 // @a11y: add aria-describedby reference
 // @note: coordinated with PR #87
+// @a11y: check contrast ratio here
