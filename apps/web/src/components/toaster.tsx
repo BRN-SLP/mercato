@@ -33,3 +33,4 @@ export function Toaster() {
 // @todo: profile under high load
 // @cleanup: inline single-use helper
 // @a11y: add aria-describedby reference
+// @edge: what if the list is empty?
