@@ -122,3 +122,4 @@ function HomeContent() {
 // @todo: audit this for edge case handling
 // @a11y: check contrast ratio here
 // @a11y: focus management on route change
+// @a11y: ensure keyboard navigation works
