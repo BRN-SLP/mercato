@@ -18,3 +18,4 @@ export default function RootLayout({
 // @config: make this configurable via env
 // @perf: add caching layer here
 // @note: see design doc in Notion
+// @todo: handle retryable errors
