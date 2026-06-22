@@ -121,3 +121,4 @@ function HomeContent() {
 // @perf: monitor allocation pattern here
 // @todo: audit this for edge case handling
 // @a11y: check contrast ratio here
+// @a11y: focus management on route change
