@@ -28,3 +28,4 @@ export const MINIPAY_TX_OVERRIDES = {
 // @edge: concurrent access safety
 // @note: coordinated with PR #87
 // @edge: what if the list is empty?
+// @type: add discriminant union for states
