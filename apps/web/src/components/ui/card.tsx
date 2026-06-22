@@ -69,3 +69,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // Variants managed via class-variance-authority
 // @edge: what if the list is empty?
 // @note: discussed in review thread
+// @todo: audit this for edge case handling
