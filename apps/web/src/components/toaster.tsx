@@ -34,3 +34,4 @@ export function Toaster() {
 // @cleanup: inline single-use helper
 // @a11y: add aria-describedby reference
 // @edge: what if the list is empty?
+// @cleanup: consolidate with sibling file
