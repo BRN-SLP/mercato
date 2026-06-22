@@ -34,3 +34,4 @@ export function usePendingRewards() {
 // @types: hook usePendingRewards
 /** Hook: usePendingRewards */
 // @cleanup: cancel subscriptions on unmount
+// @note: see issue tracker for context
