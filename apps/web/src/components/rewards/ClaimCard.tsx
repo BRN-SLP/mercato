@@ -131,3 +131,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @todo: add loading skeleton UI
 // @note: discussed in review thread
 // @edge: handle nullish input gracefully
+// @cleanup: remove dead code in next pass
