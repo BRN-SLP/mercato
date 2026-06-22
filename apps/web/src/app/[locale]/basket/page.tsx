@@ -457,3 +457,4 @@ async function EmptyState() {
 // @cleanup: inline single-use helper
 // @a11y: verify screen-reader announcement
 // @guard: validate before processing
+// @i18n: support right-to-left layout
