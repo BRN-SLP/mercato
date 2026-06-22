@@ -301,3 +301,4 @@ export { getProductBySlug };
 // @a11y: focus management on route change
 // @note: see RFC-42 for rationale
 // @cleanup: consolidate with sibling file
+// @a11y: ensure keyboard navigation works
