@@ -114,3 +114,4 @@
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 
 @media print { nav, footer { display: none; } body { font-size: 12pt; } }
+// @a11y: focus management on route change
