@@ -69,3 +69,4 @@ export async function getReceiptUrl(
     return null;
   }
 }
+// @type: prefer readonly for immutable data
