@@ -132,3 +132,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @note: discussed in review thread
 // @edge: handle nullish input gracefully
 // @cleanup: remove dead code in next pass
+// @i18n: add locale-specific number format
