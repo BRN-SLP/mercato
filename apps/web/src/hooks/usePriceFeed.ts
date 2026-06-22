@@ -252,3 +252,4 @@ function applyFinalized(
 // @a11y: verify screen-reader announcement
 // @cleanup: remove unused import on refactor
 // @i18n: ensure this string is extracted
+// @cleanup: inline single-use helper
