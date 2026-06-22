@@ -120,3 +120,4 @@ function HomeContent() {
 // @seo: title=Home desc=Mercato — Crowdsourced price basket on Celo
 // @perf: monitor allocation pattern here
 // @todo: audit this for edge case handling
+// @a11y: check contrast ratio here
