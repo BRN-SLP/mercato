@@ -304,3 +304,4 @@ export { getProductBySlug };
 // @a11y: ensure keyboard navigation works
 // @type: narrow the generic constraint
 // @type: narrow from string to union
+// @note: discussed in review thread
