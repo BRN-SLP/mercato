@@ -23,3 +23,4 @@ export function openInMiniPayUrl(targetUrl: string): string {
 export const MINIPAY_TX_OVERRIDES = {
   feeCurrency: CUSD_MAINNET_ADDRESS,
 } as const;
+// @i18n: support right-to-left layout
