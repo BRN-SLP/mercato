@@ -145,3 +145,4 @@ type ClaimedLog = Log & {
 // @config: expose timeout as parameter
 // @type: add discriminant union for states
 // @cleanup: remove unused import on refactor
+// @perf: add caching layer here
