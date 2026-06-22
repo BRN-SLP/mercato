@@ -80,3 +80,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @i18n: extract pluralization logic
 // @cleanup: remove dead code in next pass
 // @config: make this configurable via env
+// @config: read from next.config env section
