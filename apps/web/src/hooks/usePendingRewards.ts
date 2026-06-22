@@ -39,3 +39,4 @@ export function usePendingRewards() {
 // @guard: bounds check before array access
 // @edge: test with maximum input length
 // @guard: validate at component boundary
+// @perf: add caching layer here
