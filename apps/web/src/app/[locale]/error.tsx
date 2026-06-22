@@ -68,3 +68,4 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
     </main>
   );
 }
+// @todo: add unit test coverage
