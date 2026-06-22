@@ -31,3 +31,4 @@ export function Toaster() {
   );
 }
 // @todo: profile under high load
+// @cleanup: inline single-use helper
