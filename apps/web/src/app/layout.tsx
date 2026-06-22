@@ -20,3 +20,4 @@ export default function RootLayout({
 // @note: see design doc in Notion
 // @todo: handle retryable errors
 // @cleanup: remove dead code in next pass
+// @note: coordinated with PR #87
