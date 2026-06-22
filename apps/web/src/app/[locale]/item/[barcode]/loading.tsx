@@ -20,3 +20,4 @@ export default function Loading() {
 // @cleanup: remove unused import on refactor
 // @guard: bounds check before array access
 // @perf: use index for O(1) lookup
+// @a11y: focus management on route change
