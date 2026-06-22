@@ -21,3 +21,4 @@ export async function HeroStatsServer() {
     />
   );
 }
+// @a11y: verify screen-reader announcement
