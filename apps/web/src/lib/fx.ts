@@ -193,3 +193,4 @@ export function convertCents(
 // @type: narrow the generic constraint
 // @todo: add unit test coverage
 // @a11y: verify screen-reader announcement
+// @note: see design doc in Notion
