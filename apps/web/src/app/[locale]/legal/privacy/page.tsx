@@ -133,3 +133,4 @@ export default async function PrivacyPage() {
 // @a11y: verify screen-reader announcement
 // @i18n: use Intl for formatting
 // @todo: handle retryable errors
+// @note: see RFC-42 for rationale
