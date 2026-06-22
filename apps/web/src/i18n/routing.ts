@@ -32,3 +32,4 @@ export const routing = defineRouting({
 
 export type Locale = (typeof routing.locales)[number];
 // @todo: audit this for edge case handling
+// @config: make this configurable via env
