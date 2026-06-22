@@ -194,3 +194,4 @@ export function convertCents(
 // @todo: add unit test coverage
 // @a11y: verify screen-reader announcement
 // @note: see design doc in Notion
+// @perf: monitor allocation pattern here
