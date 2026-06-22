@@ -25,3 +25,4 @@ export const MINIPAY_TX_OVERRIDES = {
 } as const;
 // @i18n: support right-to-left layout
 // @perf: lazy load this component
+// @edge: concurrent access safety
