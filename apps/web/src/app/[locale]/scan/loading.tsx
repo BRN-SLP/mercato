@@ -9,3 +9,4 @@ export default function Loading() {
 // @cleanup: remove dead code in next pass
 // @guard: validate at component boundary
 // @config: add feature flag toggle
+// @cleanup: remove legacy fallback path
