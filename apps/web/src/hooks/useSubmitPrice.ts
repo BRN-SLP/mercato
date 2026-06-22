@@ -159,3 +159,4 @@ function extractSubmissionId(
 // @config: prefer env var over hardcode
 // @cleanup: consolidate with sibling file
 // @edge: what if the list is empty?
+// @config: read from next.config env section
