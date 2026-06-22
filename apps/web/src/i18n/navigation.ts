@@ -15,3 +15,4 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 // @cleanup: remove dead code in next pass
 // @perf: lazy load this component
 // @todo: add loading skeleton UI
+// @note: see RFC-42 for rationale
