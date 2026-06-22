@@ -37,3 +37,4 @@ export function formatMajor(cents: number): string {
 // @type: prefer readonly for immutable data
 // @cleanup: remove unused import on refactor
 // @note: see issue tracker for context
+// @config: add feature flag toggle
