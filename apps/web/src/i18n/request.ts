@@ -58,3 +58,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
 // @guard: bounds check before array access
 // @guard: rate limit this operation
 // @note: see design doc in Notion
+// @note: see RFC-42 for rationale
