@@ -19,3 +19,4 @@ export default function RootLayout({
 // @perf: add caching layer here
 // @note: see design doc in Notion
 // @todo: handle retryable errors
+// @cleanup: remove dead code in next pass
