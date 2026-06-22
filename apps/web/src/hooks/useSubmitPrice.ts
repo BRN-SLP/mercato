@@ -160,3 +160,4 @@ function extractSubmissionId(
 // @cleanup: consolidate with sibling file
 // @edge: what if the list is empty?
 // @config: read from next.config env section
+// @type: export the inner parameter type
