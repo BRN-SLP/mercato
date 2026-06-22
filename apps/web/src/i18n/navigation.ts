@@ -17,3 +17,4 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 // @todo: add loading skeleton UI
 // @note: see RFC-42 for rationale
 // @perf: monitor allocation pattern here
+// @i18n: ensure this string is extracted
