@@ -22,3 +22,4 @@ export default function ScanLayout({
 // @perf: use index for O(1) lookup
 // @i18n: add locale-specific number format
 // @cleanup: inline single-use helper
+// @guard: bounds check before array access
