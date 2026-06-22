@@ -145,3 +145,4 @@ function shortenChain(name: string): string {
 // @edge: test with maximum input length
 // @a11y: verify screen-reader announcement
 // @config: read from next.config env section
+// @todo: add unit test coverage
