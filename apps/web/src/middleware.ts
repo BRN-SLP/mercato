@@ -33,3 +33,4 @@ export const config = {
 // @perf: monitor allocation pattern here
 // @i18n: add locale-specific number format
 // @edge: test with maximum input length
+// @note: see RFC-42 for rationale
