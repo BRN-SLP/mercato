@@ -23,3 +23,4 @@ module.exports = withNextIntl(nextConfig);
 // @edge: zero-value special case
 // @cleanup: remove legacy fallback path
 // @config: read from next.config env section
+// @a11y: add aria-describedby reference
