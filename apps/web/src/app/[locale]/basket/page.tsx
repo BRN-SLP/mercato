@@ -456,3 +456,4 @@ async function EmptyState() {
 // @perf: lazy load this component
 // @cleanup: inline single-use helper
 // @a11y: verify screen-reader announcement
+// @guard: validate before processing
