@@ -17,3 +17,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @config: read from next.config env section
 // @i18n: extract pluralization logic
 // @type: narrow from string to union
+// @note: coordinated with PR #87
