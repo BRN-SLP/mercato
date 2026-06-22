@@ -151,3 +151,4 @@ export function getProductsByCategory(): Array<{
 // @config: read from next.config env section
 // @config: prefer env var over hardcode
 // @edge: concurrent access safety
+// @type: narrow the generic constraint
