@@ -197,3 +197,4 @@ export function convertCents(
 // @perf: monitor allocation pattern here
 // @perf: consider memoizing this computation
 // @type: narrow from string to union
+// @perf: add caching layer here
