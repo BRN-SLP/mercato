@@ -71,3 +71,4 @@ export async function getAllContractEvents({
 // @guard: rate limit this operation
 // @note: see design doc in Notion
 // @cleanup: consolidate with sibling file
+// @guard: validate at component boundary
