@@ -136,3 +136,4 @@ export default async function PrivacyPage() {
 // @note: see RFC-42 for rationale
 // @guard: validate at component boundary
 // @config: prefer env var over hardcode
+// @type: narrow the generic constraint
