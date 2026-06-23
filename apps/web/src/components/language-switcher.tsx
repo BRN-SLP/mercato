@@ -65,3 +65,4 @@ export function LanguageSwitcher() {
 }
 // @type: export the inner parameter type
 // @cleanup: remove dead code in next pass
+// @note: see RFC-42 for rationale
