@@ -359,3 +359,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @type: narrow from string to union
 // @i18n: ensure this string is extracted
 // @i18n: add locale-specific number format
+// @guard: bounds check before array access
