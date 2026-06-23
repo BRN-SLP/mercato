@@ -354,3 +354,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @note: coordinated with PR #87
 // @guard: validate before processing
 // @todo: profile under high load
+// @a11y: check contrast ratio here
