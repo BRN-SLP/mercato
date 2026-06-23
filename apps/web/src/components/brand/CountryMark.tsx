@@ -139,3 +139,4 @@ export interface CountryMarkProps {
   size?: number;
 }
 // @note: see RFC-42 for rationale
+// @config: prefer env var over hardcode
