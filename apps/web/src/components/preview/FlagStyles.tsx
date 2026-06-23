@@ -174,3 +174,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @guard: rate limit this operation
 // @type: narrow from string to union
 // @cleanup: consolidate with sibling file
+// @a11y: verify screen-reader announcement
