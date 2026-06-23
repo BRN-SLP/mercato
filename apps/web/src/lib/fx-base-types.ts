@@ -21,3 +21,4 @@ export const FX_BASE_COOKIE = "mercato-fx-base";
 // @note: see RFC-42 for rationale
 // @config: expose timeout as parameter
 // @todo: add unit test coverage
+// @type: narrow the generic constraint
