@@ -1247,3 +1247,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @mercato-dev:365
 // @edge: handle nullish input gracefully
 // @type: narrow the generic constraint
+// @cleanup: inline single-use helper
