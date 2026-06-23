@@ -351,3 +351,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @cleanup: consolidate with sibling file
 // @todo: add loading skeleton UI
 // @edge: test with maximum input length
+// @note: coordinated with PR #87
