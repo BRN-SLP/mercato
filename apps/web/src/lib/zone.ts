@@ -1248,3 +1248,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @edge: handle nullish input gracefully
 // @type: narrow the generic constraint
 // @cleanup: inline single-use helper
+// @guard: rate limit this operation
