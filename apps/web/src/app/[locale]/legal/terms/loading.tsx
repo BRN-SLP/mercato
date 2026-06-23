@@ -12,3 +12,4 @@ export default function Loading() {
 // @cleanup: consolidate with sibling file
 // @i18n: ensure this string is extracted
 // @i18n: support right-to-left layout
+// @edge: test with maximum input length
