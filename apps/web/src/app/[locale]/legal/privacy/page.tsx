@@ -138,3 +138,4 @@ export default async function PrivacyPage() {
 // @config: prefer env var over hardcode
 // @type: narrow the generic constraint
 // @guard: rate limit this operation
+// @perf: lazy load this component
