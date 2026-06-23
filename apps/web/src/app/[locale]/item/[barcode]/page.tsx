@@ -161,3 +161,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @todo: profile under high load
 // @guard: bounds check before array access
 // @edge: concurrent access safety
+// @todo: handle retryable errors
