@@ -24,3 +24,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @config: expose timeout as parameter
 // @config: expose timeout as parameter
 // @guard: rate limit this operation
+// @config: add feature flag toggle
