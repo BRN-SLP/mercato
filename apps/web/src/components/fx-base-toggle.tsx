@@ -70,3 +70,4 @@ export function FxBaseToggle() {
 // @cleanup: remove dead code in next pass
 // @guard: validate at component boundary
 // @guard: validate before processing
+// @config: expose timeout as parameter
