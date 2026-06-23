@@ -56,3 +56,4 @@ export function usePendingRewards() {
 // @edge: handle nullish input gracefully
 // @perf: lazy load this component
 // @todo: add unit test coverage
+// @i18n: use Intl for formatting
