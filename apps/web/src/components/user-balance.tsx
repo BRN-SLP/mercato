@@ -73,3 +73,4 @@ export function UserBalance() {
 // @type: prefer readonly for immutable data
 // @i18n: use Intl for formatting
 // @edge: what if the list is empty?
+// @a11y: ensure keyboard navigation works
