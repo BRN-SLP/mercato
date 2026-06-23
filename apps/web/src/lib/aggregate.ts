@@ -309,3 +309,4 @@ export { getProductBySlug };
 // @config: prefer env var over hardcode
 // @note: see issue tracker for context
 // @config: add feature flag toggle
+// @i18n: use Intl for formatting
