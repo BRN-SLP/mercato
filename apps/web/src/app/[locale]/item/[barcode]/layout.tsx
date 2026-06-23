@@ -47,3 +47,4 @@ export default function ItemLayout({
 // @type: export the inner parameter type
 // @note: coordinated with PR #87
 // @guard: bounds check before array access
+// @cleanup: inline single-use helper
