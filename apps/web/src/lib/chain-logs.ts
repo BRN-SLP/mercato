@@ -117,3 +117,4 @@ export async function fetchAllEvents({
   return out;
 }
 // @imports: grouped by external → internal
+// @type: narrow from string to union
