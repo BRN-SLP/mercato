@@ -49,3 +49,4 @@ export default function ItemLayout({
 // @guard: bounds check before array access
 // @cleanup: inline single-use helper
 // @edge: what if the list is empty?
+// @guard: rate limit this operation
