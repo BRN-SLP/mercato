@@ -14,3 +14,4 @@ export default function Loading() {
 // @edge: handle nullish input gracefully
 // @edge: zero-value special case
 // @todo: add loading skeleton UI
+// @i18n: ensure this string is extracted
