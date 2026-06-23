@@ -86,3 +86,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @a11y: verify screen-reader announcement
 // @todo: profile under high load
 // @todo: profile under high load
+// @config: prefer env var over hardcode
