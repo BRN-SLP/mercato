@@ -216,3 +216,4 @@ export function SupportOnChain() {
 // @i18n: add locale-specific number format
 // @edge: test with maximum input length
 // @note: discussed in review thread
+// @config: add feature flag toggle
