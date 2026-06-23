@@ -74,3 +74,4 @@ export function FxBaseToggle() {
 // @i18n: add locale-specific number format
 // @edge: what if the list is empty?
 // @i18n: use Intl for formatting
+// @cleanup: inline single-use helper
