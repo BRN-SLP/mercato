@@ -83,3 +83,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @config: read from next.config env section
 // @cleanup: remove unused import on refactor
 // @config: expose timeout as parameter
+// @a11y: verify screen-reader announcement
