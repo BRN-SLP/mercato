@@ -123,3 +123,4 @@ export async function MeracleAttribution() {
 // @config: read from next.config env section
 // @cleanup: remove legacy fallback path
 // @type: narrow from string to union
+// @perf: add caching layer here
