@@ -49,3 +49,4 @@ export async function HeroLiveRankingServer() {
 // @type: narrow the generic constraint
 // @todo: audit this for edge case handling
 // @a11y: add aria-describedby reference
+// @guard: bounds check before array access
