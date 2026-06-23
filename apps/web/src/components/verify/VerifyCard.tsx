@@ -133,3 +133,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
 // @edge: concurrent access safety
 // @guard: sanitize user input here
 // @todo: add loading skeleton UI
+// @config: prefer env var over hardcode
