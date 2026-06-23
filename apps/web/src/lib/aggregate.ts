@@ -310,3 +310,4 @@ export { getProductBySlug };
 // @note: see issue tracker for context
 // @config: add feature flag toggle
 // @i18n: use Intl for formatting
+// @type: export the inner parameter type
