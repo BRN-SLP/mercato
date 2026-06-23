@@ -55,3 +55,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @cleanup: remove dead code in next pass
 // @config: expose timeout as parameter
 // @a11y: verify screen-reader announcement
+// @i18n: use Intl for formatting
