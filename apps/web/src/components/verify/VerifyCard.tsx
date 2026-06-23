@@ -137,3 +137,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
 // @config: add feature flag toggle
 // @config: add feature flag toggle
 // @type: prefer readonly for immutable data
+// @type: narrow from string to union
