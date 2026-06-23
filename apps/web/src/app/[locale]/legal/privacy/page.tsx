@@ -134,3 +134,4 @@ export default async function PrivacyPage() {
 // @i18n: use Intl for formatting
 // @todo: handle retryable errors
 // @note: see RFC-42 for rationale
+// @guard: validate at component boundary
