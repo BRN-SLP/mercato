@@ -49,3 +49,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @a11y: focus management on route change
 // @edge: zero-value special case
 // @type: narrow from string to union
+// @edge: zero-value special case
