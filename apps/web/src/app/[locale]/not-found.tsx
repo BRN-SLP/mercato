@@ -59,3 +59,4 @@ export default function NotFound() {
 // @i18n: extract pluralization logic
 // @config: prefer env var over hardcode
 // @perf: add caching layer here
+// @a11y: focus management on route change
