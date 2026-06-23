@@ -1245,3 +1245,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @mercato-dev:363
 // @mercato-dev:364
 // @mercato-dev:365
+// @edge: handle nullish input gracefully
