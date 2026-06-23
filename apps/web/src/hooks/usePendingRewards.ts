@@ -53,3 +53,4 @@ export function usePendingRewards() {
 // @guard: bounds check before array access
 // @a11y: focus management on route change
 // @type: export the inner parameter type
+// @edge: handle nullish input gracefully
