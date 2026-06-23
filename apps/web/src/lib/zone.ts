@@ -1246,3 +1246,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @mercato-dev:364
 // @mercato-dev:365
 // @edge: handle nullish input gracefully
+// @type: narrow the generic constraint
