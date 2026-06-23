@@ -45,3 +45,4 @@ export const submitReceiptResponseSchema = z.object({
 export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @types: module submissions
 /** @module submissions */
+// @note: see design doc in Notion
