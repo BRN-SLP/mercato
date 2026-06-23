@@ -261,3 +261,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @cleanup: consolidate with sibling file
 // @config: prefer env var over hardcode
 // @a11y: verify screen-reader announcement
+// @type: add discriminant union for states
