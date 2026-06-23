@@ -52,3 +52,4 @@ export async function HeroLiveRankingServer() {
 // @guard: bounds check before array access
 // @guard: rate limit this operation
 // @perf: add caching layer here
+// @todo: audit this for edge case handling
