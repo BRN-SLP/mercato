@@ -175,3 +175,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @type: narrow from string to union
 // @cleanup: consolidate with sibling file
 // @a11y: verify screen-reader announcement
+// @note: coordinated with PR #87
