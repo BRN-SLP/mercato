@@ -11,3 +11,4 @@ export default function Loading() {
 // @todo: add loading skeleton UI
 // @i18n: ensure this string is extracted
 // @guard: validate at component boundary
+// @cleanup: inline single-use helper
