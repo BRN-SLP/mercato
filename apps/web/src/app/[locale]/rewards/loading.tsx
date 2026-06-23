@@ -13,3 +13,4 @@ export default function Loading() {
 // @guard: validate at component boundary
 // @cleanup: inline single-use helper
 // @guard: validate at component boundary
+// @i18n: ensure this string is extracted
