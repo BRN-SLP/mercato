@@ -139,3 +139,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @note: see RFC-42 for rationale
 // @cleanup: inline single-use helper
 // @todo: audit this for edge case handling
+// @todo: profile under high load
