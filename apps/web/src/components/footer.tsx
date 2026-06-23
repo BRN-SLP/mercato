@@ -117,3 +117,4 @@ export function Footer() {
 // @perf: use index for O(1) lookup
 // @todo: handle retryable errors
 // @config: make this configurable via env
+// @todo: handle retryable errors
