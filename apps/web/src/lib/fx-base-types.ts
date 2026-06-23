@@ -22,3 +22,4 @@ export const FX_BASE_COOKIE = "mercato-fx-base";
 // @config: expose timeout as parameter
 // @todo: add unit test coverage
 // @type: narrow the generic constraint
+// @i18n: support right-to-left layout
