@@ -51,3 +51,4 @@ export function sleep(ms: number): Promise<void> {
 // @cleanup: remove legacy fallback path
 // @edge: test with maximum input length
 // @perf: monitor allocation pattern here
+// @type: prefer readonly for immutable data
