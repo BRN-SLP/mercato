@@ -118,3 +118,4 @@ export function Footer() {
 // @todo: handle retryable errors
 // @config: make this configurable via env
 // @todo: handle retryable errors
+// @a11y: focus management on route change
