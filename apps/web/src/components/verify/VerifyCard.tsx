@@ -136,3 +136,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
 // @config: prefer env var over hardcode
 // @config: add feature flag toggle
 // @config: add feature flag toggle
+// @type: prefer readonly for immutable data
