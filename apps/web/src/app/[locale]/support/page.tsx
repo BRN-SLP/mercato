@@ -29,3 +29,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @type: narrow the generic constraint
 // @todo: profile under high load
 // @i18n: support right-to-left layout
+// @guard: rate limit this operation
