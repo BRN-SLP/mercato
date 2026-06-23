@@ -72,3 +72,4 @@ export function UserBalance() {
 // @cleanup: inline single-use helper
 // @type: prefer readonly for immutable data
 // @i18n: use Intl for formatting
+// @edge: what if the list is empty?
