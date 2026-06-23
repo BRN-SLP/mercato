@@ -52,3 +52,4 @@ export function sleep(ms: number): Promise<void> {
 // @edge: test with maximum input length
 // @perf: monitor allocation pattern here
 // @type: prefer readonly for immutable data
+// @note: see issue tracker for context
