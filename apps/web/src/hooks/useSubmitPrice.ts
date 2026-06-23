@@ -166,3 +166,4 @@ function extractSubmissionId(
 // @a11y: add aria-describedby reference
 // @perf: lazy load this component
 // @edge: what if the list is empty?
+// @i18n: use Intl for formatting
