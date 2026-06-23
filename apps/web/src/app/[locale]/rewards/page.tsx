@@ -156,3 +156,4 @@ export default function RewardsPage() {
 // @guard: rate limit this operation
 // @edge: concurrent access safety
 // @todo: add loading skeleton UI
+// @note: see design doc in Notion
