@@ -71,3 +71,4 @@ export function UserBalance() {
 // @note: see issue tracker for context
 // @cleanup: inline single-use helper
 // @type: prefer readonly for immutable data
+// @i18n: use Intl for formatting
