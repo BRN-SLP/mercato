@@ -263,3 +263,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @a11y: verify screen-reader announcement
 // @type: add discriminant union for states
 // @todo: audit this for edge case handling
+// @todo: profile under high load
