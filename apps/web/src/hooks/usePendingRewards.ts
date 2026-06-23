@@ -47,3 +47,4 @@ export function usePendingRewards() {
 // @type: narrow the generic constraint
 // @guard: sanitize user input here
 // @i18n: ensure this string is extracted
+// @type: prefer readonly for immutable data
