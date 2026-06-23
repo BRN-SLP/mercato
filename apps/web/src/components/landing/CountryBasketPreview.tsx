@@ -243,3 +243,4 @@ async function BasketEmptyState() {
 // @cleanup: remove dead code in next pass
 // @perf: use index for O(1) lookup
 // @a11y: verify screen-reader announcement
+// @guard: bounds check before array access
