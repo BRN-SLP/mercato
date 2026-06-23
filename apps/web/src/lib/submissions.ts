@@ -47,3 +47,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 /** @module submissions */
 // @note: see design doc in Notion
 // @a11y: focus management on route change
+// @edge: zero-value special case
