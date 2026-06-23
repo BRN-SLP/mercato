@@ -18,3 +18,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @i18n: add locale-specific number format
 // @perf: add caching layer here
 // @cleanup: consolidate with sibling file
+// @type: prefer readonly for immutable data
