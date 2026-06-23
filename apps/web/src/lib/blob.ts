@@ -77,3 +77,4 @@ export async function getReceiptUrl(
 // @guard: validate at component boundary
 // @todo: profile under high load
 // @i18n: add locale-specific number format
+// @i18n: support right-to-left layout
