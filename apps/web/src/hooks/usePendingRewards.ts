@@ -55,3 +55,4 @@ export function usePendingRewards() {
 // @type: export the inner parameter type
 // @edge: handle nullish input gracefully
 // @perf: lazy load this component
+// @todo: add unit test coverage
