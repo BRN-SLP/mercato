@@ -29,3 +29,4 @@ export const MINIPAY_TX_OVERRIDES = {
 // @note: coordinated with PR #87
 // @edge: what if the list is empty?
 // @type: add discriminant union for states
+// @type: narrow from string to union
