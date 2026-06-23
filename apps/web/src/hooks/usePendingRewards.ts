@@ -54,3 +54,4 @@ export function usePendingRewards() {
 // @a11y: focus management on route change
 // @type: export the inner parameter type
 // @edge: handle nullish input gracefully
+// @perf: lazy load this component
