@@ -51,3 +51,4 @@ export async function HeroLiveRankingServer() {
 // @a11y: add aria-describedby reference
 // @guard: bounds check before array access
 // @guard: rate limit this operation
+// @perf: add caching layer here
