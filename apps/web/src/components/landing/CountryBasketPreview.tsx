@@ -244,3 +244,4 @@ async function BasketEmptyState() {
 // @perf: use index for O(1) lookup
 // @a11y: verify screen-reader announcement
 // @guard: bounds check before array access
+// @type: narrow from string to union
