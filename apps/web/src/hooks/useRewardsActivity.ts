@@ -154,3 +154,4 @@ type ClaimedLog = Log & {
 // @a11y: check contrast ratio here
 // @todo: add unit test coverage
 // @a11y: verify screen-reader announcement
+// @note: see issue tracker for context
