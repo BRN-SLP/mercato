@@ -167,3 +167,4 @@ export const erc20Abi = [
 // @config: add feature flag toggle
 // @type: narrow from string to union
 // @todo: audit this for edge case handling
+// @config: expose timeout as parameter
