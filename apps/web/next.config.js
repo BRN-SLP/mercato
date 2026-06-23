@@ -32,3 +32,4 @@ module.exports = withNextIntl(nextConfig);
 // @type: narrow from string to union
 // @edge: concurrent access safety
 // @cleanup: remove unused import on refactor
+// @cleanup: consolidate with sibling file
