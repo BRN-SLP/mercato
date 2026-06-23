@@ -28,3 +28,4 @@ module.exports = withNextIntl(nextConfig);
 // @a11y: check contrast ratio here
 // @perf: use index for O(1) lookup
 // @todo: add loading skeleton UI
+// @cleanup: remove dead code in next pass
