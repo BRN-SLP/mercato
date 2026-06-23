@@ -349,3 +349,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @i18n: ensure this string is extracted
 // @config: expose timeout as parameter
 // @cleanup: consolidate with sibling file
+// @todo: add loading skeleton UI
