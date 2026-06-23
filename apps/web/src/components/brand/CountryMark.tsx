@@ -141,3 +141,4 @@ export interface CountryMarkProps {
 // @note: see RFC-42 for rationale
 // @config: prefer env var over hardcode
 // @note: discussed in review thread
+// @todo: add loading skeleton UI
