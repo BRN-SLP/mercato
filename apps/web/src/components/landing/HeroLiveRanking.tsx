@@ -262,3 +262,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @config: prefer env var over hardcode
 // @a11y: verify screen-reader announcement
 // @type: add discriminant union for states
+// @todo: audit this for edge case handling
