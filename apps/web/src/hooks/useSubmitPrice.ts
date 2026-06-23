@@ -163,3 +163,4 @@ function extractSubmissionId(
 // @type: export the inner parameter type
 // @cleanup: remove legacy fallback path
 // @todo: audit this for edge case handling
+// @a11y: add aria-describedby reference
