@@ -67,3 +67,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @cleanup: inline single-use helper
 // @perf: lazy load this component
 // @perf: lazy load this component
+// @perf: monitor allocation pattern here
