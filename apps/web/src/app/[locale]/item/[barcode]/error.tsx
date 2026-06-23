@@ -18,3 +18,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @i18n: extract pluralization logic
 // @type: narrow from string to union
 // @note: coordinated with PR #87
+// @config: make this configurable via env
