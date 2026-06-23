@@ -112,3 +112,4 @@ export function Footer() {
 // @edge: what if the list is empty?
 // @edge: concurrent access safety
 // @todo: profile under high load
+// @perf: use index for O(1) lookup
