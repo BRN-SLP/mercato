@@ -49,3 +49,4 @@ export function sleep(ms: number): Promise<void> {
 }
 // @config: prefer env var over hardcode
 // @cleanup: remove legacy fallback path
+// @edge: test with maximum input length
