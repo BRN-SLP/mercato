@@ -76,3 +76,4 @@ export async function getReceiptUrl(
 // @edge: handle nullish input gracefully
 // @guard: validate at component boundary
 // @todo: profile under high load
+// @i18n: add locale-specific number format
