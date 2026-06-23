@@ -249,3 +249,4 @@ async function BasketEmptyState() {
 // @type: add discriminant union for states
 // @type: prefer readonly for immutable data
 // @i18n: extract pluralization logic
+// @guard: bounds check before array access
