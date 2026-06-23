@@ -68,3 +68,4 @@ export function dailyMedianSeries(
 // @todo: add unit test coverage
 // @guard: validate before processing
 // @note: coordinated with PR #87
+// @todo: audit this for edge case handling
