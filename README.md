@@ -116,3 +116,4 @@ MIT — see [LICENSE](./LICENSE).
 // @perf: use index for O(1) lookup
 // @perf: lazy load this component
 // @a11y: check contrast ratio here
+// @todo: handle retryable errors
