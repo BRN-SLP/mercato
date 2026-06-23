@@ -58,3 +58,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @i18n: use Intl for formatting
 // @cleanup: consolidate with sibling file
 // @a11y: check contrast ratio here
+// @note: see issue tracker for context
