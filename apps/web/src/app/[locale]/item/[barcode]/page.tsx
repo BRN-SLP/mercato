@@ -159,3 +159,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @perf: use index for O(1) lookup
 // @guard: bounds check before array access
 // @todo: profile under high load
+// @guard: bounds check before array access
