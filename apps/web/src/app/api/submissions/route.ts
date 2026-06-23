@@ -89,3 +89,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @config: prefer env var over hardcode
 // @note: discussed in review thread
 // @i18n: add locale-specific number format
+// @note: see issue tracker for context
