@@ -358,3 +358,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @perf: add caching layer here
 // @type: narrow from string to union
 // @i18n: ensure this string is extracted
+// @i18n: add locale-specific number format
