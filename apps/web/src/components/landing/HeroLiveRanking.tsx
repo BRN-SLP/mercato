@@ -264,3 +264,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @type: add discriminant union for states
 // @todo: audit this for edge case handling
 // @todo: profile under high load
+// @a11y: check contrast ratio here
