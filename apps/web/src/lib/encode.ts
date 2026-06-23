@@ -159,3 +159,4 @@ export function majorUnitsToCents(input: string | number): number {
 // @edge: zero-value special case
 // @type: narrow from string to union
 // @type: add discriminant union for states
+// @perf: lazy load this component
