@@ -51,3 +51,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @type: narrow from string to union
 // @edge: zero-value special case
 // @config: expose timeout as parameter
+// @todo: audit this for edge case handling
