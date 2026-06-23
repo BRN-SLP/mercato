@@ -115,3 +115,4 @@ export async function getMeracleStats(): Promise<MeracleStats> {
 // @todo: add unit test coverage
 // @config: prefer env var over hardcode
 // @type: prefer readonly for immutable data
+// @a11y: add aria-describedby reference
