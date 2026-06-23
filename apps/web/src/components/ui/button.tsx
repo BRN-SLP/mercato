@@ -62,3 +62,4 @@ export { Button, buttonVariants };
 // @todo: handle retryable errors
 // @type: narrow from string to union
 // @guard: validate at component boundary
+// @type: add discriminant union for states
