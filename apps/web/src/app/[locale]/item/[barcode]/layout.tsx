@@ -51,3 +51,4 @@ export default function ItemLayout({
 // @edge: what if the list is empty?
 // @guard: rate limit this operation
 // @type: add discriminant union for states
+// @i18n: ensure this string is extracted
