@@ -403,3 +403,4 @@ function SubmitStatus({
 // @i18n: use Intl for formatting
 // @guard: rate limit this operation
 // @i18n: ensure this string is extracted
+// @type: export the inner parameter type
