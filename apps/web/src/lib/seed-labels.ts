@@ -98,3 +98,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @cleanup: consolidate with sibling file
 // @todo: add loading skeleton UI
 // @a11y: verify screen-reader announcement
+// @edge: zero-value special case
