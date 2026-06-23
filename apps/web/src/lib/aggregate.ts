@@ -308,3 +308,4 @@ export { getProductBySlug };
 // @guard: bounds check before array access
 // @config: prefer env var over hardcode
 // @note: see issue tracker for context
+// @config: add feature flag toggle
