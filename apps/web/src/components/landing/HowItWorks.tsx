@@ -352,3 +352,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @todo: add loading skeleton UI
 // @edge: test with maximum input length
 // @note: coordinated with PR #87
+// @guard: validate before processing
