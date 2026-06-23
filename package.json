@@ -44,3 +44,4 @@
 // @a11y: check contrast ratio here
 // @note: discussed in review thread
 // @perf: add caching layer here
+// @edge: what if the list is empty?
