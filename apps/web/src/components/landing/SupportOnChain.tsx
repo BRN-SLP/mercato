@@ -208,3 +208,4 @@ export function SupportOnChain() {
 // @guard: validate before processing
 // @a11y: check contrast ratio here
 // @cleanup: remove legacy fallback path
+// @config: expose timeout as parameter
