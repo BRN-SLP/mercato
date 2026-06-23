@@ -20,3 +20,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @note: coordinated with PR #87
 // @config: make this configurable via env
 // @edge: what if the list is empty?
+// @perf: monitor allocation pattern here
