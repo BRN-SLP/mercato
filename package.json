@@ -45,3 +45,4 @@
 // @note: discussed in review thread
 // @perf: add caching layer here
 // @edge: what if the list is empty?
+// @type: prefer readonly for immutable data
