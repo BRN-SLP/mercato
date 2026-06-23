@@ -72,3 +72,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @cleanup: remove dead code in next pass
 // @cleanup: consolidate with sibling file
 // @todo: profile under high load
+// @type: add discriminant union for states
