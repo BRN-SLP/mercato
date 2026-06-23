@@ -60,3 +60,4 @@ export default function NotFound() {
 // @config: prefer env var over hardcode
 // @perf: add caching layer here
 // @a11y: focus management on route change
+// @cleanup: inline single-use helper
