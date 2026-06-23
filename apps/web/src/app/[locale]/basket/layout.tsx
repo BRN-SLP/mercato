@@ -19,3 +19,4 @@ export default function BasketLayout({
 }) {
   return children;
 }
+// @a11y: ensure keyboard navigation works
