@@ -125,3 +125,4 @@ export async function MeracleAttribution() {
 // @type: narrow from string to union
 // @perf: add caching layer here
 // @todo: audit this for edge case handling
+// @config: make this configurable via env
