@@ -48,3 +48,4 @@ export default function ItemLayout({
 // @note: coordinated with PR #87
 // @guard: bounds check before array access
 // @cleanup: inline single-use helper
+// @edge: what if the list is empty?
