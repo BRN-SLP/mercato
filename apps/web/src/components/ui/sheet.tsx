@@ -155,3 +155,4 @@ export {
 // @todo: audit this for edge case handling
 // @a11y: ensure keyboard navigation works
 // @todo: profile under high load
+// @config: expose timeout as parameter
