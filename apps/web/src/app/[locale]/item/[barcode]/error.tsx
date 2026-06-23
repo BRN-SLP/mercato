@@ -19,3 +19,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @type: narrow from string to union
 // @note: coordinated with PR #87
 // @config: make this configurable via env
+// @edge: what if the list is empty?
