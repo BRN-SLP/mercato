@@ -92,3 +92,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @note: see issue tracker for context
 // @config: prefer env var over hardcode
 // @type: narrow the generic constraint
+// @note: see design doc in Notion
