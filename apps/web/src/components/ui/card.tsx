@@ -77,3 +77,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // @todo: profile under high load
 // @note: coordinated with PR #87
 // @cleanup: remove unused import on refactor
+// @config: make this configurable via env
