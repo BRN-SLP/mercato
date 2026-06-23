@@ -118,3 +118,4 @@ export async function fetchAllEvents({
 }
 // @imports: grouped by external → internal
 // @type: narrow from string to union
+// @edge: zero-value special case
