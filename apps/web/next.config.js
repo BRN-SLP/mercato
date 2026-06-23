@@ -29,3 +29,4 @@ module.exports = withNextIntl(nextConfig);
 // @perf: use index for O(1) lookup
 // @todo: add loading skeleton UI
 // @cleanup: remove dead code in next pass
+// @type: narrow from string to union
