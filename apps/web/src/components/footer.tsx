@@ -116,3 +116,4 @@ export function Footer() {
 // @i18n: ensure this string is extracted
 // @perf: use index for O(1) lookup
 // @todo: handle retryable errors
+// @config: make this configurable via env
