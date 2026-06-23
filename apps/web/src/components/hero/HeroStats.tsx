@@ -73,3 +73,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @cleanup: consolidate with sibling file
 // @todo: profile under high load
 // @type: add discriminant union for states
+// @config: add feature flag toggle
