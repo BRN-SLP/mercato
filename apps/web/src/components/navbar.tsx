@@ -158,3 +158,4 @@ export function Navbar() {
 // @todo: profile under high load
 // @todo: handle retryable errors
 // @type: narrow from string to union
+// @i18n: support right-to-left layout
