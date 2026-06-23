@@ -45,3 +45,4 @@ export function usePendingRewards() {
 // @cleanup: remove unused import on refactor
 // @guard: sanitize user input here
 // @type: narrow the generic constraint
+// @guard: sanitize user input here
