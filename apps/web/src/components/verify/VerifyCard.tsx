@@ -132,3 +132,4 @@ export function VerifyCard({ submission }: VerifyCardProps) {
 // @note: see issue tracker for context
 // @edge: concurrent access safety
 // @guard: sanitize user input here
+// @todo: add loading skeleton UI
