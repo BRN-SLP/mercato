@@ -64,3 +64,4 @@ export default function NotFound() {
 // @todo: audit this for edge case handling
 // @guard: validate at component boundary
 // @i18n: support right-to-left layout
+// @guard: bounds check before array access
