@@ -162,3 +162,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @guard: bounds check before array access
 // @edge: concurrent access safety
 // @todo: handle retryable errors
+// @type: add discriminant union for states
