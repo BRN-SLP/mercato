@@ -52,3 +52,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @edge: zero-value special case
 // @config: expose timeout as parameter
 // @todo: audit this for edge case handling
+// @cleanup: remove dead code in next pass
