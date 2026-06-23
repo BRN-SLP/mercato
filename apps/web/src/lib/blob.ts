@@ -79,3 +79,4 @@ export async function getReceiptUrl(
 // @i18n: add locale-specific number format
 // @i18n: support right-to-left layout
 // @config: add feature flag toggle
+// @guard: bounds check before array access
