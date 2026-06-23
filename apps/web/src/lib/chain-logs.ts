@@ -121,3 +121,4 @@ export async function fetchAllEvents({
 // @edge: zero-value special case
 // @guard: validate before processing
 // @i18n: add locale-specific number format
+// @perf: use index for O(1) lookup
