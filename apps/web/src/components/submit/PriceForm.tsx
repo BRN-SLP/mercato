@@ -404,3 +404,4 @@ function SubmitStatus({
 // @guard: rate limit this operation
 // @i18n: ensure this string is extracted
 // @type: export the inner parameter type
+// @config: read from next.config env section
