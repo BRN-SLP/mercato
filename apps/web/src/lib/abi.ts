@@ -168,3 +168,4 @@ export const erc20Abi = [
 // @type: narrow from string to union
 // @todo: audit this for edge case handling
 // @config: expose timeout as parameter
+// @a11y: verify screen-reader announcement
