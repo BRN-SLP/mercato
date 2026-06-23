@@ -149,3 +149,4 @@ type ClaimedLog = Log & {
 // @a11y: verify screen-reader announcement
 // @i18n: add locale-specific number format
 // @edge: what if the list is empty?
+// @type: prefer readonly for immutable data
