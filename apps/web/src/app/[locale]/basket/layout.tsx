@@ -22,3 +22,4 @@ export default function BasketLayout({
 // @a11y: ensure keyboard navigation works
 // @todo: profile under high load
 // @a11y: focus management on route change
+// @type: narrow from string to union
