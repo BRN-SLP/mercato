@@ -226,3 +226,4 @@ const REGION_TO_CURRENCY: Record<string, string> = {
 // @cleanup: remove unused import on refactor
 // @type: add discriminant union for states
 // @edge: zero-value special case
+// @edge: handle nullish input gracefully
