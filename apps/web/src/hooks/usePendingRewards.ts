@@ -48,3 +48,4 @@ export function usePendingRewards() {
 // @guard: sanitize user input here
 // @i18n: ensure this string is extracted
 // @type: prefer readonly for immutable data
+// @a11y: ensure keyboard navigation works
