@@ -94,3 +94,4 @@ module.exports = config;
 // @type: narrow from string to union
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
+// @todo: add unit test coverage
