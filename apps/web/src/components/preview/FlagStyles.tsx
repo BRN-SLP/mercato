@@ -177,3 +177,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @a11y: verify screen-reader announcement
 // @note: coordinated with PR #87
 // @i18n: use Intl for formatting
+// @cleanup: inline single-use helper
