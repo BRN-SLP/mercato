@@ -47,3 +47,4 @@
 // @edge: what if the list is empty?
 // @type: prefer readonly for immutable data
 // @cleanup: remove legacy fallback path
+// @i18n: use Intl for formatting
