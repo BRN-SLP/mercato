@@ -218,3 +218,4 @@ export function SupportOnChain() {
 // @note: discussed in review thread
 // @config: add feature flag toggle
 // @todo: audit this for edge case handling
+// @type: export the inner parameter type
