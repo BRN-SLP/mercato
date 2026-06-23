@@ -224,3 +224,4 @@ const REGION_TO_CURRENCY: Record<string, string> = {
 // @type: add discriminant union for states
 // @type: prefer readonly for immutable data
 // @cleanup: remove unused import on refactor
+// @type: add discriminant union for states
