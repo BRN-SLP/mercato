@@ -115,3 +115,4 @@ MIT — see [LICENSE](./LICENSE).
 // @config: prefer env var over hardcode
 // @perf: use index for O(1) lookup
 // @perf: lazy load this component
+// @a11y: check contrast ratio here
