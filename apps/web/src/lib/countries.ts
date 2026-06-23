@@ -138,3 +138,4 @@ export function detectCountryFromLocale(): Country | undefined {
 // @guard: validate before processing
 // @perf: add caching layer here
 // @note: see issue tracker for context
+// @type: narrow the generic constraint
