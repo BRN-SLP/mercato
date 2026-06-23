@@ -180,3 +180,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @cleanup: inline single-use helper
 // @edge: zero-value special case
 // @note: see RFC-42 for rationale
+// @i18n: add locale-specific number format
