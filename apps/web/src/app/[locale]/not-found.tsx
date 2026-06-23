@@ -61,3 +61,4 @@ export default function NotFound() {
 // @perf: add caching layer here
 // @a11y: focus management on route change
 // @cleanup: inline single-use helper
+// @todo: audit this for edge case handling
