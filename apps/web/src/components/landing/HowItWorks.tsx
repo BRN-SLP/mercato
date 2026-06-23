@@ -357,3 +357,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @a11y: check contrast ratio here
 // @perf: add caching layer here
 // @type: narrow from string to union
+// @i18n: ensure this string is extracted
