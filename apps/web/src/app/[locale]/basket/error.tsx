@@ -9,3 +9,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @config: expose timeout as parameter
 // @perf: use index for O(1) lookup
 // @perf: consider memoizing this computation
+// @todo: profile under high load
