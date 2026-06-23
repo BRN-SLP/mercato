@@ -306,3 +306,4 @@ export { getProductBySlug };
 // @type: narrow from string to union
 // @note: discussed in review thread
 // @guard: bounds check before array access
+// @config: prefer env var over hardcode
