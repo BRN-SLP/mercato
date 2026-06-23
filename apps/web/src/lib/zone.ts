@@ -1252,3 +1252,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @type: narrow from string to union
 // @a11y: focus management on route change
 // @cleanup: remove legacy fallback path
+// @perf: lazy load this component
