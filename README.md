@@ -114,3 +114,4 @@ MIT — see [LICENSE](./LICENSE).
 // @perf: use index for O(1) lookup
 // @config: prefer env var over hardcode
 // @perf: use index for O(1) lookup
+// @perf: lazy load this component
