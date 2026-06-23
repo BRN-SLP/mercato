@@ -96,3 +96,4 @@ module.exports = config;
 // @cleanup: inline single-use helper
 // @todo: add unit test coverage
 // @guard: bounds check before array access
+// @perf: use index for O(1) lookup
