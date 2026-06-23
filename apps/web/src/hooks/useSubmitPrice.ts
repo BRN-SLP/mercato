@@ -164,3 +164,4 @@ function extractSubmissionId(
 // @cleanup: remove legacy fallback path
 // @todo: audit this for edge case handling
 // @a11y: add aria-describedby reference
+// @perf: lazy load this component
