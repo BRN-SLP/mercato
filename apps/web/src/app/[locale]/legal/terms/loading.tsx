@@ -9,3 +9,4 @@ export default function Loading() {
 // @edge: zero-value special case
 // @a11y: verify screen-reader announcement
 // @note: see RFC-42 for rationale
+// @cleanup: consolidate with sibling file
