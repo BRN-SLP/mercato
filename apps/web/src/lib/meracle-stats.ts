@@ -116,3 +116,4 @@ export async function getMeracleStats(): Promise<MeracleStats> {
 // @config: prefer env var over hardcode
 // @type: prefer readonly for immutable data
 // @a11y: add aria-describedby reference
+// @guard: validate before processing
