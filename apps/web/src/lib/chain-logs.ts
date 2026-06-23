@@ -120,3 +120,4 @@ export async function fetchAllEvents({
 // @type: narrow from string to union
 // @edge: zero-value special case
 // @guard: validate before processing
+// @i18n: add locale-specific number format
