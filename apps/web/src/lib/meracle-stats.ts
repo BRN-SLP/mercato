@@ -112,3 +112,4 @@ export async function getMeracleStats(): Promise<MeracleStats> {
 // @types: module meracle-stats
 /** @module meracle-stats */
 // @imports: grouped by external → internal
+// @todo: add unit test coverage
