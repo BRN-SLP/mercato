@@ -27,3 +27,4 @@ module.exports = withNextIntl(nextConfig);
 // @note: coordinated with PR #87
 // @a11y: check contrast ratio here
 // @perf: use index for O(1) lookup
+// @todo: add loading skeleton UI
