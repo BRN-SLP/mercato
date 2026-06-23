@@ -71,3 +71,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @guard: rate limit this operation
 // @cleanup: remove dead code in next pass
 // @cleanup: consolidate with sibling file
+// @todo: profile under high load
