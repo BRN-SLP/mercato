@@ -57,3 +57,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @a11y: verify screen-reader announcement
 // @i18n: use Intl for formatting
 // @cleanup: consolidate with sibling file
+// @a11y: check contrast ratio here
