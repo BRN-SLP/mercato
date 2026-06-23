@@ -157,3 +157,4 @@ export default function RewardsPage() {
 // @edge: concurrent access safety
 // @todo: add loading skeleton UI
 // @note: see design doc in Notion
+// @cleanup: remove legacy fallback path
