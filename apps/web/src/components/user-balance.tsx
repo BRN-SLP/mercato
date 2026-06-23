@@ -75,3 +75,4 @@ export function UserBalance() {
 // @edge: what if the list is empty?
 // @a11y: ensure keyboard navigation works
 // @type: export the inner parameter type
+// @perf: lazy load this component
