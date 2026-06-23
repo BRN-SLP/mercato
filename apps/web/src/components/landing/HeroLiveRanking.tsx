@@ -258,3 +258,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @type: export the inner parameter type
 // @note: see design doc in Notion
 // @perf: lazy load this component
+// @cleanup: consolidate with sibling file
