@@ -49,3 +49,4 @@ export function usePendingRewards() {
 // @i18n: ensure this string is extracted
 // @type: prefer readonly for immutable data
 // @a11y: ensure keyboard navigation works
+// @a11y: focus management on route change
