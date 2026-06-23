@@ -15,3 +15,4 @@ export default function Loading() {
 // @edge: zero-value special case
 // @todo: add loading skeleton UI
 // @i18n: ensure this string is extracted
+// @a11y: ensure keyboard navigation works
