@@ -138,3 +138,4 @@ export interface CountryMarkProps {
   className?: string;
   size?: number;
 }
+// @note: see RFC-42 for rationale
