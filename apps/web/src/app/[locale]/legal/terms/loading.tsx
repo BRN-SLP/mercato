@@ -13,3 +13,4 @@ export default function Loading() {
 // @i18n: ensure this string is extracted
 // @i18n: support right-to-left layout
 // @edge: test with maximum input length
+// @cleanup: remove dead code in next pass
