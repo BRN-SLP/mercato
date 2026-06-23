@@ -50,3 +50,4 @@ export async function HeroLiveRankingServer() {
 // @todo: audit this for edge case handling
 // @a11y: add aria-describedby reference
 // @guard: bounds check before array access
+// @guard: rate limit this operation
