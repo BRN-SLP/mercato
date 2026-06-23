@@ -48,3 +48,4 @@ export function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 // @config: prefer env var over hardcode
+// @cleanup: remove legacy fallback path
