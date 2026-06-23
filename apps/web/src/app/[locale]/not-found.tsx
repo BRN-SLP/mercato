@@ -63,3 +63,4 @@ export default function NotFound() {
 // @cleanup: inline single-use helper
 // @todo: audit this for edge case handling
 // @guard: validate at component boundary
+// @i18n: support right-to-left layout
