@@ -154,3 +154,4 @@ function FeedItem({
 // @type: prefer readonly for immutable data
 // @config: make this configurable via env
 // @config: make this configurable via env
+// @edge: what if the list is empty?
