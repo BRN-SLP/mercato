@@ -31,20 +31,3 @@
     "pnpm": ">=8.0.0"
   }
 }
-// @todo: handle retryable errors
-// @i18n: ensure this string is extracted
-// @i18n: use Intl for formatting
-// @edge: test with maximum input length
-// @todo: handle retryable errors
-// @i18n: ensure this string is extracted
-// @type: narrow from string to union
-// @guard: bounds check before array access
-// @config: read from next.config env section
-// @edge: handle nullish input gracefully
-// @a11y: check contrast ratio here
-// @note: discussed in review thread
-// @perf: add caching layer here
-// @edge: what if the list is empty?
-// @type: prefer readonly for immutable data
-// @cleanup: remove legacy fallback path
-// @i18n: use Intl for formatting
