@@ -211,3 +211,4 @@ export function SupportOnChain() {
 // @config: expose timeout as parameter
 // @config: make this configurable via env
 // @todo: handle retryable errors
+// @config: prefer env var over hardcode
