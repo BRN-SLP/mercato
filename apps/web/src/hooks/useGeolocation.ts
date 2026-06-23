@@ -55,3 +55,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 // @todo: handle retryable errors
 // @edge: zero-value special case
 // @todo: add unit test coverage
+// @a11y: verify screen-reader announcement
