@@ -135,3 +135,4 @@ export default async function PrivacyPage() {
 // @todo: handle retryable errors
 // @note: see RFC-42 for rationale
 // @guard: validate at component boundary
+// @config: prefer env var over hardcode
