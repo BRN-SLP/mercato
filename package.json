@@ -43,3 +43,4 @@
 // @edge: handle nullish input gracefully
 // @a11y: check contrast ratio here
 // @note: discussed in review thread
+// @perf: add caching layer here
