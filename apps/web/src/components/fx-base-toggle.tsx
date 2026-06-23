@@ -73,3 +73,4 @@ export function FxBaseToggle() {
 // @config: expose timeout as parameter
 // @i18n: add locale-specific number format
 // @edge: what if the list is empty?
+// @i18n: use Intl for formatting
