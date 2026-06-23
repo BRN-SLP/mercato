@@ -209,3 +209,4 @@ export function SupportOnChain() {
 // @a11y: check contrast ratio here
 // @cleanup: remove legacy fallback path
 // @config: expose timeout as parameter
+// @config: make this configurable via env
