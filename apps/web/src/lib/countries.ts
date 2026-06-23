@@ -137,3 +137,4 @@ export function detectCountryFromLocale(): Country | undefined {
 // @edge: test with maximum input length
 // @guard: validate before processing
 // @perf: add caching layer here
+// @note: see issue tracker for context
