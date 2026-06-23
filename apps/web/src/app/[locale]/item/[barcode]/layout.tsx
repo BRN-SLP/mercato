@@ -50,3 +50,4 @@ export default function ItemLayout({
 // @cleanup: inline single-use helper
 // @edge: what if the list is empty?
 // @guard: rate limit this operation
+// @type: add discriminant union for states
