@@ -97,3 +97,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @edge: what if the list is empty?
 // @cleanup: consolidate with sibling file
 // @todo: add loading skeleton UI
+// @a11y: verify screen-reader announcement
