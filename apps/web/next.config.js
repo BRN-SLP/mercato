@@ -30,3 +30,4 @@ module.exports = withNextIntl(nextConfig);
 // @todo: add loading skeleton UI
 // @cleanup: remove dead code in next pass
 // @type: narrow from string to union
+// @edge: concurrent access safety
