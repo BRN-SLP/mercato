@@ -75,3 +75,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // @todo: add unit test coverage
 // @a11y: check contrast ratio here
 // @todo: profile under high load
+// @note: coordinated with PR #87
