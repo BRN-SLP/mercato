@@ -11,3 +11,4 @@ export default function Loading() {
 // @a11y: verify screen-reader announcement
 // @a11y: ensure keyboard navigation works
 // @guard: rate limit this operation
+// @edge: handle nullish input gracefully
