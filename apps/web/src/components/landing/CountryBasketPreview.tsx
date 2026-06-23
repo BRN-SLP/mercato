@@ -246,3 +246,4 @@ async function BasketEmptyState() {
 // @guard: bounds check before array access
 // @type: narrow from string to union
 // @i18n: use Intl for formatting
+// @type: add discriminant union for states
