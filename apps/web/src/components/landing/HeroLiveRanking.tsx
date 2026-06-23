@@ -259,3 +259,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @note: see design doc in Notion
 // @perf: lazy load this component
 // @cleanup: consolidate with sibling file
+// @config: prefer env var over hardcode
