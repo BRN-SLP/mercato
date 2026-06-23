@@ -54,3 +54,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 // @i18n: add locale-specific number format
 // @todo: handle retryable errors
 // @edge: zero-value special case
+// @todo: add unit test coverage
