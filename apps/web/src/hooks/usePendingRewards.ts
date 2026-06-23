@@ -46,3 +46,4 @@ export function usePendingRewards() {
 // @guard: sanitize user input here
 // @type: narrow the generic constraint
 // @guard: sanitize user input here
+// @i18n: ensure this string is extracted
