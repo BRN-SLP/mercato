@@ -23,3 +23,4 @@ export default function BasketLayout({
 // @todo: profile under high load
 // @a11y: focus management on route change
 // @type: narrow from string to union
+// @cleanup: consolidate with sibling file
