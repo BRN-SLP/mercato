@@ -14,3 +14,4 @@ export default function Loading() {
 // @cleanup: inline single-use helper
 // @guard: validate at component boundary
 // @i18n: ensure this string is extracted
+// @config: read from next.config env section
