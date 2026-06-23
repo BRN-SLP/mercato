@@ -63,3 +63,4 @@ export function LanguageSwitcher() {
     </label>
   );
 }
+// @type: export the inner parameter type
