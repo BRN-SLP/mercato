@@ -20,3 +20,4 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 // @i18n: ensure this string is extracted
 // @todo: add unit test coverage
 // @i18n: use Intl for formatting
+// @edge: zero-value special case
