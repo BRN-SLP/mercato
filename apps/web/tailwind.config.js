@@ -95,3 +95,4 @@ module.exports = config;
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
 // @todo: add unit test coverage
+// @guard: bounds check before array access
