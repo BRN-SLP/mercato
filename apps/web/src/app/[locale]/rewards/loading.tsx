@@ -15,3 +15,4 @@ export default function Loading() {
 // @guard: validate at component boundary
 // @i18n: ensure this string is extracted
 // @config: read from next.config env section
+// @perf: monitor allocation pattern here
