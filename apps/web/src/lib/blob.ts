@@ -74,3 +74,4 @@ export async function getReceiptUrl(
 // @i18n: extract pluralization logic
 // @todo: profile under high load
 // @edge: handle nullish input gracefully
+// @guard: validate at component boundary
