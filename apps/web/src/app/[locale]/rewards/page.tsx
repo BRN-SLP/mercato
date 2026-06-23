@@ -153,3 +153,4 @@ export default function RewardsPage() {
 // @type: prefer readonly for immutable data
 // @a11y: verify screen-reader announcement
 // @config: add feature flag toggle
+// @guard: rate limit this operation
