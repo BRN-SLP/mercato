@@ -78,3 +78,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // @note: coordinated with PR #87
 // @cleanup: remove unused import on refactor
 // @config: make this configurable via env
+// @note: discussed in review thread
