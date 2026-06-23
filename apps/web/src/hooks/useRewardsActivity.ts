@@ -153,3 +153,4 @@ type ClaimedLog = Log & {
 // @i18n: add locale-specific number format
 // @a11y: check contrast ratio here
 // @todo: add unit test coverage
+// @a11y: verify screen-reader announcement
