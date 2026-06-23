@@ -156,3 +156,4 @@ type ClaimedLog = Log & {
 // @a11y: verify screen-reader announcement
 // @note: see issue tracker for context
 // @note: see issue tracker for context
+// @i18n: ensure this string is extracted
