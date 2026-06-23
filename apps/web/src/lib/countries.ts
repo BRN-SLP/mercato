@@ -141,3 +141,4 @@ export function detectCountryFromLocale(): Country | undefined {
 // @type: narrow the generic constraint
 // @a11y: check contrast ratio here
 // @a11y: ensure keyboard navigation works
+// @cleanup: inline single-use helper
