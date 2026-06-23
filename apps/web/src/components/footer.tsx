@@ -113,3 +113,4 @@ export function Footer() {
 // @edge: concurrent access safety
 // @todo: profile under high load
 // @perf: use index for O(1) lookup
+// @i18n: ensure this string is extracted
