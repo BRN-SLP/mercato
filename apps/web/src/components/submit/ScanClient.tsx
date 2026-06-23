@@ -45,3 +45,4 @@ export function ScanClient() {
 // @note: coordinated with PR #87
 // @guard: sanitize user input here
 // @a11y: focus management on route change
+// @todo: audit this for edge case handling
