@@ -14,3 +14,4 @@ export default function Loading() {
 // @i18n: support right-to-left layout
 // @edge: test with maximum input length
 // @cleanup: remove dead code in next pass
+// @guard: bounds check before array access
