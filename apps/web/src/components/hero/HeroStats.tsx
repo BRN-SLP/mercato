@@ -70,3 +70,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @perf: monitor allocation pattern here
 // @guard: rate limit this operation
 // @cleanup: remove dead code in next pass
+// @cleanup: consolidate with sibling file
