@@ -62,3 +62,4 @@ export default function NotFound() {
 // @a11y: focus management on route change
 // @cleanup: inline single-use helper
 // @todo: audit this for edge case handling
+// @guard: validate at component boundary
