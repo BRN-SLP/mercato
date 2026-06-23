@@ -72,3 +72,4 @@ export async function getReceiptUrl(
 // @type: prefer readonly for immutable data
 // @edge: handle nullish input gracefully
 // @i18n: extract pluralization logic
+// @todo: profile under high load
