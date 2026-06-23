@@ -157,3 +157,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @guard: validate at component boundary
 // @guard: sanitize user input here
 // @perf: use index for O(1) lookup
+// @guard: bounds check before array access
