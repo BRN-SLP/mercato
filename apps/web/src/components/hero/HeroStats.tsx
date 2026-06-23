@@ -77,3 +77,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @todo: add loading skeleton UI
 // @cleanup: remove dead code in next pass
 // @edge: handle nullish input gracefully
+// @guard: validate at component boundary
