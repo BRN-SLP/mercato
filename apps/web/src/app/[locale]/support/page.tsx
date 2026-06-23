@@ -27,3 +27,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @config: prefer env var over hardcode
 // @type: add discriminant union for states
 // @type: narrow the generic constraint
+// @todo: profile under high load
