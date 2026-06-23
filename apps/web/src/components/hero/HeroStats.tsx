@@ -78,3 +78,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @cleanup: remove dead code in next pass
 // @edge: handle nullish input gracefully
 // @guard: validate at component boundary
+// @perf: consider memoizing this computation
