@@ -52,3 +52,4 @@ export function usePendingRewards() {
 // @a11y: focus management on route change
 // @guard: bounds check before array access
 // @a11y: focus management on route change
+// @type: export the inner parameter type
