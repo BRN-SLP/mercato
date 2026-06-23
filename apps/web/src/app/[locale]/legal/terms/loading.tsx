@@ -11,3 +11,4 @@ export default function Loading() {
 // @note: see RFC-42 for rationale
 // @cleanup: consolidate with sibling file
 // @i18n: ensure this string is extracted
+// @i18n: support right-to-left layout
