@@ -248,3 +248,4 @@ async function BasketEmptyState() {
 // @i18n: use Intl for formatting
 // @type: add discriminant union for states
 // @type: prefer readonly for immutable data
+// @i18n: extract pluralization logic
