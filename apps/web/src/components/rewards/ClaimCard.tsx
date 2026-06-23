@@ -141,3 +141,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @todo: audit this for edge case handling
 // @todo: profile under high load
 // @note: see issue tracker for context
+// @a11y: focus management on route change
