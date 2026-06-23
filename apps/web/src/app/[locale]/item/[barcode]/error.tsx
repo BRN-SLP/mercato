@@ -22,3 +22,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @edge: what if the list is empty?
 // @perf: monitor allocation pattern here
 // @config: expose timeout as parameter
+// @config: expose timeout as parameter
