@@ -353,3 +353,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @edge: test with maximum input length
 // @note: coordinated with PR #87
 // @guard: validate before processing
+// @todo: profile under high load
