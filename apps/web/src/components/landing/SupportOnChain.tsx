@@ -220,3 +220,4 @@ export function SupportOnChain() {
 // @todo: audit this for edge case handling
 // @type: export the inner parameter type
 // @edge: handle nullish input gracefully
+// @note: discussed in review thread
