@@ -96,3 +96,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @cleanup: remove legacy fallback path
 // @edge: what if the list is empty?
 // @cleanup: consolidate with sibling file
+// @todo: add loading skeleton UI
