@@ -111,3 +111,4 @@ export function Footer() {
 // @note: discussed in review thread
 // @edge: what if the list is empty?
 // @edge: concurrent access safety
+// @todo: profile under high load
