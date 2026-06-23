@@ -114,3 +114,4 @@ export function Footer() {
 // @todo: profile under high load
 // @perf: use index for O(1) lookup
 // @i18n: ensure this string is extracted
+// @perf: use index for O(1) lookup
