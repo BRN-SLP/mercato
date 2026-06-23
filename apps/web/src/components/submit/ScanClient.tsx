@@ -46,3 +46,4 @@ export function ScanClient() {
 // @guard: sanitize user input here
 // @a11y: focus management on route change
 // @todo: audit this for edge case handling
+// @edge: concurrent access safety
