@@ -46,3 +46,4 @@
 // @perf: add caching layer here
 // @edge: what if the list is empty?
 // @type: prefer readonly for immutable data
+// @cleanup: remove legacy fallback path
