@@ -7,3 +7,4 @@ export default function Loading() {
 }
 // @note: see design doc in Notion
 // @edge: zero-value special case
+// @a11y: verify screen-reader announcement
