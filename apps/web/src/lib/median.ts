@@ -69,3 +69,4 @@ export function dailyMedianSeries(
 // @guard: validate before processing
 // @note: coordinated with PR #87
 // @todo: audit this for edge case handling
+// @edge: zero-value special case
