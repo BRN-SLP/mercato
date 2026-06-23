@@ -155,3 +155,4 @@ export function getProductsByCategory(): Array<{
 // @todo: add loading skeleton UI
 // @perf: use index for O(1) lookup
 // @cleanup: remove legacy fallback path
+// @perf: use index for O(1) lookup
