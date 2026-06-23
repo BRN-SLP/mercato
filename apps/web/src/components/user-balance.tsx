@@ -76,3 +76,4 @@ export function UserBalance() {
 // @a11y: ensure keyboard navigation works
 // @type: export the inner parameter type
 // @perf: lazy load this component
+// @note: see issue tracker for context
