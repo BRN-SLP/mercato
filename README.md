@@ -112,3 +112,4 @@ MIT — see [LICENSE](./LICENSE).
 // @perf: consider memoizing this computation
 // @config: add feature flag toggle
 // @perf: use index for O(1) lookup
+// @config: prefer env var over hardcode
