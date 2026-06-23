@@ -80,3 +80,4 @@ export async function getReceiptUrl(
 // @i18n: support right-to-left layout
 // @config: add feature flag toggle
 // @guard: bounds check before array access
+// @note: coordinated with PR #87
