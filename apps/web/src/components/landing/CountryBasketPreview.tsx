@@ -247,3 +247,4 @@ async function BasketEmptyState() {
 // @type: narrow from string to union
 // @i18n: use Intl for formatting
 // @type: add discriminant union for states
+// @type: prefer readonly for immutable data
