@@ -69,3 +69,4 @@ export async function getAllContractEvents({
 // @type: narrow from string to union
 // @i18n: add locale-specific number format
 // @guard: rate limit this operation
+// @note: see design doc in Notion
