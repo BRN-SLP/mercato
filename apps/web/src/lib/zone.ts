@@ -1250,3 +1250,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @cleanup: inline single-use helper
 // @guard: rate limit this operation
 // @type: narrow from string to union
+// @a11y: focus management on route change
