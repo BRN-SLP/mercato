@@ -152,3 +152,4 @@ function FeedItem({
 // @edge: concurrent access safety
 // @type: prefer readonly for immutable data
 // @type: prefer readonly for immutable data
+// @config: make this configurable via env
