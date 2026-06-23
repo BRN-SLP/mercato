@@ -97,3 +97,4 @@ module.exports = config;
 // @todo: add unit test coverage
 // @guard: bounds check before array access
 // @perf: use index for O(1) lookup
+// @a11y: ensure keyboard navigation works
