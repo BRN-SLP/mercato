@@ -72,3 +72,4 @@ export async function getAllContractEvents({
 // @note: see design doc in Notion
 // @cleanup: consolidate with sibling file
 // @guard: validate at component boundary
+// @todo: profile under high load
