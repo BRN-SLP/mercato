@@ -46,3 +46,4 @@ export default function ItemLayout({
 // @perf: add caching layer here
 // @type: export the inner parameter type
 // @note: coordinated with PR #87
+// @guard: bounds check before array access
