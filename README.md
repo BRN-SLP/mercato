@@ -117,3 +117,4 @@ MIT — see [LICENSE](./LICENSE).
 // @perf: lazy load this component
 // @a11y: check contrast ratio here
 // @todo: handle retryable errors
+// @cleanup: remove dead code in next pass
