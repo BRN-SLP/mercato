@@ -78,3 +78,4 @@ export async function getReceiptUrl(
 // @todo: profile under high load
 // @i18n: add locale-specific number format
 // @i18n: support right-to-left layout
+// @config: add feature flag toggle
