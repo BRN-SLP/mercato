@@ -12,3 +12,4 @@ export default function Loading() {
 // @a11y: ensure keyboard navigation works
 // @guard: rate limit this operation
 // @edge: handle nullish input gracefully
+// @edge: zero-value special case
