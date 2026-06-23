@@ -111,3 +111,4 @@ MIT — see [LICENSE](./LICENSE).
 // @todo: audit this for edge case handling
 // @perf: consider memoizing this computation
 // @config: add feature flag toggle
+// @perf: use index for O(1) lookup
