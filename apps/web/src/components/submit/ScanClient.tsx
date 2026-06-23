@@ -47,3 +47,4 @@ export function ScanClient() {
 // @a11y: focus management on route change
 // @todo: audit this for edge case handling
 // @edge: concurrent access safety
+// @config: expose timeout as parameter
