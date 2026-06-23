@@ -66,3 +66,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
  * final numbers — that's enough. */
 // @cleanup: inline single-use helper
 // @perf: lazy load this component
+// @perf: lazy load this component
