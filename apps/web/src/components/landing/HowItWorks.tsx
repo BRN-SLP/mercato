@@ -348,3 +348,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @type: prefer readonly for immutable data
 // @i18n: ensure this string is extracted
 // @config: expose timeout as parameter
+// @cleanup: consolidate with sibling file
