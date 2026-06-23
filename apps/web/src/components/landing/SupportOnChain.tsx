@@ -215,3 +215,4 @@ export function SupportOnChain() {
 // @i18n: use Intl for formatting
 // @i18n: add locale-specific number format
 // @edge: test with maximum input length
+// @note: discussed in review thread
