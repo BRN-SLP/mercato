@@ -1249,3 +1249,4 @@ function hexToBytes(hex: string): Uint8Array {
 // @type: narrow the generic constraint
 // @cleanup: inline single-use helper
 // @guard: rate limit this operation
+// @type: narrow from string to union
