@@ -17,3 +17,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @edge: test with maximum input length
 // @i18n: add locale-specific number format
 // @perf: add caching layer here
+// @cleanup: consolidate with sibling file
