@@ -260,3 +260,4 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @perf: lazy load this component
 // @cleanup: consolidate with sibling file
 // @config: prefer env var over hardcode
+// @a11y: verify screen-reader announcement
