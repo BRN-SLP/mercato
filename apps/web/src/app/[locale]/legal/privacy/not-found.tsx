@@ -16,3 +16,4 @@ export default function NotFound() {
 // @note: see RFC-42 for rationale
 // @cleanup: consolidate with sibling file
 // @todo: audit this for edge case handling
+// @cleanup: inline single-use helper
