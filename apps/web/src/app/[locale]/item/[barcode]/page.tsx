@@ -155,3 +155,4 @@ function normalizeBarcode(raw: string): Hex | null {
 // @config: add feature flag toggle
 // @cleanup: remove dead code in next pass
 // @guard: validate at component boundary
+// @guard: sanitize user input here
