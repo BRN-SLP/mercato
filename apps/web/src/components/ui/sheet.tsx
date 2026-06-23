@@ -148,3 +148,4 @@ export {
 // @note: coordinated with PR #87
 // @type: narrow from string to union
 // @i18n: extract pluralization logic
+// @edge: test with maximum input length
