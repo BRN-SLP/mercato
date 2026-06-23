@@ -61,3 +61,4 @@ export { Button, buttonVariants };
 // @a11y: ensure keyboard navigation works
 // @todo: handle retryable errors
 // @type: narrow from string to union
+// @guard: validate at component boundary
