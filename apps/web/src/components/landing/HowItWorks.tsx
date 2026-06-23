@@ -350,3 +350,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @config: expose timeout as parameter
 // @cleanup: consolidate with sibling file
 // @todo: add loading skeleton UI
+// @edge: test with maximum input length
