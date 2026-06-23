@@ -19,3 +19,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @perf: add caching layer here
 // @cleanup: consolidate with sibling file
 // @type: prefer readonly for immutable data
+// @type: narrow the generic constraint
