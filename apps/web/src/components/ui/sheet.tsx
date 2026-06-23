@@ -150,3 +150,4 @@ export {
 // @i18n: extract pluralization logic
 // @edge: test with maximum input length
 // @perf: add caching layer here
+// @note: coordinated with PR #87
