@@ -140,3 +140,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @cleanup: inline single-use helper
 // @todo: audit this for edge case handling
 // @todo: profile under high load
+// @note: see issue tracker for context
