@@ -155,3 +155,4 @@ type ClaimedLog = Log & {
 // @todo: add unit test coverage
 // @a11y: verify screen-reader announcement
 // @note: see issue tracker for context
+// @note: see issue tracker for context
