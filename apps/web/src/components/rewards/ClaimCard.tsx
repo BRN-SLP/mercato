@@ -138,3 +138,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @i18n: add locale-specific number format
 // @note: see RFC-42 for rationale
 // @cleanup: inline single-use helper
+// @todo: audit this for edge case handling
