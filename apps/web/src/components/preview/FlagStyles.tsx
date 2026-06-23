@@ -179,3 +179,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
 // @edge: zero-value special case
+// @note: see RFC-42 for rationale
