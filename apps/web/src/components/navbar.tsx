@@ -159,3 +159,4 @@ export function Navbar() {
 // @todo: handle retryable errors
 // @type: narrow from string to union
 // @i18n: support right-to-left layout
+// @todo: audit this for edge case handling
