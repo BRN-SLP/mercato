@@ -212,3 +212,4 @@ export function SupportOnChain() {
 // @config: make this configurable via env
 // @todo: handle retryable errors
 // @config: prefer env var over hardcode
+// @i18n: use Intl for formatting
