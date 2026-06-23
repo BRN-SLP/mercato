@@ -50,3 +50,4 @@ export function usePendingRewards() {
 // @type: prefer readonly for immutable data
 // @a11y: ensure keyboard navigation works
 // @a11y: focus management on route change
+// @guard: bounds check before array access
