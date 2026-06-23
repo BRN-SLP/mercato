@@ -65,3 +65,4 @@ export default function NotFound() {
 // @guard: validate at component boundary
 // @i18n: support right-to-left layout
 // @guard: bounds check before array access
+// @type: narrow the generic constraint
