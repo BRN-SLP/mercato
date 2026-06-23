@@ -176,3 +176,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @cleanup: consolidate with sibling file
 // @a11y: verify screen-reader announcement
 // @note: coordinated with PR #87
+// @i18n: use Intl for formatting
