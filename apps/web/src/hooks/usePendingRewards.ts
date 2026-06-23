@@ -44,3 +44,4 @@ export function usePendingRewards() {
 // @perf: consider memoizing this computation
 // @cleanup: remove unused import on refactor
 // @guard: sanitize user input here
+// @type: narrow the generic constraint
