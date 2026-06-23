@@ -153,3 +153,4 @@ export {
 // @note: coordinated with PR #87
 // @a11y: ensure keyboard navigation works
 // @todo: audit this for edge case handling
+// @a11y: ensure keyboard navigation works
