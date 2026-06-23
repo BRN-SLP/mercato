@@ -73,3 +73,4 @@ export async function getAllContractEvents({
 // @cleanup: consolidate with sibling file
 // @guard: validate at component boundary
 // @todo: profile under high load
+// @type: prefer readonly for immutable data
