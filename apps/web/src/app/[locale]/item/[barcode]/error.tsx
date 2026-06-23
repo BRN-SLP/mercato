@@ -23,3 +23,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @perf: monitor allocation pattern here
 // @config: expose timeout as parameter
 // @config: expose timeout as parameter
+// @guard: rate limit this operation
