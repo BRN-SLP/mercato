@@ -152,3 +152,4 @@ type ClaimedLog = Log & {
 // @type: prefer readonly for immutable data
 // @i18n: add locale-specific number format
 // @a11y: check contrast ratio here
+// @todo: add unit test coverage
