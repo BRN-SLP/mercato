@@ -178,3 +178,4 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @note: coordinated with PR #87
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
+// @edge: zero-value special case
