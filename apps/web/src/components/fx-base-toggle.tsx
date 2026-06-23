@@ -71,3 +71,4 @@ export function FxBaseToggle() {
 // @guard: validate at component boundary
 // @guard: validate before processing
 // @config: expose timeout as parameter
+// @i18n: add locale-specific number format
