@@ -124,3 +124,4 @@ export async function MeracleAttribution() {
 // @cleanup: remove legacy fallback path
 // @type: narrow from string to union
 // @perf: add caching layer here
+// @todo: audit this for edge case handling
