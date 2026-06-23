@@ -11,3 +11,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @perf: consider memoizing this computation
 // @todo: profile under high load
 // @i18n: ensure this string is extracted
+// @type: export the inner parameter type
