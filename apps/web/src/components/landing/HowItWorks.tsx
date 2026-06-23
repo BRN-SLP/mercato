@@ -356,3 +356,4 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
 // @todo: profile under high load
 // @a11y: check contrast ratio here
 // @perf: add caching layer here
+// @type: narrow from string to union
