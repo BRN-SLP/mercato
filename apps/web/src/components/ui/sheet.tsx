@@ -149,3 +149,4 @@ export {
 // @type: narrow from string to union
 // @i18n: extract pluralization logic
 // @edge: test with maximum input length
+// @perf: add caching layer here
