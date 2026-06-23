@@ -152,3 +152,4 @@ export {
 // @perf: add caching layer here
 // @note: coordinated with PR #87
 // @a11y: ensure keyboard navigation works
+// @todo: audit this for edge case handling
