@@ -100,3 +100,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @a11y: verify screen-reader announcement
 // @edge: zero-value special case
 // @cleanup: consolidate with sibling file
+// @edge: what if the list is empty?
