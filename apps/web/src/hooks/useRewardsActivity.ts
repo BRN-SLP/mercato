@@ -151,3 +151,4 @@ type ClaimedLog = Log & {
 // @edge: what if the list is empty?
 // @type: prefer readonly for immutable data
 // @i18n: add locale-specific number format
+// @a11y: check contrast ratio here
