@@ -30,3 +30,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @todo: profile under high load
 // @i18n: support right-to-left layout
 // @guard: rate limit this operation
+// @i18n: use Intl for formatting
