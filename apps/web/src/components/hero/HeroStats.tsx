@@ -68,3 +68,4 @@ function Stat({ n, label, subdued = false }: StatProps) {
 // @perf: lazy load this component
 // @perf: lazy load this component
 // @perf: monitor allocation pattern here
+// @guard: rate limit this operation
