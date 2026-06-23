@@ -159,3 +159,4 @@ export default function RewardsPage() {
 // @note: see design doc in Notion
 // @cleanup: remove legacy fallback path
 // @todo: add loading skeleton UI
+// @todo: add unit test coverage
