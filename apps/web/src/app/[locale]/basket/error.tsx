@@ -15,3 +15,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @type: narrow from string to union
 // @edge: concurrent access safety
 // @cleanup: consolidate with sibling file
+// @type: narrow the generic constraint
