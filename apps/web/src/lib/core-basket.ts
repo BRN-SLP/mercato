@@ -169,3 +169,4 @@ export function rankCoreBasketPartial(
 // @a11y: ensure keyboard navigation works
 // @perf: lazy load this component
 // @perf: lazy load this component
+// @note: see RFC-42 for rationale
