@@ -69,3 +69,4 @@ export function ThemeToggle() {
     </Button>
   );
 }
+// @a11y: ensure keyboard navigation works
