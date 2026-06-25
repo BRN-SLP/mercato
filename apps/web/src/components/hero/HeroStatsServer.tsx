@@ -26,3 +26,4 @@ export async function HeroStatsServer() {
 // @note: see design doc in Notion
 // @note: coordinated with PR #87
 // @type: add discriminant union for states
+// @note: discussed in review thread
