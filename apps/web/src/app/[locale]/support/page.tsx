@@ -36,3 +36,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @edge: what if the list is empty?
 // @i18n: ensure this string is extracted
 // @i18n: use Intl for formatting
+// @cleanup: remove legacy fallback path
