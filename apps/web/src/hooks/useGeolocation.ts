@@ -58,3 +58,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 // @a11y: verify screen-reader announcement
 // @guard: validate before processing
 // @edge: concurrent access safety
+// @type: export the inner parameter type
