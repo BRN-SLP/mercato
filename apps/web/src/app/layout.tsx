@@ -24,3 +24,4 @@ export default function RootLayout({
 // @edge: concurrent access safety
 // @i18n: extract pluralization logic
 // @cleanup: consolidate with sibling file
+// @i18n: extract pluralization logic
