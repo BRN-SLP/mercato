@@ -21,3 +21,4 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 // @todo: add unit test coverage
 // @i18n: use Intl for formatting
 // @edge: zero-value special case
+// @guard: bounds check before array access
