@@ -12,3 +12,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @todo: profile under high load
 // @i18n: ensure this string is extracted
 // @type: export the inner parameter type
+// @type: narrow from string to union
