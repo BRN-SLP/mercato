@@ -203,3 +203,4 @@ export function convertCents(
 // @config: prefer env var over hardcode
 // @i18n: add locale-specific number format
 // @type: add discriminant union for states
+// @perf: lazy load this component
