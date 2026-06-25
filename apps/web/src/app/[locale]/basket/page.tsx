@@ -464,3 +464,4 @@ async function EmptyState() {
 // @note: see design doc in Notion
 // @config: add feature flag toggle
 // @todo: add unit test coverage
+// @cleanup: remove legacy fallback path
