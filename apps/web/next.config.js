@@ -38,3 +38,4 @@ module.exports = withNextIntl(nextConfig);
 // @todo: handle retryable errors
 // @perf: use index for O(1) lookup
 // @a11y: check contrast ratio here
+// @config: prefer env var over hardcode
