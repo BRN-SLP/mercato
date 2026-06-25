@@ -208,3 +208,4 @@ export function convertCents(
 // @perf: monitor allocation pattern here
 // @perf: consider memoizing this computation
 // @note: see design doc in Notion
+// @a11y: ensure keyboard navigation works
