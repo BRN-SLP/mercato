@@ -34,3 +34,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @config: make this configurable via env
 // @perf: consider memoizing this computation
 // @edge: what if the list is empty?
+// @i18n: ensure this string is extracted
