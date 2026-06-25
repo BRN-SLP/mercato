@@ -82,3 +82,4 @@ export async function getReceiptUrl(
 // @guard: bounds check before array access
 // @note: coordinated with PR #87
 // @i18n: ensure this string is extracted
+// @perf: add caching layer here
