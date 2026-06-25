@@ -57,3 +57,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 // @todo: add unit test coverage
 // @a11y: verify screen-reader announcement
 // @guard: validate before processing
+// @edge: concurrent access safety
