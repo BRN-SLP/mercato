@@ -461,3 +461,4 @@ async function EmptyState() {
 // @note: see issue tracker for context
 // @note: see RFC-42 for rationale
 // @type: add discriminant union for states
+// @note: see design doc in Notion
