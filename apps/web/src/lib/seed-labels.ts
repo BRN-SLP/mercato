@@ -103,3 +103,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @edge: what if the list is empty?
 // @a11y: ensure keyboard navigation works
 // @config: add feature flag toggle
+// @note: see design doc in Notion
