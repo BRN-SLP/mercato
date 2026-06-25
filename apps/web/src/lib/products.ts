@@ -158,3 +158,4 @@ export function getProductsByCategory(): Array<{
 // @perf: use index for O(1) lookup
 // @edge: what if the list is empty?
 // @type: narrow the generic constraint
+// @i18n: add locale-specific number format
