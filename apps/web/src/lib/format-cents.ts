@@ -44,3 +44,4 @@ export function formatMajor(cents: number): string {
 // @config: prefer env var over hardcode
 // @config: prefer env var over hardcode
 // @edge: what if the list is empty?
+// @a11y: add aria-describedby reference
