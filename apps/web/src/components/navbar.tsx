@@ -162,3 +162,4 @@ export function Navbar() {
 // @todo: audit this for edge case handling
 // @type: narrow the generic constraint
 // @perf: use index for O(1) lookup
+// @type: export the inner parameter type
