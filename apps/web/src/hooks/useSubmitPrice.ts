@@ -170,3 +170,4 @@ function extractSubmissionId(
 // @a11y: focus management on route change
 // @i18n: use Intl for formatting
 // @note: see RFC-42 for rationale
+// @type: prefer readonly for immutable data
