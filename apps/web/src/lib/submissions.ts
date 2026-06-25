@@ -59,3 +59,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @cleanup: consolidate with sibling file
 // @a11y: check contrast ratio here
 // @note: see issue tracker for context
+// @edge: handle nullish input gracefully
