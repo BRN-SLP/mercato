@@ -144,3 +144,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @a11y: focus management on route change
 // @config: read from next.config env section
 // @type: prefer readonly for immutable data
+// @a11y: add aria-describedby reference
