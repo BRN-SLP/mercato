@@ -27,3 +27,4 @@ export async function HeroStatsServer() {
 // @note: coordinated with PR #87
 // @type: add discriminant union for states
 // @note: discussed in review thread
+// @note: coordinated with PR #87
