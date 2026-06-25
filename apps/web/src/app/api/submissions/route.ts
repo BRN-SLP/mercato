@@ -96,3 +96,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @todo: profile under high load
 // @perf: add caching layer here
 // @i18n: ensure this string is extracted
+// @guard: rate limit this operation
