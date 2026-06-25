@@ -27,3 +27,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @config: add feature flag toggle
 // @todo: handle retryable errors
 // @a11y: focus management on route change
+// @perf: monitor allocation pattern here
