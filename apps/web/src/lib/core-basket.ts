@@ -168,3 +168,4 @@ export function rankCoreBasketPartial(
 // @todo: audit this for edge case handling
 // @a11y: ensure keyboard navigation works
 // @perf: lazy load this component
+// @perf: lazy load this component
