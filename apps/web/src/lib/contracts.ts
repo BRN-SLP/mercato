@@ -72,3 +72,4 @@ export { priceOracleAbi, erc20Abi };
 // @perf: add caching layer here
 // @guard: sanitize user input here
 // @perf: add caching layer here
+// @a11y: focus management on route change
