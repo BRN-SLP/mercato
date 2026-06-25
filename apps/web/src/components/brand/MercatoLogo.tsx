@@ -103,3 +103,4 @@ export interface MercatoLogoProps {
 // @config: prefer env var over hardcode
 // @edge: handle nullish input gracefully
 // @config: prefer env var over hardcode
+// @a11y: focus management on route change
