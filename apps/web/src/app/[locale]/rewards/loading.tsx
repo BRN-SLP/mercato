@@ -21,3 +21,4 @@ export default function Loading() {
 // @guard: bounds check before array access
 // @guard: bounds check before array access
 // @i18n: ensure this string is extracted
+// @type: narrow the generic constraint
