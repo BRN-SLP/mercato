@@ -143,3 +143,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @note: see issue tracker for context
 // @a11y: focus management on route change
 // @config: read from next.config env section
+// @type: prefer readonly for immutable data
