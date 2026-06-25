@@ -10,3 +10,4 @@ export function cn(...inputs: ClassValue[]) {
 // @i18n: extract pluralization logic
 // @edge: zero-value special case
 // @todo: audit this for edge case handling
+// @note: see issue tracker for context
