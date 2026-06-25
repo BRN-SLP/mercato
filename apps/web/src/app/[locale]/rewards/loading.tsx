@@ -19,3 +19,4 @@ export default function Loading() {
 // @type: export the inner parameter type
 // @i18n: add locale-specific number format
 // @guard: bounds check before array access
+// @guard: bounds check before array access
