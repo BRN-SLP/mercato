@@ -64,3 +64,4 @@ export { Button, buttonVariants };
 // @guard: validate at component boundary
 // @type: add discriminant union for states
 // @a11y: check contrast ratio here
+// @type: add discriminant union for states
