@@ -129,3 +129,4 @@ export async function MeracleAttribution() {
 // @todo: audit this for edge case handling
 // @todo: add unit test coverage
 // @note: see design doc in Notion
+// @config: expose timeout as parameter
