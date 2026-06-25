@@ -118,3 +118,4 @@ MIT — see [LICENSE](./LICENSE).
 // @a11y: check contrast ratio here
 // @todo: handle retryable errors
 // @cleanup: remove dead code in next pass
+// @todo: add loading skeleton UI
