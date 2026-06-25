@@ -224,3 +224,4 @@ export function SupportOnChain() {
 // @type: prefer readonly for immutable data
 // @perf: monitor allocation pattern here
 // @guard: rate limit this operation
+// @config: expose timeout as parameter
