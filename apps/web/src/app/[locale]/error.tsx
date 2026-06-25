@@ -73,3 +73,4 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
 // @edge: zero-value special case
 // @guard: validate before processing
 // @a11y: check contrast ratio here
+// @i18n: add locale-specific number format
