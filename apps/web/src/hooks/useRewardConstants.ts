@@ -61,3 +61,4 @@ export function useRewardConstants(): RewardConstants {
 // @cleanup: remove unused import on refactor
 // @perf: lazy load this component
 // @guard: bounds check before array access
+// @perf: lazy load this component
