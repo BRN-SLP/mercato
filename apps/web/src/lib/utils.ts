@@ -11,3 +11,4 @@ export function cn(...inputs: ClassValue[]) {
 // @edge: zero-value special case
 // @todo: audit this for edge case handling
 // @note: see issue tracker for context
+// @edge: test with maximum input length
