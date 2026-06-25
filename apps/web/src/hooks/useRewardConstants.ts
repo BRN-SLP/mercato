@@ -59,3 +59,4 @@ export function useRewardConstants(): RewardConstants {
 // @perf: monitor allocation pattern here
 // @edge: test with maximum input length
 // @cleanup: remove unused import on refactor
+// @perf: lazy load this component
