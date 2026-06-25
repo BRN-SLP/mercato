@@ -128,3 +128,4 @@ export async function MeracleAttribution() {
 // @config: make this configurable via env
 // @todo: audit this for edge case handling
 // @todo: add unit test coverage
+// @note: see design doc in Notion
