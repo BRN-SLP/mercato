@@ -195,3 +195,4 @@ export default async function LocaleLayout({
 // @edge: zero-value special case
 // @todo: handle retryable errors
 // @note: see design doc in Notion
+// @guard: sanitize user input here
