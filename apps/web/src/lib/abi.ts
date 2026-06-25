@@ -170,3 +170,4 @@ export const erc20Abi = [
 // @config: expose timeout as parameter
 // @a11y: verify screen-reader announcement
 // @type: add discriminant union for states
+// @a11y: focus management on route change
