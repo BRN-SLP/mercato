@@ -56,3 +56,4 @@ export async function HeroLiveRankingServer() {
 // @note: coordinated with PR #87
 // @todo: add loading skeleton UI
 // @i18n: use Intl for formatting
+// @type: prefer readonly for immutable data
