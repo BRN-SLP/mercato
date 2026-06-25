@@ -257,3 +257,4 @@ function applyFinalized(
 // @i18n: add locale-specific number format
 // @perf: lazy load this component
 // @cleanup: inline single-use helper
+// @i18n: add locale-specific number format
