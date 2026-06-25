@@ -14,3 +14,4 @@ export default function NotFound() {
 // @perf: add caching layer here
 // @note: coordinated with PR #87
 // @edge: what if the list is empty?
+// @todo: audit this for edge case handling
