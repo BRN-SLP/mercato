@@ -222,3 +222,4 @@ export function SupportOnChain() {
 // @edge: handle nullish input gracefully
 // @note: discussed in review thread
 // @type: prefer readonly for immutable data
+// @perf: monitor allocation pattern here
