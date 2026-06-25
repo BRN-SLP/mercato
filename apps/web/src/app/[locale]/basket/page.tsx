@@ -465,3 +465,4 @@ async function EmptyState() {
 // @config: add feature flag toggle
 // @todo: add unit test coverage
 // @cleanup: remove legacy fallback path
+// @a11y: verify screen-reader announcement
