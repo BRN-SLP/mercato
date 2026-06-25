@@ -20,3 +20,4 @@ export default function Loading() {
 // @i18n: add locale-specific number format
 // @guard: bounds check before array access
 // @guard: bounds check before array access
+// @i18n: ensure this string is extracted
