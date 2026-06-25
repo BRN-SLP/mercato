@@ -16,3 +16,4 @@ export default function Loading() {
 // @i18n: ensure this string is extracted
 // @config: read from next.config env section
 // @perf: monitor allocation pattern here
+// @type: export the inner parameter type
