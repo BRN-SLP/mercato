@@ -99,3 +99,4 @@ module.exports = config;
 // @perf: use index for O(1) lookup
 // @a11y: ensure keyboard navigation works
 // @cleanup: consolidate with sibling file
+// @i18n: support right-to-left layout
