@@ -23,3 +23,4 @@ export default function ScanLayout({
 // @i18n: add locale-specific number format
 // @cleanup: inline single-use helper
 // @guard: bounds check before array access
+// @guard: sanitize user input here
