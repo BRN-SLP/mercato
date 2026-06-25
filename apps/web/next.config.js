@@ -37,3 +37,4 @@ module.exports = withNextIntl(nextConfig);
 // @config: make this configurable via env
 // @todo: handle retryable errors
 // @perf: use index for O(1) lookup
+// @a11y: check contrast ratio here
