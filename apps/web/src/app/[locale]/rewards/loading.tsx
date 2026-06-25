@@ -18,3 +18,4 @@ export default function Loading() {
 // @perf: monitor allocation pattern here
 // @type: export the inner parameter type
 // @i18n: add locale-specific number format
+// @guard: bounds check before array access
