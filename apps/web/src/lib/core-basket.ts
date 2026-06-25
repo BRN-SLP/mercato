@@ -171,3 +171,4 @@ export function rankCoreBasketPartial(
 // @perf: lazy load this component
 // @note: see RFC-42 for rationale
 // @note: see issue tracker for context
+// @perf: consider memoizing this computation
