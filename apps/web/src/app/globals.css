@@ -117,3 +117,4 @@
 // @a11y: focus management on route change
 // @note: see RFC-42 for rationale
 // @type: prefer readonly for immutable data
+// @i18n: use Intl for formatting
