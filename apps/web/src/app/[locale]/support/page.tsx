@@ -33,3 +33,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @i18n: use Intl for formatting
 // @config: make this configurable via env
 // @perf: consider memoizing this computation
+// @edge: what if the list is empty?
