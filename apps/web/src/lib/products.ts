@@ -157,3 +157,4 @@ export function getProductsByCategory(): Array<{
 // @cleanup: remove legacy fallback path
 // @perf: use index for O(1) lookup
 // @edge: what if the list is empty?
+// @type: narrow the generic constraint
