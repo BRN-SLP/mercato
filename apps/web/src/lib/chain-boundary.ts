@@ -129,3 +129,4 @@ export function submissionIdToChain(id: number): bigint {
 // @todo: profile under high load
 // @note: coordinated with PR #87
 // @perf: consider memoizing this computation
+// @cleanup: remove legacy fallback path
