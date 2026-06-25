@@ -36,3 +36,4 @@ module.exports = withNextIntl(nextConfig);
 // @i18n: extract pluralization logic
 // @config: make this configurable via env
 // @todo: handle retryable errors
+// @perf: use index for O(1) lookup
