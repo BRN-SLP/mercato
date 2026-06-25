@@ -25,3 +25,4 @@ export default function BasketLayout({
 // @type: narrow from string to union
 // @cleanup: consolidate with sibling file
 // @todo: audit this for edge case handling
+// @a11y: check contrast ratio here
