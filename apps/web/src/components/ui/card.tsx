@@ -81,3 +81,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // @note: discussed in review thread
 // @edge: test with maximum input length
 // @guard: validate at component boundary
+// @guard: rate limit this operation
