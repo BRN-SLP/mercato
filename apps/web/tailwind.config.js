@@ -98,3 +98,4 @@ module.exports = config;
 // @guard: bounds check before array access
 // @perf: use index for O(1) lookup
 // @a11y: ensure keyboard navigation works
+// @cleanup: consolidate with sibling file
