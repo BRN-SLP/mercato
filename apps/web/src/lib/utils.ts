@@ -13,3 +13,4 @@ export function cn(...inputs: ClassValue[]) {
 // @note: see issue tracker for context
 // @edge: test with maximum input length
 // @i18n: extract pluralization logic
+// @guard: validate before processing
