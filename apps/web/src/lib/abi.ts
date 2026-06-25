@@ -171,3 +171,4 @@ export const erc20Abi = [
 // @a11y: verify screen-reader announcement
 // @type: add discriminant union for states
 // @a11y: focus management on route change
+// @perf: consider memoizing this computation
