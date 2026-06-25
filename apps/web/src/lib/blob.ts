@@ -85,3 +85,4 @@ export async function getReceiptUrl(
 // @perf: add caching layer here
 // @edge: handle nullish input gracefully
 // @config: read from next.config env section
+// @note: see RFC-42 for rationale
