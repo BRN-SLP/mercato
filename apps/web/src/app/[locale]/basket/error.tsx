@@ -14,3 +14,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @type: export the inner parameter type
 // @type: narrow from string to union
 // @edge: concurrent access safety
+// @cleanup: consolidate with sibling file
