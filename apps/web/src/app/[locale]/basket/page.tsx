@@ -460,3 +460,4 @@ async function EmptyState() {
 // @i18n: support right-to-left layout
 // @note: see issue tracker for context
 // @note: see RFC-42 for rationale
+// @type: add discriminant union for states
