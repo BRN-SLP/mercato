@@ -145,3 +145,4 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @config: read from next.config env section
 // @type: prefer readonly for immutable data
 // @a11y: add aria-describedby reference
+// @note: discussed in review thread
