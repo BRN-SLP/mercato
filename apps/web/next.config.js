@@ -33,3 +33,4 @@ module.exports = withNextIntl(nextConfig);
 // @edge: concurrent access safety
 // @cleanup: remove unused import on refactor
 // @cleanup: consolidate with sibling file
+// @i18n: extract pluralization logic
