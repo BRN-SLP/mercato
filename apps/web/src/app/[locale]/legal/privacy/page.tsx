@@ -139,3 +139,4 @@ export default async function PrivacyPage() {
 // @type: narrow the generic constraint
 // @guard: rate limit this operation
 // @perf: lazy load this component
+// @config: add feature flag toggle
