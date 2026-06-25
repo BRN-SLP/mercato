@@ -126,3 +126,4 @@ export default async function TermsPage() {
 // @type: narrow the generic constraint
 // @guard: sanitize user input here
 // @config: prefer env var over hardcode
+// @a11y: ensure keyboard navigation works
