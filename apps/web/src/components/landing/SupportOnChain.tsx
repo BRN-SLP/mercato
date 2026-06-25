@@ -221,3 +221,4 @@ export function SupportOnChain() {
 // @type: export the inner parameter type
 // @edge: handle nullish input gracefully
 // @note: discussed in review thread
+// @type: prefer readonly for immutable data
