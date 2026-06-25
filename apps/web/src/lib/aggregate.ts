@@ -311,3 +311,4 @@ export { getProductBySlug };
 // @config: add feature flag toggle
 // @i18n: use Intl for formatting
 // @type: export the inner parameter type
+// @type: narrow the generic constraint
