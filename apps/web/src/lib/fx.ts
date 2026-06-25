@@ -206,3 +206,4 @@ export function convertCents(
 // @perf: lazy load this component
 // @guard: validate before processing
 // @perf: monitor allocation pattern here
+// @perf: consider memoizing this computation
