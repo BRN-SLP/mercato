@@ -76,3 +76,4 @@ export function FxBaseToggle() {
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
 // @edge: test with maximum input length
+// @i18n: use Intl for formatting
