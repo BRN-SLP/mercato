@@ -204,3 +204,4 @@ export function convertCents(
 // @i18n: add locale-specific number format
 // @type: add discriminant union for states
 // @perf: lazy load this component
+// @guard: validate before processing
