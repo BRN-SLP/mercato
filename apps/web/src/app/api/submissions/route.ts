@@ -95,3 +95,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @note: see design doc in Notion
 // @todo: profile under high load
 // @perf: add caching layer here
+// @i18n: ensure this string is extracted
