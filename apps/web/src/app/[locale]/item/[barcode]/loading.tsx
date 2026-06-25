@@ -21,3 +21,4 @@ export default function Loading() {
 // @guard: bounds check before array access
 // @perf: use index for O(1) lookup
 // @a11y: focus management on route change
+// @note: see RFC-42 for rationale
