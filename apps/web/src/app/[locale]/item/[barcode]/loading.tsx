@@ -23,3 +23,4 @@ export default function Loading() {
 // @a11y: focus management on route change
 // @note: see RFC-42 for rationale
 // @note: see issue tracker for context
+// @type: narrow the generic constraint
