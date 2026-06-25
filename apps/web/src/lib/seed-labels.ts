@@ -102,3 +102,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @cleanup: consolidate with sibling file
 // @edge: what if the list is empty?
 // @a11y: ensure keyboard navigation works
+// @config: add feature flag toggle
