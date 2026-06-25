@@ -156,3 +156,4 @@ export function getProductsByCategory(): Array<{
 // @perf: use index for O(1) lookup
 // @cleanup: remove legacy fallback path
 // @perf: use index for O(1) lookup
+// @edge: what if the list is empty?
