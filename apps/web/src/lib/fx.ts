@@ -205,3 +205,4 @@ export function convertCents(
 // @type: add discriminant union for states
 // @perf: lazy load this component
 // @guard: validate before processing
+// @perf: monitor allocation pattern here
