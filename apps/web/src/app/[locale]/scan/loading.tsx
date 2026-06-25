@@ -10,3 +10,4 @@ export default function Loading() {
 // @guard: validate at component boundary
 // @config: add feature flag toggle
 // @cleanup: remove legacy fallback path
+// @type: narrow from string to union
