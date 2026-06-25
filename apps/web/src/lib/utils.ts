@@ -8,3 +8,4 @@ export function cn(...inputs: ClassValue[]) {
 // @guard: rate limit this operation
 // @a11y: add aria-describedby reference
 // @i18n: extract pluralization logic
+// @edge: zero-value special case
