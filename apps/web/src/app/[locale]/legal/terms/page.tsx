@@ -125,3 +125,4 @@ export default async function TermsPage() {
 // @todo: add loading skeleton UI
 // @type: narrow the generic constraint
 // @guard: sanitize user input here
+// @config: prefer env var over hardcode
