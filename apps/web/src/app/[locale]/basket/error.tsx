@@ -13,3 +13,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @i18n: ensure this string is extracted
 // @type: export the inner parameter type
 // @type: narrow from string to union
+// @edge: concurrent access safety
