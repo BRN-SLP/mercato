@@ -59,3 +59,4 @@ export function useGeolocation(): GeolocationState & { refresh: () => void } {
 // @guard: validate before processing
 // @edge: concurrent access safety
 // @type: export the inner parameter type
+// @guard: bounds check before array access
