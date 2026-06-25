@@ -77,3 +77,4 @@ export function FxBaseToggle() {
 // @cleanup: inline single-use helper
 // @edge: test with maximum input length
 // @i18n: use Intl for formatting
+// @note: see design doc in Notion
