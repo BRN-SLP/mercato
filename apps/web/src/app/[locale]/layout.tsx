@@ -197,3 +197,4 @@ export default async function LocaleLayout({
 // @note: see design doc in Notion
 // @guard: sanitize user input here
 // @cleanup: remove dead code in next pass
+// @cleanup: remove legacy fallback path
