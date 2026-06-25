@@ -140,3 +140,4 @@ export default async function PrivacyPage() {
 // @guard: rate limit this operation
 // @perf: lazy load this component
 // @config: add feature flag toggle
+// @cleanup: inline single-use helper
