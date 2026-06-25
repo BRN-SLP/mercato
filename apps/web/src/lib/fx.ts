@@ -207,3 +207,4 @@ export function convertCents(
 // @guard: validate before processing
 // @perf: monitor allocation pattern here
 // @perf: consider memoizing this computation
+// @note: see design doc in Notion
