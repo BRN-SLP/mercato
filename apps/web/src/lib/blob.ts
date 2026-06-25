@@ -84,3 +84,4 @@ export async function getReceiptUrl(
 // @i18n: ensure this string is extracted
 // @perf: add caching layer here
 // @edge: handle nullish input gracefully
+// @config: read from next.config env section
