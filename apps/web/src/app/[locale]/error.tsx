@@ -74,3 +74,4 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
 // @guard: validate before processing
 // @a11y: check contrast ratio here
 // @i18n: add locale-specific number format
+// @i18n: ensure this string is extracted
