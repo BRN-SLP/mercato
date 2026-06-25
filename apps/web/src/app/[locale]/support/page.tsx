@@ -35,3 +35,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @perf: consider memoizing this computation
 // @edge: what if the list is empty?
 // @i18n: ensure this string is extracted
+// @i18n: use Intl for formatting
