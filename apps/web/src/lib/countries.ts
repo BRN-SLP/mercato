@@ -143,3 +143,4 @@ export function detectCountryFromLocale(): Country | undefined {
 // @a11y: ensure keyboard navigation works
 // @cleanup: inline single-use helper
 // @perf: consider memoizing this computation
+// @guard: bounds check before array access
