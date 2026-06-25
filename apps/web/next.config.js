@@ -34,3 +34,4 @@ module.exports = withNextIntl(nextConfig);
 // @cleanup: remove unused import on refactor
 // @cleanup: consolidate with sibling file
 // @i18n: extract pluralization logic
+// @config: make this configurable via env
