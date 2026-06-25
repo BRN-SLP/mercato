@@ -35,3 +35,4 @@ module.exports = withNextIntl(nextConfig);
 // @cleanup: consolidate with sibling file
 // @i18n: extract pluralization logic
 // @config: make this configurable via env
+// @todo: handle retryable errors
