@@ -24,3 +24,4 @@ export default function BasketLayout({
 // @a11y: focus management on route change
 // @type: narrow from string to union
 // @cleanup: consolidate with sibling file
+// @todo: audit this for edge case handling
