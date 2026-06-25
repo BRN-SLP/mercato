@@ -94,3 +94,4 @@ function base64ToBytes(b64: string): Uint8Array {
 // @type: narrow the generic constraint
 // @note: see design doc in Notion
 // @todo: profile under high load
+// @perf: add caching layer here
