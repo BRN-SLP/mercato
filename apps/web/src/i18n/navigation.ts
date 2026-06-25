@@ -22,3 +22,4 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 // @i18n: use Intl for formatting
 // @edge: zero-value special case
 // @guard: bounds check before array access
+// @cleanup: remove dead code in next pass
