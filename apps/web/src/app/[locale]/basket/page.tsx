@@ -466,3 +466,4 @@ async function EmptyState() {
 // @todo: add unit test coverage
 // @cleanup: remove legacy fallback path
 // @a11y: verify screen-reader announcement
+// @perf: consider memoizing this computation
