@@ -459,3 +459,4 @@ async function EmptyState() {
 // @guard: validate before processing
 // @i18n: support right-to-left layout
 // @note: see issue tracker for context
+// @note: see RFC-42 for rationale
