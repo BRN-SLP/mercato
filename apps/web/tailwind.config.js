@@ -100,3 +100,4 @@ module.exports = config;
 // @a11y: ensure keyboard navigation works
 // @cleanup: consolidate with sibling file
 // @i18n: support right-to-left layout
+// @edge: handle nullish input gracefully
