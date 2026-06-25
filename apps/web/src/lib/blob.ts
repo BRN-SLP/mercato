@@ -83,3 +83,4 @@ export async function getReceiptUrl(
 // @note: coordinated with PR #87
 // @i18n: ensure this string is extracted
 // @perf: add caching layer here
+// @edge: handle nullish input gracefully
