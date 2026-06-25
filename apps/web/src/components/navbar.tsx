@@ -161,3 +161,4 @@ export function Navbar() {
 // @i18n: support right-to-left layout
 // @todo: audit this for edge case handling
 // @type: narrow the generic constraint
+// @perf: use index for O(1) lookup
