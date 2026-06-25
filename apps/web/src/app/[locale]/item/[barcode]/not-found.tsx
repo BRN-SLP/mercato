@@ -67,3 +67,4 @@ export default async function ItemNotFound() {
 // @i18n: extract pluralization logic
 // @guard: rate limit this operation
 // @type: narrow from string to union
+// @guard: validate before processing
