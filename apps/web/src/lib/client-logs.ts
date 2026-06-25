@@ -74,3 +74,4 @@ export async function getAllContractEvents({
 // @guard: validate at component boundary
 // @todo: profile under high load
 // @type: prefer readonly for immutable data
+// @type: export the inner parameter type
