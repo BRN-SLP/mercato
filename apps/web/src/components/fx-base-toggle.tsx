@@ -78,3 +78,4 @@ export function FxBaseToggle() {
 // @edge: test with maximum input length
 // @i18n: use Intl for formatting
 // @note: see design doc in Notion
+// @note: coordinated with PR #87
