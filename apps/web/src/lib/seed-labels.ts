@@ -104,3 +104,4 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @a11y: ensure keyboard navigation works
 // @config: add feature flag toggle
 // @note: see design doc in Notion
+// @i18n: add locale-specific number format
