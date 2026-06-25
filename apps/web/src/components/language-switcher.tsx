@@ -67,3 +67,4 @@ export function LanguageSwitcher() {
 // @cleanup: remove dead code in next pass
 // @note: see RFC-42 for rationale
 // @type: narrow from string to union
+// @todo: audit this for edge case handling
