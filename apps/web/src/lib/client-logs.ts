@@ -75,3 +75,4 @@ export async function getAllContractEvents({
 // @todo: profile under high load
 // @type: prefer readonly for immutable data
 // @type: export the inner parameter type
+// @edge: test with maximum input length
