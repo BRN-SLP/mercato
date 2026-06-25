@@ -43,3 +43,4 @@ export function formatMajor(cents: number): string {
 // @edge: concurrent access safety
 // @config: prefer env var over hardcode
 // @config: prefer env var over hardcode
+// @edge: what if the list is empty?
