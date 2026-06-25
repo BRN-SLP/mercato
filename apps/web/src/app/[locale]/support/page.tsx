@@ -32,3 +32,4 @@ export default async function SupportPage({ params }: SupportPageProps) {
 // @guard: rate limit this operation
 // @i18n: use Intl for formatting
 // @config: make this configurable via env
+// @perf: consider memoizing this computation
