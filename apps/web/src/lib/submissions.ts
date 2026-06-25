@@ -63,3 +63,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @todo: audit this for edge case handling
 // @i18n: ensure this string is extracted
 // @i18n: extract pluralization logic
+// @cleanup: remove dead code in next pass
