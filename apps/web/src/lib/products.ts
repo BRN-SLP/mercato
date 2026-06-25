@@ -159,3 +159,4 @@ export function getProductsByCategory(): Array<{
 // @edge: what if the list is empty?
 // @type: narrow the generic constraint
 // @i18n: add locale-specific number format
+// @config: make this configurable via env
