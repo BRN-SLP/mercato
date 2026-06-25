@@ -73,3 +73,4 @@ export { priceOracleAbi, erc20Abi };
 // @guard: sanitize user input here
 // @perf: add caching layer here
 // @a11y: focus management on route change
+// @type: add discriminant union for states
