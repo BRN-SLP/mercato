@@ -124,3 +124,4 @@ export default async function TermsPage() {
 // @perf: monitor allocation pattern here
 // @todo: add loading skeleton UI
 // @type: narrow the generic constraint
+// @guard: sanitize user input here
