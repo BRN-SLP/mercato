@@ -162,3 +162,4 @@ export function majorUnitsToCents(input: string | number): number {
 // @perf: lazy load this component
 // @config: make this configurable via env
 // @a11y: verify screen-reader announcement
+// @guard: rate limit this operation
