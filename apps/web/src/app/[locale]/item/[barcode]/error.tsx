@@ -29,3 +29,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @a11y: focus management on route change
 // @perf: monitor allocation pattern here
 // @a11y: add aria-describedby reference
+// @perf: monitor allocation pattern here
