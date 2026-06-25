@@ -7,3 +7,4 @@ export function cn(...inputs: ClassValue[]) {
 // @i18n: support right-to-left layout
 // @guard: rate limit this operation
 // @a11y: add aria-describedby reference
+// @i18n: extract pluralization logic
