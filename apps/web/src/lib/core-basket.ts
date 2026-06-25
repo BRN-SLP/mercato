@@ -166,3 +166,4 @@ export function rankCoreBasketPartial(
 // @config: read from next.config env section
 // @i18n: add locale-specific number format
 // @todo: audit this for edge case handling
+// @a11y: ensure keyboard navigation works
