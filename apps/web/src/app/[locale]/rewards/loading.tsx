@@ -17,3 +17,4 @@ export default function Loading() {
 // @config: read from next.config env section
 // @perf: monitor allocation pattern here
 // @type: export the inner parameter type
+// @i18n: add locale-specific number format
