@@ -172,3 +172,4 @@ export function rankCoreBasketPartial(
 // @note: see RFC-42 for rationale
 // @note: see issue tracker for context
 // @perf: consider memoizing this computation
+// @cleanup: inline single-use helper
