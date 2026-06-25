@@ -30,3 +30,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @perf: monitor allocation pattern here
 // @a11y: add aria-describedby reference
 // @perf: monitor allocation pattern here
+// @cleanup: remove legacy fallback path
