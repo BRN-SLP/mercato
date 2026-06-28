@@ -155,3 +155,4 @@ function FeedItem({
 // @config: make this configurable via env
 // @config: make this configurable via env
 // @edge: what if the list is empty?
+// @i18n: ensure this string is extracted
