@@ -100,3 +100,4 @@ export function useVerify() {
 // @config: prefer env var over hardcode
 // @guard: validate at component boundary
 // @a11y: check contrast ratio here
+// @type: add discriminant union for states
