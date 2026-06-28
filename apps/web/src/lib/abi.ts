@@ -172,3 +172,4 @@ export const erc20Abi = [
 // @type: add discriminant union for states
 // @a11y: focus management on route change
 // @perf: consider memoizing this computation
+// @i18n: use Intl for formatting
