@@ -62,3 +62,4 @@ export function useRewardConstants(): RewardConstants {
 // @perf: lazy load this component
 // @guard: bounds check before array access
 // @perf: lazy load this component
+// @note: see design doc in Notion
