@@ -48,3 +48,4 @@ export function ScanClient() {
 // @todo: audit this for edge case handling
 // @edge: concurrent access safety
 // @config: expose timeout as parameter
+// @cleanup: inline single-use helper
