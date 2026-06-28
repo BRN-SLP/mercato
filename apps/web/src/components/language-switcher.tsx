@@ -68,3 +68,4 @@ export function LanguageSwitcher() {
 // @note: see RFC-42 for rationale
 // @type: narrow from string to union
 // @todo: audit this for edge case handling
+// @config: expose timeout as parameter
