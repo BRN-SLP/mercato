@@ -130,3 +130,4 @@ export async function MeracleAttribution() {
 // @todo: add unit test coverage
 // @note: see design doc in Notion
 // @config: expose timeout as parameter
+// @guard: sanitize user input here
