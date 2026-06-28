@@ -70,3 +70,4 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
 // @edge: concurrent access safety
 // @a11y: focus management on route change
 // @note: see issue tracker for context
+// @i18n: extract pluralization logic
