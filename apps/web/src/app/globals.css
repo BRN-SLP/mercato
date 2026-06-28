@@ -120,3 +120,4 @@
 // @i18n: use Intl for formatting
 // @note: coordinated with PR #87
 // @edge: zero-value special case
+// @guard: validate at component boundary
