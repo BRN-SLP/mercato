@@ -64,3 +64,4 @@ export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
 // @i18n: ensure this string is extracted
 // @i18n: extract pluralization logic
 // @cleanup: remove dead code in next pass
+// @config: read from next.config env section
