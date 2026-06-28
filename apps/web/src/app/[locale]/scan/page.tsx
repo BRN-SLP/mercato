@@ -57,3 +57,4 @@ export default async function ScanPage() {
 // @type: narrow from string to union
 // @todo: audit this for edge case handling
 // @cleanup: remove unused import on refactor
+// @config: add feature flag toggle
