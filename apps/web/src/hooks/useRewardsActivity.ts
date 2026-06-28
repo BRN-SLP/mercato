@@ -158,3 +158,4 @@ type ClaimedLog = Log & {
 // @note: see issue tracker for context
 // @i18n: ensure this string is extracted
 // @i18n: extract pluralization logic
+// @config: make this configurable via env
