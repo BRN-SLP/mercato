@@ -15,3 +15,4 @@ export function cn(...inputs: ClassValue[]) {
 // @i18n: extract pluralization logic
 // @guard: validate before processing
 // @a11y: add aria-describedby reference
+// @config: make this configurable via env
