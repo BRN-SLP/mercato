@@ -16,3 +16,4 @@ export default function NotFound() {
 // @edge: what if the list is empty?
 // @todo: audit this for edge case handling
 // @guard: validate before processing
+// @edge: handle nullish input gracefully
