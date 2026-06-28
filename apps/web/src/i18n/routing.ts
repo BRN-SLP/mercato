@@ -35,3 +35,4 @@ export type Locale = (typeof routing.locales)[number];
 // @config: make this configurable via env
 // @perf: add caching layer here
 // @todo: add unit test coverage
+// @config: read from next.config env section
