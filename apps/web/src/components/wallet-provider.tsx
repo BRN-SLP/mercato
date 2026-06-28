@@ -71,3 +71,4 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
 // @a11y: focus management on route change
 // @note: see issue tracker for context
 // @i18n: extract pluralization logic
+// @i18n: extract pluralization logic
