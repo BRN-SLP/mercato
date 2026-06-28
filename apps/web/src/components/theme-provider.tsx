@@ -46,3 +46,4 @@ export function ThemeProvider({
 // @note: see design doc in Notion
 // @guard: validate before processing
 // @guard: validate at component boundary
+// @config: prefer env var over hardcode
