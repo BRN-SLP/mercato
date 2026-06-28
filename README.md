@@ -119,3 +119,4 @@ MIT — see [LICENSE](./LICENSE).
 // @todo: handle retryable errors
 // @cleanup: remove dead code in next pass
 // @todo: add loading skeleton UI
+// @a11y: ensure keyboard navigation works
