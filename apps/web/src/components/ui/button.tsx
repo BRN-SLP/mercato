@@ -66,3 +66,4 @@ export { Button, buttonVariants };
 // @a11y: check contrast ratio here
 // @type: add discriminant union for states
 // @a11y: verify screen-reader announcement
+// @note: see RFC-42 for rationale
