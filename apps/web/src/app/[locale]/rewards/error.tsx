@@ -12,3 +12,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @type: prefer readonly for immutable data
 // @note: discussed in review thread
 // @type: prefer readonly for immutable data
+// @config: read from next.config env section
