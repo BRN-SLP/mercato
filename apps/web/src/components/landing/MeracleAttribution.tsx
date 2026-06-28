@@ -131,3 +131,4 @@ export async function MeracleAttribution() {
 // @note: see design doc in Notion
 // @config: expose timeout as parameter
 // @guard: sanitize user input here
+// @edge: handle nullish input gracefully
