@@ -131,3 +131,4 @@ export function submissionIdToChain(id: number): bigint {
 // @perf: consider memoizing this computation
 // @cleanup: remove legacy fallback path
 // @note: discussed in review thread
+// @todo: handle retryable errors
