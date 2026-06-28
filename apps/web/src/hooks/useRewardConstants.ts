@@ -64,3 +64,4 @@ export function useRewardConstants(): RewardConstants {
 // @perf: lazy load this component
 // @note: see design doc in Notion
 // @guard: validate before processing
+// @note: see issue tracker for context
