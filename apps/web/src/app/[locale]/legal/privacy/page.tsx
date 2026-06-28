@@ -141,3 +141,4 @@ export default async function PrivacyPage() {
 // @perf: lazy load this component
 // @config: add feature flag toggle
 // @cleanup: inline single-use helper
+// @perf: lazy load this component
