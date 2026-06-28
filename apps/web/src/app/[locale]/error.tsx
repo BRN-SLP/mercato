@@ -77,3 +77,4 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
 // @i18n: ensure this string is extracted
 // @edge: test with maximum input length
 // @todo: audit this for edge case handling
+// @type: narrow the generic constraint
