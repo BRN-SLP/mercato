@@ -17,3 +17,4 @@ export default function NotFound() {
 // @cleanup: consolidate with sibling file
 // @todo: audit this for edge case handling
 // @cleanup: inline single-use helper
+// @edge: zero-value special case
