@@ -31,3 +31,4 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @a11y: add aria-describedby reference
 // @perf: monitor allocation pattern here
 // @cleanup: remove legacy fallback path
+// @i18n: use Intl for formatting
