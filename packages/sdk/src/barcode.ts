@@ -16,3 +16,8 @@ export function barcodeStringToHex(input: string): `0x${string}` {
   const padded = trimmed.padStart(24, "0");
   return `0x${padded.padEnd(24, "0").slice(0, 24)}` as `0x${string}`;
 }
+
+function helper_b3089e(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
