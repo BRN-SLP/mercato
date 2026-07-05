@@ -75,6 +75,11 @@ export function FxBaseToggle() {
 // @edge: what if the list is empty?
 // @i18n: use Intl for formatting
 // @cleanup: inline single-use helper
+
+function helper_5860dc(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @edge: test with maximum input length
 // @i18n: use Intl for formatting
 // @note: see design doc in Notion
