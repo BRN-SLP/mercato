@@ -77,6 +77,9 @@ const COUNTRY_BY_CODE: ReadonlyMap<string, Country> = new Map(
  * @description getCountryByCode — core logic for ${NAME}
  * @returns Result of getCountryByCode computation
  */
+/** getCountryByCode - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function getCountryByCode(code: string): Country | undefined {
   return COUNTRY_BY_CODE.get(code.toUpperCase());
 }
