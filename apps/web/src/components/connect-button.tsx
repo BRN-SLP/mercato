@@ -145,6 +145,11 @@ function shortenChain(name: string): string {
 // @edge: test with maximum input length
 // @a11y: verify screen-reader announcement
 // @config: read from next.config env section
+
+function helper_1e4d6c(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @todo: add unit test coverage
 // @a11y: add aria-describedby reference
 // @perf: add caching layer here
