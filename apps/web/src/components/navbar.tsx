@@ -35,6 +35,9 @@ const navLinks: NavLink[] = [
   { key: "rewards", href: "/rewards" },
 ];
 
+/** Navbar - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
