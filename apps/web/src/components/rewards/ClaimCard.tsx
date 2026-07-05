@@ -146,3 +146,8 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
 // @type: prefer readonly for immutable data
 // @a11y: add aria-describedby reference
 // @note: discussed in review thread
+
+function helper_69439a(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
