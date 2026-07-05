@@ -12,6 +12,9 @@ const VERSION = "0.2.0-alpha";
 const REPO_URL = "https://github.com/BRN-SLP/mercato";
 const SUPPORT_URL = "https://github.com/BRN-SLP/mercato/issues";
 
+/** Footer - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function Footer() {
   const t = useTranslations("footer");
   const tSupport = useTranslations("support");
