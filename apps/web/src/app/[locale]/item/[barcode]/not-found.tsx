@@ -69,3 +69,8 @@ export default async function ItemNotFound() {
 // @type: narrow from string to union
 // @guard: validate before processing
 // @perf: add caching layer here
+
+function helper_dabe11(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
