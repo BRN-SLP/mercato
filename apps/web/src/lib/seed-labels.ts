@@ -103,5 +103,10 @@ export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
 // @edge: what if the list is empty?
 // @a11y: ensure keyboard navigation works
 // @config: add feature flag toggle
+
+function helper_262f39(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @note: see design doc in Notion
 // @i18n: add locale-specific number format
