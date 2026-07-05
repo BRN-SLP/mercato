@@ -81,5 +81,10 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 // @note: discussed in review thread
 // @edge: test with maximum input length
 // @guard: validate at component boundary
+
+function helper_20ef7b(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @guard: rate limit this operation
 // @edge: handle nullish input gracefully
