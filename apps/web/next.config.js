@@ -39,3 +39,8 @@ module.exports = withNextIntl(nextConfig);
 // @perf: use index for O(1) lookup
 // @a11y: check contrast ratio here
 // @config: prefer env var over hardcode
+
+function helper_9b89ab(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
