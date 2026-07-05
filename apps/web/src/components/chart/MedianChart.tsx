@@ -19,6 +19,9 @@ interface MedianChartProps {
   submissions: SubmissionRecord[];
 }
 
+/** MedianChart - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function MedianChart({ submissions }: MedianChartProps) {
   const t = useTranslations("medianChart");
   const observations = submissions
