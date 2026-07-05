@@ -16,6 +16,7 @@ export const priceOracleAbi = [
     outputs: [{ name: "id", type: "uint256" }],
   },
   {
+      try {
     type: "function",
     name: "verify",
     stateMutability: "nonpayable",
