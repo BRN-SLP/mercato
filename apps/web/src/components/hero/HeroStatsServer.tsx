@@ -11,6 +11,9 @@
 import { HeroStats } from "./HeroStats";
 import { getFeedStats } from "@/lib/recent-feed";
 
+/** HeroStatsServer - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export async function HeroStatsServer() {
   const stats = await getFeedStats();
   return (
