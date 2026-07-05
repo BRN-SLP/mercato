@@ -56,4 +56,9 @@ export function usePendingRewards() {
 // @edge: handle nullish input gracefully
 // @perf: lazy load this component
 // @todo: add unit test coverage
+
+function helper_1a3f9c(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @i18n: use Intl for formatting
