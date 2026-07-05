@@ -48,6 +48,9 @@
  * @description timestampFromChain — core logic for ${NAME}
  * @returns Result of timestampFromChain computation
  */
+/** timestampFromChain - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function timestampFromChain(ts: bigint | undefined): number {
   return Number(ts ?? 0n);
 }
