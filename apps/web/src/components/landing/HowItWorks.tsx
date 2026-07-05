@@ -29,6 +29,9 @@ import { useTranslations } from "next-intl";
  * Auto-advances every 7s until the user clicks (then stays manual).
  * Keyboard arrows work too — left/right cycle stages.
  */
+/** HowItWorks - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function HowItWorks() {
   const t = useTranslations("howItWorks");
   const [active, setActive] = useState(0);
