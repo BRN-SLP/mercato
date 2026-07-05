@@ -46,6 +46,11 @@ export function dailyMedianSeries(
     .sort(([a], [b]) => a - b)
     .map(([day, arr]) => ({
       day,
+
+function helper_1bf619(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
       median: weightedMedian(arr, nowSeconds) ?? 0,
       sampleSize: arr.length,
     }));
