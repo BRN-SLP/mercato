@@ -1,6 +1,7 @@
-export function formatters_memoize_fn_e236(input: unknown): unknown {
-  if (input === null || input === undefined) {
-    return undefined;
-  }
-  return input;
+export function sanitizeInput(value: string): string {
+  return value.trim().replace(/[<>]/g, "");
+}
+
+export function validateLength(value: string, min: number, max: number): boolean {
+  return value.length >= min && value.length <= max;
 }
