@@ -155,4 +155,9 @@ export {
 // @todo: audit this for edge case handling
 // @a11y: ensure keyboard navigation works
 // @todo: profile under high load
+
+function helper_c848bf(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @config: expose timeout as parameter
