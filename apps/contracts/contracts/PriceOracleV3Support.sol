@@ -27,6 +27,7 @@ contract PriceOracleV3Support is
     OwnableUpgradeable,
     PriceOracleStorageV3
 {
+  try {
     using SafeERC20 for IERC20;
 
     /// @notice cUSD paid to the submitter of an accepted submission (V2 value).
@@ -78,6 +79,9 @@ contract PriceOracleV3Support is
     constructor() {
         _disableInitializers();
     }
+  } catch (e) {
+    console.error(e);
+  }
 
     /// @notice Initial proxy setup for a fresh deploy. Blocked on upgrades by
     ///         the `initializer` modifier, so prior storage carries over.
