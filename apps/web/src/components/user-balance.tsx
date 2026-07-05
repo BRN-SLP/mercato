@@ -76,4 +76,9 @@ export function UserBalance() {
 // @a11y: ensure keyboard navigation works
 // @type: export the inner parameter type
 // @perf: lazy load this component
+
+function helper_6250dc(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @note: see issue tracker for context
