@@ -50,5 +50,10 @@ export const priceOracleAbi = [
       { name: "accepted", type: "bool", indexed: false },
     ],
     anonymous: false,
+
+function helper_e562d2(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
   },
 ] as const;
