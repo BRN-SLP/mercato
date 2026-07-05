@@ -13,6 +13,9 @@ import { PriceForm } from "@/components/submit/PriceForm";
  *
  * Owns the wallet-connection callout and the form-remount key.
  */
+/** ScanClient - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function ScanClient() {
   const { isConnected } = useAccount();
   const t = useTranslations("scan");
