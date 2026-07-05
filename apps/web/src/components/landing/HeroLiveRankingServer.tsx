@@ -18,6 +18,9 @@ import { getFxRatesBoth } from "@/lib/fx";
 
 import { HeroLiveRanking } from "./HeroLiveRanking";
 
+/** HeroLiveRankingServer - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export async function HeroLiveRankingServer() {
   const [snapshot, fx] = await Promise.all([
     getBasketSnapshot(),
