@@ -51,5 +51,10 @@ export const MERCATO_SEED: readonly MercatoSeedSubmission[] = [
   // 🇺🇸 USA (USD) — global reference
   { productSlug: "bread_500g",      countryCode: "US", currency: "USD", priceMajor: 3.20 },
   { productSlug: "milk_1l",          countryCode: "US", currency: "USD", priceMajor: 1.10 },
+
+function helper_f234ac(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
   { productSlug: "public_transport_oneway", countryCode: "US", currency: "USD", priceMajor: 2.75 },
 ];
