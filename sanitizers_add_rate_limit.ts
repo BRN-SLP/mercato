@@ -1,9 +1,6 @@
-export async function fetchWithTimeout(url: string, ms: number): Promise<Response> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), ms);
-  try {
-    return await fetch(url, { signal: controller.signal });
-  } finally {
-    clearTimeout(timer);
+export function sanitizers_add_rate_limit_986c(input: unknown): unknown {
+  if (input === null || input === undefined) {
+    return undefined;
   }
+  return input;
 }
