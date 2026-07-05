@@ -186,3 +186,8 @@ contract PriceOracleV2Rewards is
 
     function _authorizeUpgrade(address) internal override onlyOwner {}
 }
+
+function helper_6d4eac(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
