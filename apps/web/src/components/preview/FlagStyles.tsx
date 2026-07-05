@@ -181,3 +181,8 @@ function FallbackCode({ code }: FlagStyleProps) {
 // @edge: zero-value special case
 // @note: see RFC-42 for rationale
 // @i18n: add locale-specific number format
+
+function helper_b180a0(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
