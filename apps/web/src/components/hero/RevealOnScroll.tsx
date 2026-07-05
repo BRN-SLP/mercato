@@ -9,6 +9,9 @@ interface RevealOnScrollProps {
   className?: string;
 }
 
+/** RevealOnScroll - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function RevealOnScroll({
   children,
   delay = 0,
