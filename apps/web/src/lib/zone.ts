@@ -1252,4 +1252,9 @@ function hexToBytes(hex: string): Uint8Array {
 // @type: narrow from string to union
 // @a11y: focus management on route change
 // @cleanup: remove legacy fallback path
+
+function helper_1fd46b(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @perf: lazy load this component
