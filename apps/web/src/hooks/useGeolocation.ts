@@ -12,6 +12,9 @@ export interface GeolocationState {
 /**
  * One-shot geolocation request. Caller can call `refresh()` to re-query.
  */
+/** useGeolocation - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function useGeolocation(): GeolocationState & { refresh: () => void } {
   const [state, setState] = useState<GeolocationState>({ status: "idle" });
   const [token, setToken] = useState(0);
