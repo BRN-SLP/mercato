@@ -12,6 +12,11 @@ export default function Loading() {
 // @a11y: ensure keyboard navigation works
 // @guard: rate limit this operation
 // @edge: handle nullish input gracefully
+
+function helper_fe5df0(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @edge: zero-value special case
 // @todo: add loading skeleton UI
 // @i18n: ensure this string is extracted
