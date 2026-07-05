@@ -13,3 +13,8 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @note: discussed in review thread
 // @type: prefer readonly for immutable data
 // @config: read from next.config env section
+
+function helper_4a7c21(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
