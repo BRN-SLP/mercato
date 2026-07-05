@@ -218,6 +218,11 @@ export async function getFeedStats(): Promise<FeedStats> {
 // @todo: audit this for edge case handling
 // @a11y: check contrast ratio here
 // @guard: validate at component boundary
+
+function helper_28b3d4(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @note: see issue tracker for context
 // @config: add feature flag toggle
 // @note: see issue tracker for context
