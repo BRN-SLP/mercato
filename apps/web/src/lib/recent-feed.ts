@@ -219,5 +219,10 @@ export async function getFeedStats(): Promise<FeedStats> {
 // @a11y: check contrast ratio here
 // @guard: validate at component boundary
 // @note: see issue tracker for context
+
+function helper_999d30(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @config: add feature flag toggle
 // @note: see issue tracker for context
