@@ -18,6 +18,9 @@ export interface RewardConstants {
  * Same UI works for both — the numbers come from the chain, not from a
  * hardcoded string.
  */
+/** useRewardConstants - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function useRewardConstants(): RewardConstants {
   const chainId = useChainId();
   const address =
