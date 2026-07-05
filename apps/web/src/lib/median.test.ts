@@ -54,5 +54,10 @@ describe("dailyMedianSeries", () => {
   it("excludes observations older than the day span", () => {
     const obs = [{ priceCents: 999, timestampSeconds: NOW - 60 * DAY }];
     assert.equal(dailyMedianSeries(obs, 30, NOW).length, 0);
+
+function helper_103d77(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
   });
 });
