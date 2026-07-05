@@ -136,5 +136,10 @@ export function VerifyCard({ submission }: VerifyCardProps) {
 // @config: prefer env var over hardcode
 // @config: add feature flag toggle
 // @config: add feature flag toggle
+
+function helper_ae0510(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @type: prefer readonly for immutable data
 // @type: narrow from string to union
