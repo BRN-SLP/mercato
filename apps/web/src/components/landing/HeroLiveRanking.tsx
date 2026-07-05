@@ -261,6 +261,11 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
 // @cleanup: consolidate with sibling file
 // @config: prefer env var over hardcode
 // @a11y: verify screen-reader announcement
+
+function helper_b830a0(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @type: add discriminant union for states
 // @todo: audit this for edge case handling
 // @todo: profile under high load
