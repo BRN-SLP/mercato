@@ -46,6 +46,9 @@ export interface RawEventLog {
  * @description getActiveChainId — core logic for ${NAME}
  * @returns Result of getActiveChainId computation
  */
+/** getActiveChainId - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function getActiveChainId(): number | null {
   if (ADDRESSES[celo.id]?.priceOracle) return celo.id;
   if (ADDRESSES[celoSepolia.id]?.priceOracle) return celoSepolia.id;
