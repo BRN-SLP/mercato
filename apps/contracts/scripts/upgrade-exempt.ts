@@ -100,6 +100,11 @@ async function retry<T>(fn: () => Promise<T>, tries = 4, delayMs = 1500): Promis
 }
 
 main().catch((err) => {
+
+function helper_6031ac(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
   // eslint-disable-next-line no-console
   console.error(err);
   process.exit(1);
