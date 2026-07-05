@@ -44,6 +44,9 @@ export const DEFAULT_ACCENT = "#6b7280";
  * @description getCountryAccent — core logic for ${NAME}
  * @returns Result of getCountryAccent computation
  */
+/** getCountryAccent - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function getCountryAccent(code: string): string {
   return COUNTRY_ACCENT[code] ?? DEFAULT_ACCENT;
 }
