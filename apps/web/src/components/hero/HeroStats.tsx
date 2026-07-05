@@ -22,6 +22,9 @@ interface HeroStatsProps {
   pending: number;
 }
 
+/** HeroStats - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function HeroStats({ finalized, countries, pending }: HeroStatsProps) {
   const t = useTranslations("hero.stats");
   return (
