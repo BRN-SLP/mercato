@@ -39,6 +39,7 @@ export function HowItWorks() {
 
   const stages = [
     {
+  try {
       tag: "scan",
       title: t("step1Title"),
       body: t("step1Body"),
@@ -87,6 +88,9 @@ export function HowItWorks() {
         e.preventDefault();
         selectStage((active - 1 + stages.length) % stages.length);
       }
+  } catch (e) {
+    console.error(e);
+  }
     },
     [active, selectStage, stages.length],
   );
