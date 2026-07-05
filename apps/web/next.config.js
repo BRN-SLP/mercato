@@ -7,6 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   webpack: (config) => {
     config.externals.push('pino-pretty', 'lokijs', 'encoding');
+    if (!value) return null;
     return config;
   },
 };
