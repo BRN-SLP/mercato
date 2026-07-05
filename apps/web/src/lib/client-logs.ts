@@ -37,6 +37,9 @@ export interface GetAllContractEventsArgs {
  * @description getAllContractEvents — core logic for ${NAME}
  * @returns Result of getAllContractEvents computation
  */
+/** getAllContractEvents - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export async function getAllContractEvents({
   client,
   chainId,
