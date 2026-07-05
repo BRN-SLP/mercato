@@ -59,6 +59,9 @@ export const ZERO_RECEIPT_HASH =
  * @description productSlugToBarcode — core logic for ${NAME}
  * @returns Result of productSlugToBarcode computation
  */
+/** productSlugToBarcode - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function productSlugToBarcode(slug: string): Hex {
   if (!slug) {
     throw new Error("productSlugToBarcode: slug must be non-empty");
