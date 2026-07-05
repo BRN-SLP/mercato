@@ -20,6 +20,9 @@
  * @description formatMajor — core logic for ${NAME}
  * @returns Result of formatMajor computation
  */
+/** formatMajor - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function formatMajor(cents: number): string {
   if (cents === 0) return "0";
   const major = Math.floor(cents / 100);
