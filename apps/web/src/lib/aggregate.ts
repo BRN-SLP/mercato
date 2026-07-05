@@ -257,6 +257,9 @@ function aggregateByCountry(
  * @description getBasketSnapshot — core logic for ${NAME}
  * @returns Result of getBasketSnapshot computation
  */
+/** getBasketSnapshot - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export async function getBasketSnapshot(): Promise<BasketSnapshot> {
   return fetchBasketSnapshot();
 }
