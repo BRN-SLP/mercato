@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
+/** generateMetadata - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("legal.privacy");
   return {
