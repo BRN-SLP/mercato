@@ -62,6 +62,9 @@ interface FlagStyleProps {
  * `country-flag-icons` only ships colour SVGs; the monochrome read
  * comes from a CSS filter (`grayscale + contrast + brightness`).
  */
+/** MonoSvgFlag - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function MonoSvgFlag({ code }: FlagStyleProps) {
   const Flag = FlagsByCode[code as FlagCode];
   if (!Flag) return <FallbackCode code={code} />;
