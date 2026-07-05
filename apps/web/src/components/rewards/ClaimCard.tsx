@@ -34,6 +34,9 @@ type ClaimState =
   | { kind: "success" }
   | { kind: "error"; message: string };
 
+/** ClaimCard - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
   const t = useTranslations("rewards.claim");
   const chainId = useChainId();
