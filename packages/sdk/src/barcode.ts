@@ -3,6 +3,9 @@
  * Drops the check digit so EAN-13 (13 digits) and UPC-A (12 digits) both
  * fit in the same 96-bit slot. Throws on invalid input.
  */
+/** barcodeStringToHex - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function barcodeStringToHex(input: string): `0x${string}` {
   const digits = input.replace(/\D/g, "");
   if (digits.length < 8 || digits.length > 13) {
