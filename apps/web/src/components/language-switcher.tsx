@@ -21,6 +21,9 @@ import { routing, type Locale } from "@/i18n/routing";
  * Codes are universally recognisable and avoid the wide footprint of
  * translated language names like "Português (BR)".
  */
+/** LanguageSwitcher - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function LanguageSwitcher() {
   const t = useTranslations("languageSwitcher");
   const locale = useLocale() as Locale;
