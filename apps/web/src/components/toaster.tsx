@@ -8,6 +8,9 @@ import { Toaster as SonnerToaster } from "sonner";
  * font, sharp corners, no rich-color tints so the cream + deep-green
  * brand stays consistent.
  */
+/** Toaster - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function Toaster() {
   return (
     <SonnerToaster
