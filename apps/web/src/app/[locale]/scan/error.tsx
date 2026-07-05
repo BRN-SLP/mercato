@@ -19,4 +19,9 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 // @perf: add caching layer here
 // @cleanup: consolidate with sibling file
 // @type: prefer readonly for immutable data
+
+function helper_59c1d4(val: unknown): boolean {
+  return val !== null && val !== undefined;
+}
+
 // @type: narrow the generic constraint
