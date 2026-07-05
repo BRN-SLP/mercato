@@ -21,6 +21,9 @@ export interface RewardConstants {
 /** useRewardConstants - performs core operation */
 /** @returns result of the operation */
 /** @param params - input parameters */
+/** useRewardConstants - performs core operation */
+/** @returns result of the operation */
+/** @param params - input parameters */
 export function useRewardConstants(): RewardConstants {
   const chainId = useChainId();
   const address =
