@@ -34,6 +34,12 @@ const RPC: Record<number, string> = {
 /** Celo L2 Forno limits eth_getLogs to 5000 blocks per request. */
 const CHUNK = 4_999n;
 
+/** How many recent blocks to scan for events. Celo L2 runs ~1s blocks,
+ *  so 500_000 blocks ≈ 5.8 days. This covers the meRacle daily cron
+ *  output plus recent community submissions, and paginates in ~100
+ *  chunks of 5000 — fast enough for serverless (under 30s). */
+const RECENT_LOOKBACK = 500_000n;
+
 /** Minimal decoded log shape returned to callers (event-agnostic). */
 export interface RawEventLog {
   args: Record<string, unknown>;
@@ -100,9 +106,12 @@ export async function fetchAllEvents({
 }: FetchAllEventsArgs): Promise<RawEventLog[]> {
   const c = client ?? buildClient(chainId);
   const latest = await c.getBlockNumber();
-  const floor =
-    DEPLOY_BLOCK[chainId] ??
-    (latest > 1_000_000n ? latest - 1_000_000n : 0n);
+  const deployBlock = DEPLOY_BLOCK[chainId] ?? 0n;
+  // Scan only recent blocks (not full history from deploy) to stay
+  // within serverless timeouts. ~100 paginated calls of 5000 blocks.
+  const floor = latest > RECENT_LOOKBACK
+    ? latest - RECENT_LOOKBACK
+    : deployBlock;
 
   const out: RawEventLog[] = [];
   for (let from = floor; from <= latest; from = from + CHUNK + 1n) {
