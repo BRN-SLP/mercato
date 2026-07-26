@@ -31,8 +31,8 @@ const RPC: Record<number, string> = {
   [celoSepolia.id]: "https://forno.celo-sepolia.celo-testnet.org/",
 };
 
-/** Forno is comfortable with ~1M-block getLogs ranges; stay just under. */
-const CHUNK = 900_000n;
+/** Celo L2 Forno limits eth_getLogs to 5000 blocks per request. */
+const CHUNK = 4_999n;
 
 /** Minimal decoded log shape returned to callers (event-agnostic). */
 export interface RawEventLog {
