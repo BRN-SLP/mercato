@@ -35,10 +35,10 @@ const RPC: Record<number, string> = {
 const CHUNK = 4_999n;
 
 /** How many recent blocks to scan for events. Celo L2 runs ~1s blocks,
- *  so 500_000 blocks ≈ 5.8 days. This covers the meRacle daily cron
- *  output plus recent community submissions, and paginates in ~100
- *  chunks of 5000 — fast enough for serverless (under 30s). */
-const RECENT_LOOKBACK = 500_000n;
+ *  so 50_000 blocks ≈ 14 hours. This covers the latest meRacle daily
+ *  cron output (06:00 UTC) plus recent community submissions, in only
+ *  ~10 paginated calls — well within Vercel serverless timeout. */
+const RECENT_LOOKBACK = 50_000n;
 
 /** Minimal decoded log shape returned to callers (event-agnostic). */
 export interface RawEventLog {
