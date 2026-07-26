@@ -143,6 +143,7 @@ const fetchBasketSnapshot = unstable_cache(
         address,
         eventName: "PriceSubmitted",
       });
+      console.log("[aggregate] fetched", logs.length, "events");
 
       submissions = logs.flatMap((log) => {
         const args = log.args as {
@@ -169,8 +170,9 @@ const fetchBasketSnapshot = unstable_cache(
           } satisfies RawSubmission,
         ];
       });
-    } catch {
+    } catch (err) {
       // Public RPC hiccup — return an empty snapshot rather than 500.
+      console.error("[aggregate] fetchAllEvents failed:", err instanceof Error ? err.message : String(err));
       submissions = [];
     }
 
