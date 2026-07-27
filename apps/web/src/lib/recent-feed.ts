@@ -251,7 +251,7 @@ const fetchFeedSnapshot = unstable_cache(
       return { rows: [], stats: EMPTY_STATS };
     }
   },
-  ["mercato-feed-snapshot-v3"],
+  ["mercato-feed-snapshot-v4"],
   { revalidate: 60, tags: ["basket", "feed"] },
 );
 
