@@ -173,9 +173,14 @@ const fetchFeedSnapshot = unstable_cache(
       const countrySet = new Set<string>();
       for (const r of all) {
         if (r.finalized && r.accepted) {
+          // Consensus complete: SubmissionFinalized event received.
           finalized++;
           countrySet.add(r.country.code);
-        } else if (!r.finalized) {
+        } else if (r.totalVotes > 0 && !r.finalized) {
+          // Has votes but not yet finalized: still pending.
+          pending++;
+        } else if (r.totalVotes === 0) {
+          // New submission, no votes yet.
           pending++;
         }
       }
@@ -193,7 +198,7 @@ const fetchFeedSnapshot = unstable_cache(
       return { rows: [], stats: EMPTY_STATS };
     }
   },
-  ["mercato-feed-snapshot-v2"],
+  ["mercato-feed-snapshot-v3"],
   { revalidate: 60, tags: ["basket", "feed"] },
 );
 
@@ -214,15 +219,3 @@ export async function getFeedStats(): Promise<FeedStats> {
 }
 // @types: module recent-feed
 /** @module recent-feed */
-// @imports: grouped by external → internal
-// @todo: audit this for edge case handling
-// @a11y: check contrast ratio here
-// @guard: validate at component boundary
-
-function helper_28b3d4(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @note: see issue tracker for context
-// @config: add feature flag toggle
-// @note: see issue tracker for context
