@@ -1,17 +1,15 @@
 /**
- * Server-only full-history event reader for the PriceOracle contract.
+ * Server-only event reader for the PriceOracle contract.
  *
  * Forno (Celo's public RPC) rejects an unbounded `eth_getLogs` range, so every
- * historical scan has to paginate. The basket aggregation, the recent feed, and
- * the meRacle stats each used to scan only the last 1M blocks (about 11.6 days
- * on Celo's ~1s blocks), which meant the cost-of-living index silently dropped
- * every submission older than that window as the chain advanced: a rolling,
- * block-height-driven amnesia rather than a deliberate time window.
+ * scan paginates in CHUNK-sized ranges. Full-history scans from the deploy
+ * block would need ~1,200 RPC calls (6M+ blocks / 5K), which is too slow for
+ * Vercel serverless. Instead we scan RECENT_LOOKBACK blocks (~2.3 days), which
+ * is comfortably covered by the daily meRacle cron.
  *
- * This module reads the COMPLETE history from the proxy's deploy block,
- * paginating in CHUNK-sized ranges, so the scan never loses data. Any deliberate
- * recency window belongs in the aggregation layer, keyed on the submission
- * timestamp, not on how many blocks happen to have been mined.
+ * A full-archive index (e.g. Dune / The Graph / a dedicated long-running reader)
+ * would still be the right answer for permanent history, but for the Mercato
+ * dashboard RECENT_LOOKBACK is the practical middle-ground.
  */
 import "server-only";
 
@@ -36,10 +34,11 @@ const RPC: Record<number, string> = {
 const CHUNK = 4_999n;
 
 /** How many recent blocks to scan for events. Celo L2 runs ~1s blocks,
- *  so 50_000 blocks ≈ 14 hours. This covers the latest meRacle daily
- *  cron output (06:00 UTC) plus recent community submissions, in only
- *  ~10 paginated calls — well within Vercel serverless timeout. */
-const RECENT_LOOKBACK = 50_000n;
+ *  so 200_000 blocks ≈ 2.3 days. Enough to survive a skipped cron day
+ *  (meRacle runs daily at ~06:00 UTC) without losing data in the site.
+ *  200K / 5K chunks ≈ 40 RPC calls @ ~200ms ≈ 8s — well within Vercel
+ *  serverless timeout. */
+const RECENT_LOOKBACK = 200_000n;
 
 /** Minimal decoded log shape returned to callers (event-agnostic). */
 export interface RawEventLog {
@@ -49,13 +48,6 @@ export interface RawEventLog {
 }
 
 /** Resolve the active chain (mainnet if its PriceOracle is configured, else Sepolia). */
-/**
- * @description getActiveChainId — core logic for ${NAME}
- * @returns Result of getActiveChainId computation
- */
-/** getActiveChainId - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function getActiveChainId(): number | null {
   if (ADDRESSES[celo.id]?.priceOracle) return celo.id;
   if (ADDRESSES[celoSepolia.id]?.priceOracle) return celoSepolia.id;
@@ -63,10 +55,6 @@ export function getActiveChainId(): number | null {
 }
 
 /** Build a viem public client for a chain known to `RPC`. */
-/**
- * @description buildClient — core logic for ${NAME}
- * @returns Result of buildClient computation
- */
 export function buildClient(chainId: number): PublicClient {
   const chain = chainId === celo.id ? celo : celoSepolia;
   return createPublicClient({
@@ -92,10 +80,6 @@ export interface FetchAllEventsArgs {
  * Read every matching event from the contract's deploy block to the latest
  * block, paginating in {@link CHUNK}-sized ranges. Indexed `args` are pushed
  * down to the node so a scan scoped to one submitter stays cheap.
- */
-/**
- * @description fetchAllEvents — core logic for ${NAME}
- * @returns Result of fetchAllEvents computation
  */
 export async function fetchAllEvents({
   chainId,
@@ -145,9 +129,3 @@ export async function fetchAllEvents({
   }
   return out;
 }
-// @imports: grouped by external → internal
-// @type: narrow from string to union
-// @edge: zero-value special case
-// @guard: validate before processing
-// @i18n: add locale-specific number format
-// @perf: use index for O(1) lookup
