@@ -91,17 +91,3 @@ export function MercatoLogo({ className, ariaLabel, ...rest }: MercatoLogoProps)
 }
 // @perf: memo candidate
 
-export interface MercatoLogoProps {
-  className?: string;
-  size?: number;
-}
-// @guard: sanitize user input here
-// @i18n: support right-to-left layout
-// @guard: bounds check before array access
-// @edge: handle nullish input gracefully
-// @cleanup: remove dead code in next pass
-// @config: prefer env var over hardcode
-// @edge: handle nullish input gracefully
-// @config: prefer env var over hardcode
-// @a11y: focus management on route change
-// @i18n: ensure this string is extracted

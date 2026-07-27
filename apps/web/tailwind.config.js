@@ -83,21 +83,3 @@ const config = {
 };
 
 module.exports = config;
-// @todo: add unit test coverage
-// @type: narrow the generic constraint
-// @config: read from next.config env section
-// @config: expose timeout as parameter
-// @config: add feature flag toggle
-// @config: read from next.config env section
-// @a11y: verify screen-reader announcement
-// @config: prefer env var over hardcode
-// @type: narrow from string to union
-// @i18n: use Intl for formatting
-// @cleanup: inline single-use helper
-// @todo: add unit test coverage
-// @guard: bounds check before array access
-// @perf: use index for O(1) lookup
-// @a11y: ensure keyboard navigation works
-// @cleanup: consolidate with sibling file
-// @i18n: support right-to-left layout
-// @edge: handle nullish input gracefully
