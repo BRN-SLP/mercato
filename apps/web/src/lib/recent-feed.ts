@@ -223,14 +223,17 @@ const fetchFeedSnapshot = unstable_cache(
       const countrySet = new Set<string>();
       for (const r of all) {
         if (r.finalized && r.accepted) {
-          // Consensus complete: SubmissionFinalized event received.
+          // Consensus complete via SubmissionFinalized event.
           finalized++;
           countrySet.add(r.country.code);
-        } else if (r.totalVotes > 0 && !r.finalized) {
-          // Has votes but not yet finalized: still pending.
-          pending++;
-        } else if (r.totalVotes === 0) {
-          // New submission, no votes yet.
+        } else if (r.totalVotes > 0) {
+          // Has at least one Verified event: count as "verified" for the
+          // hero stat (SubmissionFinalized is not yet emitted by the
+          // current oracle implementation).
+          finalized++;
+          countrySet.add(r.country.code);
+        } else {
+          // No verifications yet: awaiting peer vote.
           pending++;
         }
       }
