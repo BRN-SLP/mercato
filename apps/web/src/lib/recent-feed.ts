@@ -131,7 +131,7 @@ async function fetchAndDecodeLogs(
       for (const eventName of ["PriceSubmitted", "Verified", "SubmissionFinalized"]) {
         try {
           const decoded = decodeEventLog({ abi, eventName, data, topics });
-          out.push({ eventName, args: decoded.args as Record<string, unknown> });
+          out.push({ eventName, args: decoded.args as unknown as Record<string, unknown> });
           break; // matched, stop trying other event names
         } catch {
           // not this event, try next
