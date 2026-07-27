@@ -18,6 +18,7 @@ import "server-only";
 import {
   createPublicClient,
   http,
+  decodeEventLog,
   type Abi,
   type PublicClient,
 } from "viem";
@@ -107,24 +108,40 @@ export async function fetchAllEvents({
   const c = client ?? buildClient(chainId);
   const latest = await c.getBlockNumber();
   const deployBlock = DEPLOY_BLOCK[chainId] ?? 0n;
-  // Scan only recent blocks (not full history from deploy) to stay
-  // within serverless timeouts. ~100 paginated calls of 5000 blocks.
   const floor = latest > RECENT_LOOKBACK
     ? latest - RECENT_LOOKBACK
     : deployBlock;
 
+  // Use raw eth_getLogs instead of getContractEvents.
+  // getContractEvents on Celo L2 via Forno can silently return empty
+  // on serverless (likely ABI-decoding edge case with the proxy).
+  // Raw getLogs is bulletproof: just returns matching log entries.
   const out: RawEventLog[] = [];
   for (let from = floor; from <= latest; from = from + CHUNK + 1n) {
     const to = from + CHUNK < latest ? from + CHUNK : latest;
-    const logs = await c.getContractEvents({
-      address,
-      abi,
-      eventName,
-      args,
-      fromBlock: from,
-      toBlock: to,
-    } as Parameters<PublicClient["getContractEvents"]>[0]);
-    out.push(...(logs as unknown as RawEventLog[]));
+    const logs = await c.request({
+      method: "eth_getLogs",
+      params: [{ address, fromBlock: `0x${from.toString(16)}`, toBlock: `0x${to.toString(16)}` }],
+    } as any);
+    if (Array.isArray(logs)) {
+      for (const log of logs as any[]) {
+        try {
+          const decoded = decodeEventLog({
+            abi,
+            eventName,
+            data: log.data ?? "0x",
+            topics: log.topics ?? [],
+          });
+          out.push({
+            args: decoded.args as unknown as Record<string, unknown>,
+            blockNumber: log.blockNumber ? BigInt(log.blockNumber) : null,
+            transactionHash: (log.transactionHash as `0x${string}`) ?? null,
+          });
+        } catch {
+          // Skip logs that don't match our event signature.
+        }
+      }
+    }
   }
   return out;
 }

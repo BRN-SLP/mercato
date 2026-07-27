@@ -187,7 +187,7 @@ const fetchBasketSnapshot = unstable_cache(
   // number. v2 → v3: scan switched from a rolling 1M-block window to
   // the full deploy-block history, so cached v2 snapshots are
   // incomplete and must not be served after deploy.
-  ["mercato-basket-snapshot-v4"],
+  ["mercato-basket-snapshot-v5"],
   { revalidate: 60, tags: ["basket"] },
 );
 
