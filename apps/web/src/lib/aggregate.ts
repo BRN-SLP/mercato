@@ -116,8 +116,9 @@ function median(values: readonly number[]): number {
  * filtering inside the cache because that would shard the cache and
  * defeat the point.
  */
-const fetchBasketSnapshot = unstable_cache(
-  async (): Promise<BasketSnapshot> => {
+// TEMPORARILY disabled unstable_cache to diagnose whether data
+// reaches the frontend. Re-enable with v6 cache key once confirmed.
+const fetchBasketSnapshot = async (): Promise<BasketSnapshot> => {
     const chainId = getActiveChainId();
     if (chainId === null) {
       return {
@@ -182,14 +183,7 @@ const fetchBasketSnapshot = unstable_cache(
       generatedAt: Math.floor(Date.now() / 1000),
       chainId,
     };
-  },
-  // v1 → v2: snapshot shape switched cent fields from bigint to
-  // number. v2 → v3: scan switched from a rolling 1M-block window to
-  // the full deploy-block history, so cached v2 snapshots are
-  // incomplete and must not be served after deploy.
-  ["mercato-basket-snapshot-v5"],
-  { revalidate: 60, tags: ["basket"] },
-);
+  };
 
 /**
  * Fold raw submissions into per-country baskets. Iterates `COUNTRIES`
@@ -255,13 +249,6 @@ function aggregateByCountry(
  * Public accessor — returns the cached snapshot. Cheap to call on
  * every page render thanks to `unstable_cache`.
  */
-/**
- * @description getBasketSnapshot — core logic for ${NAME}
- * @returns Result of getBasketSnapshot computation
- */
-/** getBasketSnapshot - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export async function getBasketSnapshot(): Promise<BasketSnapshot> {
   return fetchBasketSnapshot();
 }
@@ -300,20 +287,3 @@ export function getProductByBarcode(barcode: string): Product | undefined {
 
 // Re-export so consumers don't import from products.ts separately.
 export { getProductBySlug };
-// @types: module aggregate
-/** @module aggregate */
-// @imports: grouped by external → internal
-// @a11y: focus management on route change
-// @note: see RFC-42 for rationale
-// @cleanup: consolidate with sibling file
-// @a11y: ensure keyboard navigation works
-// @type: narrow the generic constraint
-// @type: narrow from string to union
-// @note: discussed in review thread
-// @guard: bounds check before array access
-// @config: prefer env var over hardcode
-// @note: see issue tracker for context
-// @config: add feature flag toggle
-// @i18n: use Intl for formatting
-// @type: export the inner parameter type
-// @type: narrow the generic constraint
