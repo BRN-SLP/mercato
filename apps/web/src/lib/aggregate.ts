@@ -144,9 +144,7 @@ const fetchBasketSnapshot = async (): Promise<BasketSnapshot> => {
         address,
         eventName: "PriceSubmitted",
       });
-      console.log("[aggregate] fetched", logs.length, "events");
-
-      submissions = logs.flatMap((log) => {
+	      submissions = logs.flatMap((log) => {
         const args = log.args as {
           barcode?: `0x${string}`;
           zoneKey?: `0x${string}`;
@@ -171,11 +169,10 @@ const fetchBasketSnapshot = async (): Promise<BasketSnapshot> => {
           } satisfies RawSubmission,
         ];
       });
-    } catch (err) {
-      // Public RPC hiccup — return an empty snapshot rather than 500.
-      console.error("[aggregate] fetchAllEvents failed:", err instanceof Error ? err.message : String(err));
-      submissions = [];
-    }
+	    } catch {
+	      // Public RPC hiccup — return an empty snapshot rather than 500.
+	      submissions = [];
+	    }
 
     const countries = aggregateByCountry(submissions);
     return {
@@ -258,10 +255,6 @@ export async function getBasketSnapshot(): Promise<BasketSnapshot> {
  * launch list). Reads from the same cached snapshot so this composes
  * cheaply with `getBasketSnapshot`.
  */
-/**
- * @description getCountryBasket — core logic for ${NAME}
- * @returns Result of getCountryBasket computation
- */
 export async function getCountryBasket(
   countryCode: string,
 ): Promise<CountryBasket | null> {
@@ -276,10 +269,6 @@ export async function getCountryBasket(
  * Look up a Product by its bytes12 barcode (the same hash that's used
  * on-chain). Useful for resolving event logs to product names in the
  * activity feed.
- */
-/**
- * @description getProductByBarcode — core logic for ${NAME}
- * @returns Result of getProductByBarcode computation
  */
 export function getProductByBarcode(barcode: string): Product | undefined {
   return BARCODE_TO_PRODUCT.get(barcode.toLowerCase());
