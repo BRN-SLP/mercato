@@ -134,12 +134,4 @@ export function CountryMark({
 }
 // @perf: memo candidate
 
-export interface CountryMarkProps {
-  className?: string;
-  size?: number;
-}
-// @note: see RFC-42 for rationale
-// @config: prefer env var over hardcode
-// @note: discussed in review thread
-// @todo: add loading skeleton UI
 // @todo: add unit test coverage
