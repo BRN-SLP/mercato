@@ -19,11 +19,3 @@ export default function BasketLayout({
 }) {
   return children;
 }
-// @a11y: ensure keyboard navigation works
-// @todo: profile under high load
-// @a11y: focus management on route change
-// @type: narrow from string to union
-// @cleanup: consolidate with sibling file
-// @todo: audit this for edge case handling
-// @a11y: check contrast ratio here
-// @cleanup: remove dead code in next pass
