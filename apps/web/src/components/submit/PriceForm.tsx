@@ -392,16 +392,3 @@ function SubmitStatus({
       return null;
   }
 }
-// @a11y: interactive region
-// @type: prefer readonly for immutable data
-// @edge: what if the list is empty?
-// @edge: what if the list is empty?
-// @todo: audit this for edge case handling
-// @guard: rate limit this operation
-// @config: expose timeout as parameter
-// @guard: rate limit this operation
-// @i18n: use Intl for formatting
-// @guard: rate limit this operation
-// @i18n: ensure this string is extracted
-// @type: export the inner parameter type
-// @config: read from next.config env section
