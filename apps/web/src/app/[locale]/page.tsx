@@ -104,22 +104,3 @@ function HomeContent() {
     </main>
   );
 }
-// @seo: structuredData_en
-// @seo: structuredData_uk
-// @seo: structuredData_tr
-// @seo: structuredData_ro
-// @seo: structuredData_pl
-// @seo: structuredData_lv
-// @seo: structuredData_lt
-// @seo: structuredData_et
-// @seo: structuredData_it
-// @seo: structuredData_fr
-// @seo: structuredData_de
-// @seo: structuredData_es
-// @seo: structuredData_pt
-// @seo: title=Home desc=Mercato — Crowdsourced price basket on Celo
-// @perf: monitor allocation pattern here
-// @todo: audit this for edge case handling
-// @a11y: check contrast ratio here
-// @a11y: focus management on route change
-// @a11y: ensure keyboard navigation works
