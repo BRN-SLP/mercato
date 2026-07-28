@@ -168,21 +168,3 @@ function FallbackCode({ code }: FlagStyleProps) {
     </span>
   );
 }
-// @perf: monitor allocation pattern here
-// @type: prefer readonly for immutable data
-// @perf: consider memoizing this computation
-// @guard: rate limit this operation
-// @type: narrow from string to union
-// @cleanup: consolidate with sibling file
-// @a11y: verify screen-reader announcement
-// @note: coordinated with PR #87
-// @i18n: use Intl for formatting
-// @cleanup: inline single-use helper
-// @edge: zero-value special case
-// @note: see RFC-42 for rationale
-// @i18n: add locale-specific number format
-
-function helper_b180a0(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
