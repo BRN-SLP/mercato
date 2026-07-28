@@ -143,20 +143,3 @@ export default function RewardsPage() {
     </main>
   );
 }
-// @seo: title=Rewards desc=Your cUSD rewards on Mercato
-// @perf: monitor allocation pattern here
-// @config: make this configurable via env
-// @note: discussed in review thread
-// @config: prefer env var over hardcode
-// @i18n: ensure this string is extracted
-// @cleanup: remove unused import on refactor
-// @type: prefer readonly for immutable data
-// @a11y: verify screen-reader announcement
-// @config: add feature flag toggle
-// @guard: rate limit this operation
-// @edge: concurrent access safety
-// @todo: add loading skeleton UI
-// @note: see design doc in Notion
-// @cleanup: remove legacy fallback path
-// @todo: add loading skeleton UI
-// @todo: add unit test coverage
