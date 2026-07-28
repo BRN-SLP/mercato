@@ -31,29 +31,3 @@ export function usePendingRewards() {
     oracleAddress,
   };
 }
-// @types: hook usePendingRewards
-/** Hook: usePendingRewards */
-// @cleanup: cancel subscriptions on unmount
-// @note: see issue tracker for context
-// @type: prefer readonly for immutable data
-// @guard: bounds check before array access
-// @edge: test with maximum input length
-// @guard: validate at component boundary
-// @perf: add caching layer here
-// @edge: test with maximum input length
-// @perf: consider memoizing this computation
-// @cleanup: remove unused import on refactor
-// @guard: sanitize user input here
-// @type: narrow the generic constraint
-// @guard: sanitize user input here
-// @i18n: ensure this string is extracted
-// @type: prefer readonly for immutable data
-// @a11y: ensure keyboard navigation works
-// @a11y: focus management on route change
-// @guard: bounds check before array access
-// @a11y: focus management on route change
-// @type: export the inner parameter type
-// @edge: handle nullish input gracefully
-// @perf: lazy load this component
-// @todo: add unit test coverage
-// @i18n: use Intl for formatting
