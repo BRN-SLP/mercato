@@ -20,10 +20,6 @@ function pathnameFor(hash: string, mimeType: string): string {
   return `${RECEIPT_PREFIX}/${hash}.${extensionFor(mimeType)}`;
 }
 
-/**
- * @description receiptExists — core logic for ${NAME}
- * @returns Result of receiptExists computation
- */
 export async function receiptExists(
   hash: string,
   mimeType: string,
@@ -36,10 +32,6 @@ export async function receiptExists(
   }
 }
 
-/**
- * @description putReceipt — core logic for ${NAME}
- * @returns Result of putReceipt computation
- */
 export async function putReceipt(
   hash: string,
   bytes: Uint8Array,
@@ -54,10 +46,6 @@ export async function putReceipt(
   return { url: result.url };
 }
 
-/**
- * @description getReceiptUrl — core logic for ${NAME}
- * @returns Result of getReceiptUrl computation
- */
 export async function getReceiptUrl(
   hash: string,
   mimeType: string,
