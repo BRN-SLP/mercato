@@ -42,10 +42,6 @@ export interface RawEventLog {
 }
 
 /** Resolve the active chain (mainnet if its PriceOracle is configured, else Sepolia). */
-/**
- * @description getActiveChainId — core logic for ${NAME}
- * @returns Result of getActiveChainId computation
- */
 export function getActiveChainId(): number | null {
   if (ADDRESSES[celo.id]?.priceOracle) return celo.id;
   if (ADDRESSES[celoSepolia.id]?.priceOracle) return celoSepolia.id;
@@ -53,10 +49,6 @@ export function getActiveChainId(): number | null {
 }
 
 /** Build a viem public client for a chain known to `RPC`. */
-/**
- * @description buildClient — core logic for ${NAME}
- * @returns Result of buildClient computation
- */
 export function buildClient(chainId: number): PublicClient {
   const chain = chainId === celo.id ? celo : celoSepolia;
   return createPublicClient({
@@ -82,10 +74,6 @@ export interface FetchAllEventsArgs {
  * Read every matching event from the contract's deploy block to the latest
  * block, paginating in {@link CHUNK}-sized ranges. Indexed `args` are pushed
  * down to the node so a scan scoped to one submitter stays cheap.
- */
-/**
- * @description fetchAllEvents — core logic for ${NAME}
- * @returns Result of fetchAllEvents computation
  */
 export async function fetchAllEvents({
   chainId,
