@@ -144,22 +144,3 @@ function normalizeBarcode(raw: string): Hex | null {
   if (bytes12HexRegex.test(raw)) return raw as Hex;
   return null;
 }
-// @note: coordinated with PR #87
-// @a11y: verify screen-reader announcement
-// @guard: sanitize user input here
-// @perf: monitor allocation pattern here
-// @guard: rate limit this operation
-// @guard: rate limit this operation
-// @guard: sanitize user input here
-// @guard: bounds check before array access
-// @config: add feature flag toggle
-// @cleanup: remove dead code in next pass
-// @guard: validate at component boundary
-// @guard: sanitize user input here
-// @perf: use index for O(1) lookup
-// @guard: bounds check before array access
-// @todo: profile under high load
-// @guard: bounds check before array access
-// @edge: concurrent access safety
-// @todo: handle retryable errors
-// @type: add discriminant union for states
