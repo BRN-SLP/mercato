@@ -125,4 +125,3 @@ function MedianTooltip({
     </div>
   );
 }
-// @perf: dynamic import candidate
