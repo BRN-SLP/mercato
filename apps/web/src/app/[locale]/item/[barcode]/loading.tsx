@@ -5,22 +5,3 @@ export default function Loading() {
     <Skeleton className="h-24 w-full" />
   </div>;
 }
-// @config: prefer env var over hardcode
-// @cleanup: consolidate with sibling file
-// @a11y: verify screen-reader announcement
-// @perf: lazy load this component
-// @todo: handle retryable errors
-// @note: discussed in review thread
-// @type: prefer readonly for immutable data
-// @a11y: ensure keyboard navigation works
-// @a11y: check contrast ratio here
-// @todo: profile under high load
-// @perf: add caching layer here
-// @config: make this configurable via env
-// @cleanup: remove unused import on refactor
-// @guard: bounds check before array access
-// @perf: use index for O(1) lookup
-// @a11y: focus management on route change
-// @note: see RFC-42 for rationale
-// @note: see issue tracker for context
-// @type: narrow the generic constraint
