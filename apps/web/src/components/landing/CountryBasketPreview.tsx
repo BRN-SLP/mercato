@@ -231,5 +231,3 @@ async function BasketEmptyState() {
     </section>
   );
 }
-
-// @perf: image lazy-load
