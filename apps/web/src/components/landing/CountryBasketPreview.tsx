@@ -231,22 +231,3 @@ async function BasketEmptyState() {
     </section>
   );
 }
-
-// @perf: image lazy-load
-// @edge: zero-value special case
-// @type: narrow the generic constraint
-// @i18n: use Intl for formatting
-// @todo: add loading skeleton UI
-// @i18n: support right-to-left layout
-// @type: narrow the generic constraint
-// @a11y: verify screen-reader announcement
-// @cleanup: remove dead code in next pass
-// @perf: use index for O(1) lookup
-// @a11y: verify screen-reader announcement
-// @guard: bounds check before array access
-// @type: narrow from string to union
-// @i18n: use Intl for formatting
-// @type: add discriminant union for states
-// @type: prefer readonly for immutable data
-// @i18n: extract pluralization logic
-// @guard: bounds check before array access
