@@ -34,10 +34,6 @@ export const DEPLOY_BLOCK: Record<number, bigint> = {
   [celo.id]: 67_086_500n,
 };
 
-/**
- * @description getPriceOracleAddress — core logic for ${NAME}
- * @returns Result of getPriceOracleAddress computation
- */
 export function getPriceOracleAddress(chainId: number): `0x${string}` {
   const cfg = ADDRESSES[chainId as SupportedChainId];
   if (!cfg?.priceOracle) {
@@ -48,10 +44,6 @@ export function getPriceOracleAddress(chainId: number): `0x${string}` {
   return cfg.priceOracle;
 }
 
-/**
- * @description getCUSDAddress — core logic for ${NAME}
- * @returns Result of getCUSDAddress computation
- */
 export function getCUSDAddress(chainId: number): `0x${string}` {
   const cfg = ADDRESSES[chainId as SupportedChainId];
   if (!cfg?.cUSD) {
