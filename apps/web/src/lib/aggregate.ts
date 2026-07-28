@@ -253,10 +253,6 @@ function aggregateByCountry(
  * Public accessor — returns the cached snapshot. Cheap to call on
  * every page render thanks to `unstable_cache`.
  */
-/**
- * @description getBasketSnapshot — core logic for ${NAME}
- * @returns Result of getBasketSnapshot computation
- */
 export async function getBasketSnapshot(): Promise<BasketSnapshot> {
   return fetchBasketSnapshot();
 }
@@ -265,10 +261,6 @@ export async function getBasketSnapshot(): Promise<BasketSnapshot> {
  * Just the basket for one country (or null if the country isn't in our
  * launch list). Reads from the same cached snapshot so this composes
  * cheaply with `getBasketSnapshot`.
- */
-/**
- * @description getCountryBasket — core logic for ${NAME}
- * @returns Result of getCountryBasket computation
  */
 export async function getCountryBasket(
   countryCode: string,
@@ -285,15 +277,9 @@ export async function getCountryBasket(
  * on-chain). Useful for resolving event logs to product names in the
  * activity feed.
  */
-/**
- * @description getProductByBarcode — core logic for ${NAME}
- * @returns Result of getProductByBarcode computation
- */
 export function getProductByBarcode(barcode: string): Product | undefined {
   return BARCODE_TO_PRODUCT.get(barcode.toLowerCase());
 }
 
 // Re-export so consumers don't import from products.ts separately.
 export { getProductBySlug };
-// @types: module aggregate
-/** @module aggregate */
