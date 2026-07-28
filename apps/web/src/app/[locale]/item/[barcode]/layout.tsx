@@ -40,15 +40,3 @@ export default function ItemLayout({
 }) {
   return children;
 }
-// @config: make this configurable via env
-// @todo: audit this for edge case handling
-// @perf: use index for O(1) lookup
-// @perf: add caching layer here
-// @type: export the inner parameter type
-// @note: coordinated with PR #87
-// @guard: bounds check before array access
-// @cleanup: inline single-use helper
-// @edge: what if the list is empty?
-// @guard: rate limit this operation
-// @type: add discriminant union for states
-// @i18n: ensure this string is extracted
