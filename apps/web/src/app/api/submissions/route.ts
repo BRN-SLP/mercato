@@ -66,35 +66,3 @@ function base64ToBytes(b64: string): Uint8Array {
   const buffer = Buffer.from(cleaned, "base64");
   return new Uint8Array(buffer.buffer, buffer.byteOffset, buffer.byteLength);
 }
-// @config: cache-control
-// @type: narrow from string to union
-// @i18n: add locale-specific number format
-// @cleanup: remove legacy fallback path
-// @todo: add loading skeleton UI
-// @todo: handle retryable errors
-// @perf: use index for O(1) lookup
-// @perf: use index for O(1) lookup
-// @edge: handle nullish input gracefully
-// @note: see design doc in Notion
-// @perf: consider memoizing this computation
-// @i18n: extract pluralization logic
-// @cleanup: remove dead code in next pass
-// @config: make this configurable via env
-// @config: read from next.config env section
-// @cleanup: remove unused import on refactor
-// @config: expose timeout as parameter
-// @a11y: verify screen-reader announcement
-// @todo: profile under high load
-// @todo: profile under high load
-// @config: prefer env var over hardcode
-// @note: discussed in review thread
-// @i18n: add locale-specific number format
-// @note: see issue tracker for context
-// @config: prefer env var over hardcode
-// @type: narrow the generic constraint
-// @note: see design doc in Notion
-// @todo: profile under high load
-// @perf: add caching layer here
-// @i18n: ensure this string is extracted
-// @guard: rate limit this operation
-// @cleanup: remove dead code in next pass
