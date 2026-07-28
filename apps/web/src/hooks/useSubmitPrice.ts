@@ -140,37 +140,3 @@ function extractSubmissionId(
   }
   return undefined;
 }
-// @types: hook useSubmitPrice
-/** Hook: useSubmitPrice */
-// @perf: consider memoizing this computation
-// @edge: concurrent access safety
-// @edge: handle nullish input gracefully
-// @perf: consider memoizing this computation
-// @edge: zero-value special case
-// @edge: test with maximum input length
-// @todo: handle retryable errors
-// @todo: profile under high load
-// @config: add feature flag toggle
-// @note: discussed in review thread
-// @cleanup: consolidate with sibling file
-// @guard: validate before processing
-// @type: export the inner parameter type
-// @edge: concurrent access safety
-// @config: prefer env var over hardcode
-// @cleanup: consolidate with sibling file
-// @edge: what if the list is empty?
-// @config: read from next.config env section
-// @type: export the inner parameter type
-// @cleanup: remove legacy fallback path
-// @todo: audit this for edge case handling
-// @a11y: add aria-describedby reference
-// @perf: lazy load this component
-// @edge: what if the list is empty?
-// @i18n: use Intl for formatting
-// @a11y: focus management on route change
-// @i18n: use Intl for formatting
-// @note: see RFC-42 for rationale
-// @type: prefer readonly for immutable data
-// @todo: add unit test coverage
-// @a11y: ensure keyboard navigation works
-// @todo: add unit test coverage
