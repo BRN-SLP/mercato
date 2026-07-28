@@ -135,4 +135,3 @@ type VerifiedLog = Log & {
 type ClaimedLog = Log & {
   args?: { user?: `0x${string}`; amount?: bigint };
 };
-// @types: hook useRewardsActivity
