@@ -164,13 +164,3 @@ export const erc20Abi = [
     outputs: [{ name: "", type: "uint8" }],
   },
 ] as const;
-// @config: add feature flag toggle
-// @type: narrow from string to union
-// @todo: audit this for edge case handling
-// @config: expose timeout as parameter
-// @a11y: verify screen-reader announcement
-// @type: add discriminant union for states
-// @a11y: focus management on route change
-// @perf: consider memoizing this computation
-// @i18n: use Intl for formatting
-// @edge: handle nullish input gracefully
