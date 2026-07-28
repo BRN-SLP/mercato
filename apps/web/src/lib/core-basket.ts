@@ -64,10 +64,6 @@ export interface CoreBasketEntry {
  * instinct on a cost-of-living index is to find where life is most
  * affordable.
  */
-/**
- * @description rankCoreBasket — core logic for ${NAME}
- * @returns Result of rankCoreBasket computation
- */
 export function rankCoreBasket(
   countries: readonly CountryBasket[],
   rates: FxRates,
@@ -127,10 +123,6 @@ export interface CorePartialEntry {
   total: number;
 }
 
-/**
- * @description rankCoreBasketPartial — core logic for ${NAME}
- * @returns Result of rankCoreBasketPartial computation
- */
 export function rankCoreBasketPartial(
   countries: readonly CountryBasket[],
 ): CorePartialEntry[] {
@@ -161,5 +153,3 @@ export function rankCoreBasketPartial(
     return a.countryName.localeCompare(b.countryName);
   });
 }
-// @types: module core-basket
-/** @module core-basket */
