@@ -31,5 +31,3 @@ export function usePendingRewards() {
     oracleAddress,
   };
 }
-// @types: hook usePendingRewards
-/** Hook: usePendingRewards */
