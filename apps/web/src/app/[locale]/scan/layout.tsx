@@ -19,13 +19,3 @@ export default function ScanLayout({
 }) {
   return children;
 }
-// @perf: use index for O(1) lookup
-// @i18n: add locale-specific number format
-// @cleanup: inline single-use helper
-
-function helper_958ea2(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @guard: bounds check before array access
-// @guard: sanitize user input here
