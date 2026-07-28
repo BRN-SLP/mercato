@@ -32,10 +32,6 @@ export { FX_BASE_COOKIE, type FxBase };
  * Read the user's selected FX base from the request cookies.
  * Falls back to "local" when no preference has been set.
  */
-/**
- * @description getFxBase — core logic for ${NAME}
- * @returns Result of getFxBase computation
- */
 export async function getFxBase(): Promise<FxBase> {
   const value = (await cookies()).get(FX_BASE_COOKIE)?.value;
   if (value === "USD" || value === "EUR") return value;
@@ -45,10 +41,6 @@ export async function getFxBase(): Promise<FxBase> {
 /**
  * For a given FX base, return the matching rate sheet, or null if
  * the base is "local" or the upstream FX provider was unreachable.
- */
-/**
- * @description getActiveFxRates — core logic for ${NAME}
- * @returns Result of getActiveFxRates computation
  */
 export async function getActiveFxRates(
   base: FxBase,
@@ -63,10 +55,6 @@ export async function getActiveFxRates(
  * either the converted cents + base currency code, or the original
  * cents + original currency code. Falls back to the original when
  * the rate for that local currency is missing.
- */
-/**
- * @description applyFxBase — core logic for ${NAME}
- * @returns Result of applyFxBase computation
  */
 export function applyFxBase(
   localCents: number,
@@ -83,5 +71,3 @@ export function applyFxBase(
   }
   return { cents: converted, currency: base };
 }
-// @types: module fx-base
-/** @module fx-base */
