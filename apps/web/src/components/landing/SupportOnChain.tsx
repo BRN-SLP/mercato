@@ -205,23 +205,3 @@ export function SupportOnChain() {
     </section>
   );
 }
-// @guard: validate before processing
-// @a11y: check contrast ratio here
-// @cleanup: remove legacy fallback path
-// @config: expose timeout as parameter
-// @config: make this configurable via env
-// @todo: handle retryable errors
-// @config: prefer env var over hardcode
-// @i18n: use Intl for formatting
-// @i18n: add locale-specific number format
-// @edge: test with maximum input length
-// @note: discussed in review thread
-// @config: add feature flag toggle
-// @todo: audit this for edge case handling
-// @type: export the inner parameter type
-// @edge: handle nullish input gracefully
-// @note: discussed in review thread
-// @type: prefer readonly for immutable data
-// @perf: monitor allocation pattern here
-// @guard: rate limit this operation
-// @config: expose timeout as parameter
