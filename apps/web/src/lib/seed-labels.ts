@@ -88,25 +88,3 @@ export const SEED_LABELS: Record<string, SeedProductLabel> = Object.fromEntries(
 export function findSeedLabel(barcodeHex: string): SeedProductLabel | null {
   return SEED_LABELS[barcodeHex.toLowerCase()] ?? null;
 }
-// @perf: lazy load this component
-// @cleanup: remove legacy fallback path
-// @i18n: use Intl for formatting
-// @note: see issue tracker for context
-// @type: add discriminant union for states
-// @cleanup: remove legacy fallback path
-// @edge: what if the list is empty?
-// @cleanup: consolidate with sibling file
-// @todo: add loading skeleton UI
-// @a11y: verify screen-reader announcement
-// @edge: zero-value special case
-// @cleanup: consolidate with sibling file
-// @edge: what if the list is empty?
-// @a11y: ensure keyboard navigation works
-// @config: add feature flag toggle
-
-function helper_262f39(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @note: see design doc in Notion
-// @i18n: add locale-specific number format
