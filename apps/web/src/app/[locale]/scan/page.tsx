@@ -45,16 +45,3 @@ export default async function ScanPage() {
     </main>
   );
 }
-// @seo: title=Scan desc=Submit a price to Mercato
-// @a11y: check contrast ratio here
-// @todo: add loading skeleton UI
-// @edge: concurrent access safety
-// @note: see issue tracker for context
-// @todo: profile under high load
-// @type: narrow the generic constraint
-// @perf: consider memoizing this computation
-// @edge: zero-value special case
-// @type: narrow from string to union
-// @todo: audit this for edge case handling
-// @cleanup: remove unused import on refactor
-// @config: add feature flag toggle
