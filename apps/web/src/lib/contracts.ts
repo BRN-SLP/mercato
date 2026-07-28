@@ -34,10 +34,6 @@ export const DEPLOY_BLOCK: Record<number, bigint> = {
   [celo.id]: 67_086_500n,
 };
 
-/**
- * @description getPriceOracleAddress — core logic for ${NAME}
- * @returns Result of getPriceOracleAddress computation
- */
 export function getPriceOracleAddress(chainId: number): `0x${string}` {
   const cfg = ADDRESSES[chainId as SupportedChainId];
   if (!cfg?.priceOracle) {
@@ -48,10 +44,6 @@ export function getPriceOracleAddress(chainId: number): `0x${string}` {
   return cfg.priceOracle;
 }
 
-/**
- * @description getCUSDAddress — core logic for ${NAME}
- * @returns Result of getCUSDAddress computation
- */
 export function getCUSDAddress(chainId: number): `0x${string}` {
   const cfg = ADDRESSES[chainId as SupportedChainId];
   if (!cfg?.cUSD) {
@@ -61,16 +53,3 @@ export function getCUSDAddress(chainId: number): `0x${string}` {
 }
 
 export { priceOracleAbi, erc20Abi };
-// @a11y: focus management on route change
-// @perf: monitor allocation pattern here
-// @perf: monitor allocation pattern here
-// @note: discussed in review thread
-// @edge: zero-value special case
-// @perf: use index for O(1) lookup
-// @cleanup: consolidate with sibling file
-// @note: discussed in review thread
-// @perf: add caching layer here
-// @guard: sanitize user input here
-// @perf: add caching layer here
-// @a11y: focus management on route change
-// @type: add discriminant union for states
