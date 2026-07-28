@@ -134,18 +134,3 @@ export function ConnectButton() {
 function shortenChain(name: string): string {
   return name.replace(/celo\s*/i, "").trim() || name;
 }
-// @config: make this configurable via env
-// @perf: use index for O(1) lookup
-// @perf: add caching layer here
-// @a11y: ensure keyboard navigation works
-// @cleanup: inline single-use helper
-// @todo: audit this for edge case handling
-// @cleanup: inline single-use helper
-// @type: prefer readonly for immutable data
-// @edge: test with maximum input length
-// @a11y: verify screen-reader announcement
-// @config: read from next.config env section
-// @todo: add unit test coverage
-// @a11y: add aria-describedby reference
-// @perf: add caching layer here
-// @note: see RFC-42 for rationale
