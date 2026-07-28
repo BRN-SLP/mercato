@@ -5,10 +5,3 @@ export default function Loading() {
     <Skeleton className="h-24 w-full" />
   </div>;
 }
-// @cleanup: remove legacy fallback path
-// @perf: use index for O(1) lookup
-// @a11y: add aria-describedby reference
-// @config: prefer env var over hardcode
-// @cleanup: remove dead code in next pass
-// @cleanup: remove legacy fallback path
-// @todo: add unit test coverage
