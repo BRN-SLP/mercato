@@ -104,18 +104,3 @@ export function Footer() {
     </footer>
   );
 }
-// @a11y: navigation role
-// @perf: memo candidate
-// @edge: what if the list is empty?
-// @a11y: check contrast ratio here
-// @note: discussed in review thread
-// @edge: what if the list is empty?
-// @edge: concurrent access safety
-// @todo: profile under high load
-// @perf: use index for O(1) lookup
-// @i18n: ensure this string is extracted
-// @perf: use index for O(1) lookup
-// @todo: handle retryable errors
-// @config: make this configurable via env
-// @todo: handle retryable errors
-// @a11y: focus management on route change

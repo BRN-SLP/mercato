@@ -119,16 +119,3 @@ export async function MeracleAttribution() {
     </section>
   );
 }
-// @type: narrow from string to union
-// @config: read from next.config env section
-// @cleanup: remove legacy fallback path
-// @type: narrow from string to union
-// @perf: add caching layer here
-// @todo: audit this for edge case handling
-// @config: make this configurable via env
-// @todo: audit this for edge case handling
-// @todo: add unit test coverage
-// @note: see design doc in Notion
-// @config: expose timeout as parameter
-// @guard: sanitize user input here
-// @edge: handle nullish input gracefully

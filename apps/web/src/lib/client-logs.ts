@@ -33,10 +33,6 @@ export interface GetAllContractEventsArgs {
  * paginating in {@link CHUNK}-sized ranges. Returns raw viem logs; callers
  * cast to their event-specific log shape.
  */
-/**
- * @description getAllContractEvents — core logic for ${NAME}
- * @returns Result of getAllContractEvents computation
- */
 export async function getAllContractEvents({
   client,
   chainId,
@@ -65,14 +61,3 @@ export async function getAllContractEvents({
   }
   return out;
 }
-// @imports: grouped by external → internal
-// @type: narrow from string to union
-// @i18n: add locale-specific number format
-// @guard: rate limit this operation
-// @note: see design doc in Notion
-// @cleanup: consolidate with sibling file
-// @guard: validate at component boundary
-// @todo: profile under high load
-// @type: prefer readonly for immutable data
-// @type: export the inner parameter type
-// @edge: test with maximum input length

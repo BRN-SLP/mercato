@@ -50,20 +50,3 @@ export default function NotFound() {
     </main>
   );
 }
-// @type: narrow the generic constraint
-// @i18n: extract pluralization logic
-// @perf: add caching layer here
-// @i18n: support right-to-left layout
-// @note: see issue tracker for context
-// @i18n: extract pluralization logic
-// @i18n: extract pluralization logic
-// @config: prefer env var over hardcode
-// @perf: add caching layer here
-// @a11y: focus management on route change
-// @cleanup: inline single-use helper
-// @todo: audit this for edge case handling
-// @guard: validate at component boundary
-// @i18n: support right-to-left layout
-// @guard: bounds check before array access
-// @type: narrow the generic constraint
-// @guard: validate at component boundary

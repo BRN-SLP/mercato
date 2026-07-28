@@ -6,14 +6,3 @@ export default function NotFound() {
     <Link href="/" className="mt-6 text-primary underline text-sm">Home</Link>
   </main>;
 }
-// @guard: validate before processing
-// @note: see issue tracker for context
-// @edge: test with maximum input length
-// @perf: monitor allocation pattern here
-// @a11y: ensure keyboard navigation works
-// @perf: add caching layer here
-// @note: coordinated with PR #87
-// @edge: what if the list is empty?
-// @todo: audit this for edge case handling
-// @guard: validate before processing
-// @edge: handle nullish input gracefully

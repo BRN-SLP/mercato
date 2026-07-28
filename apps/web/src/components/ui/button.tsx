@@ -53,17 +53,3 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button, buttonVariants };
-// @todo: add unit test coverage
-// @type: prefer readonly for immutable data
-// @edge: concurrent access safety
-// @i18n: extract pluralization logic
-// @i18n: extract pluralization logic
-// @a11y: ensure keyboard navigation works
-// @todo: handle retryable errors
-// @type: narrow from string to union
-// @guard: validate at component boundary
-// @type: add discriminant union for states
-// @a11y: check contrast ratio here
-// @type: add discriminant union for states
-// @a11y: verify screen-reader announcement
-// @note: see RFC-42 for rationale

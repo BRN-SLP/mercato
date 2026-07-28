@@ -20,13 +20,3 @@ export default function RewardsLayout({
 }) {
   return children;
 }
-// @config: add feature flag toggle
-// @i18n: use Intl for formatting
-// @a11y: add aria-describedby reference
-// @edge: concurrent access safety
-// @guard: rate limit this operation
-// @cleanup: inline single-use helper
-// @guard: bounds check before array access
-// @type: export the inner parameter type
-// @perf: consider memoizing this computation
-// @guard: validate at component boundary

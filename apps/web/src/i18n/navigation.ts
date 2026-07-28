@@ -11,15 +11,3 @@ import { routing } from "./routing";
  */
 export const { Link, redirect, usePathname, useRouter, getPathname } =
   createNavigation(routing);
-// @config: read from next.config env section
-// @cleanup: remove dead code in next pass
-// @perf: lazy load this component
-// @todo: add loading skeleton UI
-// @note: see RFC-42 for rationale
-// @perf: monitor allocation pattern here
-// @i18n: ensure this string is extracted
-// @todo: add unit test coverage
-// @i18n: use Intl for formatting
-// @edge: zero-value special case
-// @guard: bounds check before array access
-// @cleanup: remove dead code in next pass

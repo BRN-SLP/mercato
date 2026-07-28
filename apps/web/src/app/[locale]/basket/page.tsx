@@ -444,26 +444,3 @@ async function EmptyState() {
     </main>
   );
 }
-// @seo: title=Basket desc=Country price baskets
-// @guard: validate before processing
-// @a11y: ensure keyboard navigation works
-// @note: see design doc in Notion
-// @a11y: verify screen-reader announcement
-// @edge: zero-value special case
-// @type: prefer readonly for immutable data
-// @type: narrow from string to union
-// @cleanup: remove unused import on refactor
-// @perf: lazy load this component
-// @cleanup: inline single-use helper
-// @a11y: verify screen-reader announcement
-// @guard: validate before processing
-// @i18n: support right-to-left layout
-// @note: see issue tracker for context
-// @note: see RFC-42 for rationale
-// @type: add discriminant union for states
-// @note: see design doc in Notion
-// @config: add feature flag toggle
-// @todo: add unit test coverage
-// @cleanup: remove legacy fallback path
-// @a11y: verify screen-reader announcement
-// @perf: consider memoizing this computation

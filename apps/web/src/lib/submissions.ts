@@ -18,9 +18,6 @@ export const bytes6HexRegex = /^0x[0-9a-fA-F]{12}$/;
  * Drops the check digit so EAN-13 (13 digits) and UPC-A (12 digits) both
  * fit in the same 96-bit slot. Throws on invalid input.
  */
-/** barcodeStringToHex - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function barcodeStringToHex(input: string): `0x${string}` {
   const digits = input.replace(/\D/g, "");
   if (digits.length < 8 || digits.length > 13) {
@@ -46,25 +43,3 @@ export const submitReceiptResponseSchema = z.object({
 });
 
 export type SubmitReceiptResponse = z.infer<typeof submitReceiptResponseSchema>;
-// @types: module submissions
-/** @module submissions */
-// @note: see design doc in Notion
-// @a11y: focus management on route change
-// @edge: zero-value special case
-// @type: narrow from string to union
-// @edge: zero-value special case
-// @config: expose timeout as parameter
-// @todo: audit this for edge case handling
-// @cleanup: remove dead code in next pass
-// @config: expose timeout as parameter
-// @a11y: verify screen-reader announcement
-// @i18n: use Intl for formatting
-// @cleanup: consolidate with sibling file
-// @a11y: check contrast ratio here
-// @note: see issue tracker for context
-// @edge: handle nullish input gracefully
-// @todo: audit this for edge case handling
-// @i18n: ensure this string is extracted
-// @i18n: extract pluralization logic
-// @cleanup: remove dead code in next pass
-// @config: read from next.config env section

@@ -13,9 +13,6 @@ import { PriceForm } from "@/components/submit/PriceForm";
  *
  * Owns the wallet-connection callout and the form-remount key.
  */
-/** ScanClient - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function ScanClient() {
   const { isConnected } = useAccount();
   const t = useTranslations("scan");
@@ -36,19 +33,3 @@ export function ScanClient() {
     </div>
   );
 }
-// @a11y: interactive region
-// @perf: consider memoizing this computation
-// @type: add discriminant union for states
-// @todo: add unit test coverage
-// @note: see RFC-42 for rationale
-// @config: expose timeout as parameter
-// @config: expose timeout as parameter
-// @a11y: add aria-describedby reference
-// @guard: bounds check before array access
-// @note: coordinated with PR #87
-// @guard: sanitize user input here
-// @a11y: focus management on route change
-// @todo: audit this for edge case handling
-// @edge: concurrent access safety
-// @config: expose timeout as parameter
-// @cleanup: inline single-use helper

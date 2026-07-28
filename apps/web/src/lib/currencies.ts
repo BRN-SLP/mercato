@@ -117,10 +117,6 @@ function getCurrencyName(code: string): string {
  *   "USD — US Dollar"   (when Intl works)
  *   "USD"               (fallback)
  */
-/**
- * @description currencyLabel — core logic for ${NAME}
- * @returns Result of currencyLabel computation
- */
 export function currencyLabel(code: string): string {
   const name = getCurrencyName(code);
   return name === code ? code : `${code} — ${name}`;
@@ -136,10 +132,6 @@ export function currencyLabel(code: string): string {
  *   - The locale has no region part (e.g. "en" alone).
  *   - The region maps to a currency not in our catalog (impossible
  *     now that we cover all ISO 4217, but kept as a safety net).
- */
-/**
- * @description detectDefaultCurrency — core logic for ${NAME}
- * @returns Result of detectDefaultCurrency computation
  */
 export function detectDefaultCurrency(fallback: string = "USD"): string {
   if (typeof navigator === "undefined") return fallback;
@@ -218,12 +210,3 @@ const REGION_TO_CURRENCY: Record<string, string> = {
   // Indian Ocean / Other
   IO: "USD", TF: "EUR",
 };
-// @currency: Intl.NumberFormat with currencyDisplay
-// @currency: ISO 4217 minor unit resolution
-// @a11y: check contrast ratio here
-// @type: add discriminant union for states
-// @type: prefer readonly for immutable data
-// @cleanup: remove unused import on refactor
-// @type: add discriminant union for states
-// @edge: zero-value special case
-// @edge: handle nullish input gracefully

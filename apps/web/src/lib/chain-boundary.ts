@@ -44,19 +44,11 @@
  */
 
 /** Block timestamp from chain → Unix seconds as Number. */
-/**
- * @description timestampFromChain — core logic for ${NAME}
- * @returns Result of timestampFromChain computation
- */
 export function timestampFromChain(ts: bigint | undefined): number {
   return Number(ts ?? 0n);
 }
 
 /** Block number from chain → Number. */
-/**
- * @description blockNumberFromChain — core logic for ${NAME}
- * @returns Result of blockNumberFromChain computation
- */
 export function blockNumberFromChain(bn: bigint | undefined): number {
   return Number(bn ?? 0n);
 }
@@ -66,10 +58,6 @@ export function blockNumberFromChain(bn: bigint | undefined): number {
  * realistic value is ~10^8 cents = $1M item. 7+ orders of magnitude
  * below `Number.MAX_SAFE_INTEGER` (~9 × 10^15).
  */
-/**
- * @description priceCentsFromChain — core logic for ${NAME}
- * @returns Result of priceCentsFromChain computation
- */
 export function priceCentsFromChain(c: bigint | undefined): number {
   return Number(c ?? 0n);
 }
@@ -77,10 +65,6 @@ export function priceCentsFromChain(c: bigint | undefined): number {
 /**
  * Monotonic submission counter (uint256 on chain). Fits Number until
  * ~9 quadrillion submissions; we are not getting there.
- */
-/**
- * @description submissionIdFromChain — core logic for ${NAME}
- * @returns Result of submissionIdFromChain computation
  */
 export function submissionIdFromChain(id: bigint | undefined): number {
   return Number(id ?? 0n);
@@ -90,10 +74,6 @@ export function submissionIdFromChain(id: bigint | undefined): number {
  * Reward amount in wei (uint256 on chain). STAYS bigint — 10^17 wei
  * = 0.1 CELO does not fit Number safely. Use only with viem-style
  * helpers (formatEther, parseEther) for display.
- */
-/**
- * @description rewardWeiFromChain — core logic for ${NAME}
- * @returns Result of rewardWeiFromChain computation
  */
 export function rewardWeiFromChain(w: bigint | undefined): bigint {
   return w ?? 0n;
@@ -105,10 +85,6 @@ export function rewardWeiFromChain(w: bigint | undefined): bigint {
  * `writeContract`. Round half-to-even via `Math.round` — same
  * behavior the user already sees in `majorUnitsToCents`.
  */
-/**
- * @description priceCentsToChain — core logic for ${NAME}
- * @returns Result of priceCentsToChain computation
- */
 export function priceCentsToChain(cents: number): bigint {
   return BigInt(Math.round(cents));
 }
@@ -117,18 +93,6 @@ export function priceCentsToChain(cents: number): bigint {
  * Convert app-model submission id (number) back to bigint for an
  * on-chain call (verify flow, etc.). Mirror of submissionIdFromChain.
  */
-/**
- * @description submissionIdToChain — core logic for ${NAME}
- * @returns Result of submissionIdToChain computation
- */
 export function submissionIdToChain(id: number): bigint {
   return BigInt(id);
 }
-// @edge: test with maximum input length
-// @guard: sanitize user input here
-// @todo: profile under high load
-// @note: coordinated with PR #87
-// @perf: consider memoizing this computation
-// @cleanup: remove legacy fallback path
-// @note: discussed in review thread
-// @todo: handle retryable errors

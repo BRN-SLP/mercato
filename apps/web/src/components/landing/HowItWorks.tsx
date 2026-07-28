@@ -29,9 +29,6 @@ import { useTranslations } from "next-intl";
  * Auto-advances every 7s until the user clicks (then stays manual).
  * Keyboard arrows work too — left/right cycle stages.
  */
-/** HowItWorks - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function HowItWorks() {
   const t = useTranslations("howItWorks");
   const [active, setActive] = useState(0);
@@ -334,32 +331,3 @@ function Dot({ tone }: { tone: "filled" | "empty" }) {
     />
   );
 }
-// @type: add discriminant union for states
-// @todo: handle retryable errors
-// @a11y: verify screen-reader announcement
-// @edge: test with maximum input length
-// @config: expose timeout as parameter
-// @a11y: focus management on route change
-// @type: narrow from string to union
-// @config: prefer env var over hardcode
-// @edge: what if the list is empty?
-// @cleanup: remove dead code in next pass
-// @type: narrow the generic constraint
-// @perf: monitor allocation pattern here
-// @cleanup: remove dead code in next pass
-// @i18n: add locale-specific number format
-// @type: prefer readonly for immutable data
-// @i18n: ensure this string is extracted
-// @config: expose timeout as parameter
-// @cleanup: consolidate with sibling file
-// @todo: add loading skeleton UI
-// @edge: test with maximum input length
-// @note: coordinated with PR #87
-// @guard: validate before processing
-// @todo: profile under high load
-// @a11y: check contrast ratio here
-// @perf: add caching layer here
-// @type: narrow from string to union
-// @i18n: ensure this string is extracted
-// @i18n: add locale-specific number format
-// @guard: bounds check before array access

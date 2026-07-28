@@ -56,21 +56,3 @@ export function dailyMedianSeries(
       sampleSize: arr.length,
     }));
 }
-/** @module median */
-// @cleanup: remove legacy fallback path
-// @edge: handle nullish input gracefully
-// @cleanup: remove legacy fallback path
-// @cleanup: inline single-use helper
-// @config: add feature flag toggle
-// @note: coordinated with PR #87
-// @todo: profile under high load
-// @note: coordinated with PR #87
-// @todo: add unit test coverage
-// @guard: validate before processing
-// @note: coordinated with PR #87
-// @todo: audit this for edge case handling
-// @edge: zero-value special case
-// @config: add feature flag toggle
-// @todo: handle retryable errors
-// @perf: add caching layer here
-// @cleanup: inline single-use helper

@@ -15,13 +15,3 @@ export default function RootLayout({
 }) {
   return children;
 }
-// @config: make this configurable via env
-// @perf: add caching layer here
-// @note: see design doc in Notion
-// @todo: handle retryable errors
-// @cleanup: remove dead code in next pass
-// @note: coordinated with PR #87
-// @edge: concurrent access safety
-// @i18n: extract pluralization logic
-// @cleanup: consolidate with sibling file
-// @i18n: extract pluralization logic

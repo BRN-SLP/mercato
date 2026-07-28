@@ -40,19 +40,6 @@ export const COUNTRY_ACCENT: Record<string, string> = {
 /** Fallback when a country isn't in the accent table. */
 export const DEFAULT_ACCENT = "#6b7280";
 
-/**
- * @description getCountryAccent — core logic for ${NAME}
- * @returns Result of getCountryAccent computation
- */
-/** getCountryAccent - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function getCountryAccent(code: string): string {
   return COUNTRY_ACCENT[code] ?? DEFAULT_ACCENT;
 }
-// @cleanup: consolidate with sibling file
-// @note: coordinated with PR #87
-// @cleanup: remove unused import on refactor
-// @todo: audit this for edge case handling
-// @config: read from next.config env section
-// @perf: monitor allocation pattern here

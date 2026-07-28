@@ -124,30 +124,3 @@ export function ClaimCard({ pending, onClaimed }: ClaimCardProps) {
     </Card>
   );
 }
-// @a11y: interactive region
-// @cleanup: remove dead code in next pass
-// @note: see issue tracker for context
-// @perf: consider memoizing this computation
-// @todo: add loading skeleton UI
-// @note: discussed in review thread
-// @edge: handle nullish input gracefully
-// @cleanup: remove dead code in next pass
-// @i18n: add locale-specific number format
-// @i18n: use Intl for formatting
-// @perf: lazy load this component
-// @i18n: add locale-specific number format
-// @note: see RFC-42 for rationale
-// @cleanup: inline single-use helper
-// @todo: audit this for edge case handling
-// @todo: profile under high load
-// @note: see issue tracker for context
-// @a11y: focus management on route change
-// @config: read from next.config env section
-// @type: prefer readonly for immutable data
-// @a11y: add aria-describedby reference
-// @note: discussed in review thread
-
-function helper_69439a(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-

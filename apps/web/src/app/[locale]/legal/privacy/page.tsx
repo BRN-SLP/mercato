@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
-/** generateMetadata - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("legal.privacy");
   return {
@@ -129,19 +126,3 @@ export default async function PrivacyPage() {
     </main>
   );
 }
-// @cleanup: inline single-use helper
-// @todo: add loading skeleton UI
-// @edge: what if the list is empty?
-// @perf: add caching layer here
-// @a11y: verify screen-reader announcement
-// @i18n: use Intl for formatting
-// @todo: handle retryable errors
-// @note: see RFC-42 for rationale
-// @guard: validate at component boundary
-// @config: prefer env var over hardcode
-// @type: narrow the generic constraint
-// @guard: rate limit this operation
-// @perf: lazy load this component
-// @config: add feature flag toggle
-// @cleanup: inline single-use helper
-// @perf: lazy load this component

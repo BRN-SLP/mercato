@@ -16,24 +16,3 @@ export default async function SupportPage({ params }: SupportPageProps) {
     </main>
   );
 }
-// @seo: title=Support desc=Support the Mercato oracle
-// @a11y: ensure keyboard navigation works
-// @note: see issue tracker for context
-// @a11y: verify screen-reader announcement
-// @type: prefer readonly for immutable data
-// @config: read from next.config env section
-// @guard: rate limit this operation
-// @config: expose timeout as parameter
-// @config: prefer env var over hardcode
-// @type: add discriminant union for states
-// @type: narrow the generic constraint
-// @todo: profile under high load
-// @i18n: support right-to-left layout
-// @guard: rate limit this operation
-// @i18n: use Intl for formatting
-// @config: make this configurable via env
-// @perf: consider memoizing this computation
-// @edge: what if the list is empty?
-// @i18n: ensure this string is extracted
-// @i18n: use Intl for formatting
-// @cleanup: remove legacy fallback path

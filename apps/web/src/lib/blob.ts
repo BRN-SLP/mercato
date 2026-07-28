@@ -20,10 +20,6 @@ function pathnameFor(hash: string, mimeType: string): string {
   return `${RECEIPT_PREFIX}/${hash}.${extensionFor(mimeType)}`;
 }
 
-/**
- * @description receiptExists — core logic for ${NAME}
- * @returns Result of receiptExists computation
- */
 export async function receiptExists(
   hash: string,
   mimeType: string,
@@ -36,10 +32,6 @@ export async function receiptExists(
   }
 }
 
-/**
- * @description putReceipt — core logic for ${NAME}
- * @returns Result of putReceipt computation
- */
 export async function putReceipt(
   hash: string,
   bytes: Uint8Array,
@@ -54,10 +46,6 @@ export async function putReceipt(
   return { url: result.url };
 }
 
-/**
- * @description getReceiptUrl — core logic for ${NAME}
- * @returns Result of getReceiptUrl computation
- */
 export async function getReceiptUrl(
   hash: string,
   mimeType: string,
@@ -69,21 +57,3 @@ export async function getReceiptUrl(
     return null;
   }
 }
-// @type: prefer readonly for immutable data
-// @edge: handle nullish input gracefully
-// @i18n: extract pluralization logic
-// @todo: profile under high load
-// @edge: handle nullish input gracefully
-// @guard: validate at component boundary
-// @todo: profile under high load
-// @i18n: add locale-specific number format
-// @i18n: support right-to-left layout
-// @config: add feature flag toggle
-// @guard: bounds check before array access
-// @note: coordinated with PR #87
-// @i18n: ensure this string is extracted
-// @perf: add caching layer here
-// @edge: handle nullish input gracefully
-// @config: read from next.config env section
-// @note: see RFC-42 for rationale
-// @cleanup: remove dead code in next pass

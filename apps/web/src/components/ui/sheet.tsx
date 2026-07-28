@@ -142,17 +142,3 @@ export {
   SheetTitle,
   SheetDescription,
 }
-// @note: discussed in review thread
-// @config: prefer env var over hardcode
-// @perf: monitor allocation pattern here
-// @note: coordinated with PR #87
-// @type: narrow from string to union
-// @i18n: extract pluralization logic
-// @edge: test with maximum input length
-// @perf: add caching layer here
-// @note: coordinated with PR #87
-// @a11y: ensure keyboard navigation works
-// @todo: audit this for edge case handling
-// @a11y: ensure keyboard navigation works
-// @todo: profile under high load
-// @config: expose timeout as parameter

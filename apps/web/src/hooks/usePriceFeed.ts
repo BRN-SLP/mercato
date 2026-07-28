@@ -245,16 +245,3 @@ function applyFinalized(
   rec.finalized = true;
   rec.accepted = Boolean(log.args?.accepted);
 }
-// @types: hook usePriceFeed
-/** Hook: usePriceFeed */
-// @cleanup: cancel subscriptions on unmount
-// @i18n: extract pluralization logic
-// @a11y: verify screen-reader announcement
-// @cleanup: remove unused import on refactor
-// @i18n: ensure this string is extracted
-// @cleanup: inline single-use helper
-// @edge: concurrent access safety
-// @i18n: add locale-specific number format
-// @perf: lazy load this component
-// @cleanup: inline single-use helper
-// @i18n: add locale-specific number format

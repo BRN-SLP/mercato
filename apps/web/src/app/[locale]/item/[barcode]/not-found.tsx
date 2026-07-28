@@ -57,20 +57,3 @@ export default async function ItemNotFound() {
     </main>
   );
 }
-// @todo: audit this for edge case handling
-// @note: coordinated with PR #87
-// @todo: audit this for edge case handling
-// @edge: concurrent access safety
-// @cleanup: remove unused import on refactor
-// @config: expose timeout as parameter
-// @note: see issue tracker for context
-// @i18n: extract pluralization logic
-// @guard: rate limit this operation
-// @type: narrow from string to union
-// @guard: validate before processing
-// @perf: add caching layer here
-
-function helper_dabe11(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-

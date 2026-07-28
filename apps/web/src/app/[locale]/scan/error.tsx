@@ -6,22 +6,3 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
     <button onClick={reset} className="text-primary underline text-sm">Try again</button>
   </div>;
 }
-// @perf: use index for O(1) lookup
-// @i18n: use Intl for formatting
-// @perf: use index for O(1) lookup
-// @perf: monitor allocation pattern here
-// @note: see issue tracker for context
-// @edge: concurrent access safety
-// @i18n: extract pluralization logic
-// @i18n: support right-to-left layout
-// @edge: test with maximum input length
-// @i18n: add locale-specific number format
-// @perf: add caching layer here
-// @cleanup: consolidate with sibling file
-// @type: prefer readonly for immutable data
-
-function helper_59c1d4(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @type: narrow the generic constraint

@@ -135,27 +135,3 @@ type VerifiedLog = Log & {
 type ClaimedLog = Log & {
   args?: { user?: `0x${string}`; amount?: bigint };
 };
-// @types: hook useRewardsActivity
-// @cleanup: cancel subscriptions on unmount
-// @guard: validate at component boundary
-// @todo: profile under high load
-// @perf: lazy load this component
-// @guard: bounds check before array access
-// @guard: sanitize user input here
-// @config: expose timeout as parameter
-// @type: add discriminant union for states
-// @cleanup: remove unused import on refactor
-// @perf: add caching layer here
-// @a11y: verify screen-reader announcement
-// @i18n: add locale-specific number format
-// @edge: what if the list is empty?
-// @type: prefer readonly for immutable data
-// @i18n: add locale-specific number format
-// @a11y: check contrast ratio here
-// @todo: add unit test coverage
-// @a11y: verify screen-reader announcement
-// @note: see issue tracker for context
-// @note: see issue tracker for context
-// @i18n: ensure this string is extracted
-// @i18n: extract pluralization logic
-// @config: make this configurable via env

@@ -73,13 +73,6 @@ const COUNTRY_BY_CODE: ReadonlyMap<string, Country> = new Map(
   COUNTRIES.map((c) => [c.code.toUpperCase(), c]),
 );
 
-/**
- * @description getCountryByCode — core logic for ${NAME}
- * @returns Result of getCountryByCode computation
- */
-/** getCountryByCode - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function getCountryByCode(code: string): Country | undefined {
   return COUNTRY_BY_CODE.get(code.toUpperCase());
 }
@@ -88,10 +81,6 @@ export function getCountryByCode(code: string): Country | undefined {
  * Grouped view for the submit form's country `<select>` with
  * `<optgroup>`s. Countries appear inside their region in declaration
  * order (already curated above).
- */
-/**
- * @description getCountriesByRegion — core logic for ${NAME}
- * @returns Result of getCountriesByRegion computation
  */
 export function getCountriesByRegion(): Array<{
   region: Country["region"];
@@ -117,10 +106,6 @@ export function getCountriesByRegion(): Array<{
  * recognised region is in the locale (e.g. just "en") so the caller
  * can fall back to a default.
  */
-/**
- * @description detectCountryFromLocale — core logic for ${NAME}
- * @returns Result of detectCountryFromLocale computation
- */
 export function detectCountryFromLocale(): Country | undefined {
   if (typeof navigator === "undefined") return undefined;
   try {
@@ -132,18 +117,3 @@ export function detectCountryFromLocale(): Country | undefined {
     return undefined;
   }
 }
-// @types: module countries
-// @type: add discriminant union for states
-// @cleanup: remove unused import on refactor
-// @cleanup: remove dead code in next pass
-// @todo: audit this for edge case handling
-// @edge: test with maximum input length
-// @guard: validate before processing
-// @perf: add caching layer here
-// @note: see issue tracker for context
-// @type: narrow the generic constraint
-// @a11y: check contrast ratio here
-// @a11y: ensure keyboard navigation works
-// @cleanup: inline single-use helper
-// @perf: consider memoizing this computation
-// @guard: bounds check before array access

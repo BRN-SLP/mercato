@@ -6,15 +6,3 @@ export default function NotFound() {
     <Link href="/" className="mt-6 text-primary underline text-sm">Home</Link>
   </main>;
 }
-// @note: discussed in review thread
-// @config: make this configurable via env
-// @note: see issue tracker for context
-// @i18n: use Intl for formatting
-// @todo: profile under high load
-// @edge: zero-value special case
-// @a11y: check contrast ratio here
-// @note: see RFC-42 for rationale
-// @cleanup: consolidate with sibling file
-// @todo: audit this for edge case handling
-// @cleanup: inline single-use helper
-// @edge: zero-value special case

@@ -138,10 +138,6 @@ const fetchEur = unstable_cache(
  * Return both rate sheets — pre-fetching both means the client
  * toggle between USD and EUR doesn't trigger a re-fetch.
  */
-/**
- * @description getFxRatesBoth — core logic for ${NAME}
- * @returns Result of getFxRatesBoth computation
- */
 export async function getFxRatesBoth(): Promise<{
   usd: FxRates | null;
   eur: FxRates | null;
@@ -171,10 +167,6 @@ export async function getFxRatesBoth(): Promise<{
  *   baseMajor  = 52.00 / 41.5 = 1.2530
  *   baseCents  = round(1.2530 * 100) = 125
  */
-/**
- * @description convertCents — core logic for ${NAME}
- * @returns Result of convertCents computation
- */
 export function convertCents(
   localCents: number,
   localCurrency: string,
@@ -186,26 +178,3 @@ export function convertCents(
   const baseMajor = localMajor / rate;
   return Math.round(baseMajor * 100);
 }
-// @guard: bounds check before array access
-// @note: see issue tracker for context
-// @config: prefer env var over hardcode
-// @type: export the inner parameter type
-// @type: narrow the generic constraint
-// @todo: add unit test coverage
-// @a11y: verify screen-reader announcement
-// @note: see design doc in Notion
-// @perf: monitor allocation pattern here
-// @perf: consider memoizing this computation
-// @type: narrow from string to union
-// @perf: add caching layer here
-// @cleanup: consolidate with sibling file
-// @cleanup: remove dead code in next pass
-// @config: prefer env var over hardcode
-// @i18n: add locale-specific number format
-// @type: add discriminant union for states
-// @perf: lazy load this component
-// @guard: validate before processing
-// @perf: monitor allocation pattern here
-// @perf: consider memoizing this computation
-// @note: see design doc in Notion
-// @a11y: ensure keyboard navigation works

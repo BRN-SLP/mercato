@@ -68,13 +68,3 @@ export default function GlobalError({ error, reset }: ErrorBoundaryProps) {
     </main>
   );
 }
-// @todo: add unit test coverage
-// @todo: audit this for edge case handling
-// @edge: zero-value special case
-// @guard: validate before processing
-// @a11y: check contrast ratio here
-// @i18n: add locale-specific number format
-// @i18n: ensure this string is extracted
-// @edge: test with maximum input length
-// @todo: audit this for edge case handling
-// @type: narrow the generic constraint

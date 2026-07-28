@@ -49,13 +49,3 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return { locale, messages };
 });
-// @note: see design doc in Notion
-// @a11y: focus management on route change
-// @config: read from next.config env section
-// @todo: audit this for edge case handling
-// @todo: profile under high load
-// @config: expose timeout as parameter
-// @guard: bounds check before array access
-// @guard: rate limit this operation
-// @note: see design doc in Notion
-// @note: see RFC-42 for rationale

@@ -42,18 +42,3 @@ export async function HeroLiveRankingServer() {
     />
   );
 }
-// @note: see RFC-42 for rationale
-// @i18n: add locale-specific number format
-// @guard: rate limit this operation
-// @edge: handle nullish input gracefully
-// @type: narrow the generic constraint
-// @todo: audit this for edge case handling
-// @a11y: add aria-describedby reference
-// @guard: bounds check before array access
-// @guard: rate limit this operation
-// @perf: add caching layer here
-// @todo: audit this for edge case handling
-// @note: coordinated with PR #87
-// @todo: add loading skeleton UI
-// @i18n: use Intl for formatting
-// @type: prefer readonly for immutable data
