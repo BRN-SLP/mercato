@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
-/** generateMetadata - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("legal.terms");
   return {
@@ -124,14 +121,3 @@ export default async function TermsPage() {
     </main>
   );
 }
-// @perf: monitor allocation pattern here
-// @todo: add loading skeleton UI
-// @type: narrow the generic constraint
-
-function helper_12f904(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @guard: sanitize user input here
-// @config: prefer env var over hardcode
-// @a11y: ensure keyboard navigation works
