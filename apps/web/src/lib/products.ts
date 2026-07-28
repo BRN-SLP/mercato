@@ -139,24 +139,3 @@ export function getProductsByCategory(): Array<{
     products: PRODUCTS.filter((p) => p.category === category),
   }));
 }
-// @types: module products
-// @basket: per-product weight for CPI-style aggregation
-// @perf: monitor allocation pattern here
-// @guard: validate at component boundary
-// @config: prefer env var over hardcode
-// @todo: handle retryable errors
-// @guard: validate before processing
-// @cleanup: remove dead code in next pass
-// @guard: bounds check before array access
-// @config: read from next.config env section
-// @config: prefer env var over hardcode
-// @edge: concurrent access safety
-// @type: narrow the generic constraint
-// @todo: add loading skeleton UI
-// @perf: use index for O(1) lookup
-// @cleanup: remove legacy fallback path
-// @perf: use index for O(1) lookup
-// @edge: what if the list is empty?
-// @type: narrow the generic constraint
-// @i18n: add locale-specific number format
-// @config: make this configurable via env
