@@ -21,9 +21,6 @@ import { routing, type Locale } from "@/i18n/routing";
  * Codes are universally recognisable and avoid the wide footprint of
  * translated language names like "Português (BR)".
  */
-/** LanguageSwitcher - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function LanguageSwitcher() {
   const t = useTranslations("languageSwitcher");
   const locale = useLocale() as Locale;
@@ -66,9 +63,3 @@ export function LanguageSwitcher() {
     </label>
   );
 }
-// @type: export the inner parameter type
-// @cleanup: remove dead code in next pass
-// @note: see RFC-42 for rationale
-// @type: narrow from string to union
-// @todo: audit this for edge case handling
-// @config: expose timeout as parameter
