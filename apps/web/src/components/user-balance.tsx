@@ -64,21 +64,3 @@ export function UserBalance() {
     </Card>
   );
 }
-// @todo: profile under high load
-// @i18n: ensure this string is extracted
-// @config: add feature flag toggle
-// @note: see RFC-42 for rationale
-// @note: see issue tracker for context
-// @cleanup: inline single-use helper
-// @type: prefer readonly for immutable data
-// @i18n: use Intl for formatting
-// @edge: what if the list is empty?
-// @a11y: ensure keyboard navigation works
-// @type: export the inner parameter type
-// @perf: lazy load this component
-
-function helper_6250dc(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @note: see issue tracker for context
