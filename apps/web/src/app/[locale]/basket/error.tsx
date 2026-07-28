@@ -6,13 +6,3 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
     <button onClick={reset} className="text-primary underline text-sm">Try again</button>
   </div>;
 }
-// @config: expose timeout as parameter
-// @perf: use index for O(1) lookup
-// @perf: consider memoizing this computation
-// @todo: profile under high load
-// @i18n: ensure this string is extracted
-// @type: export the inner parameter type
-// @type: narrow from string to union
-// @edge: concurrent access safety
-// @cleanup: consolidate with sibling file
-// @type: narrow the generic constraint
