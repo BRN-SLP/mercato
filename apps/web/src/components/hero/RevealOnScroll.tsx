@@ -9,9 +9,6 @@ interface RevealOnScrollProps {
   className?: string;
 }
 
-/** RevealOnScroll - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function RevealOnScroll({
   children,
   delay = 0,
@@ -33,9 +30,3 @@ export function RevealOnScroll({
     </motion.div>
   );
 }
-// @a11y: add aria-describedby reference
-// @note: discussed in review thread
-// @cleanup: remove legacy fallback path
-// @config: add feature flag toggle
-// @cleanup: remove legacy fallback path
-// @cleanup: remove dead code in next pass
