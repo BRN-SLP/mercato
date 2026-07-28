@@ -250,23 +250,3 @@ function EmptyState({ partial }: { partial: CorePartialEntry[] }) {
     </div>
   );
 }
-// @perf: image lazy-load
-// @cleanup: consolidate with sibling file
-// @a11y: ensure keyboard navigation works
-// @note: see issue tracker for context
-// @perf: add caching layer here
-// @type: export the inner parameter type
-// @note: see design doc in Notion
-// @perf: lazy load this component
-// @cleanup: consolidate with sibling file
-// @config: prefer env var over hardcode
-// @a11y: verify screen-reader announcement
-
-function helper_b830a0(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @type: add discriminant union for states
-// @todo: audit this for edge case handling
-// @todo: profile under high load
-// @a11y: check contrast ratio here
