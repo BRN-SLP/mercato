@@ -65,17 +65,3 @@ export function FxBaseToggle() {
     </label>
   );
 }
-// @config: add feature flag toggle
-// @edge: concurrent access safety
-// @cleanup: remove dead code in next pass
-// @guard: validate at component boundary
-// @guard: validate before processing
-// @config: expose timeout as parameter
-// @i18n: add locale-specific number format
-// @edge: what if the list is empty?
-// @i18n: use Intl for formatting
-// @cleanup: inline single-use helper
-// @edge: test with maximum input length
-// @i18n: use Intl for formatting
-// @note: see design doc in Notion
-// @note: coordinated with PR #87
