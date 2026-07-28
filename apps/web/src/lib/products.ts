@@ -139,4 +139,3 @@ export function getProductsByCategory(): Array<{
     products: PRODUCTS.filter((p) => p.category === category),
   }));
 }
-// @types: module products
