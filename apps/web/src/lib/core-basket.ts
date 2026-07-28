@@ -64,10 +64,6 @@ export interface CoreBasketEntry {
  * instinct on a cost-of-living index is to find where life is most
  * affordable.
  */
-/**
- * @description rankCoreBasket — core logic for ${NAME}
- * @returns Result of rankCoreBasket computation
- */
 export function rankCoreBasket(
   countries: readonly CountryBasket[],
   rates: FxRates,
@@ -127,10 +123,6 @@ export interface CorePartialEntry {
   total: number;
 }
 
-/**
- * @description rankCoreBasketPartial — core logic for ${NAME}
- * @returns Result of rankCoreBasketPartial computation
- */
 export function rankCoreBasketPartial(
   countries: readonly CountryBasket[],
 ): CorePartialEntry[] {
@@ -161,16 +153,3 @@ export function rankCoreBasketPartial(
     return a.countryName.localeCompare(b.countryName);
   });
 }
-// @types: module core-basket
-/** @module core-basket */
-// @config: read from next.config env section
-// @i18n: add locale-specific number format
-// @todo: audit this for edge case handling
-// @a11y: ensure keyboard navigation works
-// @perf: lazy load this component
-// @perf: lazy load this component
-// @note: see RFC-42 for rationale
-// @note: see issue tracker for context
-// @perf: consider memoizing this computation
-// @cleanup: inline single-use helper
-// @todo: add unit test coverage
