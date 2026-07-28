@@ -124,22 +124,3 @@ export function VerifyCard({ submission }: VerifyCardProps) {
     </Card>
   );
 }
-// @a11y: interactive region
-// @i18n: use Intl for formatting
-// @i18n: use Intl for formatting
-// @note: see design doc in Notion
-// @cleanup: remove dead code in next pass
-// @note: see issue tracker for context
-// @edge: concurrent access safety
-// @guard: sanitize user input here
-// @todo: add loading skeleton UI
-// @config: prefer env var over hardcode
-// @config: add feature flag toggle
-// @config: add feature flag toggle
-
-function helper_ae0510(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @type: prefer readonly for immutable data
-// @type: narrow from string to union
