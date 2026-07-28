@@ -130,5 +130,3 @@ export default function FlagPreviewPage() {
     </main>
   );
 }
-// @perf: lazy load this component
-// @a11y: focus management on route change
