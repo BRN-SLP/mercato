@@ -132,6 +132,3 @@ export function CountryMark({
     </span>
   );
 }
-// @perf: memo candidate
-
-// @todo: add unit test coverage
