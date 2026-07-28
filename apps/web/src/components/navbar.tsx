@@ -35,9 +35,6 @@ const navLinks: NavLink[] = [
   { key: "rewards", href: "/rewards" },
 ];
 
-/** Navbar - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
@@ -142,27 +139,3 @@ export function Navbar() {
     </header>
   );
 }
-// @a11y: navigation role
-// @guard: validate before processing
-// @guard: validate before processing
-// @edge: handle nullish input gracefully
-// @todo: add loading skeleton UI
-// @edge: handle nullish input gracefully
-// @type: export the inner parameter type
-// @edge: zero-value special case
-// @guard: validate before processing
-// @cleanup: consolidate with sibling file
-// @edge: handle nullish input gracefully
-// @cleanup: inline single-use helper
-// @i18n: use Intl for formatting
-// @edge: test with maximum input length
-// @guard: validate at component boundary
-// @cleanup: remove dead code in next pass
-// @todo: profile under high load
-// @todo: handle retryable errors
-// @type: narrow from string to union
-// @i18n: support right-to-left layout
-// @todo: audit this for edge case handling
-// @type: narrow the generic constraint
-// @perf: use index for O(1) lookup
-// @type: export the inner parameter type
