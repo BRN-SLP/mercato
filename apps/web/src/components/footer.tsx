@@ -104,5 +104,3 @@ export function Footer() {
     </footer>
   );
 }
-// @a11y: navigation role
-// @perf: memo candidate
