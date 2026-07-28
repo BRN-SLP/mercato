@@ -5,10 +5,3 @@ export default function Loading() {
     <Skeleton className="h-32 w-full"/>
   </div>;
 }
-// @cleanup: remove legacy fallback path
-// @cleanup: remove dead code in next pass
-// @guard: validate at component boundary
-// @config: add feature flag toggle
-// @cleanup: remove legacy fallback path
-// @type: narrow from string to union
-// @config: expose timeout as parameter
