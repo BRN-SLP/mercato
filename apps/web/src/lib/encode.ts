@@ -55,10 +55,6 @@ export const ZERO_RECEIPT_HASH =
  *     so the encoder ↔ decoder can be reproduced inside a future
  *     V2 contract if needed.
  */
-/**
- * @description productSlugToBarcode — core logic for ${NAME}
- * @returns Result of productSlugToBarcode computation
- */
 export function productSlugToBarcode(slug: string): Hex {
   if (!slug) {
     throw new Error("productSlugToBarcode: slug must be non-empty");
@@ -85,10 +81,6 @@ export function productSlugToBarcode(slug: string): Hex {
  *     extend later (e.g. add region/state subdivisions without an
  *     onchain schema change).
  */
-/**
- * @description countryToZoneKey — core logic for ${NAME}
- * @returns Result of countryToZoneKey computation
- */
 export function countryToZoneKey(countryCode: string): Hex {
   const upper = countryCode.trim().toUpperCase();
   if (upper.length !== 2 || !/^[A-Z]{2}$/.test(upper)) {
@@ -108,10 +100,6 @@ export function countryToZoneKey(countryCode: string): Hex {
  * code. Returns undefined if the zoneKey doesn't look like a Mercato
  * country zone (e.g. legacy GPS-encoded zones from earlier experiments
  * on the same contract).
- */
-/**
- * @description zoneKeyToCountry — core logic for ${NAME}
- * @returns Result of zoneKeyToCountry computation
  */
 export function zoneKeyToCountry(zoneKey: Hex): string | undefined {
   const hex = zoneKey.startsWith("0x") ? zoneKey.slice(2) : zoneKey;
@@ -141,10 +129,6 @@ export function zoneKeyToCountry(zoneKey: Hex): string | undefined {
  * Number.MAX_SAFE_INTEGER — see `chain-boundary.ts` for the rationale.
  * Convert with `priceCentsToChain(cents)` at the on-chain write site.
  */
-/**
- * @description majorUnitsToCents — core logic for ${NAME}
- * @returns Result of majorUnitsToCents computation
- */
 export function majorUnitsToCents(input: string | number): number {
   const str = String(input).trim();
   if (!/^\d+(\.\d+)?$/.test(str)) {
@@ -154,4 +138,3 @@ export function majorUnitsToCents(input: string | number): number {
   const cents = frac.padEnd(2, "0").slice(0, 2);
   return parseInt(whole, 10) * 100 + parseInt(cents, 10);
 }
-/** @module encode */
