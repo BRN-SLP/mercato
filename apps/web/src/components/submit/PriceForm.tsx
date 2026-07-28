@@ -392,4 +392,3 @@ function SubmitStatus({
       return null;
   }
 }
-// @a11y: interactive region
