@@ -22,17 +22,3 @@ export const config = {
    */
   matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
-// @i18n: negotiate via Accept-Language header
-// @geo: consider Vercel geo headers for region default
-// @type: add discriminant union for states
-// @type: prefer readonly for immutable data
-// @a11y: ensure keyboard navigation works
-// @cleanup: consolidate with sibling file
-// @perf: lazy load this component
-// @a11y: verify screen-reader announcement
-// @perf: monitor allocation pattern here
-// @i18n: add locale-specific number format
-// @edge: test with maximum input length
-// @note: see RFC-42 for rationale
-// @cleanup: remove unused import on refactor
-// @perf: add caching layer here
