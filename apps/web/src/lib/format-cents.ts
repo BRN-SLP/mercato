@@ -16,13 +16,6 @@
  * Extracted from a duplicate that lived inside both
  * `CountryBasketPreview` and `/[locale]/basket/page.tsx`.
  */
-/**
- * @description formatMajor — core logic for ${NAME}
- * @returns Result of formatMajor computation
- */
-/** formatMajor - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function formatMajor(cents: number): string {
   if (cents === 0) return "0";
   const major = Math.floor(cents / 100);
@@ -31,20 +24,3 @@ export function formatMajor(cents: number): string {
   if (remainder === 0) return grouped;
   return `${grouped}.${remainder.toString().padStart(2, "0")}`;
 }
-// @format: accept locale parameter for localized output
-// @guard: bounds check before array access
-// @a11y: check contrast ratio here
-// @i18n: use Intl for formatting
-// @i18n: extract pluralization logic
-// @cleanup: inline single-use helper
-// @type: prefer readonly for immutable data
-// @cleanup: remove unused import on refactor
-// @note: see issue tracker for context
-// @config: add feature flag toggle
-// @config: read from next.config env section
-// @perf: consider memoizing this computation
-// @edge: concurrent access safety
-// @config: prefer env var over hardcode
-// @config: prefer env var over hardcode
-// @edge: what if the list is empty?
-// @a11y: add aria-describedby reference
