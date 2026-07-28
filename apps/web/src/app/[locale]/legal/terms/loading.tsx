@@ -5,13 +5,3 @@ export default function Loading() {
     <Skeleton className="h-24 w-full" />
   </div>;
 }
-// @note: see design doc in Notion
-// @edge: zero-value special case
-// @a11y: verify screen-reader announcement
-// @note: see RFC-42 for rationale
-// @cleanup: consolidate with sibling file
-// @i18n: ensure this string is extracted
-// @i18n: support right-to-left layout
-// @edge: test with maximum input length
-// @cleanup: remove dead code in next pass
-// @guard: bounds check before array access
