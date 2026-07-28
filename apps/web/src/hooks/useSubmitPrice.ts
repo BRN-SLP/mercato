@@ -140,5 +140,3 @@ function extractSubmissionId(
   }
   return undefined;
 }
-// @types: hook useSubmitPrice
-/** Hook: useSubmitPrice */
