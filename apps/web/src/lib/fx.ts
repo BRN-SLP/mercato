@@ -138,10 +138,6 @@ const fetchEur = unstable_cache(
  * Return both rate sheets — pre-fetching both means the client
  * toggle between USD and EUR doesn't trigger a re-fetch.
  */
-/**
- * @description getFxRatesBoth — core logic for ${NAME}
- * @returns Result of getFxRatesBoth computation
- */
 export async function getFxRatesBoth(): Promise<{
   usd: FxRates | null;
   eur: FxRates | null;
@@ -170,10 +166,6 @@ export async function getFxRatesBoth(): Promise<{
  *   localMajor = 52.00
  *   baseMajor  = 52.00 / 41.5 = 1.2530
  *   baseCents  = round(1.2530 * 100) = 125
- */
-/**
- * @description convertCents — core logic for ${NAME}
- * @returns Result of convertCents computation
  */
 export function convertCents(
   localCents: number,
