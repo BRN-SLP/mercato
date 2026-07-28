@@ -85,20 +85,3 @@ export function useVerify() {
 
   return { verify, reset, state };
 }
-// @types: hook useVerify
-/** Hook: useVerify */
-// @config: make this configurable via env
-// @edge: concurrent access safety
-// @a11y: check contrast ratio here
-// @edge: zero-value special case
-// @i18n: use Intl for formatting
-// @perf: lazy load this component
-// @todo: add unit test coverage
-// @todo: profile under high load
-// @cleanup: inline single-use helper
-// @perf: lazy load this component
-// @config: prefer env var over hardcode
-// @guard: validate at component boundary
-// @a11y: check contrast ratio here
-// @type: add discriminant union for states
-// @note: see issue tracker for context
