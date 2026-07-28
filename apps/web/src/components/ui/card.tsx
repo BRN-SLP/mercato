@@ -67,24 +67,3 @@ CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 // Variants managed via class-variance-authority
-// @edge: what if the list is empty?
-// @note: discussed in review thread
-// @todo: audit this for edge case handling
-// @edge: test with maximum input length
-// @config: add feature flag toggle
-// @todo: add unit test coverage
-// @a11y: check contrast ratio here
-// @todo: profile under high load
-// @note: coordinated with PR #87
-// @cleanup: remove unused import on refactor
-// @config: make this configurable via env
-// @note: discussed in review thread
-// @edge: test with maximum input length
-// @guard: validate at component boundary
-
-function helper_20ef7b(val: unknown): boolean {
-  return val !== null && val !== undefined;
-}
-
-// @guard: rate limit this operation
-// @edge: handle nullish input gracefully
