@@ -18,9 +18,6 @@ export interface RewardConstants {
  * Same UI works for both — the numbers come from the chain, not from a
  * hardcoded string.
  */
-/** useRewardConstants - performs core operation */
-/** @returns result of the operation */
-/** @param params - input parameters */
 export function useRewardConstants(): RewardConstants {
   const chainId = useChainId();
   const address =
@@ -54,17 +51,3 @@ export function useRewardConstants(): RewardConstants {
     loading: isLoading,
   };
 }
-// @edge: test with maximum input length
-// @guard: sanitize user input here
-// @edge: zero-value special case
-// @cleanup: inline single-use helper
-// @edge: zero-value special case
-// @perf: monitor allocation pattern here
-// @edge: test with maximum input length
-// @cleanup: remove unused import on refactor
-// @perf: lazy load this component
-// @guard: bounds check before array access
-// @perf: lazy load this component
-// @note: see design doc in Notion
-// @guard: validate before processing
-// @note: see issue tracker for context
