@@ -137,22 +137,3 @@ function FeedItem({
     </li>
   );
 }
-// @perf: dynamic import candidate
-// @todo: audit this for edge case handling
-// @config: make this configurable via env
-// @guard: sanitize user input here
-// @type: narrow the generic constraint
-// @i18n: support right-to-left layout
-// @perf: monitor allocation pattern here
-// @type: add discriminant union for states
-// @i18n: support right-to-left layout
-// @todo: handle retryable errors
-// @i18n: support right-to-left layout
-// @type: prefer readonly for immutable data
-// @edge: concurrent access safety
-// @type: prefer readonly for immutable data
-// @type: prefer readonly for immutable data
-// @config: make this configurable via env
-// @config: make this configurable via env
-// @edge: what if the list is empty?
-// @i18n: ensure this string is extracted
